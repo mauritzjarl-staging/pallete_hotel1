@@ -7,7 +7,6 @@ import { MdOutlineBorderColor } from "react-icons/md";
 // import MapComponent from "../components/MapComponent";
 import dynamic from "next/dynamic";
 
-
 // Dynamically import MapComponent with SSR disabled
 const MapComponent = dynamic(() => import("../components/MapComponent"), {
   ssr: false,
@@ -23,8 +22,8 @@ const QuoteForm = () => {
       </section>
 
       <section className="h-[500px]">
-          <MapComponent />
-      </section> 
+        <MapComponent />
+      </section>
 
       <section className="py-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
         <div className="w-full lg:w-4/12 px-8">
@@ -59,7 +58,7 @@ const QuoteForm = () => {
             {/* Contact Form */}
             {/* 1. Företagsuppgifter */}
             <div>
-              <h2 className="text-lg font-bold mb-6">1. Företagsuppgifter</h2>
+              <h2 className="text-lg font-bold mb-6"> 1. Företagsuppgifter </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   type="text"
@@ -338,7 +337,7 @@ const QuoteForm = () => {
               <div className="flex items-center">
                 <input
                   type="checkbox"
-                  id="contai  ne    rhandling"
+                  id="containerhandling"
                   className="mr-2 size-6"
                 />
 
@@ -362,148 +361,64 @@ const QuoteForm = () => {
             </div>
 
             {/* Section 3.3 - Redskap och maskiner */}
+            
             <h3 className="text-md font-semibold mb-4">
               3.3 Redskap och maskiner
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="flex items-center">
+            <div className="flex flex-col mb-6">
+
+              <div className="flex my-5">
+                <div className="md:w-1/2">
                 <input
                   type="checkbox"
                   id="handtruck"
-                  className="mr-2 size-6 "
+                  className="mr-2 size-6"
                 />
                 <label htmlFor="handtruck">Handtruck önskas</label>
-              </div>
-              <input
-                type="text"
-                placeholder="Antal timmar"
-                className="p-2 border focus:outline-orange-500 rounded"
-              />
-
-              <div className="flex items-center">
+                </div>
                 <input
-                  type="checkbox"
-                  id="gaffeltruck2"
-                  className="mr-2 size-6   "
+                  type="text"
+                  placeholder="Antal timmar"
+                  className="p-2 border focus:outline-orange-500 rounded md:w-1/2 "
                 />
-                <label htmlFor="gaffeltruck2">Gaffeltruck önskas</label>
-              </div>
-              <input
-                type="text"
-                placeholder="Antal timmar"
-                className="p-2 border focus:outline-orange-500 rounded"
-              />
-
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="travers"
-                  className="mr-2 size-6   "
-                />
-                <label htmlFor="travers">Travers önskas (max 7ton)</label>
               </div>
 
-              <input
-                type="text"
-                placeholder="Antal timmar"
-                className="p-2 border focus:outline-orange-500 rounded"
-              />
-            </div>
-
-            {/* Section 4 Heading */}
-            {/* <div>
-              <h4 className="text-lg font-bold mb-4">4. Kringtjänster</h4>
-              <div className="grid md:grid-col gap-4 mb-6">
-                <div className="flex items-center mb-4">
+              <div className="flex my-5">
+                <div className="md:w-1/2">
                   <input
                     type="checkbox"
-                    id="handtruck"
-                    className="mr-2 size-6"
+                    id="gaffeltruck2"
+                    className="mr-2 size-6   "
                   />
-                  <div className="flex space-x-5 items-center">
-                    <label htmlFor="handtruck" className="md:mr-[11rem]">
-                      Handtruck önskas
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Antal timmar"
-                      className="p-2 w-64 border focus:outline-orange-500 rounded"
-                    />
-                  </div>
+                  <label htmlFor="gaffeltruck2">Gaffeltruck önskas</label>
                 </div>
-                <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
-
-                <div className="mb-4 md:flex justify-between">
-                  <label className="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      className="form-checkbox text-indigo-600 size-6"
-                    />
-                  </label>
-                  <span className="ml-2 mr-[9.7rem]">
-                    Orderhantering önskas:
-                  </span>
+                <div className="md:w-1/2">
                   <input
                     type="text"
                     placeholder="Antal timmar"
-                    className="p-2 border w-64 focus:outline-orange-500 rounded"
+                    className="p-2 border focus:outline-orange-500 rounded"
                   />
                 </div>
-                <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
-                <div className="mb-4 md:flex justify-between">
-                  <label className="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      className="form-checkbox text-orange-600 size-6"
-                    />
-                    <span className="ml-2 ">
-                      Upphämtning / utkörning av gods önskas
-                    </span>
-                  </label>
-                  <div className="ml-4 mt-2  space-x-4">
-                    <input
-                      type="text"
-                      placeholder="Upphämtningsadress"
-                      className="border w-54 text-start my-3 border-gray-300 p-2 rounded-md"
-                    />
+              </div>
 
-                    <input
-                      type="text"
-                      placeholder="Leveransadress"
-                      className="border w-54 text-start my-3 mr-6 border-gray-300 p-2 rounded-md"
-                    />
-                  </div>
+              <div className="flex my-5">
+                <div className="md:w-1/2">
+                  <input
+                    type="checkbox"
+                    id="travers"
+                    className="mr-2 size-6"
+                  />
+                  <label htmlFor="travers">Travers önskas (max 7ton)</label>
                 </div>
-                <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
-                <div className="mb-4 md:flex justify-between">
-                  <label className="inline-flex items-center">
-                    <input type="checkbox" className="form-checkbox size-6" />
-                    <span className="ml-2">
-                      Behöver köpa fler kringtjänster såsom inventering,
-                      kvalitetskontroll, etc.
-                    </span>
-                  </label>
-                </div>
-
-                <div className="mb-4 md:flex justify-between">
-                  <label className="inline-flex items-center">
-                    <input type="checkbox" className="form-checkbox size-6" />
-                    <span className="ml-2">
-                      Behöver förslag på en komplett 3pl lösning
-                    </span>
-                  </label>
+                <div className="md:w-1/2">
+                  <input
+                    type="text"
+                    placeholder="Antal timmar"
+                    className="p-2 border focus:outline-orange-500 rounded"
+                  />
                 </div>
               </div>
-             
-              <div className="sm:col-span-2">
-                <button
-                  type="submit"
-                  className="w-full bg-orange-500 text-white py-3 px-4 rounded-md shadow-md hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 transition duration-300"
-                >
-                  Skicka in
-                </button>
-              </div>
-            </div> */}
+            </div>
 
             <div className="flex flex-col items-center justify-center">
               <div className="bg-white w-full">
@@ -512,55 +427,60 @@ const QuoteForm = () => {
                 </h2>
 
                 {/* First Section */}
-                <div className="mb-4 md:flex justify-between">
-                  <label className="flex items-center space-x-2">
-                    <input type="checkbox" className="form-checkbox size-6" />
+                <div className="mb-4 flex">
+                  <label className="flex items-center md:w-1/2 ">
+                    <input type="checkbox" className="form-checkbox size-6 me-2" />
                     <span>Hjälp med dokumentation föradrar</span>
                   </label>
                   <input
-                    type="number"
+                    type="text"
                     placeholder="Antal timmar"
-                    className="mt-2  p-2 border border-gray-300 rounded focus:ring-orange-500 focus:border-orange-500"
+                    className="mt-2 p-2 border rounded  focus:border-orange-500 md:w-1/2 "
                   />
                 </div>
+                <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
                 {/* Second Section */}
-                <div className="mb-4 md:flex justify-between">
-                  <label className="flex items-center space-x-2">
-                    <input type="checkbox" className="form-checkbox size-6" />
+
+                <div className="mb-4 flex">
+                  <label className="flex items-center md:w-1/2">
+                    <input type="checkbox" className="form-checkbox size-6 me-2" />
                     <span>Orderhantering & inköp</span>
                   </label>
                   <input
-                    type="number"
+                    type="text"
                     placeholder="Antal timmar"
-                    className="mt-2  p-2 border border-gray-300 rounded focus:ring-orange-500 focus:border-orange-500"
+                    className="mt-2  p-2 border rounded  focus:border-orange-500 md:w-1/2"
                   />
                 </div>
 
+
+
+                <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
                 {/* Third Section */}
                 <div className="mb-4">
                   <label className="md:flex items-center space-x-2">
                     <input type="checkbox" className="form-checkbox size-6" />
                     <span>Upphandling / hantering av gods orders</span>
                   </label>
-                  <div className="flex space-x-4 mt-2">
+                  <div className="flex space-x-4 m-7">
                     <input
                       type="text"
                       placeholder="Upphandlingsprocess"
-                      className="w-full p-2 border border-gray-300 rounded focus:ring-orange-500 focus:border-orange-500"
+                      className=" p-2 border border-gray-300 rounded focus:ring-orange-500 focus:border-orange-500"
                     />
                     <input
                       type="text"
                       placeholder="Leveransmetod"
-                      className="w-full p-2 border border-gray-300 rounded focus:ring-orange-500 focus:border-orange-500"
+                      className=" p-2 border border-gray-300 rounded focus:ring-orange-500 focus:border-orange-500"
                     />
                   </div>
                 </div>
-
+                <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
                 {/* Fourth Section */}
-                <div className="mb-4 md:flex justify-between">
-                  <label className="flex items-center space-x-2">
-                    <input type="checkbox" className="form-checkbox size-6" />
+                <div className="mb-4 md:flex py-4 justify-between">
+                  <label className="flex items-center space-x-4">
+                    <input type="checkbox" className="form-checkbox size-7" />
                     <span>
                       Behöver hjälp för kringfunktioner såsom montering,
                       underhåll och etc. Kontakta oss gärna för mer info!
@@ -569,7 +489,7 @@ const QuoteForm = () => {
                 </div>
 
                 {/* Fifth Section */}
-                <div className="mb-6">
+                <div className="mb-6  py-4">
                   <label className="flex items-center space-x-2">
                     <input type="checkbox" className="form-checkbox size-6" />
                     <span>
@@ -583,7 +503,7 @@ const QuoteForm = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="bg-orange-500 text-white py-3 px-6 rounded-lg hover:bg-orange-600"
+                    className="bg-orange-500 text-white py-3 md:w-full rounded-lg hover:bg-orange-600"
                   >
                     Skicka In
                   </button>

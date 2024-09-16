@@ -67,7 +67,7 @@ export default function Footer() {
           <div className="md:w-3/12  mt-10">
             <p className="text-2xl mb-5 text-white font-medium">Quick Links</p>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="#">
+              <Link href="/">
                 <i className="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>
                 Home
               </Link>
