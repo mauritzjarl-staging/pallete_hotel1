@@ -97,13 +97,14 @@ export default function Header() {
           className={`bg-[#001d24] text-white flex justify-between items-center w-full  md:px-0 md:w-[90%] py-4 ${isSticky ? "fixed top-0 z-50" : "relative"}`}
         >
           <div className="w-3/12 xl:w-1/5 md:w-2/12 ms-5 h-auto">
+          <Link href="/">
             <Image
               src="/imgs/Pallhotellet.se.png"
               alt="Logo"
               width={250}
               height={200}
-              href="/"
             />
+          </Link>
           </div>
 
           {/* Mobile menu toggler */}
