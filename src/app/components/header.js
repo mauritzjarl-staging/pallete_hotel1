@@ -178,27 +178,27 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden bg-[#001d24] text-white p-4">
           <ul className="space-y-4 ">
-          <li className={`${pathname === '/' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
+          <li className="text-white hover:text-[#ff6300]">
               <Link href="/">Hem</Link>
             </li>
-           <li className={`${pathname === '/' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
+           <li className="text-white hover:text-[#ff6300]">
               <Link href="/findus">Hitta oss</Link>
             </li>
-           <li className={`${pathname === '/' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
-              <Link href="/service">Tjänster</Link>
+           <li className="text-white hover:text-[#ff6300]">
+              <Link href="/services">Tjänster</Link>
             </li>
-           <li className={`${pathname === '/' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
+           <li className="text-white hover:text-[#ff6300]">
               <Link href="/contact">Kontakt</Link>
             </li>
-           <li className={`${pathname === '/' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
+           <li className="text-white hover:text-[#ff6300]">
               <Link href="/login">Logga in</Link>
             </li>
           </ul>
 
           {/* Mobile Request for Quotation Button */}
           <div className="mt-4 border-2 border-[#ff6300] rounded-md">
-            <button className="w-full py-2 text-sm hover:text-[#ff6300]">
-            Offertförfrågan
+            <button href="/quotation" className="w-full py-2 text-sm hover:text-[#ff6300]">
+              <Link href="/quotation">Offertförfrågan</Link>
             </button>
           </div>
         </div>     
