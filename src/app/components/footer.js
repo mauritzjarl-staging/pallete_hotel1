@@ -20,8 +20,7 @@ export default function Footer() {
               src="/imgs/Pallhotellet.se.png"
             />
             <p className="text-sm md:w-8/12 w-4/6 hover:text-white">
-              Diam dolor diam ipsum sit. Aliqa diam amet diam at eos. Clita erat
-              ipsum et lorem et sit, sed stet lorem sit clita.
+            Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket annat!
             </p>
             <div className="flex my-5 gap-3">
               <Link href="#" className="border hover:text-white hover:border-white p-2 rounded-md border-[#808E91]">
@@ -47,19 +46,19 @@ export default function Footer() {
             <li className="hover:text-white my-3 text-sm">
               <Link href="#" className="flex">
                 <IoLocationSharp size={16} />
-                <p className="ms-3">59196 Motala Sweden</p>
-              </Link>
-            </li>
-            <li className="hover:text-white my-3  text-sm">
-              <Link href="#" className="flex">
-                <MdCall size={16} />
-                <p className="ms-3">info@pallhotellet.se</p>
+                <p className="ms-3">Vickerkullavägen 2, 591 45 Motala</p>
               </Link>
             </li>
             <li className="hover:text-white my-3 text-sm">
               <Link href="#" className="flex">
                 <MdEmail size={16} />
-                <p className="ms-3">+012 345 67890</p>
+                <p className="ms-3">0141-21 50 44</p>
+              </Link>
+            </li>
+            <li className="hover:text-white my-3  text-sm">
+              <Link href="#" className="flex">
+                <MdCall size={16} />
+                <p className="ms-3">order@pallhotellet.se</p>
               </Link>
             </li>
           </div>
@@ -68,32 +67,32 @@ export default function Footer() {
             <p className="text-2xl mb-5 text-white font-medium">Quick Links</p>
             <li className="hover:text-white my-3 text-sm">
               <Link href="#">
-                <i className="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>
                 Home
               </Link>
             </li>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="#">
-                <i className="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>
-                Contact
+              <Link href="/">
+                Hem
               </Link>
             </li>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="#">
-                <i className="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>
-                Request for quotation
+              <Link href="/services">
+                Hitta oss
               </Link>
             </li>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="#">
-                <i className="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>
-                Terms & Conditions
+              <Link href="/contact">
+                Kontakt
               </Link>
             </li>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="#">
-                <i className="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>
-                Login
+              <Link href="/login">
+                Logga in
+              </Link>
+            </li>
+            <li className="hover:text-white my-3 text-sm">
+              <Link href="/quotation">
+                Offertförfrågan
               </Link>
             </li>
           </div>
@@ -102,7 +101,7 @@ export default function Footer() {
 
         <div className="md:w-10/12 mx-auto px-10 ">
           <p className="flex items-center content-center ">
-            <span className="text-white"> &copy; Pallethotel </span>
+            <span className="text-white"> &copy; Pallhotellet  </span>
             <span className="text-gray-400 hover:text-white"> &nbsp; 2024, All Rights Reserved. </span>
           </p>
         </div>
