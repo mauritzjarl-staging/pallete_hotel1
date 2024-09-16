@@ -635,7 +635,7 @@ export default function HomePage() {
                 <Image
                   src={testimonial.image}
                   className="mx-auto rounded-full"
-                  alt={`Client-Img ${index + 1}`}
+                  alt="{Client-Img ${index + 1}}"
                   width={90}
                   height={90}
                 />
