@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Pallet Hotel</title>
+</head>
+
+<body class="font-[montserrat]">
+
+  <!-- NAV+SLIDERIMAGE -->
+  <!-- Add all page content inside this div if you want the side div to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+
+    <header class="bg-[url('imgs/Frame5892.png')] md:pt-0 pt-4  object-cover bg-cover md:h-[48rem] bg-center w-full">
+      <div class="container mx-auto w-[90%] text-[#989898] hidden md:flex justify-between items-center py-4">
+        <div class=" flex flex-column md:text-sm xl:text-lg  text-sm items-center space-x-6">
+          <div class=" hover:text-white flex items-center space-x-3">
+            <p>591 90 Motala, Sweden</p>
+            <i class="fa-solid fa-location-dot "></i>
+          </div>
+          <div class=" hover:text-white flex items-center space-x-3 ">
+            <p>info@pallhotellet.se</p>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+        </div>
+        <div class="flex text-sm md:text-sm xl:text-lg items-center">
+          <p>Follow Us:</p>
+          <div class="px-4 hover:cursor-pointer md:space-x-4 space-x-2">
+            <i href="#" class="fa-brands hover:text-white fa-twitter"></i>
+            <i href="#" class="fa-brands hover:text-white fa-facebook"></i>
+            <i href="#" class="fa-brands hover:text-white fa-linkedin"></i>
+            <i href="#" class="fa-brands hover:text-white fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Navbar -->
+      <!-- bg-[#001d24] -->
+      <div class="bg-[#001d24]  text-white flex justify-between items-center w-[90%] mx-auto md:py-3 relative">
+        <!-- Logo -->
+        <div class="w-3/12 xl:w-1/5 md:w-2/12 ms-5 ">
+          <img src="imgs/Palltheplace.png" alt="">
+        </div>
+
+        <!-- Top Navigation Menu for mobiles -->
+        <div class="topnav flex md:hidden">
+          <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+
+          <!-- Navigation links (hidden by default) -->
+          <div id="myLinks" class="w-full">
+            <a href="#home" class="active">Home</a>
+            <a href="#">Find Us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#">Login</a>
+          </div>
+        </div>
+
+
+        <!-- Horizontal Menu (for larger screens) -->
+        <ul id="menu" class="hidden md:flex xl:text-lg md:text-sm text-sm lg:space-x-6 md:space-x-3">
+          <li class="hover:text-[#ff6300]"><a href="#">Home</a></li>
+          <li class="hover:text-[#ff6300]"><a href="#">Find Us</a></li>
+          <li class="hover:text-[#ff6300]"><a href="#">Services</a></li>
+          <li class="hover:text-[#ff6300]"><a href="#">Contact</a></li>
+          <li class="hover:text-[#ff6300]"><a href="#">Login</a></li>
+        </ul>
+
+
+        <!-- Request Button -->
+        <div
+          class=" md:me-4 border-2 hidden md:block xl:text-lg md:text-xs text-sm outline-2 xl:px-[1.5rem] md:px-[0.6rem] md:py-[0.30rem] xl:py-[0.65rem] border-[#ff6300] rounded-[6px]">
+          <button class="hover:text-[#ff6300] py-1 font-medium">Request for quotation</button>
+        </div>
+      </div>
+
+      <div class="flex justify-center flex-col">
+        <div class="flex justify-center">
+          <p
+            class="text-center pt-32 sm:w-3/4 md:w-4/5 md:text-[1rem]  text-xs w-4/5 pb-10 md-leading-[2.5] leading-[1.5] text-white">
+            <span
+              class="md:text-[2.5rem] text-lg leading-[1.4] font-extrabold font-[montserrat] text-white">Your
+              Space, Your Storage,<br> Our Commitment.</span>
+            <br>
+            <span class="xl:text-xl lg:text-lg">We have both inside and outside that is well suited for all kinds storage</span>
+          </p>
+        </div>
+
+        <div class="items-center text-center">
+          <button
+            class="lg:w-60 md:text-sm md:w-60 md:h-[3rem] h-9 w-40 mb-24 text-sm hover:border-white text-white bg-[#ff6300] hover:border-2 rounded-md lg:text-xl font-bold">DISCOVER
+            MORE</button>
+        </div>
+      </div>
+    </header>
+
+  </div>
+  <!-- Section2 -->
+  <div class="bg-[#08343D] lg:flex items-center  justify-evenly text-white lg:py-4 py-14">
+
+    <div class="flex items-center mx-6  mb-6 space-x-5 md:space-x-14">
+      <img src="imgs/Layer_1.png" alt="Flexible warehousing" class="h-16 w-16">
+      <div class="pe-5">
+        <h3 class="xl:text-xl md:text-sm font-bold text-sm lg:font-bold md:font-medium">Flexible warehousing</h3>
+        <p class=" text-[0.6rem] md:text-[0.9rem] ">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
+          justo sed vero dolor
+          duo.</p>
+      </div>
+    </div>
+
+    <div class="flex items-center mx-6  mb-6 space-x-5 md:space-x-14">
+      <img src="imgs/Layer_2.png" alt="Fast order processing" class="h-16 w-16">
+      <div class="pe-5">
+        <h3 class="xl:text-xl md:text-sm font-bold  text-sm lg:font-bold md:font-medium">Fast order processing</h3>
+        <p class=" text-[0.6rem] md:text-[0.9rem] ">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
+          justo sed vero dolor
+          duo.</p>
+      </div>
+    </div>
+
+    <div class="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
+      <img src="imgs/Layer_3.png" alt="More efficient flow" class="h-16 w-16">
+      <div class="pe-5">
+        <h3 class="xl:text-xl md:text-sm font-bold text-sm lg:font-bold md:font-medium">More efficient flow</h3>
+        <p class=" text-[0.6rem] md:text-[0.9rem] ">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum dia m
+          justo sed vero dolor
+          duo.</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Section3 -->
+  <div class="h-75 flex md:flex-row flex-col p-8">
+    <!--col-1 Text -->
+    <div class="p-8 space-y-4 md:w-6/12 w-full">
+      <p class="bg-[#FF6F0F17] text-[#ff6300] flex w-36  p-3 text-[1rem] ">WHO WE ARE</p>
+      <p class="md:text-[2rem] text-[1.2rem] font-bold md:w-5/6 w-full">We help you with warehousing, goods handling,
+        documentation and much more.</p>
+      <p class="lg:text-[0.87rem] md:text-[0.70rem] text-[0.70rem] font-medium text-gray-500">Tempor erat elitr rebum at
+        clita. Diam dolor
+        diam ipsum sit.
+        Aliqu diam amet diam et eos. Clita erat ipsum et
+        lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
+      <p
+        class="bg-[#7d7d7d21] h-[7rem] font-medium text-gray-500 md:text-[0.77rem] p-[2rem] text-[0.70rem] pl-5 place-content-around ">
+        Aliqu diam
+        amet diam et eos. Clita erat
+        ipsum
+        et lorem sed stet lorem sit clita duo justo erat amet <br>
+        <span class="text-orange-600">Christopher Jarl, CEO</span>
+      </p>
+      <div class="flex space-x-8">
+
+        <button class="bg-[#ff6300] text-white border-2 border-[#ff6300] text-nowrap py-3  font-bold px-3 md:px-5 lg:px-10  
+          text-[0.8rem] md:text-[0.9] text-center rounded-md">Learn
+          More <i class="fa-solid fa-circle-arrow-right"></i></button>
+
+
+        <button
+          class="bg-[#ffffff] text-[#ff6300] border-2 border-[#ff6300] text-nowrap py-3 font-bold  px-3 md:px-5 lg:px-10  text-[0.8rem] md:text-[0.9] text-center rounded-md">Contact
+          US <i class="fa-solid fa-circle-arrow-right" style="color: #ff6300;"></i>
+        </button>
+
+      </div>
+    </div>
+    <!--col-2 side Image -->
+    <div class="relative p-14 md:w-6/12 w-full">
+      <img src="imgs/Rectangle4.png" alt="Background Image" class=" w-full h-full">
+      <div class="absolute top-8 left-[2rem] border-8 border-white ">
+        <img src="imgs/image2.png" alt="Overlay Image" class="md:w-[8rem] md:h-[9rem] h-[8rem] w-[8rem]">
+      </div>
+    </div>
+  </div>
+
+  <!-- section4 what we offer slider -->
+  <div class="bg-[#7d7d7d21] pb-[40px] px-20">
+    <div
+      class="flex flex-col items-center justify-between pt-[16.07px]  pr-[17.96px] gap-[9.46px]  pb-[16.07px] pl-[17.96px]">
+      <p class="bg-[#FF6F0F17] text-[#ff6300] flex p-3 text-[1rem]  mt-8">WHAT WE OFFER</p>
+      <p class="md:text-[2rem] text-[1.2rem] text-center font-bold font-[montserrat] lg:w-3/6 w-3/6">We offer flexible
+        and customized solutions
+      </p>
+    </div>
+    <!-- what we offer slider -->
+    <div class="solutions-slider justify-center text-center sm:hidden">
+      <!-- Box1 -->
+      <div class=" md:px-48">
+        <div class=" rounded-t-3xl justify-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
+          <span
+            class="items-center inline-flex rounded-md -mt-1 pt-3 overflow-hidden text-[1.1rem] text-white pb-3 font-semibold">Storage</span>
+          <p class="text-l mt-8 font-bold">Stocking for everyone's needs</p>
+          <p class="text-[#989898] text-[0.8rem] py-4">Tempor erat elitr rebum at clita dolor diam ipsum sit
+            diam
+            amet diam et eos
+          </p>
+          <!-- Greybox1 -->
+          <div class="bg-[#7d7d7d21] py-2 mx-auto w-11/12">
+            <div class="flex px-2 space-x-5 justify-around font-semibold">
+              <p class="flex  m-0 p-0 text-[0.8rem]">10,000&nbsp;<span class="font-light text-[0.7rem] pt-[2px]">pallet
+                  capacity</span></p>
+              <span class="flex text-[0.7rem]">4950&nbsp;<p class="font-light text-[0.8rem]">pallets in stock</p>
+              </span>
+            </div>
+            <div class="container1 w-8/12 mx-auto ">
+              <div class="skills text-[0.4rem] my-2 html">40%</div>
+            </div>
+          </div>
+          <!-- Greybox Image -->
+          <div class="w-full mt-4">
+            <img src="imgs/Rectangle 12.png" alt="Grey box">
+          </div>
+        </div>
+      </div>
+      <!-- Box2 -->
+
+      <div class=" md:px-48">
+        <div class="rounded-t-3xl border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
+          <span
+            class="items-center inline-flex rounded-md -mt-1 pt-3 overflow-hidden text-[1.1rem] text-white pb-3 font-semibold">Goods
+            Handling</span>
+          <p class="text-l mt-8 font-bold">We take care of your goods</p>
+          <p class="text-[#989898] text-[0.8rem] py-4">Tempor erat elitr rebum at clita dolor diam ipsum sit
+            diam
+            amet diam et eos
+          </p>
+          <!-- Greybox1 -->
+          <div class="bg-[#7d7d7d21] py-2 mx-auto w-11/12">
+            <div class="flex space-x-1 justify-around font-semibold">
+              <p class="flex m-0 p-0 text-[0.8rem]">1000&nbsp; <span class="font-light text-[0.7rem] pt-[2px]">
+                  customers
+                  as
+                  ml</span></p>
+              <span class="flex text-[0.7rem]">4000 &nbsp;<p class="font-light text-[0.8rem]">existing customers</p>
+              </span>
+            </div>
+            <div class="container1 w-8/12 mx-auto ">
+              <div class="skills text-[0.4rem] my-2 html">40%</div>
+            </div>
+          </div>
+          <!-- Greybox Image -->
+          <div class="mt-4">
+            <img src="imgs/Rectangle 13.png" alt="Grey box">
+          </div>
+        </div>
+      </div>
+      <!-- Box3 -->
+      <div class=" md:px-48">
+        <div class="rounded-t-3xl border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
+          <span
+            class="items-center inline-flex rounded-md -mt-1 pt-3 overflow-hidden text-[1.1rem] text-white pb-3 font-semibold">Documentation</span>
+          <p class="text-l font-bold">We take care of your inventory</p>
+          <p class="text-[#989898] text-[0.8rem] px-10 py-4">Tempor erat elitr rebum at clita dolor diam ipsum sit
+            diam
+            amet diam et eos
+          </p>
+          <!-- Greybox1 -->
+          <div class="bg-[#7d7d7d21] py-2 mx-auto w-11/12">
+            <div class="flex px-2 space-x-2 font-semibold justify-around">
+              <p class="flex m-0 p-0 text-[0.8rem]">5000&nbsp;<span
+                  class="font-light text-[0.7rem] pt-[2px] ms-2">customers as ml
+                  <p class="flex  m-0 p-0 text-[0.8rem] text-nowrap">1000&nbsp;<span
+                      class="font-light text-[0.7rem]">customers</span></p>
+            </div>
+            <div class="container1 w-8/12 mx-auto ">
+              <div class="skills text-[0.4rem] my-2 html">40%</div>
+            </div>
+          </div>
+          <!-- Greybox Image -->
+          <div class="w-full mt-4">
+            <img src="imgs/Rectangle 14.png" alt="Grey box">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- section5 what we offer -->
+    <div class="sm:flex hidden sm:flex-col lg:flex-row gap-8 md:mx-8  text-center justify-center place-items-center">
+      <!-- Box1 -->
+      <div class="lg:w-4/12 w-8/12 rounded-t-3xl justify-center  border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
+        <span
+          class="items-center inline-flex rounded-md -mt-1 pt-3 overflow-hidden text-[1.1rem] text-white px-[50px] pb-3 font-semibold">Storage</span>
+        <p class="text-l mt-8 font-bold">Stocking for everyone's needs</p>
+        <p class="text-[#989898] text-[0.8rem] px-10 py-4">Tempor erat elitr rebum at clita dolor diam ipsum sit diam
+          amet diam et eos
+        </p>
+        <!-- Greybox1 -->
+        <div class="bg-[#7d7d7d21] py-2 mx-auto w-11/12">
+          <div class="flex px-3  space-x-5 font-semibold">
+            <p class="flex m-0 p-0 text-[0.8rem]">10,000&nbsp;<span class="font-light text-[0.7rem] pt-[2px]">pallet
+                capacity</span></p>
+            <span class="flex text-[0.7rem] p-0 m-0 ">4950&nbsp;<p class="font-light text-[0.8rem] ">pallets in stock
+              </p></span>
+          </div>
+          <div class="container1 w-8/12 mx-auto ">
+            <div class="skills text-[0.4rem] my-2 html">40%</div>
+          </div>
+        </div>
+        <!-- Greybox Image -->
+        <div class="w-full mt-4">
+          <img src="imgs/Rectangle 12.png" alt="Grey box">
+        </div>
+      </div>
+      <!-- Box2 -->
+      <div class="lg:w-4/12 w-8/12 rounded-t-3xl justify-center  border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
+        <span
+          class="items-center inline-flex rounded-md -mt-1 pt-3 overflow-hidden text-[1.1rem] text-white px-[50px] pb-3 font-semibold">Goods
+          Handling</span>
+        <p class="text-l mt-8 font-bold">We take care of your goods</p>
+        <p class="text-[#989898] text-[0.8rem] px-10 py-4">Tempor erat elitr rebum at clita dolor diam ipsum sit diam
+          amet diam et eos
+        </p>
+        <!-- Greybox1 -->
+        <div class="bg-[#7d7d7d21] py-2 mx-auto w-11/12">
+          <div class="flex px-3 space-x-5 justify-around font-semibold">
+            <p class="flex m-0 p-0 text-[0.8rem]">10&nbsp;<span class="font-light text-[0.7rem] pt-[2px]"> customers as
+                ml</span></p>
+            <span class="flex text-[0.7rem]">4&nbsp;<p class="font-light text-[0.8rem]">existing customers</p></span>
+          </div>
+          <div class="container1 w-8/12 mx-auto ">
+            <div class="skills text-[0.4rem] my-2 html">40%</div>
+          </div>
+        </div>
+        <!-- Greybox Image -->
+        <div class="w-full mt-4">
+          <img src="imgs/Rectangle 13.png" alt="Grey box">
+        </div>
+      </div>
+      <!-- Box3 -->
+      <div class="lg:w-4/12 w-8/12 rounded-t-3xl justify-center  border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
+        <span
+          class="items-center inline-flex rounded-md -mt-1 pt-3 overflow-hidden text-[1.1rem] text-white px-[50px] pb-3 font-semibold">Documentation</span>
+        <p class="text-l mt-8 font-bold">We take care of your inventory</p>
+        <p class="text-[#989898] text-[0.8rem] px-10 py-4">Tempor erat elitr rebum at clita dolor diam ipsum sit diam
+          amet diam et eos
+        </p>
+        <!-- Greybox1 -->
+        <div class="bg-[#7d7d7d21] py-2 mx-auto w-11/12">
+          <div class="flex px-3 space-x-5 justify-around font-semibold">
+            <p class="flex p-0 text-[0.8rem]">5<span class="font-light text-[0.7rem] pt-[2px] ms-2">customers as ml</p>
+            <p class="flex  m-0 p-0 text-[0.8rem] text-nowrap">1&nbsp;<span
+                class="font-light text-[0.7rem]">customers</span></p>
+          </div>
+          <div class="container1 w-8/12 mx-auto ">
+            <div class="skills text-[0.4rem] my-2 html">40%</div>
+          </div>
+        </div>
+        <!-- Greybox Image -->
+        <div class="w-full mt-4">
+          <img src="imgs/Rectangle 14.png" class="h-full" alt="Grey box">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- section5 -->
+  <div class="flex flex-col items-center justify-between gap-8  pb-[4rem] pr-[4rem] pl-[4rem]">
+    <p class="bg-[#FF6F0F17] text-[#ff6300] flex p-3 text-[1rem]  mt-8">Our Staff</p>
+    <p class="md:text-[2rem] text-[1.2rem]  text-center font-bold font-[montserrat] ">Our Staff is our strength
+    </p>
+    <div class="flex flex-wrap md:flex-nowrap md:gap-6 justify-around md:justify-center">
+      <!-- box1 -->
+      <div class="md:w-3/12 rounded-md bg-[#F4F4F4] w-5/12">
+
+        <div class=" flex flex-col">
+          <div>
+            <img src="imgs/1.png" alt="">
+          </div>
+          <div class="my-6 flex flex-col text-center">
+            <span class="text-lg">Full Name</span>
+            <span class="text-xs text-[#ff6300]">Designation</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- box2 -->
+      <div class="md:w-3/12 rounded-md bg-[#F4F4F4] w-5/12">
+
+        <div class=" flex flex-col">
+          <div>
+            <img src="imgs/2.png" alt="">
+          </div>
+          <div class="my-6 flex flex-col text-center">
+            <span class="text-lg">Full Name</span>
+            <span class="text-xs text-[#ff6300]">Designation</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- box3 -->
+      <div class="md:w-3/12 rounded-md bg-[#F4F4F4] w-5/12">
+
+        <div class=" flex flex-col">
+          <div>
+            <img src="imgs/3.png" alt="">
+          </div>
+          <div class="my-6 flex flex-col text-center">
+            <span class="text-lg">Full Name</span>
+            <span class="text-xs text-[#ff6300]">Designation</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- box4 -->
+      <div class="md:w-3/12  rounded-md bg-[#F4F4F4] w-5/12">
+
+        <div class=" flex flex-col">
+          <div>
+            <img src="imgs/1.png" alt="">
+          </div>
+          <div class="my-6 flex flex-col text-center">
+            <span class="text-lg">Full Name</span>
+            <span class="text-xs text-[#ff6300]">Designation</span>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------------------- -->
+  <!-- testimonials section -->
+  <div class="flex flex-col items-center px-[4rem] pb-10">
+    <p class="bg-[#FF6F0F17] text-[#ff6300] flex p-3 text-[1rem]  my-8">Testimonials</p>
+    <p class="md:text-[2rem] text-[1.2rem] text-center font-bold font-[montserrat] md:w-2/5 w-3/5 ">Trusted By Thousands
+      of
+      People and nonprofits
+    </p>
+  </div>
+  <div class="flex relative justify-center">
+    <!-- arrows -->
+    <!--  -->
+    <div class=" absolute  top-5 flex justify-between z-30 w-60">
+      <button class="slick-prev-testimonial"><i
+          class="fa-solid text-3xl content-center text-[#ff6300] fa-arrow-left"></i></button>
+      <button class="slick-next-testimonial"> <i
+          class="fa-solid text-3xl content-center text-[#ff6300] fa-arrow-right"></i></button>
+    </div>
+    <!-- -------------------------------------------------------------------- -->
+    <div class="testimonial-slider w-full">
+      <div class="mx-4 ">
+        <div class="w-11/12">
+          <img class="rounded-full w-20 h-20 mx-auto mb-12 " src="imgs/Ellipse 3.png" alt="">
+          <div class="content-box text-center rounded-lg text-white mt-6 mb-8 h-[350px] py-4">
+            <p class="md:text-[0.8rem] lg:text-[1rem] text-[0.9rem] font-[montserrat] py-10 px-10">
+              Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo. Tempor ut
+              dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam jussed vero dolor duo. Tempor ut dolore lorem
+              kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.
+            </p>
+            <p class="font-semibold md:text-[0.8rem] lg:text-[0.9rem] text-[0.8rem]">Full Name</p>
+            <p class="md:text-[0.8rem] lg:text-[0.9rem] text-[0.6rem]">Designation</p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-4 ">
+        <div class="w-11/12">
+          <img class="rounded-full w-20 h-20 mx-auto mb-12 " src="imgs/Ellipse 3.png" alt="">
+          <div class="content-box text-center rounded-lg text-white mt-6 mb-8 h-[350px] py-4">
+            <p class="md:text-[0.8rem] lg:text-[1rem] text-[0.9rem] font-[montserrat] py-10 px-10">
+              Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo. Tempor ut
+              dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam jussed vero dolor duo. Tempor ut dolore lorem
+              kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.
+            </p>
+            <p class="font-semibold md:text-[0.8rem] lg:text-[0.9rem] text-[0.8rem]">Full Name</p>
+            <p class="md:text-[0.8rem] lg:text-[0.9rem] text-[0.6rem]">Designation</p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-4 ">
+        <div class="w-11/12">
+          <img class="rounded-full w-20 h-20 mx-auto mb-12 " src="imgs/Ellipse 3.png" alt="">
+          <div class="content-box text-center rounded-lg text-white mt-6 mb-8 h-[350px] py-4">
+            <p class="md:text-[0.8rem] lg:text-[1rem] text-[0.9rem] font-[montserrat] py-10 px-10">
+              Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo. Tempor ut
+              dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam jussed vero dolor duo. Tempor ut dolore lorem
+              kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.
+            </p>
+            <p class="font-semibold md:text-[0.8rem] lg:text-[0.9rem] text-[0.8rem]">Full Name</p>
+            <p class="md:text-[0.8rem] lg:text-[0.9rem] text-[0.6rem]">Designation</p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-4 ">
+        <div class="w-11/12">
+          <img class="rounded-full w-20 h-20 mx-auto mb-12 " src="imgs/Ellipse 3.png" alt="">
+          <div class="content-box text-center rounded-lg text-white mt-6 mb-8 h-[350px] py-4">
+            <p class="md:text-[0.8rem] lg:text-[1rem] text-[0.9rem] font-[montserrat] py-10 px-10">
+              Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo. Tempor ut
+              dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam jussed vero dolor duo. Tempor ut dolore lorem
+              kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.
+            </p>
+            <p class="font-semibold md:text-[0.8rem] lg:text-[0.9rem] text-[0.8rem]">Full Name</p>
+            <p class="md:text-[0.8rem] lg:text-[0.9rem] text-[0.6rem]">Designation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer>
+
+    <div class="leading-8 py-8  px-auto list-none bg-[#001D23]">
+      <div class=" flex lg:flex-row space-y-10 flex-col justify-between text-[#808E91] px-8 space-x-4 w-full ">
+        <div class="w-full pt-10">
+          <img class="mb-5 h-8" src="imgs/Palltheplace.png" alt="">
+          <p class="text-sm font-[montserrat] md:w-10/12 w-4/6 hover:text-white ">Diam dolor diam ipsum sit. Aliqa diam
+            amet diam at eos. Clita erat ipsum et
+            lorem et sit, sed stet lorem sit clita.
+          </p>
+          <div class="flex my-5  gap-3">
+            <a href="#"><i
+                class="fa-brands text-lg border w-7 text-center text-[#808E91] border-[#808E91] rounded-md hover:text-white fa-facebook-f"></i></a>
+            <a href="#"><i
+                class="fa-brands text-lg border w-7 text-center text-[#808E91] border-[#808E91] rounded-md hover:text-white fa-twitter"></i></a>
+            <a href="#"><i
+                class="fa-brands text-lg border w-7 text-center text-[#808E91] border-[#808E91] rounded-md hover:text-white fa-instagram"></i></a>
+            <a href="#"><i
+                class="fa-brands text-lg border w-7 text-center text-[#808E91] border-[#808E91] rounded-md hover:text-white fa-linkedin-in"></i></a>
+            <a href="#"><i
+                class="fa-brands text-lg border w-7 text-center text-[#808E91] border-[#808E91] rounded-md hover:text-white fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="font-[montserrat] w-full ">
+          <p class="text-2xl mb-5 font-medium text-white">Address</p>
+          <li class="hover:text-white my-3 text-sm"><a href="#"><i
+                class="me-2 fa-solid text-base  fa-location-dot"></i>59196 Motala Sweden</a>
+          </li>
+          <li class="hover:text-white my-3  text-sm"><a href="#"><i
+                class="me-2 fa-regular text-base fa-envelope"></i>info@pallhotellet.se</a>
+          </li>
+          <li class="hover:text-white my-3  text-sm"><a href="#"><i class="me-2 fa-solid text-base fa-phone"> </i>+012
+              345
+              67890</a></li>
+        </div>
+
+        <div class=" font-[montserrat] w-full ">
+          <p class="text-2xl mb-5 text-white font-medium">Quick Links</p>
+          <li class="hover:text-white my-3 text-sm"><a href="#"><i
+                class="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>Home</a></li>
+          <li class="hover:text-white my-3 text-sm"><a href="#"><i
+                class="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>Contact</a></li>
+          <li class="hover:text-white my-3 text-sm"><a href="#"><i
+                class="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>Request for quotation</a></li>
+          <li class="hover:text-white my-3 text-sm"><a href="#"><i
+                class="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>Terms & Conditions</a></li>
+          <li class="hover:text-white my-3 text-sm"><a href="#"><i
+                class="fa-solid font-extrabold text-[0.8rem] fa-chevron-right me-2"></i>Login</a></li>
+        </div>
+
+        <div class=" font-[montserrat] w-full ">
+          <p class="text-2xl mb-5 text-white font-medium">Newsletter</p>
+          <p class="mb-2 my-3 text-sm hover:text-white ">Sign up for our newsletter .</p>
+          <div
+            class="flex items-center  hover:border-white border-[#808E91] bg-transparent border-[1px] border-[#989898]-700 rounded-md overflow-hidden w-[14rem]">
+            <input type="email" placeholder="Your email"
+              class="pl-4 text-sm text-gray-700 focus:outline-none bg-transparent w-7/12" />
+            <button class="text-xs font-semibold rounded bg-orange-600 text-white py-3 my-1 px-3 ms-4">Sign
+              Up</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="bg-[#001D23]">
+      <div class="border-t-[1px] border-t-gray-700 mx-8 "></div>
+    </div>
+
+
+    <div class="mx-auto text-[#808E91] flex justify-between h-16 items-center py-4 bg-[#001D23]">
+      <div class="md:ml-10 ml-4">
+        <p class="text-center text-sm">&copy; <span class="text-white ">Pallethotel</span> 2024. All Rights
+          Reserved.</p>
+      </div>
+      <div class="md:mr-24 mr-4">
+        <p class="text-center text-sm">Pallethotel@2024</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Script-->
+  <script>
+    $(document).ready(function () {
+      // Initialize the slider with both autoplay and arrow navigation
+      $('.testimonial-slider').slick({
+        centerMode: true,
+        prevArrow: $('.slick-prev-testimonial'),
+        nextArrow: $('.slick-next-testimonial'),
+        // arrows: true,
+        centerPadding: '10px',
+        slidesToShow: 3,
+        autoplay: false, // Enable automatic sliding
+        autoplaySpeed: 3000, // Slide every 2 seconds
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '10px',
+              slidesToShow: 1,
+            }
+          },
+          {
+            breakpoint: 0,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '100px',
+              slidesToShow: 1,
+            }
+          }
+        ]
+      });
+
+      // Function to update the background color dynamically
+      function updateBackgroundColor() {
+        $('.slick-slide').each(function () {
+          // Apply background color for all slides
+          $(this).find('.text-box').css('background-color', '#F3F3F3');
+        });
+
+        // Apply background color for the center slide
+        $('.slick-center').find('.text-box').css('background-color', '#ff6300');
+      }
+
+      // Call the function after the slide changes
+      $('.testimonial-slider').on('afterChange', function (event, slick, currentSlide) {
+        updateBackgroundColor();
+      });
+
+      // Initial background color setting on load
+      updateBackgroundColor();
+    });
+
+
+    // New solutions slider
+    $('.solutions-slider').slick({
+      slidesToShow: 1, // Show 3 items at a time
+      slidesToScroll: 1,
+      // arrows: true,
+      // autoplay: true, // Enable autoplay prevArrow: '<button class="slick-prev"><i class="fa fa-arrow-left"></i></button>',
+      autoplaySpeed: 3000, // Slide every 2 seconds
+      // nextArrow: '<button class="slick-next"><i class="fa fa-arrow-right"></i></button>',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1, // Show 2 items at a time on smaller screens
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1, // Show 1 item at a time on mobile
+
+          }
+        }
+      ]
+    });
+
+  </script>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("hidden");
+      document.querySelector(".cursor-pointer").classList.toggle("change");
+    }
+  </script>
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+
+      var y = document.querySelector(".topnav");
+      y.classList.toggle("responsive");
+    }
+  </script>
+</body>
+
+</html>
