@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
@@ -134,7 +135,8 @@ const QuoteForm = () => {
                     name="toDateKallager"
                     placeholder="Till och med"
                     className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                  />
+                  /> 
+                  
                   <input
                     type="text"
                     name="Pallvikt/snitt"
@@ -361,20 +363,19 @@ const QuoteForm = () => {
             </div>
 
             {/* Section 3.3 - Redskap och maskiner */}
-            
+
             <h3 className="text-md font-semibold mb-4">
               3.3 Redskap och maskiner
             </h3>
             <div className="flex flex-col mb-6">
-
               <div className="flex my-5">
                 <div className="md:w-1/2">
-                <input
-                  type="checkbox"
-                  id="handtruck"
-                  className="mr-2 size-6"
-                />
-                <label htmlFor="handtruck">Handtruck önskas</label>
+                  <input
+                    type="checkbox"
+                    id="handtruck"
+                    className="mr-2 size-6"
+                  />
+                  <label htmlFor="handtruck">Handtruck önskas</label>
                 </div>
                 <input
                   type="text"
@@ -403,11 +404,7 @@ const QuoteForm = () => {
 
               <div className="flex my-5">
                 <div className="md:w-1/2">
-                  <input
-                    type="checkbox"
-                    id="travers"
-                    className="mr-2 size-6"
-                  />
+                  <input type="checkbox" id="travers" className="mr-2 size-6" />
                   <label htmlFor="travers">Travers önskas (max 7ton)</label>
                 </div>
                 <div className="md:w-1/2">
@@ -429,7 +426,10 @@ const QuoteForm = () => {
                 {/* First Section */}
                 <div className="mb-4 flex">
                   <label className="flex items-center md:w-1/2 ">
-                    <input type="checkbox" className="form-checkbox size-6 me-2" />
+                    <input
+                      type="checkbox"
+                      className="form-checkbox size-6 me-2"
+                    />
                     <span>Hjälp med dokumentation föradrar</span>
                   </label>
                   <input
@@ -444,7 +444,10 @@ const QuoteForm = () => {
 
                 <div className="mb-4 flex">
                   <label className="flex items-center md:w-1/2">
-                    <input type="checkbox" className="form-checkbox size-6 me-2" />
+                    <input
+                      type="checkbox"
+                      className="form-checkbox size-6 me-2"
+                    />
                     <span>Orderhantering & inköp</span>
                   </label>
                   <input
@@ -453,8 +456,6 @@ const QuoteForm = () => {
                     className="mt-2  p-2 border rounded  focus:border-orange-500 md:w-1/2"
                   />
                 </div>
-
-
 
                 <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
                 {/* Third Section */}

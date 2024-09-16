@@ -12,14 +12,14 @@ export default function Footer() {
     <footer>
       <div className="leading-8 py-8 list-none bg-[#001D23]">
         <div className="flex justify-center flex-col md:flex-row px-10 text-[#808E91]">
-          <div className="md:w-4/12 h-auto mt-10">
+          <div className="md:w-[30%] p-4  h-auto mt-10">
             <Image
               width={250}
               height={250}
              className="mb-5"
               src="/imgs/Pallhotellet.se.png"
             />
-            <p className="text-sm md:w-8/12 w-4/6 hover:text-white">
+            <p className="text-sm md:w-9/12 w-4/6 hover:text-white">
             Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket annat!
             </p>
             <div className="flex my-5 gap-3">
@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:w-3/12  mt-10">
+          <div className="md:w-[29%] p-4 mt-10">
             <p className="text-2xl mb-5 font-medium text-white">Address</p>
             <li className="hover:text-white my-3 text-sm">
               <Link href="#" className="flex">
@@ -63,13 +63,8 @@ export default function Footer() {
             </li>
           </div>
 
-          <div className="md:w-3/12  mt-10">
+          <div className="md:w-3/12 p-4 mt-10">
             <p className="text-2xl mb-5 text-white font-medium">Quick Links</p>
-            <li className="hover:text-white my-3 text-sm">
-              <Link href="#">
-                Home
-              </Link>
-            </li>
             <li className="hover:text-white my-3 text-sm">
               <Link href="/">
                 Hem

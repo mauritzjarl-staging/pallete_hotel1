@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import Image from "next/image";
 import { IoArrowForward } from 'react-icons/io5';
+import Link from 'next/link';
 
 // Define all tab content as separate components
 const LagerhallningInomhus = () => (
@@ -29,13 +30,15 @@ const LagerhallningInomhus = () => (
                     </p>
                 </div>
             </div>
+            <Link href="/quotation ">
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
          text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 md:px-5 lg:px-10 text-center rounded-md"
+          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
+            </Link>
         </section>
 );
 
@@ -58,13 +61,15 @@ const LagerhallningUtomhus = () => (
                     </p>
                 </div>
             </div>
+            <Link href="/quotation ">
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
          text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 md:px-5 lg:px-10 text-center rounded-md"
+          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
+            </Link>
         </section>
 );
 
@@ -88,13 +93,15 @@ const HyraAvForbind = () => (
                     </p>
                 </div>
             </div>
+            <Link href="/quotation ">
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
          text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 md:px-5 lg:px-10 text-center rounded-md"
+          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
+            </Link>
         </section>
 );
 
@@ -118,13 +125,15 @@ const Godshantering = () => (
                     </p>
                 </div>
             </div>
+            <Link href="/quotation ">
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
-     text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-      px-3 md:px-5 lg:px-10 text-center rounded-md"
+         text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
+          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
+            </Link>
         </section>
 );
 
@@ -154,13 +163,15 @@ const Ovrigt = () => (
                     </p>
                 </div>
             </div>
+            <Link href="/quotation ">
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
-     text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-      px-3 md:px-5 lg:px-10 text-center rounded-md"
+         text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
+          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
+            </Link>
         </section>
 );
 
