@@ -1,8 +1,12 @@
-"use client";
-import React, { useState } from "react";
+
+import React from "react";
+import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
 import { PiPhoneCallThin } from "react-icons/pi";
 import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineBorderColor } from "react-icons/md";
+import { MdDateRange } from "react-icons/md";
+// import MapComponent from "../components/MapComponent";
 import dynamic from "next/dynamic";
 
 // Dynamically import MapComponent with SSR disabled
@@ -11,32 +15,6 @@ const MapComponent = dynamic(() => import("../components/MapComponent"), {
 });
 
 const QuoteForm = () => {
-  const [checkedSections, setCheckedSections] = useState({
-    kallager: false,
-    varmlager: false,
-    utomhusforvaring: false,
-    forrad: false,
-    gaffeltruck: false,
-    container: false,
-    ompackning: false,
-    handtruck: false,
-    gaffeltruck2: false,
-    travers: false,
-    containerhandling: false,
-    skrymmande: false,
-    helpDocumentation: false,
-    orderManagement: false,
-    upphandling: false,
-    kringfunktioner: false,
-    completeSolution: false,
-  });
-
-  const handleCheckboxChange = (section) => {
-    setCheckedSections((prevState) => ({
-      ...prevState,
-      [section]: !prevState[section],
-    }));
-  };
 
   return (
     <>
@@ -140,47 +118,46 @@ const QuoteForm = () => {
                   />
                   <p>Vill hyra pallplatser INOMHUS I KALLAGER</p>
                 </label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <input
+                    type="number"
+                    name="pallplatserKallager"
+                    placeholder="Antal pallplatser"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                  />
+                  <input
+                    type="number"
+                    name="monthsPerYearKallager"
+                    placeholder="Antal månader per år"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                  />
+                  <input
+                    type="date"
+                    name="fromDateKallager"
+                    placeholder="Från och med"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                  />
+                
+                  <input
+                    type="date"
+                    name="toDateKallager"
+                    placeholder="Till och med"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                  />
 
-                {checkedSections.kallager && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input
-                      type="number"
-                      name="pallplatserKallager"
-                      placeholder="Antal pallplatser"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="number"
-                      name="monthsPerYearKallager"
-                      placeholder="Antal månader per år"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="date"
-                      name="fromDateKallager"
-                      placeholder="Från och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="date"
-                      name="toDateKallager"
-                      placeholder="Till och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="text"
-                      name="Pallvikt/snitt"
-                      placeholder="Pallvikt/snitt"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="text"
-                      name="Antalkragar"
-                      placeholder="Antal kragar"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                  </div>
-                )}
+                  <input
+                    type="text"
+                    name="Pallvikt/snitt"
+                    placeholder="Pallvikt/snitt"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                  />
+                  <input
+                    type="text"
+                    name="Antalkragar"
+                    placeholder="Antal kragar"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                  />
+                </div>
               </div>
 
               <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
