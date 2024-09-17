@@ -269,7 +269,9 @@ const QuoteForm = () => {
                       className="p-2 border rounded focus:outline-orange-500"
                     />
                   </div>
+    
 
+    
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                     <input
                       type="date"
