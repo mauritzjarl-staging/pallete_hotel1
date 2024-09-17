@@ -32,21 +32,21 @@ const ContactPage = () => {
           <div className="space-y-4 text-lg">
             <div className="flex items-center">
               <CiLocationOn size={20} />
-              <p className="ml-4">Viskrullavägen 2, 591 465 Motala</p>
+              <p className="ml-4">Vickerkullavägen 2, 591 45 Motala</p>
             </div>
             <div className="flex items-center">
               <PiPhoneCallThin size={20} />
-              <p className="ml-4">Tel: 0141-21 50 44</p>
+              <p className="ml-4">0141-21 50 44</p>
             </div>
             <div className="flex items-center">
-              <AiOutlineMail size={20} />
+              <AiOutlineMail size={20} />      
               <p className="ml-4">
                 Email:{" "}
                 <a
                   href="mailto:order@pallhotellet.se"
                   className="text-orange-500 hover:text-orange-300"
                 >
-                  order@pallhotellet.se
+                  order@pallhotelletet.se
                 </a>
               </p>
             </div>

@@ -5,21 +5,21 @@ import { FaTwitter } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FiInstagram } from "react-icons/fi";
 import { IoLocationSharp } from "react-icons/io5";
-import { MdCall } from "react-icons/md";
+import { MdCall } from "react-icons/md";         
 import { MdEmail } from "react-icons/md";
 export default function Footer() {
   return (
     <footer>
       <div className="leading-8 py-8 list-none bg-[#001D23]">
         <div className="flex justify-center flex-col md:flex-row px-10 text-[#808E91]">
-          <div className="md:w-[30%] p-4  h-auto mt-10">
+          <div className="md:w-[30%] py-4 h-auto mt-10">
             <Image
-              width={250}
-              height={250}
+            width={200}
+            height={250}
              className="mb-5"
               src="/imgs/Pallhotellet.se.png"
             />
-            <p className="text-sm md:w-9/12 w-4/6 hover:text-white">
+            <p className="text-sm md:w-9/12 hover:text-white">
             Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket annat!
             </p>
             <div className="flex my-5 gap-3">
@@ -41,8 +41,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:w-[29%] p-4 mt-10">
-            <p className="text-2xl mb-5 font-medium text-white">Address</p>
+          <div className="md:w-[29%] py-4 md:mt-10">
+            <p className="text-2xl mb-5 font-medium text-white">Adress</p>
             <li className="hover:text-white my-3 text-sm">
               <Link href="#" className="flex">
                 <IoLocationSharp size={16} />
@@ -55,7 +55,7 @@ export default function Footer() {
                 <p className="ms-3">0141-21 50 44</p>
               </Link>
             </li>
-            <li className="hover:text-white my-3  text-sm">
+            <li className="hover:text-white my-3 text-sm">
               <Link href="#" className="flex">
                 <MdCall size={16} />
                 <p className="ms-3">order@pallhotellet.se</p>
@@ -63,18 +63,18 @@ export default function Footer() {
             </li>
           </div>
 
-          <div className="md:w-3/12 p-4 mt-10">
-            <p className="text-2xl mb-5 text-white font-medium">Quick Links</p>
+          <div className="md:w-3/12 py-4 md:mt-10">
+            <p className="text-2xl mb-5 text-white font-medium">Snabblänkar</p>
             <li className="hover:text-white my-3 text-sm">
               <Link href="/">
                 Hem
               </Link>
             </li>
-            <li className="hover:text-white my-3 text-sm">
+            {/* <li className="hover:text-white my-3 text-sm">
               <Link href="/services">
                 Hitta oss
               </Link>
-            </li>
+            </li> */}
             <li className="hover:text-white my-3 text-sm">
               <Link href="/contact">
                 Kontakt
@@ -94,9 +94,9 @@ export default function Footer() {
 
         </div>
 
-        <div className="md:w-10/12 mx-auto px-10 ">
-          <p className="flex items-center content-center ">
-            <span className="text-white"> &copy; Pallhotellet  </span>
+        <div className="md:w-10/12 mx-auto px-10 md:px-7">
+          <p className=" ">
+            <span className="text-white"> &copy; Pallhotellet</span>
             <span className="text-gray-400 hover:text-white"> &nbsp; 2024, All Rights Reserved. </span>
           </p>
         </div>

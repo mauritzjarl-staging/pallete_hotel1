@@ -32,6 +32,44 @@ export default function HomePage() {
       </button>
     </div>
   );
+  const SliderContent2 = () => (
+    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10">
+      <div>
+        <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
+          Godshantering
+        </h1>
+      </div>
+      <div>
+        <p className="xl:text-xl lg:text-">
+          Vi tar hand om ut-och inlastning av ditt gods
+        </p>
+      </div>
+      <button className="bg-[#ff6300] flex items-center hover:border-white text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm">
+        Upptäck mer.
+        <span className="bg-white rounded-full p-1 ms-3">
+          <IoArrowForward color="orange" size={20} />
+        </span>
+      </button>
+    </div>
+  );
+  const SliderContent3 = () => (
+    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10">
+      <div>
+        <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
+          Vi ordnar hela flödet
+        </h1>
+      </div>
+      <div>
+        <p className="xl:text-xl lg:text-">Vi tar hand om hela flödet åt er</p>
+      </div>
+      <button className="bg-[#ff6300] flex items-center hover:border-white text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm">
+        Upptäck mer.
+        <span className="bg-white rounded-full p-1 ms-3">
+          <IoArrowForward color="orange" size={20} />
+        </span>
+      </button>
+    </div>
+  );
 
   // Banner slider settings
 
@@ -72,7 +110,7 @@ export default function HomePage() {
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
+          // arrows: false,
         },
       },
     ],
@@ -83,7 +121,8 @@ export default function HomePage() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
+    autoplay: true, 
   };
 
   // Testomonial slider settings
@@ -160,14 +199,12 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[url('/imgs/Frame5892.png')] bg-cover bg-center h-screen  flex justify-center md:px-20 items-center">
+      <section className="bg-[url('/imgs/Frame5892.png')] bg-cover bg-center h-screen  flex justify-center md:px-20 items-center px-5">
         <div className="w-full max-w-5xl">
           <Slider {...BannerSlider}>
             <SliderContent />
-            <SliderContent />
-            <SliderContent />
-            <SliderContent />
-            <SliderContent />
+            <SliderContent2 />
+            <SliderContent3 />
           </Slider>
         </div>
       </section>
@@ -183,7 +220,7 @@ export default function HomePage() {
           />
           <div className="pe-5">
             <h3 className="xl:text-xl md:text-sm font-bold text-sm lg:font-bold md:font-medium">
-              Flexible warehousing
+              Flexibel lagerhållning
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
               Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
@@ -201,7 +238,7 @@ export default function HomePage() {
           />
           <div className="pe-5">
             <h3 className="xl:text-xl md:text-sm font-bold text-sm lg:font-bold md:font-medium">
-              Fast order processing
+              Snabb orderhantering
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
               Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
@@ -219,7 +256,7 @@ export default function HomePage() {
           />
           <div className="pe-5">
             <h3 className="xl:text-xl md:text-sm font-bold text-sm lg:font-bold md:font-medium">
-              More efficient flow
+              Effektivare flöde
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
               Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
@@ -253,33 +290,18 @@ export default function HomePage() {
             lorem sit clita duo justo erat amet <br />
             <span className="text-orange-600 mt-5">Christopher Jarl, CEO</span>
           </p>
-          <div className="flex sm:space-x-8 text-wrap flex-col justify-center md:justify-start sm:flex-row space-y-5 sm:space-y-0">
-            <Link href="/">
-              <button
-                className="bg-[#ff6300] flex items-center justify-around text-white border-2 border-[#ff6300] text-nowrap md:py-3 py-2  font-bold px-3 md:px-5 lg:px-10  
-           text-center rounded-md"
-              >
-                Läs mer
-                <span className="bg-white rounded-full p-1 ms-3">
-                  {" "}
-                  <IoArrowForward color="orange" size={22} />
-                </span>
-              </button>
-            </Link>
-
+          <div className="flex text-wrap justify-center md:justify-start space-y-5 sm:space-y-0">
             <Link href="/contact">
               <button
-                className="flex items-center justify-around text-[#ff6300] border-2 border-[#ff6300] text-nowrap md:py-3 py-2 font-bold px-3 md:px-4 lg:px-8  
+                className="flex items-center md:justify-around text-[#ff6300] border-2 border-[#ff6300] text-nowrap md:py-3 py-2 font-bold px-3 md:px-4 lg:px-8  
            text-center rounded-md"
               >
                 Kontakta oss
                 <span className="bg-[#ff6300] rounded-full p-1 ms-3">
-              
                   <IoArrowForward color="white" size={23} />
                 </span>
               </button>
             </Link>
-           
           </div>
         </div>
         {/* <!--col-2 side Image --> */}
@@ -337,8 +359,8 @@ export default function HomePage() {
                 <ProgressBar
                   total={10000}
                   current={4950}
-                  totalLabel="pallet capacity"
-                  currentLabel="pallets in stock"
+                  totalLabel="pallkapacitet"
+                  currentLabel="pallar i lager"
                 />
               </div>
               {/* <!-- Greybox Image --> */}
@@ -432,7 +454,7 @@ export default function HomePage() {
       <section className="my-10 bg-[url('/imgs/Frame5894.png')] p-10 md:p-24">
         <div className="flex flex-col justify-center lg:flex-row">
           <div className="lg:w-3/12 w-full lg:pt-44">
-            <div className="relative my-10 lg:my-0 flex justify-center">
+            <div className="relative my-10 lg:my-0 lg:flex justify-center  hidden">
               <div>
                 <Image
                   width={350}
@@ -479,7 +501,7 @@ export default function HomePage() {
                 behov, när du behöver det.
               </p>
             </div>
-            <div className="lg:relative my-10">
+            <div className="lg:relative my-10 hidden lg:block">
               <div className="flex justify-center mt-10 lg:my-0 lg:absolute lg:-top-20 lg:right-0">
                 <div className="flex justify-center relative">
                   <div>
@@ -503,7 +525,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="lg:w-3/12 w-full">
+          <div className="lg:w-3/12 w-full  hidden lg:block">
             <div className="flex justify-center relative">
               <Image
                 width={350}
@@ -541,15 +563,21 @@ export default function HomePage() {
           <div className="hidden md:flex flex-col md:flex-row justify-center md:space-x-10 space-y-5 md:space-y-0">
             <div className="bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col">
               <Image src="/imgs/1.png" alt="Staff 1" width={300} height={300} />
-              <p className="py-8 text-xl">Sylvain</p>
+              <p className="pt-5 pb-1 text-lg  font-bold">Sylvain</p>
+              <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Kundkontakt</p>
+              <p className="pt-1 pb-5 text-lg">0141215044</p>
             </div>
             <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
               <Image src="/imgs/2.png" alt="Staff 2" width={300} height={300} />
-              <p className="py-8 text-xl">Toby</p>
+              <p className="pt-5 pb-1 text-lg  font-bold">Lukas</p>
+              <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Ekonomi</p>
+              <p className="pt-1 pb-5 text-lg">0141 215044 </p>
             </div>
             <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
               <Image src="/imgs/3.png" alt="Staff 3" width={300} height={300} />
-              <p className="py-8 text-xl">Elma</p>
+              <p className="pt-5 pb-1 text-lg  font-bold">Elma </p>
+              <p className="py-1 text-lg text-[#FF6F0F]">Ekonomi </p>
+              <p className="pt-1 pb-5 text-lg">0141 215044</p>
             </div>
           </div>
 
@@ -564,7 +592,11 @@ export default function HomePage() {
                     width={800}
                     height={300}
                   />
-                  <p className="py-8 text-xl">Sylvain</p>
+                  <p className="pt-5 pb-1 text-lg  font-bold">Sylvain</p>
+                  <p className="py-1 text-lg text-[#FF6F0F]">
+                    Sälj / Kundkontakt
+                  </p>
+                  <p className="pt-1 pb-5 text-lg">0141215044</p>
                 </div>
               </div>
               <div>
@@ -575,7 +607,9 @@ export default function HomePage() {
                     width={800}
                     height={300}
                   />
-                  <p className="py-8 text-xl">Toby</p>
+                  <p className="pt-5 pb-1 text-lg  font-bold">Lukas</p>
+                  <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Ekonomi</p>
+                  <p className="pt-1 pb-5 text-lg">0141 215044 </p>
                 </div>
               </div>
               <div>
@@ -586,23 +620,25 @@ export default function HomePage() {
                     width={800}
                     height={300}
                   />
-                  <p className="py-8 text-xl">Elma</p>
+                  <p className="pt-5 pb-1 text-lg  font-bold">Elma </p>
+                  <p className="py-1 text-lg text-[#FF6F0F]">Ekonomi </p>
+                  <p className="pt-1 pb-5 text-lg">0141 215044</p>
                 </div>
               </div>
             </Slider>
           </div>
         </div>
       </section>
-
+                 
       {/* Last Testimonial-Slider Section */}
 
       <section className="relative pt-10 md:pb-20 pb-10 px-10 md:px-[65px] bg-gray-100">
         <div className="text-center space-y-8 my-10">
           <p className="bg-[#FF6F0F17] text-[#ff6300] text-xl font-semibold p-3 inline">
-            TESTIMONIALS
+          Kundomdömen
           </p>
           <p className="md:text-[2rem] text-[1.2rem] font-bold">
-            Trusted By Thousands of People
+          Vad säger våra kunder om oss
           </p>
         </div>
         {/* Custom navigation buttons */}

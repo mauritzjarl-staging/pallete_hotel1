@@ -32,8 +32,8 @@ export default function Findus() {
               <AiOutlineEnvironment size={20} />
             </div>
 
-            <p className="text-lg font-bold mt-4">Address</p>
-            <p>Vickerullavägen 2, 591 45 Motala</p>
+            <p className="text-lg font-bold mt-4">Adress</p>
+            <p>Vickerkullavägen 2, 591 45 Motala</p>
           </div>
           {/* Email */}
           <div className="flex flex-col items-center p-6 rounded-lg">
@@ -41,14 +41,14 @@ export default function Findus() {
               <AiOutlineMail size={20} />
             </div>
             <p className="text-lg font-bold mt-4">Email</p>
-            <p>order@pallhotellet.se</p>
+            <p>order@pallhotell.se</p>
           </div>
           {/* Phone */}
           <div className="flex flex-col items-center  p-6 rounded-lg">
             <div className=" border rounded-full p-2">
               <AiOutlinePhone size={20} />
             </div>
-            <p className="text-lg font-bold mt-4">Phone</p>
+            <p className="text-lg font-bold mt-4">Telefon</p>
             <p>0141-21 50 44</p>
           </div>
         </div>
@@ -69,8 +69,7 @@ export default function Findus() {
           {/* Text */}
           <div className="w-full text-center md:text-start  md:w-1/2 mt-8 md:mt-0 md:pl-12">
             <h2 className="text-3xl font-bold">
-              Expertlösningar inom lagring, godshantering, dokumentation och
-              vidare
+            Expertlösningar inom lagring, godshantering, dokumentation och vidare
             </h2>
             <p className="mt-4 text-sm">
               På vårt företag är vi specialiserade på att tillhandahålla
@@ -92,16 +91,18 @@ export default function Findus() {
             commodo euismod dis lectus natoque donec mollis feugiat risus
             egestas etiam viverra.
           </p>
-          <button className="bg-orange-500 text-white py-3
+          <button
+            className="bg-orange-500 text-white py-3
            px-8 rounded-lg shadow-md hover:bg-orange-600
-            transition duration-300">
+            transition duration-300"
+          >
             Get Started
           </button>
         </div>
       </section>
 
       <section className="h-[500px]">
-          <MapComponent />
+        <MapComponent />
       </section>
     </>
   );

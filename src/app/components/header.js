@@ -1,9 +1,9 @@
 "use client"; // Enable client-side interactivity
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaCaretDown } from "react-icons/fa"; 
+import { FaCaretDown } from "react-icons/fa";
 import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -22,22 +22,21 @@ export default function Header() {
       const handleScroll = () => {
         const headerSecondDiv = document.getElementById("stickyDiv");
         const stickyPoint = headerSecondDiv?.offsetTop || 0;
-  
+
         if (window.pageYOffset > stickyPoint) {
           setIsSticky(true);
         } else {
           setIsSticky(false);
         }
       };
-  
+
       window.addEventListener("scroll", handleScroll);
-  
+
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
   }, []);
-  
 
   // Toggle mobile menu
   const toggleMenu = () => {
@@ -52,26 +51,29 @@ export default function Header() {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest('.dropdown-container') && !event.target.closest('.dropdown-btn')) {
+      if (
+        !event.target.closest(".dropdown-container") &&
+        !event.target.closest(".dropdown-btn")
+      ) {
         setDropdownOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   return (
     <header
-      className={`text-white justify-between items-center w-full fixed top-0 left-0 z-50 py-2`}
+      className={`text-white justify-between items-center w-full fixed top-0 left-0 z-50 pb-2`}
     >
-      <div className="container mx-auto w-[90%] text-gray-400 hidden md:flex justify-between items-center py-2">
+      <div className="px-20 mx-auto border border-gray-700 text-gray-400 hidden md:flex justify-between items-center py-2">
         <div className="flex md:text-sm xl:text-lg text-sm items-center space-x-6">
           <div className="hover:text-white flex items-center space-x-3">
-            <p>591 90 Motala, Sweden</p>
+            <p>591 45 Motala, Sweden.</p>
             <FaLocationDot />
           </div>
           <div className="hover:text-white flex items-center space-x-3">
@@ -82,7 +84,7 @@ export default function Header() {
         <div className="flex text-sm md:text-sm xl:text-lg items-center">
           <p className="hover:text-white">Följ oss:</p>
           <div className="px-4 cursor-pointer md:space-x-4 space-x-2 flex">
-            <FaFacebook className="hover:text-white" />  
+            <FaFacebook className="hover:text-white" />
             <FaTwitter className="hover:text-white" />
             <IoLogoLinkedin className="hover:text-white" />
             <FiInstagram className="hover:text-white" />
@@ -90,86 +92,118 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Second Div - Becomes sticky when scrolling */}
-      <div className="flex justify-center">
+      <div className="flex md:justify-center justify-around md:px-10">
         <div
           id="stickyDiv"
-          className={`bg-[#001d24] text-white flex justify-between items-center w-full  md:px-0 md:w-[90%] py-4 ${isSticky ? "fixed top-0 z-50" : "relative"}`}
+          className={` text-white flex justify-between items-center
+             w-full px-8 py-4 ${
+               isSticky ? "bg-[#001d24] fixed top-0 z-50 md:px-20" : "relative"
+             }`}
         >
-          <div className="w-3/12 xl:w-1/5 md:w-2/12 ms-5 h-auto">
-          <Link href="/">
-            <Image
-              src="/imgs/Pallhotellet.se.png"
-              alt="Logo"
-              width={250}
-              height={200}
-            />
-          </Link>
+          <div className="lg:w-5/12 lg:h-auto">
+            <Link href="/">
+              <Image
+                src="/imgs/Pallhotellet.se.png"
+                alt="Logo"
+                width={200}
+                height={250}
+              />
+            </Link>
           </div>
 
           {/* Mobile menu toggler */}
-          <div className="md:hidden px-10">
+          <div className="md:hidden">
             <button className="text-white" onClick={toggleMenu}>
               <GiHamburgerMenu /> {/* Mobile menu icon */}
             </button>
           </div>
 
-      {/* Desktop menu */}
-<ul id="menu" className="hidden md:flex md:text-xl lg:space-x-10 md:space-x-5">
-  <li className={`${pathname === '/' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
-    <Link href="/">Hem</Link>
-  </li>
-  <li className={`${pathname === '/findus' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
-    <Link href="/findus">Hitta oss</Link>
-  </li>
-  <li 
-  className={`relative group dropdown-container ${pathname.startsWith('/services') ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}
-  onMouseEnter={() => setDropdownOpen(true)} 
-  onMouseLeave={() => setDropdownOpen(false)}
->
-  <div className="flex items-center space-x-3">
-    <Link href="/services">Tjänster</Link>
-    <FaCaretDown />
-  </div>
+          <div className="lg:w-7/12 hidden md:flex items-center justify-between space-x-2">
+            {/* Desktop menu */}
+            <ul
+              id="menu"
+              className="hidden md:flex text-nowrap lg:space-x-5 md:space-x-2 font-semibold "
+            >
+              <li
+                className={`${
+                  pathname === "/" ? "text-[#ff6300]" : "hover:text-[#ff6300]"
+                }`}
+              >
+                <Link href="/">Hem</Link>
+              </li>
+              {/* <li
+                className={`${
+                  pathname === "/findus"
+                    ? "text-[#ff6300]"
+                    : "hover:text-[#ff6300]"
+                }`}
+              >
+                <Link href="/findus">Hitta oss</Link>
+              </li> */}
+              <li
+                className={`relative group dropdown-container ${
+                  pathname.startsWith("/services")
+                    ? "text-[#ff6300]"
+                    : "hover:text-[#ff6300]"
+                }`}
+                onMouseEnter={() => setDropdownOpen(true)}
+                onMouseLeave={() => setDropdownOpen(false)}
+              >
+                <div className="flex items-center space-x-2">
+                  <Link href="/services">Tjänster</Link>
+                  <FaCaretDown />
+                </div>
 
-  {/* Dropdown */}
-  {dropdownOpen && (
-    <ul className="absolute bg-[#001d24] text-white text-md space-y-2 pt-5 pb-3 px-5 rounded shadow-lg z-50">
-      <li className="hover:text-white hover:border-2 p-2 rounded-md hover:border-[#ff6300] text-nowrap">
-        <Link href="/services#indoor">Lagerhållning inomhus</Link>
-      </li>
-      <li className="hover:text-white hover:border-2 p-2 rounded-md hover:border-[#ff6300] text-nowrap">
-        <Link href="/services#outdoor">Lagerhållning utomhus</Link>
-      </li>
-      <li className="hover:text-white hover:border-2 p-2 rounded-md hover:border-[#ff6300] text-nowrap">
-        <Link href="/services#rental">Hyra av förbind</Link>
-      </li>
-      <li className="hover:text-white hover:border-2 p-2 rounded-md hover:border-[#ff6300] text-nowrap">
-        <Link href="/services#cargo">Godshantering</Link>
-      </li>
-      <li className="hover:text-white hover:border-2 p-2 rounded-md hover:border-[#ff6300] text-nowrap">
-        <Link href="/services#other">Övrigt</Link>
-      </li>
-    </ul>
-  )}
-</li>
+                {/* Dropdown */}
+                {dropdownOpen && (
+                  <ul className="absolute bg-white rounded font-medium text-[#001d24] py-2 z-50">
+                    <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                      <Link href="/services#indoor">Lagerhållning inomhus</Link>
+                    </li>
+                    <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                      <Link href="/services#outdoor">
+                        Lagerhållning utomhus
+                      </Link>
+                    </li>
+                    <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                      <Link href="/services#rental">Hyra av förbind</Link>
+                    </li>
+                    <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                      <Link href="/services#cargo">Godshantering</Link>
+                    </li>
+                    <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                      <Link href="/services#other">Övrigt</Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
 
-  <li className={`${pathname === '/contact' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
-    <Link href="/contact">Kontakt</Link>
-  </li>
-  <li className={`${pathname === '/login' ? 'text-[#ff6300]' : 'hover:text-[#ff6300]'}`}>
-    <Link href="/login">Logga in</Link>
-  </li>
-</ul>
+              <li
+                className={`${
+                  pathname === "/contact"
+                    ? "text-[#ff6300]"
+                    : "hover:text-[#ff6300]"
+                }`}
+              >
+                <Link href="/contact">Kontakt</Link>
+              </li>
+              <li
+                className={`${
+                  pathname === "/login"
+                    ? "text-[#ff6300]"
+                    : "hover:text-[#ff6300]"
+                }`}
+              >
+                <Link href="/login">Logga in</Link>
+              </li>
+            </ul>
 
-
-          {/* Request for Quotation Button (Desktop) */}
-          <div className="md:me-4 border-2 hidden md:block md:text-xl outline-2 xl:px-6 md:px-2 md:py-1 xl:py-2 border-[#ff6300] rounded-md">
-            <button className="hover:text-[#ff6300] py-1 font-medium">
-              <Link href="/quotation">
-                Offertförfrågan
-              </Link>
-            </button>
+            {/* Request for Quotation Button (Desktop) */}
+            <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-[#ff6300] rounded-md">
+              <button className="hover:text-[#ff6300] md:py-2 py-1 font-medium">
+                <Link href="/quotation">Offertförfrågan</Link>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -178,31 +212,99 @@ export default function Header() {
 
       {menuOpen && (
         <div className="md:hidden bg-[#001d24] text-white p-4">
-          <ul className="space-y-4 ">
-          <li className="text-white hover:text-[#ff6300]">
-              <Link href="/">Hem</Link>
+          <ul className="space-y-4">
+            <li className="text-white hover:text-[#ff6300]">
+              <Link href="/" onClick={() => setMenuOpen(false)}>
+                Hem
+              </Link>
             </li>
-           <li className="text-white hover:text-[#ff6300]">
-              <Link href="/findus">Hitta oss</Link>
+            <li className="text-white hover:text-[#ff6300]">
+              <Link href="/findus" onClick={() => setMenuOpen(false)}>
+                Hitta oss
+              </Link>
             </li>
-           <li className="text-white hover:text-[#ff6300]">
-              <Link href="/services">Tjänster</Link>
+            <li
+              className={` group dropdown-container ${
+                pathname.startsWith("/services")
+                  ? "text-[#ff6300]"
+                  : "hover:text-[#ff6300]"
+              }`}
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <div className="flex items-center space-x-3">
+                <Link href="/services">Tjänster</Link>
+                <FaCaretDown />
+              </div>
+
+              {/* Dropdown */}
+              {dropdownOpen && (
+                <ul className="bg-white text-[#001d24] text-md pt-5 pb-3 z-50 rounded">
+                  <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                    <Link
+                      href="/services#indoor"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Lagerhållning inomhus
+                    </Link>
+                  </li>
+                  <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                    <Link
+                      href="/services#outdoor"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Lagerhållning utomhus
+                    </Link>
+                  </li>
+                  <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                    <Link
+                      href="/services#rental"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Hyra av förbind
+                    </Link>
+                  </li>
+                  <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                    <Link
+                      href="/services#cargo"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Godshantering
+                    </Link>
+                  </li>
+                  <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
+                    <Link
+                      href="/services#other"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Övrigt
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
-           <li className="text-white hover:text-[#ff6300]">
-              <Link href="/contact">Kontakt</Link>
+            <li className="text-white hover:text-[#ff6300]">
+              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                Kontakt
+              </Link>
             </li>
-           <li className="text-white hover:text-[#ff6300]">
-              <Link href="/login">Logga in</Link>
+            <li className="text-white hover:text-[#ff6300]">
+              <Link href="/login" onClick={() => setMenuOpen(false)}>
+                Logga in
+              </Link>
             </li>
           </ul>
 
           {/* Mobile Request for Quotation Button */}
           <div className="mt-4 border-2 border-[#ff6300] rounded-md">
-            <button href="/quotation" className="w-full py-2 text-sm hover:text-[#ff6300]">
+            <button
+              className="w-full py-2 text-sm hover:text-[#ff6300]"
+              onClick={() => setMenuOpen(false)}
+            >
               <Link href="/quotation">Offertförfrågan</Link>
             </button>
           </div>
-        </div>     
+        </div>
       )}
     </header>
   );

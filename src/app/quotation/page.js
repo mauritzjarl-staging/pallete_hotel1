@@ -130,7 +130,7 @@ const QuoteForm = () => {
               <h2 className="text-lg font-bold mb-4">2. Hyra av lageryta</h2>
               {/* Kallager */}
               <p className="mb-4 font-semibold">2.1 Kallager</p>
-              <div className="mb-6">
+              <div className="my-10">
                 <label className="flex items-center mb-3">
                   <input
                     type="checkbox"
@@ -149,24 +149,12 @@ const QuoteForm = () => {
                       placeholder="Antal pallplatser"
                       className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
                     />
-                    <input
+                    {/* <input
                       type="number"
                       name="monthsPerYearKallager"
                       placeholder="Antal månader per år"
                       className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="date"
-                      name="fromDateKallager"
-                      placeholder="Från och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="date"
-                      name="toDateKallager"
-                      placeholder="Till och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
+                    /> */}
                     <input
                       type="text"
                       name="Pallvikt/snitt"
@@ -179,6 +167,18 @@ const QuoteForm = () => {
                       placeholder="Antal kragar"
                       className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
                     />
+                       <input
+                      type="date"
+                      name="fromDateKallager"
+                      placeholder="Från och med"
+                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                    />
+                    <input
+                      type="date"
+                      name="toDateKallager"
+                      placeholder="Till och med"
+                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                    />
                   </div>
                 )}
               </div>
@@ -186,9 +186,9 @@ const QuoteForm = () => {
               <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
               {/* Varmlager */}
-              <div className="mb-6">
-                <p className="mb-4 font-semibold">2.2 Varmlager</p>
-                <label className="flex items-center mb-3">
+              <div className="my-10">
+                <p className="my-5 font-semibold">2.2 Varmlager</p>
+                <label className="flex items-center my-10">
                   <input
                     type="checkbox"
                     checked={checkedSections.varmlager}
@@ -207,9 +207,15 @@ const QuoteForm = () => {
                       className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
                     />
                     <input
-                      type="number"
-                      name="monthsPerYearVarmager"
-                      placeholder="Antal månader per år"
+                      type="text"
+                      name="Pallvikt/snitt"
+                      placeholder="Pallvikt/snitt"
+                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                    />
+                    <input
+                      type="text"
+                      name="Antalkragar"
+                      placeholder="Antal kragar"
                       className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
                     />
                     <input
@@ -231,8 +237,8 @@ const QuoteForm = () => {
               <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
               {/* Utomhusförvaring */}
-              <h2 className="mb-4 font-semibold">2.3 Utomhusförvaring</h2>
-              <div className="flex items-center mb-4">
+              <h2 className="my-5 font-semibold">2.3 Utomhusförvaring</h2>
+              <div className="flex items-center my-10">
                 <input
                   type="checkbox"
                   id="utomhusforvaring"
@@ -295,8 +301,8 @@ const QuoteForm = () => {
               <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
               {/* Hyra av förråd */}
-              <h2 className="mb-4 font-semibold">2.4 Hyra av förråd</h2>
-              <div className="flex items-center mb-4">
+              <h2 className="my-5 font-semibold">2.4 Hyra av förråd</h2>
+              <div className="flex items-center my-10">
                 <input
                   type="checkbox"
                   checked={checkedSections.forrad}
@@ -330,11 +336,14 @@ const QuoteForm = () => {
 
             <div className="border-t-2 border-[#A0ABBB] my-6"></div>
 
+
             {/* Section 3 - Inlastning / utlastning */}
+
+
             <h2 className="text-lg font-semibold mb-2">
               3. Inlastning / utlastning
             </h2>
-            <p className="mb-4 font-semibold">
+            {/* <p className="mb-4 font-semibold">
               3.1 Hur ofta skall godset lastas in och ut?
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -344,15 +353,15 @@ const QuoteForm = () => {
               <select className="p-2 h-12 border rounded focus:outline-orange-500">
                 <option>Antal utlastningar i månaden</option>
               </select>
-            </div>
+            </div> */}
 
             <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
             {/* Lossning, ompackning */}
-            <h3 className="mb-4 font-semibold">3.2 Lossning, ompackning</h3>
-            <div className="mb-6 space-y-5">
-              <div className="w-full flex flex-wrap space-y-5">
-                <div className="md:w-1/2">
+            <h3 className="font-semibold">3.1 Lossning, ompackning</h3>
+            <div className="space-y-10">
+              <div className="w-full flex flex-wrap ">
+                <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
                     checked={checkedSections.gaffeltruck}
@@ -364,7 +373,7 @@ const QuoteForm = () => {
                     Lossning/lastning lastbil med gaffeltruck önskas
                   </label>
                 </div>
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 flex items-center">
                   {checkedSections.gaffeltruck && (
                     <input
                       type="text"
@@ -375,8 +384,8 @@ const QuoteForm = () => {
                 </div>
               </div>
 
-              <div className="w-full flex flex-wrap space-y-5">
-                <div className="md:w-1/2">
+              <div className="w-full flex flex-wrap ">
+                <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
                     checked={checkedSections.container}
@@ -388,7 +397,7 @@ const QuoteForm = () => {
                     Lossning/lastning av container önskas
                   </label>
                 </div>
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 flex items-center">
                   {checkedSections.container && (
                     <input
                       type="text"
@@ -399,8 +408,8 @@ const QuoteForm = () => {
                 </div>
               </div>
 
-              <div className="w-full flex flex-wrap space-y-5">
-                <div className="md:w-1/2">
+              <div className="w-full flex flex-wrap ">
+                <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
                     checked={checkedSections.ompackning}
@@ -412,7 +421,7 @@ const QuoteForm = () => {
                     Ompackning och plock önskas
                   </label>
                 </div>
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 flex items-center">
                   {checkedSections.ompackning && (
                     <input
                       type="text"
@@ -427,7 +436,7 @@ const QuoteForm = () => {
             <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
             {/* Additional Checkboxes */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+
               <div className="flex items-center">
                 <input
                   type="checkbox"
@@ -440,6 +449,7 @@ const QuoteForm = () => {
                   Containerhantering/packetering
                 </label>
               </div>
+              <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
               <div className="flex items-center">
                 <input
@@ -451,18 +461,17 @@ const QuoteForm = () => {
                 />
                 <label htmlFor="skrymmande">Hantering av skrymmande gods</label>
               </div>
-            </div>
 
             <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
             {/* Section 3.3 - Redskap och maskiner */}
             <h3 className="text-md font-semibold mb-4">
-              3.3 Redskap och maskiner
+              3.2 Redskap och maskiner
             </h3>
 
-            <div className="mb-6 space-y-5">
-              <div className="w-full flex flex-wrap space-y-5">
-                <div className="md:w-1/2">
+            <div className="mb-6 space-y-10">
+              <div className="w-full flex flex-wrap">
+                <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
                     checked={checkedSections.handtruck}
@@ -472,7 +481,7 @@ const QuoteForm = () => {
                   />
                   <label htmlFor="handtruck">Handtruck önskas</label>
                 </div>
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 flex items-center">
                   {checkedSections.handtruck && (
                     <input
                       type="text"
@@ -483,8 +492,8 @@ const QuoteForm = () => {
                 </div>
               </div>
 
-              <div className="w-full flex flex-wrap space-y-5">
-                <div className="md:w-1/2">
+              <div className="w-full flex flex-wrap">
+                <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
                     checked={checkedSections.gaffeltruck2}
@@ -494,7 +503,7 @@ const QuoteForm = () => {
                   />
                   <label htmlFor="gaffeltruck2">Gaffeltruck önskas</label>
                 </div>
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 flex items-center">
                   {checkedSections.gaffeltruck2 && (
                     <input
                       type="text"
@@ -505,8 +514,8 @@ const QuoteForm = () => {
                 </div>
               </div>
 
-              <div className="w-full flex flex-wrap space-y-5">
-                <div className="md:w-1/2">
+              <div className="w-full flex flex-wrap">
+                <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
                     checked={checkedSections.travers}
@@ -517,7 +526,7 @@ const QuoteForm = () => {
                   <label htmlFor="travers">Travers önskas (max 7ton)</label>
                 </div>
 
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 flex items-center">
                   {checkedSections.travers && (
                     <input
                       type="text"
@@ -539,7 +548,7 @@ const QuoteForm = () => {
                 </h2>
 
                 {/* Help with Documentation */}
-                <div className="mb-4 flex flex-wrap space-y-5">
+                <div className="my-10 flex flex-wrap space-y-5">
                   <label className="flex items-center md:w-1/2">
                     <input
                       type="checkbox"
@@ -561,7 +570,7 @@ const QuoteForm = () => {
                 <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
                 {/* Order Management */}
-                <div className="mb-4 flex flex-wrap space-y-5">
+                <div className="my-10 flex flex-wrap space-y-5">
                   <label className="flex items-center md:w-1/2">
                     <input
                       type="checkbox"
@@ -583,7 +592,7 @@ const QuoteForm = () => {
                 <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
                 {/* Upphandling */}
-                <div className="mb-4">
+                <div className="my-10">
                   <label className="md:flex items-center space-x-2">
                     <input
                       type="checkbox"
@@ -612,7 +621,7 @@ const QuoteForm = () => {
                 <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
                 {/* Kringfunktioner */}
-                <div className="mb-4 md:flex py-4 justify-between">
+                <div className="my-10 md:flex justify-between">
                   <label className="flex items-center space-x-4">
                     <input
                       type="checkbox"
@@ -630,7 +639,7 @@ const QuoteForm = () => {
                 <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
                 {/* Complete Solution */}
-                <div className="mb-6 py-4">
+                <div className="my-10">
                   <label className="flex items-center space-x-2">
                     <input
                       type="checkbox"
