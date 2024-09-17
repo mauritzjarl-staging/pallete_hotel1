@@ -1,10 +1,11 @@
-"use client";
+
 import React from "react";
 import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
 import { PiPhoneCallThin } from "react-icons/pi";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineBorderColor } from "react-icons/md";
+import { MdDateRange } from "react-icons/md";
 // import MapComponent from "../components/MapComponent";
 import dynamic from "next/dynamic";
 
@@ -14,6 +15,7 @@ const MapComponent = dynamic(() => import("../components/MapComponent"), {
 });
 
 const QuoteForm = () => {
+
   return (
     <>
       <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] py-56">
@@ -130,13 +132,14 @@ const QuoteForm = () => {
                     placeholder="Från och med"
                     className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
                   />
+                
                   <input
                     type="date"
                     name="toDateKallager"
                     placeholder="Till och med"
                     className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                  /> 
-                  
+                  />
+
                   <input
                     type="text"
                     name="Pallvikt/snitt"
