@@ -27,7 +27,7 @@ const ContactPage = () => {
       <section className="py-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
         {/* Contact Information */}
         <div className="w-full lg:w-5/12 p-8">
-          <h2 className="text-xl font-bold mb-1 mt-16">Kontakt</h2>
+          <h2 className="text-xl font-bold mb-1 mt-16">Kontakt oss</h2>
           <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
           <div className="space-y-4 text-lg">
             <div className="flex items-center">

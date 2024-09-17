@@ -660,7 +660,7 @@ const QuoteForm = () => {
                     type="submit"
                     className="bg-orange-500 px-5 text-white py-3 w-full rounded-lg hover:bg-orange-600"
                   >
-                    Skicka In
+                    Skicka                
                   </button>
                 </div>
               </div>
