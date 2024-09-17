@@ -17,7 +17,7 @@ const ContactPage = () => {
     <>
       <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] py-56">
         <div className=" mx-auto flex justify-center items-center h-full">
-          <h1 className="text-white text-5xl font-bold">Kontakt</h1>
+          <h1 className="text-white text-5xl font-bold">Kontakt oss </h1>
         </div>
       </section>
       <section className="h-[500px]">
