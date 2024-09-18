@@ -92,12 +92,12 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex md:justify-center justify-around md:px-10">
+      <div className="flex md:justify-center justify-around ">
         <div
           id="stickyDiv"
-          className={` text-white flex justify-between items-center
-             w-full px-8 py-4 ${
-               isSticky ? "bg-[#001d24] fixed top-0 z-50 md:px-20" : "relative"
+          className={`text-white flex justify-between items-center
+             w-full py-4 bg-[#001d24] mx-8 px-8 md:mx-20 ${
+               isSticky ? "bg-[#001d24] fixed top-0 z-50 px-8 md:px-20" : "relative"
              }`}
         >
           <div className="md:w-4/12 lg:h-auto">

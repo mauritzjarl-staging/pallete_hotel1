@@ -9,9 +9,9 @@ import "react-datepicker/dist/react-datepicker.css"; // Importing required style
 import { FaCalendarAlt } from "react-icons/fa"; // Optional: Icon for calendar
 
 // Dynamically import MapComponent with SSR disabled
-const MapComponent = dynamic(() => import("../components/MapComponent"), {
-  ssr: false,
-});
+// const MapComponent = dynamic(() => import("../components/MapComponent"), {
+//   ssr: false,
+// });
 
 const QuoteForm = () => {
   const [checkedSections, setCheckedSections] = useState({
@@ -67,33 +67,27 @@ const QuoteForm = () => {
         </div>
       </section>
 
-      <section className="h-[500px]">
+      {/* <section className="h-[500px]">
         <MapComponent />
-      </section>
+      </section> */}
 
       <section className="py-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
         <div className="w-full lg:w-4/12 px-8">
-          <h2 className="text-xl font-bold mb-1 mt-16">Kontakt</h2>
+          <h2 className="text-xl font-bold mb-1">Kontakt</h2>
           <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
           <div className="space-y-4 text-lg">
             <div className="flex items-center">
               <CiLocationOn size={20} />
-              <p className="ml-4">Viskrullavägen 2, 591 465 Motala</p>
+              <p className="ml-4">Vickerkullavägen 2, 591 45 Motala</p>
             </div>
             <div className="flex items-center">
               <PiPhoneCallThin size={20} />
-              <p className="ml-4">Tel: 0141-21 50 44</p>
+              <p className="ml-4">0141-21 50 44</p>
             </div>
             <div className="flex items-center">
               <AiOutlineMail size={20} />
               <p className="ml-4">
-                Email:{" "}
-                <a
-                  href="mailto:order@pallhotellet.se"
-                  className="text-orange-500 hover:text-orange-300"
-                >
                   order@pallhotellet.se
-                </a>
               </p>
             </div>
           </div>
@@ -104,7 +98,7 @@ const QuoteForm = () => {
             {/* Contact Form */}
             {/* 1. Företagsuppgifter */}
             <div>
-              <h2 className="text-lg font-bold mb-6"> 1. Företagsuppgifter </h2>
+              <h2 className="text-2xl font-bold mb-6"> 1. Företagsuppgifter </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   type="text"
@@ -148,7 +142,7 @@ const QuoteForm = () => {
 
             {/* 2. Hyra av lageryta */}
             <div>
-              <h2 className="text-lg font-bold mb-4">2. Hyra av lageryta</h2>
+              <h2 className="text-2xl font-bold mb-3">2. Hyra av lageryta</h2>
               {/* Kallager */}
               <p className="mb-4 font-semibold">2.1 Kallager</p>
               <div className="my-10">
@@ -390,7 +384,7 @@ const QuoteForm = () => {
               </div>
 
               {checkedSections.forrad && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <input
                     type="text"
                     placeholder="Ytan i m2"
@@ -430,11 +424,11 @@ const QuoteForm = () => {
               )}
             </div>
 
-            <div className="border-t-2 border-[#A0ABBB] my-6"></div>
+            <div className="border-t-2 border-[#A0ABBB] mb-6"></div>
 
             {/* Section 3 - Inlastning / utlastning */}
 
-            <h2 className="text-lg font-semibold mb-2">
+            <h2 className="text-2xl font-semibold">
               3. Inlastning / utlastning
             </h2>
             {/* <p className="mb-4 font-semibold">
@@ -449,7 +443,7 @@ const QuoteForm = () => {
               </select>
             </div> */}
 
-            <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
+            {/* <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div> */}
 
             {/* Lossning, ompackning */}
             <h3 className="font-semibold">3.1 Lossning, ompackning</h3>
@@ -637,12 +631,12 @@ const QuoteForm = () => {
             {/* Section 4 - Kringtjänster */}
             <div className="flex flex-col items-center justify-center">
               <div className="bg-white w-full">
-                <h2 className="text-lg font-bold mb-6 text-gray-900">
+                <h2 className="text-2xl font-bold mb-6 text-gray-900">
                   4. Kringtjänster
                 </h2>
 
                 {/* Help with Documentation */}
-                <div className="my-10 flex flex-wrap space-y-5">
+                {/* <div className="my-10 flex flex-wrap space-y-5">
                   <label className="flex items-center md:w-1/2">
                     <input
                       type="checkbox"
@@ -659,7 +653,7 @@ const QuoteForm = () => {
                       className="mt-2 p-2 border rounded focus:border-orange-500 md:w-1/2"
                     />
                   )}
-                </div>
+                </div> */}
 
                 <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
@@ -672,7 +666,7 @@ const QuoteForm = () => {
                       checked={checkedSections.orderManagement}
                       onChange={() => handleCheckboxChange("orderManagement")}
                     />
-                    <span>Orderhantering & inköp</span>
+                    <span>Hjälp med dokumentation önskas</span>
                   </label>
                   {checkedSections.orderManagement && (
                     <input
@@ -694,7 +688,7 @@ const QuoteForm = () => {
                       onChange={() => handleCheckboxChange("upphandling")}
                       className="form-checkbox size-6"
                     />
-                    <span>Upphandling / hantering av gods orders</span>
+                    <span>Hjälp med orderhantering önskas</span>
                   </label>
                   {checkedSections.upphandling && (
                     <div className="flex flex-wrap my-7 gap-5">
@@ -724,8 +718,7 @@ const QuoteForm = () => {
                       onChange={() => handleCheckboxChange("kringfunktioner")}
                     />
                     <span>
-                      Behöver hjälp för kringfunktioner såsom montering,
-                      underhåll och etc. Kontakta oss gärna för mer info!
+                    Behöver hjälp med andra kringtjänster, såsom montering, underhåll etc. Vi önskar mer info.
                     </span>
                   </label>
                 </div>
@@ -742,8 +735,7 @@ const QuoteForm = () => {
                       onChange={() => handleCheckboxChange("completeSolution")}
                     />
                     <span>
-                      Behöver förslag på en komplett lösning, kontakta oss gärna
-                      för mer info!
+                    Behöver förslag till en komplett 3pl lösning, önskar gärna mer info.
                     </span>
                   </label>
                 </div>

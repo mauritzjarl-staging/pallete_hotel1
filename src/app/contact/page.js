@@ -24,30 +24,24 @@ const ContactPage = () => {
           <MapComponent />
       </section>
 
-      <section className="py-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
+      <section className="pt-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
         {/* Contact Information */}
-        <div className="w-full lg:w-5/12 p-8">
-          <h2 className="text-xl font-bold mb-1 mt-16">Kontakt oss</h2>
+        <div className="w-full lg:w-5/12 p-8 text-center md:text-start">
+          <h2 className="text-xl font-bold mb-1">Kontakta oss</h2>
           <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
           <div className="space-y-4 text-lg">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center md:justify-normal">
               <CiLocationOn size={20} />
               <p className="ml-4">Vickerkullavägen 2, 591 45 Motala</p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center justify-center md:justify-normal">
               <PiPhoneCallThin size={20} />
               <p className="ml-4">0141-21 50 44</p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center justify-center md:justify-normal">
               <AiOutlineMail size={20} />      
               <p className="ml-4">
-                Email:{" "}
-                <a
-                  href="mailto:order@pallhotellet.se"
-                  className="text-orange-500 hover:text-orange-300"
-                >
                   order@pallhotelletet.se
-                </a>
               </p>
             </div>
           </div>
@@ -137,7 +131,7 @@ const ContactPage = () => {
                 type="submit"
                 className="w-full bg-orange-500 text-white py-3 px-4 rounded-md shadow-md hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 transition duration-300"
               >
-                Skicka meddelande
+                Skicka
               </button>
             </div>
           </form>

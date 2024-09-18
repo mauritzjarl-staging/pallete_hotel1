@@ -17,7 +17,7 @@ const LagerhallningInomhus = () => (
                 className="w-full h-auto mb-6"
             />
             <div className="space-y-10 md:pe-5">
-                <div className="md:space-y-10 space-y-7">
+                <div className="md:space-y-5 space-y-3">
                     <h2 className="text-2xl font-bold">Lagerhållning inomhus</h2>
                     <p className='md:text-lg text-[#626262]'>
                         Lagerhåll  dina varor i något av våra lager! Våra lager är placerade mitt i  Sverige, Motala Östergötland och ligger bra till för distribution till  de flesta storstadsregioner i Sverige.
@@ -34,8 +34,8 @@ const LagerhallningInomhus = () => (
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
          text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-            >
+          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
+             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
             </Link>
@@ -54,7 +54,7 @@ const LagerhallningUtomhus = () => (
                  unoptimized={true} // Disable Next.js image optimization
             />
             <div className="space-y-10 md:pe-5">
-                <div className="md:space-y-10 space-y-7">
+                <div className="md:space-y-5 space-y-3">
                     <h2 className="text-2xl font-bold">Lagerhållning utomhus</h2>
                     <p className='md:text-lg text-[#626262]'>
                         Vi har plats för containers, olika typer av skrymmande gods eller annat  som kan förvaras utomhus. Vi förfogar över mer än 100.000m2 yta utomhus  som kan användas till lagring. Våra utomhus lagerplatser är framförallt  belägna i Motala, Östergötland.
@@ -65,8 +65,8 @@ const LagerhallningUtomhus = () => (
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
          text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-            >
+          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
+             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
             </Link>
@@ -86,7 +86,7 @@ const HyraAvForbind = () => (
                  unoptimized={true} // Disable Next.js image optimization
             />
             <div className="space-y-10 md:pe-5">
-                <div className="md:space-y-10 space-y-7">
+                <div className="md:space-y-5 space-y-3">
                     <h2 className="text-2xl font-bold"> Hyra av förråd</h2>
                     <p className='md:text-lg text-[#626262]'>
                         Vi kan erbjuda er olika typer av enskilda förråd. Storleken på dessa  varierar från 4m2 och uppåt. Vi kan även anpassa ditt nya förråd helt  efter era behov.
@@ -97,8 +97,8 @@ const HyraAvForbind = () => (
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
          text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-            >
+          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
+             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
             </Link>
@@ -118,7 +118,7 @@ const Godshantering = () => (
                  unoptimized={true} // Disable Next.js image optimization
             />
             <div className="space-y-10 md:pe-5">
-                <div className="md:space-y-10 space-y-7">
+                <div className="md:space-y-5 space-y-3">
                     <h2 className="text-2xl font-bold">Godshantering</h2>
                     <p className='md:text-lg text-[#626262]'>
                         I samband med lagerhållning hos oss kan vår personal hjälpa till med  hantering av ordrar, bokning, lossning/lastning samt ankomstkontroll.  Upplägget gör vi tillsammans med er för att får en helhetslösning som är  den bästa för just dig och dina behov.
@@ -129,8 +129,8 @@ const Godshantering = () => (
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
          text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-            >
+          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
+             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
             </Link>
@@ -148,7 +148,7 @@ const Ovrigt = () => (
                  unoptimized={true} // Disable Next.js image optimization
             />
             <div className="space-y-10 md:pe-5">
-                <div className="md:space-y-10 space-y-7">
+                <div className="md:space-y-5 space-y-3">
                     <h2 className="text-2xl font-bold">Dokumentation </h2>
                     <p className='md:text-lg text-[#626262]'>
                         Att välja Pallhotellet för dina lagerbehov innebär att du inte bara får  tillgång till flexibla och kostnadseffektiva lagerlösningar. Det innebär  också att du får en partner som är engagerad i att lösa ditt företags  unika utmaningar och hjälpa dig att optimera  ditt lagerflöde.
@@ -167,8 +167,8 @@ const Ovrigt = () => (
             <button
                 className="bg-[#ff6300] flex items-center hover:border-white
          text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-            >
+          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
+             >
                 Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
             </button>
             </Link>
@@ -182,7 +182,7 @@ const Page = () => {
     const tabs = [
         { id: 0, label: 'Lagerhållning inomhus', component: <LagerhallningInomhus /> },
         { id: 1, label: 'Lagerhållning utomhus', component: <LagerhallningUtomhus /> },
-        { id: 2, label: 'Hyra av förbind', component: <HyraAvForbind /> },
+        { id: 2, label: 'Hyra av förråd', component: <HyraAvForbind /> },
         { id: 3, label: 'Godshantering', component: <Godshantering /> },
         { id: 4, label: 'Övrigt', component: <Ovrigt /> },
     ];

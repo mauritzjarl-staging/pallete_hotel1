@@ -15,57 +15,57 @@ export default function HomePage() {
 
   // Reusable SliderContent Component
   const SliderContent = () => (
-    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10">
+    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-5">
       <div>
         <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
           Från 49 kronor per pall!
         </h1>
       </div>
       <div>
-        <p className="xl:text-xl lg:text-">Hyr din pallplats hos oss!</p>
+        <p className="xl:text-xl px-5">Hyr din pallplats hos oss!</p>
       </div>
       <button className="bg-[#ff6300] flex items-center hover:border-white text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm">
         UPPTÄCK MER{" "}
         <span className="bg-white rounded-full p-1 ms-3">
-          <IoArrowForward color="orange" size={20} />
+          <IoArrowForward color="black" size={20} />
         </span>
       </button>
     </div>
   );
   const SliderContent2 = () => (
-    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10">
+    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-5">
       <div>
         <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
           Godshantering
         </h1>
       </div>
       <div>
-        <p className="xl:text-xl lg:text-">
+        <p className="xl:text-xl px-5">
           Vi tar hand om ut-och inlastning av ditt gods
         </p>
       </div>
       <button className="bg-[#ff6300] flex items-center hover:border-white text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm">
         Upptäck mer.
         <span className="bg-white rounded-full p-1 ms-3">
-          <IoArrowForward color="orange" size={20} />
+          <IoArrowForward color="black" size={20} />
         </span>
       </button>
     </div>
   );
   const SliderContent3 = () => (
-    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10">
+    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-5">
       <div>
         <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
           Vi ordnar hela flödet
         </h1>
       </div>
       <div>
-        <p className="xl:text-xl lg:text-">Vi tar hand om hela flödet åt er</p>
+        <p className="xl:text-xl px-5">Vi tar hand om hela flödet åt er</p>
       </div>
       <button className="bg-[#ff6300] flex items-center hover:border-white text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm">
         Upptäck mer.
         <span className="bg-white rounded-full p-1 ms-3">
-          <IoArrowForward color="orange" size={20} />
+          <IoArrowForward color="black" size={20} />
         </span>
       </button>
     </div>
@@ -77,7 +77,7 @@ export default function HomePage() {
   const NextArrow = ({ onClick }) => {
     return (
       <div
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white cursor-pointer z-10"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2  bg-[#001D23D1]  p-2 rounded-full text-white cursor-pointer z-10"
         onClick={onClick}
       >
         <GrNext size={30} />
@@ -89,7 +89,7 @@ export default function HomePage() {
   const PrevArrow = ({ onClick }) => {
     return (
       <div
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white cursor-pointer z-10"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-[#001D23D1]  p-2 rounded-full cursor-pointer z-10"
         onClick={onClick}
       >
         <GrPrevious size={30} />
@@ -122,7 +122,7 @@ export default function HomePage() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
-    autoplay: true, 
+    autoplay: true,
   };
 
   // Testomonial slider settings
@@ -165,15 +165,18 @@ export default function HomePage() {
 
   const testimonialSettings = {
     centerMode: true,
-    centerPadding: "0px", // No padding around the slides
+    centerPadding: "0px",
     slidesToShow: 3,
     autoplay: true,
-    arrows: false, // Disable default arrows
+    arrows: false,
     responsive: [
       {
         breakpoint: 992,
         settings: {
           slidesToShow: 1,
+          arrows: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
         },
       },
     ],
@@ -184,13 +187,14 @@ export default function HomePage() {
 
   const solutionSettings = {
     slidesToShow: 3,
-    // autoplay: true,
+    arrows: false,
     autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 992,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],
@@ -199,8 +203,8 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[url('/imgs/Frame5892.png')] bg-cover bg-center h-screen  flex justify-center md:px-20 items-center px-5">
-        <div className="w-full max-w-5xl">
+      <section className="bg-[url('/imgs/Frame5892.png')] bg-cover bg-center h-screen flex justify-center md:px-20 items-center px-5">
+        <div className="w-full max-w-5xl ">
           <Slider {...BannerSlider}>
             <SliderContent />
             <SliderContent2 />
@@ -293,7 +297,7 @@ export default function HomePage() {
           <div className="flex text-wrap justify-center md:justify-start space-y-5 sm:space-y-0">
             <Link href="/contact">
               <button
-                className="flex items-center md:justify-around text-[#ff6300] border-2 border-[#ff6300] text-nowrap md:py-3 py-2 font-bold px-3 md:px-4 lg:px-8  
+                className="flex items-center md:justify-around text-[#ff6300] border-2 border-[#ff6300] text-nowrap md:py-3 py-2  px-3 md:px-4 lg:px-8  
            text-center rounded-md"
               >
                 Kontakta oss
@@ -305,7 +309,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* <!--col-2 side Image --> */}
-        <div className="my-10 md:my-0 p-10 md:w-6/12 w-full">
+        <div className="my-10 md:my-0 md:p-10 px-5 md:w-6/12 w-full">
           <div className="relative">
             <Image
               src="/imgs/Rectangle4.png"
@@ -314,13 +318,13 @@ export default function HomePage() {
               alt="Background Image"
               className="w-full h-full "
             />
-            <div className="absolute top-0 -left-10 border-8 border-white">
+            <div className="absolute sm:-top-6 sm:-left-10 -top-3 -left-5 border-8 border-white">
               <Image
                 src="/imgs/image2.png"
                 width={500}
                 height={300}
                 alt="Overlay Image"
-                className="md:w-[6rem] lg:w-[9rem] xl:w-[12rem] w-[7rem] sm:w-[9rem]"
+                className="md:w-[6rem] lg:w-[9rem] xl:w-[12rem] w-[5rem] sm:w-[9rem]"
               />
             </div>
           </div>
@@ -334,7 +338,7 @@ export default function HomePage() {
           <p className="bg-[#FF6F0F17] text-[#ff6300] p-3 inline-block">
             VAD VI ERBJUDER
           </p>
-          <p className="md:text-[2rem] text-[1.2rem] font-bold md:w-4/12 mx-auto">
+          <p className="md:text-[2rem] text-[1.2rem] font-bold md:w-5/12 mx-auto">
             Vi erbjuder flexibla och skräddarsydda lösningar
           </p>
         </div>
@@ -380,7 +384,7 @@ export default function HomePage() {
           <div className="md:px-5 mt-10">
             <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
               <div>
-                <p className="inline-block px-2 rounded-md py-2 bg-[#ff6300] text-[1.2rem] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
+                <p className="inline-block px-2 rounded-md py-2 bg-[#ff6300] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
                   Godshantering
                 </p>
               </div>
@@ -415,7 +419,7 @@ export default function HomePage() {
           <div className="md:px-5 mt-10">
             <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
               <div>
-                <p className="inline-block px-2 rounded-md py-2 bg-[#ff6300] text-[1.2rem] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
+                <p className="inline-block px-2 rounded-md py-2 bg-[#ff6300] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
                   Dokumentation
                 </p>
               </div>
@@ -465,7 +469,7 @@ export default function HomePage() {
               </div>
               <div className="absolute top-0">
                 <p
-                  className="text-center rounded-md py-1 bg-[#ff6300] text-[1.2rem]
+                  className="text-center rounded-md py-1 bg-[#ff6300]
              text-white px-8 inline font-semibold"
                 >
                   Lagring
@@ -629,16 +633,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-                 
+
       {/* Last Testimonial-Slider Section */}
 
       <section className="relative pt-10 md:pb-20 pb-10 px-10 md:px-[65px] bg-gray-100">
         <div className="text-center space-y-8 my-10">
           <p className="bg-[#FF6F0F17] text-[#ff6300] text-xl font-semibold p-3 inline">
-          Kundomdömen
+            Kundomdömen
           </p>
           <p className="md:text-[2rem] text-[1.2rem] font-bold">
-          Vad säger våra kunder om oss
+            Vad säger våra kunder om oss
           </p>
         </div>
         {/* Custom navigation buttons */}
@@ -682,7 +686,7 @@ export default function HomePage() {
                   text-center md:mx-8 mx-2 ${
                     activeSlide === index ? "opacity-100" : ""
                   }
-                   bg-[#ff6300] rounded-lg md:p-10 p-4 space-y-2 text-white`}
+                   bg-[#ff6300] rounded-lg md:p-5 p-4 space-y-2 text-white`}
               >
                 <p>{testimonial.text}</p>
                 <p className="font-semibold">{testimonial.name}</p>
