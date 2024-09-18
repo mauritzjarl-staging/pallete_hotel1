@@ -45,7 +45,9 @@ export default function Header() {
 
   // Toggle dropdown for Tjänster
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+    if (!pathname.startsWith("/services")) {
+      setDropdownOpen(!dropdownOpen);
+    }
   };
 
   // Close dropdown when clicking outside
@@ -97,11 +99,13 @@ export default function Header() {
           id="stickyDiv"
           className={`text-white flex justify-between items-center
              w-full py-4 bg-[#001d24] mx-8 px-8 md:mx-20 ${
-               isSticky ? "bg-[#001d24] fixed top-0 z-50 px-8 md:px-20" : "relative"
+               isSticky
+                 ? "bg-[#001d24] fixed top-0 z-50 px-8 md:px-20"
+                 : "relative"
              }`}
         >
           <div className="md:w-4/12 lg:h-auto">
-            <Link href="/">
+            <Link className="w-full" href="/">
               <Image
                 src="/imgs/Pallhotellet.se.png"
                 alt="Logo"
@@ -129,7 +133,7 @@ export default function Header() {
                   pathname === "/" ? "text-[#ff6300]" : "hover:text-[#ff6300]"
                 }`}
               >
-                <Link href="/">Hem</Link>
+                <Link className="w-full" href="/">Hem</Link>
               </li>
               {/* <li
                 className={`${
@@ -138,7 +142,7 @@ export default function Header() {
                     : "hover:text-[#ff6300]"
                 }`}
               >
-                <Link href="/findus">Hitta oss</Link>
+                <Link className="w-full" href="/findus">Hitta oss</Link>
               </li> */}
               <li
                 className={`relative group dropdown-container ${
@@ -146,11 +150,11 @@ export default function Header() {
                     ? "text-[#ff6300]"
                     : "hover:text-[#ff6300]"
                 }`}
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                onMouseEnter={toggleDropdown}
+                onMouseLeave={toggleDropdown}
               >
                 <div className="flex items-center space-x-2">
-                  <Link href="/services">Tjänster</Link>
+                  <Link className="w-full" href="/services">Tjänster</Link>
                   <FaCaretDown />
                 </div>
 
@@ -158,21 +162,21 @@ export default function Header() {
                 {dropdownOpen && (
                   <ul className="absolute bg-white rounded font-medium text-[#001d24] py-2 z-50">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link href="/services#indoor">Lagerhållning inomhus</Link>
+                      <Link className="w-full" href="/services#indoor">Lagerhållning inomhus</Link>
                     </li>
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link href="/services#outdoor">
+                      <Link className="w-full" href="/services#outdoor">
                         Lagerhållning utomhus
                       </Link>
                     </li>
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link href="/services#rental">Hyra av förbind</Link>
+                      <Link className="w-full" href="/services#rental">Hyra av förbind</Link>
                     </li>
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link href="/services#cargo">Godshantering</Link>
+                      <Link className="w-full" href="/services#cargo">Godshantering</Link>
                     </li>
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link href="/services#other">Övrigt</Link>
+                      <Link className="w-full" href="/services#other">Övrigt</Link>
                     </li>
                   </ul>
                 )}
@@ -185,7 +189,7 @@ export default function Header() {
                     : "hover:text-[#ff6300]"
                 }`}
               >
-                <Link href="/contact">Kontakt</Link>
+                <Link className="w-full" href="/contact">Kontakt</Link>
               </li>
               <li
                 className={`${
@@ -194,14 +198,14 @@ export default function Header() {
                     : "hover:text-[#ff6300]"
                 }`}
               >
-                <Link href="/login">Logga in</Link>
+                <Link className="w-full" href="/login">Logga in</Link>
               </li>
             </ul>
 
             {/* Request for Quotation Button (Desktop) */}
             <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-[#ff6300] rounded-md">
               <button className="hover:text-[#ff6300] md:py-2 py-1 font-medium">
-                <Link href="/quotation">Offertförfrågan</Link>
+                <Link className="w-full" href="/quotation">Offertförfrågan</Link>
               </button>
             </div>
           </div>
@@ -211,29 +215,29 @@ export default function Header() {
       {/* Mobile Menu - Only shown when toggled */}
 
       {menuOpen && (
-        <div className="md:hidden bg-[#001d24] text-white p-4">
+        <div className="md:hidden bg-[#001d24] text-white px-4 py-10">
           <ul className="space-y-4">
             <li className="text-white hover:text-[#ff6300]">
-              <Link href="/" onClick={() => setMenuOpen(false)}>
+              <Link className="w-full" href="/" onClick={() => setMenuOpen(false)}>
                 Hem
               </Link>
             </li>
-            <li className="text-white hover:text-[#ff6300]">
-              <Link href="/findus" onClick={() => setMenuOpen(false)}>
+            {/* <li className="text-white hover:text-[#ff6300]">
+              <Link className="w-full" href="/findus" onClick={() => setMenuOpen(false)}>
                 Hitta oss
               </Link>
-            </li>
+            </li> */}
             <li
-              className={` group dropdown-container ${
+              className={`relative group dropdown-container ${
                 pathname.startsWith("/services")
                   ? "text-[#ff6300]"
                   : "hover:text-[#ff6300]"
               }`}
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
+              onMouseEnter={toggleDropdown}
+              onMouseLeave={toggleDropdown}
             >
               <div className="flex items-center space-x-3">
-                <Link href="/services">Tjänster</Link>
+                <Link className="w-full" href="/services">Tjänster</Link>
                 <FaCaretDown />
               </div>
 
@@ -241,7 +245,7 @@ export default function Header() {
               {dropdownOpen && (
                 <ul className="bg-white text-[#001d24] text-md pt-5 pb-3 z-50 rounded">
                   <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                    <Link
+                    <Link className="w-full"
                       href="/services#indoor"
                       onClick={() => setMenuOpen(false)}
                     >
@@ -249,7 +253,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                    <Link
+                    <Link className="w-full"
                       href="/services#outdoor"
                       onClick={() => setMenuOpen(false)}
                     >
@@ -257,7 +261,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                    <Link
+                    <Link className="w-full"
                       href="/services#rental"
                       onClick={() => setMenuOpen(false)}
                     >
@@ -265,7 +269,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                    <Link
+                    <Link className="w-full"
                       href="/services#cargo"
                       onClick={() => setMenuOpen(false)}
                     >
@@ -273,7 +277,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                    <Link
+                    <Link className="w-full"
                       href="/services#other"
                       onClick={() => setMenuOpen(false)}
                     >
@@ -284,12 +288,12 @@ export default function Header() {
               )}
             </li>
             <li className="text-white hover:text-[#ff6300]">
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+              <Link className="w-full" href="/contact" onClick={() => setMenuOpen(false)}>
                 Kontakt
               </Link>
             </li>
             <li className="text-white hover:text-[#ff6300]">
-              <Link href="/login" onClick={() => setMenuOpen(false)}>
+              <Link className="w-full" href="/login" onClick={() => setMenuOpen(false)}>
                 Logga in
               </Link>
             </li>
@@ -301,7 +305,7 @@ export default function Header() {
               className="w-full py-2 text-sm hover:text-[#ff6300]"
               onClick={() => setMenuOpen(false)}
             >
-              <Link href="/quotation">Offertförfrågan</Link>
+              <Link className="w-full" href="/quotation">Offertförfrågan</Link>
             </button>
           </div>
         </div>
