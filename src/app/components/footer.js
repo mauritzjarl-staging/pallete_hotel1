@@ -9,8 +9,8 @@ import { MdCall } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 export default function Footer() {
   return (
-    <footer>
-      <div className="leading-8 py-8 list-none bg-[#001D23] px-8 md:px-20">
+    <footer className="md:px-10 px-5 bg-[#001D23]">
+      <div className="leading-8 py-8 list-none md:px-20 px-10">
         <div className="flex md:justify-between justify-center flex-col md:flex-row text-[#808E91]">
           <div className="py-4 h-auto mt-10 md:w-4/12">
             <Image

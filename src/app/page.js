@@ -15,17 +15,17 @@ export default function HomePage() {
 
   // Reusable SliderContent Component
   const SliderContent = () => (
-    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-5">
+    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
         <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
           Från 49 kronor per pall!
         </h1>
       </div>
       <div>
-        <p className="xl:text-xl px-5">Hyr din pallplats hos oss!</p>
+        <p className="xl:text-xl px-8 text-center">Hyr din pallplats hos oss!</p>
       </div>
       <button className="bg-[#ff6300] flex items-center hover:border-white text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm">
-        UPPTÄCK MER{" "}
+       UPPTÄCK MER{" "}
         <span className="bg-white rounded-full p-1 ms-3">
           <IoArrowForward color="black" size={20} />
         </span>
@@ -33,19 +33,19 @@ export default function HomePage() {
     </div>
   );
   const SliderContent2 = () => (
-    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-5">
+    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
         <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
           Godshantering
         </h1>
       </div>
       <div>
-        <p className="xl:text-xl px-5">
+        <p className="xl:text-xl px-8 text-center">
           Vi tar hand om ut-och inlastning av ditt gods
         </p>
       </div>
       <button className="bg-[#ff6300] flex items-center hover:border-white text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm">
-        Upptäck mer.
+       UPPTÄCK MER
         <span className="bg-white rounded-full p-1 ms-3">
           <IoArrowForward color="black" size={20} />
         </span>
@@ -53,17 +53,17 @@ export default function HomePage() {
     </div>
   );
   const SliderContent3 = () => (
-    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-5">
+    <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
         <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
           Vi ordnar hela flödet
         </h1>
       </div>
       <div>
-        <p className="xl:text-xl px-5">Vi tar hand om hela flödet åt er</p>
+        <p className="xl:text-xl px-8 text-center">Vi tar hand om hela flödet åt er</p>
       </div>
       <button className="bg-[#ff6300] flex items-center hover:border-white text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm">
-        Upptäck mer.
+      UPPTÄCK MER
         <span className="bg-white rounded-full p-1 ms-3">
           <IoArrowForward color="black" size={20} />
         </span>
@@ -272,7 +272,7 @@ export default function HomePage() {
 
       {/* <!-- Section3 --> */}
 
-      <section className="flex md:flex-row flex-col md:px-20 px-10 my-10">
+      <section className="flex md:flex-row flex-col md:px-20 px-10 md:my-20 my-10">
         {/* <!--col-1 Text --> */}
         <div className="md:pe-8 inline-flex justify-center flex-col space-y-6 md:w-6/12 w-full text-center md:text-start">
           <div>
@@ -280,7 +280,7 @@ export default function HomePage() {
               VILKA VI ÄR
             </p>
           </div>
-          <p className="md:text-4xl text-lg font-bold md:w-5/6 leading-loose">
+          <p className="md:text-4xl text-lg font-bold leading-loose">
             Vi hjälper dig med lagerhållning, godshantering, dokumentation och
             mycket mer.
           </p>
@@ -309,7 +309,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* <!--col-2 side Image --> */}
-        <div className="my-10 md:my-0 md:p-10 px-5 md:w-6/12 w-full">
+        <div className="my-10 md:my-0 md:flex justify-end md:px-5 md:w-6/12 w-full">
           <div className="relative">
             <Image
               src="/imgs/Rectangle4.png"
@@ -455,7 +455,7 @@ export default function HomePage() {
 
       {/* Services section / 3-Images  */}
 
-      <section className="my-10 bg-[url('/imgs/Frame5894.png')] p-10 md:p-24">
+      <section className="my-10 bg-[url('/imgs/Frame5894.png')] p-10 md:p-20">
         <div className="flex flex-col justify-center lg:flex-row">
           <div className="lg:w-3/12 w-full lg:pt-44">
             <div className="relative my-10 lg:my-0 lg:flex justify-center  hidden">
