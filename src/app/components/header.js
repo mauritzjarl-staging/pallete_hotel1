@@ -131,7 +131,7 @@ export default function Header() {
               >
                 <Link href="/">Hem</Link>
               </li>
-              {/* <li
+              <li
                 className={`${
                   pathname === "/findus"
                     ? "text-[#ff6300]"
@@ -139,7 +139,7 @@ export default function Header() {
                 }`}
               >
                 <Link href="/findus">Hitta oss</Link>
-              </li> */}
+              </li>
               <li
                 className={`relative group dropdown-container ${
                   pathname.startsWith("/services")
