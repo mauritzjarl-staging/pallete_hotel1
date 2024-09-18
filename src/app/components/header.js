@@ -100,7 +100,7 @@ export default function Header() {
                isSticky ? "bg-[#001d24] fixed top-0 z-50 md:px-20" : "relative"
              }`}
         >
-          <div className="lg:w-5/12 lg:h-auto">
+          <div className="md:w-4/12 lg:h-auto">
             <Link href="/">
               <Image
                 src="/imgs/Pallhotellet.se.png"
@@ -118,11 +118,11 @@ export default function Header() {
             </button>
           </div>
 
-          <div className="lg:w-7/12 hidden md:flex items-center justify-between space-x-2">
+          <div className="md:w-8/12 hidden md:flex items-center justify-between space-x-2">
             {/* Desktop menu */}
             <ul
               id="menu"
-              className="hidden md:flex text-nowrap lg:space-x-5 md:space-x-2 font-semibold "
+              className="hidden md:flex text-nowrap lg:space-x-14 md:space-x-2 lg:text-lg font-semibold "
             >
               <li
                 className={`${

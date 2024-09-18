@@ -1,9 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { PiPhoneCallThin } from "react-icons/pi";
 import { CiLocationOn } from "react-icons/ci";
 import dynamic from "next/dynamic";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css"; // Importing required styles for DatePicker
+import { FaCalendarAlt } from "react-icons/fa"; // Optional: Icon for calendar
 
 // Dynamically import MapComponent with SSR disabled
 const MapComponent = dynamic(() => import("../components/MapComponent"), {
@@ -38,6 +41,24 @@ const QuoteForm = () => {
     }));
   };
 
+  // Calendar Input Settings
+
+  const [startDate, setStartDate] = useState(null); // For "From" date
+  const [endDate, setEndDate] = useState(null); // For "Till" (Until) date
+  const datePickerStartRef = useRef(null);
+  const datePickerEndRef = useRef(null);
+
+  const handleStartDateClick = () => {
+    if (datePickerStartRef.current) {
+      datePickerStartRef.current.setOpen(true); // Open the start date picker
+    }
+  };
+
+  const handleEndDateClick = () => {
+    if (datePickerEndRef.current) {
+      datePickerEndRef.current.setOpen(true); // Open the end date picker
+    }
+  };
   return (
     <>
       <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] py-56">
@@ -149,12 +170,6 @@ const QuoteForm = () => {
                       placeholder="Antal pallplatser"
                       className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
                     />
-                    {/* <input
-                      type="number"
-                      name="monthsPerYearKallager"
-                      placeholder="Antal månader per år"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    /> */}
                     <input
                       type="text"
                       name="Pallvikt/snitt"
@@ -167,18 +182,39 @@ const QuoteForm = () => {
                       placeholder="Antal kragar"
                       className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
                     />
-                       <input
-                      type="date"
-                      name="fromDateKallager"
-                      placeholder="Från och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="date"
-                      name="toDateKallager"
-                      placeholder="Till och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
+
+                    <div
+                      className="relative w-full"
+                      onClick={handleStartDateClick}
+                    >
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                        <DatePicker
+                          ref={datePickerStartRef}
+                          selected={startDate}
+                          onChange={(date) => setStartDate(date)}
+                          placeholderText="Från och med"
+                          dateFormat="yyyy-MM-dd"
+                          className="focus:outline-none w-full bg-transparent pointer-events-none"
+                        />
+                        <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+                    <div
+                      className="relative w-full"
+                      onClick={handleEndDateClick}
+                    >
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                        <DatePicker
+                          ref={datePickerEndRef}
+                          selected={endDate}
+                          onChange={(date) => setEndDate(date)}
+                          placeholderText="Till och med"
+                          dateFormat="yyyy-MM-dd"
+                          className="focus:outline-none w-full bg-transparent pointer-events-none"
+                        />
+                        <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -218,18 +254,38 @@ const QuoteForm = () => {
                       placeholder="Antal kragar"
                       className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
                     />
-                    <input
-                      type="date"
-                      name="fromDateVarmager"
-                      placeholder="Från och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="date"
-                      name="toDateVarmager"
-                      placeholder="Till och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
+                    <div
+                      className="relative w-full"
+                      onClick={handleStartDateClick}
+                    >
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                        <DatePicker
+                          ref={datePickerStartRef}
+                          selected={startDate}
+                          onChange={(date) => setStartDate(date)}
+                          placeholderText="Från och med"
+                          dateFormat="yyyy-MM-dd"
+                          className="focus:outline-none w-full bg-transparent pointer-events-none"
+                        />
+                        <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+                    <div
+                      className="relative w-full"
+                      onClick={handleEndDateClick}
+                    >
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                        <DatePicker
+                          ref={datePickerEndRef}
+                          selected={endDate}
+                          onChange={(date) => setEndDate(date)}
+                          placeholderText="Till och med"
+                          dateFormat="yyyy-MM-dd"
+                          className="focus:outline-none w-full bg-transparent pointer-events-none"
+                        />
+                        <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -275,20 +331,40 @@ const QuoteForm = () => {
                       className="p-2 border rounded focus:outline-orange-500"
                     />
                   </div>
-    
 
-    
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                    <input
-                      type="date"
-                      placeholder="Från och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="date"
-                      placeholder="Till och med"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
+                    <div
+                      className="relative w-full"
+                      onClick={handleStartDateClick}
+                    >
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                        <DatePicker
+                          ref={datePickerStartRef}
+                          selected={startDate}
+                          onChange={(date) => setStartDate(date)}
+                          placeholderText="Från och med"
+                          dateFormat="yyyy-MM-dd"
+                          className="focus:outline-none w-full bg-transparent pointer-events-none"
+                        />
+                        <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+                    <div
+                      className="relative w-full"
+                      onClick={handleEndDateClick}
+                    >
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                        <DatePicker
+                          ref={datePickerEndRef}
+                          selected={endDate}
+                          onChange={(date) => setEndDate(date)}
+                          placeholderText="Till och med"
+                          dateFormat="yyyy-MM-dd"
+                          className="focus:outline-none w-full bg-transparent pointer-events-none"
+                        />
+                        <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
                     <select className="p-3 border border-gray-300 rounded-md focus:outline-orange-500">
                       <option value="">Typ av gods</option>
                       <option value="skrymmande">Skrymmande</option>
@@ -320,25 +396,42 @@ const QuoteForm = () => {
                     placeholder="Ytan i m2"
                     className="p-2 border rounded focus:outline-orange-500"
                   />
-                  <input
-                    type="date"
-                    placeholder="Från och med"
-                    className="p-2 border rounded focus:outline-orange-500"
-                  />
-                  <input
-                    type="date"
-                    placeholder="Till och med"
-                    className="p-2 border rounded focus:outline-orange-500"
-                  />
+                  <div
+                    className="relative w-full"
+                    onClick={handleStartDateClick}
+                  >
+                    <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                      <DatePicker
+                        ref={datePickerStartRef}
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        placeholderText="Från och med"
+                        dateFormat="yyyy-MM-dd"
+                        className="focus:outline-none w-full bg-transparent pointer-events-none"
+                      />
+                      <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                    </div>
+                  </div>
+                  <div className="relative w-full" onClick={handleEndDateClick}>
+                    <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                      <DatePicker
+                        ref={datePickerEndRef}
+                        selected={endDate}
+                        onChange={(date) => setEndDate(date)}
+                        placeholderText="Till och med"
+                        dateFormat="yyyy-MM-dd"
+                        className="focus:outline-none w-full bg-transparent pointer-events-none"
+                      />
+                      <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
 
             <div className="border-t-2 border-[#A0ABBB] my-6"></div>
 
-
             {/* Section 3 - Inlastning / utlastning */}
-
 
             <h2 className="text-lg font-semibold mb-2">
               3. Inlastning / utlastning
@@ -378,7 +471,7 @@ const QuoteForm = () => {
                     <input
                       type="text"
                       placeholder="Antal timmar"
-                      className="p-2 border focus:outline-orange-500 rounded"
+                      className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
                   )}
                 </div>
@@ -402,7 +495,7 @@ const QuoteForm = () => {
                     <input
                       type="text"
                       placeholder="Antal timmar"
-                      className="p-2 border focus:outline-orange-500 rounded"
+                      className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
                   )}
                 </div>
@@ -426,7 +519,7 @@ const QuoteForm = () => {
                     <input
                       type="text"
                       placeholder="Antal timmar"
-                      className="p-2 border focus:outline-orange-500 rounded"
+                      className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
                   )}
                 </div>
@@ -437,30 +530,30 @@ const QuoteForm = () => {
 
             {/* Additional Checkboxes */}
 
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="containerhandling"
-                  checked={checkedSections.containerhandling}
-                  onChange={() => handleCheckboxChange("containerhandling")}
-                  className="mr-2 size-6"
-                />
-                <label htmlFor="containerhandling">
-                  Containerhantering/packetering
-                </label>
-              </div>
-              <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="containerhandling"
+                checked={checkedSections.containerhandling}
+                onChange={() => handleCheckboxChange("containerhandling")}
+                className="mr-2 size-6"
+              />
+              <label htmlFor="containerhandling">
+                Containerhantering/packetering
+              </label>
+            </div>
+            <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="skrymmande"
-                  checked={checkedSections.skrymmande}
-                  onChange={() => handleCheckboxChange("skrymmande")}
-                  className="mr-2 size-6"
-                />
-                <label htmlFor="skrymmande">Hantering av skrymmande gods</label>
-              </div>
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="skrymmande"
+                checked={checkedSections.skrymmande}
+                onChange={() => handleCheckboxChange("skrymmande")}
+                className="mr-2 size-6"
+              />
+              <label htmlFor="skrymmande">Hantering av skrymmande gods</label>
+            </div>
 
             <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
 
@@ -486,7 +579,7 @@ const QuoteForm = () => {
                     <input
                       type="text"
                       placeholder="Antal timmar"
-                      className="p-2 border focus:outline-orange-500 rounded"
+                      className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
                   )}
                 </div>
@@ -508,7 +601,7 @@ const QuoteForm = () => {
                     <input
                       type="text"
                       placeholder="Antal timmar"
-                      className="p-2 border focus:outline-orange-500 rounded"
+                      className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
                   )}
                 </div>
@@ -531,7 +624,7 @@ const QuoteForm = () => {
                     <input
                       type="text"
                       placeholder="Antal timmar"
-                      className="p-2 border focus:outline-orange-500 rounded"
+                      className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
                   )}
                 </div>
