@@ -396,6 +396,7 @@ const QuoteForm = () => {
                     placeholder="Ytan i m2"
                     className="p-2 border rounded focus:outline-orange-500"
                   />
+                  
                   <div
                     className="relative w-full"
                     onClick={handleStartDateClick}
