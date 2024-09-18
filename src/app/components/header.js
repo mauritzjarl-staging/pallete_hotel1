@@ -85,9 +85,9 @@ export default function Header() {
           <p className="hover:text-white">Följ oss:</p>
           <div className="px-4 cursor-pointer md:space-x-4 space-x-2 flex">
             <FaFacebook className="hover:text-white" />
-            <FaTwitter className="hover:text-white" />
+            {/* <FaTwitter className="hover:text-white" />
             <IoLogoLinkedin className="hover:text-white" />
-            <FiInstagram className="hover:text-white" />
+            <FiInstagram className="hover:text-white" /> */}
           </div>
         </div>
       </div>
@@ -131,7 +131,7 @@ export default function Header() {
               >
                 <Link href="/">Hem</Link>
               </li>
-              <li
+              {/* <li
                 className={`${
                   pathname === "/findus"
                     ? "text-[#ff6300]"
@@ -139,7 +139,7 @@ export default function Header() {
                 }`}
               >
                 <Link href="/findus">Hitta oss</Link>
-              </li>
+              </li> */}
               <li
                 className={`relative group dropdown-container ${
                   pathname.startsWith("/services")

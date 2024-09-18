@@ -31,7 +31,7 @@ export default function Footer() {
                 <FaFacebook />
               </Link>
 
-              <Link
+              {/* <Link
                 href="#"
                 className="border hover:text-white hover:border-white p-2 rounded-md border-[#808E91]"
               >
@@ -50,7 +50,7 @@ export default function Footer() {
                 className="border hover:text-white hover:border-white p-2 rounded-md border-[#808E91]"
               >
                 <FiInstagram />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
