@@ -452,7 +452,7 @@ const QuoteForm = () => {
                 <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
-                    checked={checkedSections.gaffeltruck}
+                    // checked={checkedSections.gaffeltruck}
                     onChange={() => handleCheckboxChange("gaffeltruck")}
                     id="gaffeltruck"
                     className="mr-2 size-6"
@@ -462,13 +462,13 @@ const QuoteForm = () => {
                   </label>
                 </div>
                 <div className="md:w-1/2 flex items-center">
-                  {checkedSections.gaffeltruck && (
+                  {/* {checkedSections.gaffeltruck && (
                     <input
                       type="text"
                       placeholder="Antal timmar"
                       className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
-                  )}
+                  )} */}
                 </div>
               </div>
 
@@ -476,7 +476,7 @@ const QuoteForm = () => {
                 <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
-                    checked={checkedSections.container}
+                    // checked={checkedSections.container}
                     onChange={() => handleCheckboxChange("container")}
                     id="container"
                     className="mr-2 size-6"
@@ -486,13 +486,13 @@ const QuoteForm = () => {
                   </label>
                 </div>
                 <div className="md:w-1/2 flex items-center">
-                  {checkedSections.container && (
+                  {/* {checkedSections.container && (
                     <input
                       type="text"
                       placeholder="Antal timmar"
                       className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
-                  )}
+                  )} */}
                 </div>
               </div>
 
@@ -500,7 +500,7 @@ const QuoteForm = () => {
                 <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
-                    checked={checkedSections.ompackning}
+                    // checked={checkedSections.ompackning}
                     onChange={() => handleCheckboxChange("ompackning")}
                     id="ompackning"
                     className="mr-2 size-6"
@@ -510,13 +510,13 @@ const QuoteForm = () => {
                   </label>
                 </div>
                 <div className="md:w-1/2 flex items-center">
-                  {checkedSections.ompackning && (
+                  {/* {checkedSections.ompackning && (
                     <input
                       type="text"
                       placeholder="Antal timmar"
                       className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -543,7 +543,7 @@ const QuoteForm = () => {
               <input
                 type="checkbox"
                 id="skrymmande"
-                checked={checkedSections.skrymmande}
+                // checked={checkedSections.skrymmande}
                 onChange={() => handleCheckboxChange("skrymmande")}
                 className="mr-2 size-6"
               />
@@ -562,7 +562,7 @@ const QuoteForm = () => {
                 <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
-                    checked={checkedSections.handtruck}
+                    // checked={checkedSections.handtruck}
                     onChange={() => handleCheckboxChange("handtruck")}
                     id="handtruck"
                     className="mr-2 size-6"
@@ -570,13 +570,13 @@ const QuoteForm = () => {
                   <label htmlFor="handtruck">Handtruck önskas</label>
                 </div>
                 <div className="md:w-1/2 flex items-center">
-                  {checkedSections.handtruck && (
+                  {/* {checkedSections.handtruck && (
                     <input
                       type="text"
                       placeholder="Antal timmar"
                       className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
-                  )}
+                  )} */}
                 </div>
               </div>
 
@@ -584,7 +584,7 @@ const QuoteForm = () => {
                 <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
-                    checked={checkedSections.gaffeltruck2}
+                    // checked={checkedSections.gaffeltruck2}
                     onChange={() => handleCheckboxChange("gaffeltruck2")}
                     id="gaffeltruck2"
                     className="mr-2 size-6"
@@ -592,13 +592,13 @@ const QuoteForm = () => {
                   <label htmlFor="gaffeltruck2">Gaffeltruck önskas</label>
                 </div>
                 <div className="md:w-1/2 flex items-center">
-                  {checkedSections.gaffeltruck2 && (
+                  {/* {checkedSections.gaffeltruck2 && (
                     <input
                       type="text"
                       placeholder="Antal timmar"
                       className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
-                  )}
+                  )} */}
                 </div>
               </div>
 
@@ -606,7 +606,7 @@ const QuoteForm = () => {
                 <div className="md:w-1/2 flex items-center">
                   <input
                     type="checkbox"
-                    checked={checkedSections.travers}
+                    // checked={checkedSections.travers}
                     onChange={() => handleCheckboxChange("travers")}
                     id="travers"
                     className="mr-2 size-6"
@@ -615,13 +615,13 @@ const QuoteForm = () => {
                 </div>
 
                 <div className="md:w-1/2 flex items-center">
-                  {checkedSections.travers && (
+                  {/* {checkedSections.travers && (
                     <input
                       type="text"
                       placeholder="Antal timmar"
                       className="p-2 border focus:outline-orange-500 rounded mt-5 md:mt-0"
                     />
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -663,18 +663,18 @@ const QuoteForm = () => {
                     <input
                       type="checkbox"
                       className="form-checkbox size-6 me-2"
-                      checked={checkedSections.orderManagement}
+                      // checked={checkedSections.orderManagement}
                       onChange={() => handleCheckboxChange("orderManagement")}
                     />
                     <span>Hjälp med dokumentation önskas</span>
                   </label>
-                  {checkedSections.orderManagement && (
+                  {/* {checkedSections.orderManagement && (
                     <input
                       type="text"
                       placeholder="Antal timmar"
                       className="mt-2 p-2 border rounded focus:border-orange-500 md:w-1/2"
                     />
-                  )}
+                  )} */}
                 </div>
 
                 <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>
@@ -684,13 +684,13 @@ const QuoteForm = () => {
                   <label className="md:flex items-center space-x-2">
                     <input
                       type="checkbox"
-                      checked={checkedSections.upphandling}
+                      // checked={checkedSections.upphandling}
                       onChange={() => handleCheckboxChange("upphandling")}
                       className="form-checkbox size-6"
                     />
                     <span>Hjälp med orderhantering önskas</span>
                   </label>
-                  {checkedSections.upphandling && (
+                  {/* {checkedSections.upphandling && (
                     <div className="flex flex-wrap my-7 gap-5">
                       <input
                         type="text"
@@ -703,7 +703,7 @@ const QuoteForm = () => {
                         className="p-2 border border-gray-300 rounded md:w-1/2 focus:ring-orange-500 focus:border-orange-500"
                       />
                     </div>
-                  )}
+                  )} */}
                 </div>
 
                 <div className="border-t-2 border-dotted border-[#A0ABBB] my-6"></div>

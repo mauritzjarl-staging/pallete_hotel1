@@ -94,11 +94,11 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex md:justify-center justify-around ">
+      <div className="flex md:justify-center justify-around">
         <div
           id="stickyDiv"
           className={`text-white flex justify-between items-center
-             w-full py-4 bg-[#001d24] mx-8 px-8 md:mx-20 ${
+             w-full py-4 bg-[#001d24] px-8 md:mx-20 ${
                isSticky
                  ? "bg-[#001d24] fixed top-0 z-50 px-8 md:px-20"
                  : "relative"
@@ -122,7 +122,7 @@ export default function Header() {
             </button>
           </div>
 
-          <div className="md:w-8/12 hidden md:flex items-center justify-between space-x-2">
+          <div className="md:w-8/12 hidden md:flex items-center justify-between  space-x-2">
             {/* Desktop menu */}
             <ul
               id="menu"
@@ -155,12 +155,12 @@ export default function Header() {
               >
                 <div className="flex items-center space-x-2">
                   <Link className="w-full" href="/services">Tjänster</Link>
-                  <FaCaretDown />
+                  {!pathname.startsWith("/services") && <FaCaretDown />}
                 </div>
 
                 {/* Dropdown */}
                 {dropdownOpen && (
-                  <ul className="absolute bg-white rounded font-medium text-[#001d24] py-2 z-50">
+                  <ul className="absolute top-10 bg-white rounded font-medium  text-[#001d24] py-2 z-50">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       <Link className="w-full" href="/services#indoor">Lagerhållning inomhus</Link>
                     </li>
@@ -170,7 +170,7 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link className="w-full" href="/services#rental">Hyra av förbind</Link>
+                      <Link className="w-full" href="/services#rental">Hyra av förråd</Link>
                     </li>
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       <Link className="w-full" href="/services#cargo">Godshantering</Link>
@@ -215,7 +215,7 @@ export default function Header() {
       {/* Mobile Menu - Only shown when toggled */}
 
       {menuOpen && (
-        <div className="md:hidden bg-[#001d24] text-white px-4 py-10">
+        <div className="md:hidden bg-[#001d24] text-white px-4">
           <ul className="space-y-4">
             <li className="text-white hover:text-[#ff6300]">
               <Link className="w-full" href="/" onClick={() => setMenuOpen(false)}>
@@ -238,7 +238,7 @@ export default function Header() {
             >
               <div className="flex items-center space-x-3">
                 <Link className="w-full" href="/services">Tjänster</Link>
-                <FaCaretDown />
+                {!pathname.startsWith("/services") && <FaCaretDown />}
               </div>
 
               {/* Dropdown */}
@@ -265,7 +265,7 @@ export default function Header() {
                       href="/services#rental"
                       onClick={() => setMenuOpen(false)}
                     >
-                      Hyra av förbind
+                      Hyra av förråd
                     </Link>
                   </li>
                   <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
