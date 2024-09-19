@@ -41,7 +41,7 @@ const ContactPage = () => {
             <div className="flex items-center justify-center md:justify-normal">
               <AiOutlineMail size={19} />      
               <p className="ml-2">
-                  order@pallhotelletet.se
+              order@pallhotellet.se
               </p>
             </div>
           </div>

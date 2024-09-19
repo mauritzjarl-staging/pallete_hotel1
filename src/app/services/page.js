@@ -32,12 +32,17 @@ const LagerhallningInomhus = () => (
             </div>
             <Link href="/quotation ">
             <button
-                className="bg-[#ff6300] flex items-center hover:border-white
-         text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-             >
-                Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
-            </button>
+                className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
+                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                  px-3 md:px-4 lg:px-8  
+            rounded-md"
+              >
+               Offertförfrågan
+
+                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                  <IoArrowForward color="orange" size={23} />
+                </span>
+              </button>
             </Link>
         </section>
 );
@@ -63,12 +68,17 @@ const LagerhallningUtomhus = () => (
             </div>
             <Link href="/quotation ">
             <button
-                className="bg-[#ff6300] flex items-center hover:border-white
-         text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-             >
-                Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
-            </button>
+                className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
+                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                  px-3 md:px-4 lg:px-8  
+            rounded-md"
+              >
+               Offertförfrågan
+
+                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                  <IoArrowForward color="orange" size={23} />
+                </span>
+              </button>
             </Link>
         </section>
 );
@@ -95,12 +105,17 @@ const HyraAvForbind = () => (
             </div>
             <Link href="/quotation ">
             <button
-                className="bg-[#ff6300] flex items-center hover:border-white
-         text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-             >
-                Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
-            </button>
+                className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
+                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                  px-3 md:px-4 lg:px-8  
+            rounded-md"
+              >
+               Offertförfrågan
+
+                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                  <IoArrowForward color="orange" size={23} />
+                </span>
+              </button>
             </Link>
         </section>
 );
@@ -127,12 +142,17 @@ const Godshantering = () => (
             </div>
             <Link href="/quotation ">
             <button
-                className="bg-[#ff6300] flex items-center hover:border-white
-         text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-             >
-                Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
-            </button>
+                className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
+                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                  px-3 md:px-4 lg:px-8  
+            rounded-md"
+              >
+               Offertförfrågan
+
+                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                  <IoArrowForward color="orange" size={23} />
+                </span>
+              </button>
             </Link>
         </section>
 );
@@ -165,12 +185,17 @@ const Ovrigt = () => (
             </div>
             <Link href="/quotation ">
             <button
-                className="bg-[#ff6300] flex items-center hover:border-white
-         text-white border-2 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold
-          px-3 justify-center md:justify-normal w-auto mx-auto md:mx-0 md:px-5 lg:px-10 text-center mt-16 rounded-md"
-             >
-                Offertförfrågan <span className="bg-white rounded-full p-1 ms-3"><IoArrowForward color="black" size={20} /></span>
-            </button>
+                className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
+                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                  px-3 md:px-4 lg:px-8  
+            rounded-md"
+              >
+               Offertförfrågan
+
+                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                  <IoArrowForward color="orange" size={23} />
+                </span>
+              </button>
             </Link>
         </section>
 );
