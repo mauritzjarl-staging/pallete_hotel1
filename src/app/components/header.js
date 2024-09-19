@@ -166,7 +166,7 @@ export default function Header() {
 
                 {/* Dropdown */}
                 {dropdownOpen && (
-                  <ul className="absolute top-10 bg-white rounded font-medium  text-[#001d24] py-2 z-50">
+                  <ul className="absolute top-10 bg-white rounded font-medium text-[#001d24] py-2 z-50">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       <Link className="w-full" href="/services#indoor">
                         Lagerhållning inomhus
@@ -224,7 +224,7 @@ export default function Header() {
             {/* Request for Quotation Button (Desktop) */}
             <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-[#ff6300] rounded-md">
               <Link className="w-full" href="/quotation">
-                <button className="hover:text-[#ff6300] md:py-2 py-1 font-medium">
+                <button className="hover:text-[#ff6300] md:py-2 py-1 font-semibold">
                   Offertförfrågan
                 </button>
               </Link>
@@ -260,24 +260,25 @@ export default function Header() {
                   ? "text-[#ff6300]"
                   : "hover:text-[#ff6300]"
               }`}
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={toggleDropdown}
             >
+              <div className="flex">
               <Link className="w-full" href="/services">
                 <div
                   className="flex items-center text-md font-semibold px-4"
                   onClick={() => setMenuOpen(false)}
                 >
                   Tjänster
-                  <span className="ms-3">
-                    {!pathname.startsWith("/services") && <FaCaretDown />}
-                  </span>
                 </div>
               </Link>
 
+              <span className="ms-3"
+                      onClick={toggleDropdown}>
+                    {!pathname.startsWith("/services") && <FaCaretDown />}
+                  </span>
+                  </div>
               {/* Dropdown */}
               {dropdownOpen && (
-                <ul className="bg-white text-[#001d24] text-md pt-5 pb-3 z-50 rounded">
+                <ul className="bg-white text-[#001d24] text-md py-3 my-2 z-50 rounded">
                   <Link
                     className="w-full"
                     href="/services#indoor"

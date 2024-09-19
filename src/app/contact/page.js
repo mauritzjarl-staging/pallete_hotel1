@@ -17,7 +17,7 @@ const ContactPage = () => {
     <>
       <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] py-56">
         <div className=" mx-auto flex justify-center items-center h-full">
-          <h1 className="text-white text-5xl font-bold">Kontakta oss </h1>
+          <h1 className="text-white text-5xl font-bold text-center">Kontakta oss</h1>
         </div>
       </section>
       <section className="h-[500px]">
@@ -26,21 +26,21 @@ const ContactPage = () => {
 
       <section className="pt-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
         {/* Contact Information */}
-        <div className="w-full lg:w-5/12 p-8 text-center md:text-start">
+        <div className="w-full lg:w-5/12 md:p-8 P-4 text-center md:text-start">
           <h2 className="text-xl font-bold mb-1">Kontakta oss</h2>
           <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
-          <div className="space-y-4 text-lg">
-            <div className="flex items-center justify-center md:justify-normal">
-              <CiLocationOn size={20} />
-              <p className="ml-4">Vickerkullavägen 2, 591 45 Motala</p>
+          <div className="space-y-4 text-lg px-4 md:px-0">
+            <div className="flex md:items-center justify-center md:justify-normal">
+              <CiLocationOn size={23} />
+              <p className="ml-1">Vickerkullavägen 2, 591 45 Motala</p>
             </div>
-            <div className="flex items-center justify-center md:justify-normal">
+            <div className="flex mditems-center justify-center md:justify-normal">
               <PiPhoneCallThin size={20} />
-              <p className="ml-4">0141-21 50 44</p>
+              <p className="ml-2">0141-21 50 44</p>
             </div>
             <div className="flex items-center justify-center md:justify-normal">
-              <AiOutlineMail size={20} />      
-              <p className="ml-4">
+              <AiOutlineMail size={19} />      
+              <p className="ml-2">
                   order@pallhotelletet.se
               </p>
             </div>
@@ -48,7 +48,7 @@ const ContactPage = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="w-full lg:w-9/12  p-8 ">
+        <div className="w-full lg:w-9/12  md:p-8 p-4">
           <h2 className="text-3xl font-bold mb-8">Kontakta oss</h2>
           <form className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* First Name */}

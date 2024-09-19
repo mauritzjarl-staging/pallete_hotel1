@@ -13,7 +13,7 @@ const LagerhallningInomhus = () => (
                 alt="Warehouse"
                 width={1000}
                 height={500}
-                unoptimized={true} // Disable Next.js image optimization
+                // unoptimized={true}
                 className="w-full h-auto mb-6"
             />
             <div className="space-y-10 md:pe-5">
@@ -51,7 +51,7 @@ const LagerhallningUtomhus = () => (
                 width={1000}
                 height={500}
                 className="w-full h-auto mb-6"
-                 unoptimized={true} // Disable Next.js image optimization
+                //  unoptimized={true} // Disable Next.js image optimization
             />
             <div className="space-y-10 md:pe-5">
                 <div className="md:space-y-5 space-y-3">
@@ -83,7 +83,7 @@ const HyraAvForbind = () => (
                 width={1000}
                 height={500}
                 className="w-full h-auto mb-6"
-                 unoptimized={true} // Disable Next.js image optimization
+                //  unoptimized={true} // Disable Next.js image optimization
             />
             <div className="space-y-10 md:pe-5">
                 <div className="md:space-y-5 space-y-3">
@@ -115,7 +115,7 @@ const Godshantering = () => (
                 width={1000}
                 height={500}
                 className="w-full h-auto mb-6"
-                 unoptimized={true} // Disable Next.js image optimization
+                //  unoptimized={true} // Disable Next.js image optimization
             />
             <div className="space-y-10 md:pe-5">
                 <div className="md:space-y-5 space-y-3">
@@ -145,7 +145,7 @@ const Ovrigt = () => (
                 width={1000}
                 height={500}
                 className="w-full h-auto mb-6"
-                 unoptimized={true} // Disable Next.js image optimization
+                //  unoptimized={true} // Disable Next.js image optimization
             />
             <div className="space-y-10 md:pe-5">
                 <div className="md:space-y-5 space-y-3">
@@ -206,8 +206,8 @@ const Page = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center h-[500px] flex justify-center items-center">
-                <p className="relative text-white font-bold text-3xl md:text-5xl text-center z-10">
+            <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
+                <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
                 {tabs[activeTab].label}
                 </p>
             </section>
