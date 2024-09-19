@@ -21,17 +21,17 @@ export default function HomePage() {
           Från 49 kronor per pall!
         </h1>
       </div>
-      <div>
-        <p className="xl:text-xl px-8 text-center">
+      <div className="px-20">
+        <p className="xl:text-xl text-center">
           Hyr din pallplats hos oss!
         </p>
       </div>
       <button
         className="bg-[#ff6300] hover:bg-white flex items-center hover:border-[#ff6300]
-       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
       >
         UPPTÄCK MER{" "}
-        <span className="bg-white rounded-full p-2 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
+        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
           <IoArrowForward color="orange" size={20} />
         </span>
       </button>
@@ -44,17 +44,17 @@ export default function HomePage() {
           Godshantering
         </h1>
       </div>
-      <div>
-        <p className="xl:text-xl px-8 text-center">
+      <div className="px-10">
+        <p className="xl:text-xl text-center">
           Vi tar hand om ut-och inlastning av ditt gods
         </p>
       </div>
       <button
         className="bg-[#ff6300] hover:bg-white flex items-center hover:border-[#ff6300]
-       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
       >
         UPPTÄCK MER
-        <span className="bg-white rounded-full p-2 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
+        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
           <IoArrowForward color="orange" size={20} />
         </span>
       </button>
@@ -67,17 +67,17 @@ export default function HomePage() {
           Vi ordnar hela flödet
         </h1>
       </div>
-      <div>
-        <p className="xl:text-xl px-8 text-center">
+      <div className="px-20">
+        <p className="xl:text-xl text-center">
           Vi tar hand om hela flödet åt er
         </p>
       </div>
       <button
         className="bg-[#ff6300] hover:bg-white flex items-center hover:border-[#ff6300]
-       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-2 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
       >
         UPPTÄCK MER
-        <span className="bg-white rounded-full p-2 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
+        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
           <IoArrowForward color="orange" size={20} />
         </span>
       </button>

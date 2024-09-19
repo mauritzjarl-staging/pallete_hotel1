@@ -15,7 +15,7 @@ export default function Login() {
           <h1 className="text-2xl font-bold text-center mb-6 text-gray-900">
           Välkommen till Pallhotellet!
           </h1>
-          <form className="space-y-4">
+          <form className="space-y-4 px-5 md:px-0">
             <div>
            
               <input
