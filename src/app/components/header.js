@@ -243,18 +243,12 @@ export default function Header() {
               href="/"
               onClick={() => setMenuOpen(false)}
             >
-              <li    className={`px-4 my-3 font-semibold${
-                pathname.startsWith("/")
-                  ? "text-[#ff6300]"
-                  : "hover:text-[#ff6300]"
-              }`}>
+              <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
                 Hem
               </li>
             </Link>
 
-            {/* <li    className=px-4 my-3 font-semibold {`${
-                  pathname === "/" ? "text-[#ff6300]" : "hover:text-[#ff6300]"
-                }`}>
+            {/* <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
               <Link className="w-full" href="/findus" onClick={() => setMenuOpen(false)}>
                 Hitta oss
               </Link>
@@ -342,9 +336,7 @@ export default function Header() {
               href="/contact"
               onClick={() => setMenuOpen(false)}
             >
-              <li    className={`px-4 my-3 font-semibold ${
-                  pathname === "contact" ? "text-[#ff6300]" : "hover:text-[#ff6300]"
-                }`}>
+              <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
                 Kontakt
               </li>
             </Link>
@@ -354,9 +346,7 @@ export default function Header() {
               href="/login"
               onClick={() => setMenuOpen(false)}
             >
-              <li    className={`px-4 my-3 font-semibold ${
-                  pathname === "login" ? "text-[#ff6300]" : "hover:text-[#ff6300]"
-                }`}>
+              <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
                 Logga in
               </li>
             </Link>
