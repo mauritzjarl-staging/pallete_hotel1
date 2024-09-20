@@ -240,8 +240,7 @@ export default function HomePage() {
               Flexibel lagerhållning
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
-              Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
-              justo sed vero dolor duo.
+            Lagring hos oss är flexibelt och vi erbjuder både kort- och långtidsförvaring.
             </p>
           </div>
         </div>
@@ -258,8 +257,7 @@ export default function HomePage() {
               Snabb orderhantering
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
-              Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
-              justo sed vero dolor duo.
+            Med snabb orderhantering och ett stort lager lägger vi grunden för att kunna garantera snabba leveranser.
             </p>
           </div>
         </div>
@@ -276,8 +274,7 @@ export default function HomePage() {
               Effektivare flöde
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
-              Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam
-              justo sed vero dolor duo.
+            Vi tar gärna hand om hela ditt flöde. Du behover bara ringa ett telefonnummer.
             </p>
           </div>
         </div>

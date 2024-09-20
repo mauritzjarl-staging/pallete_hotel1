@@ -5,6 +5,7 @@ import { PiPhoneCallThin } from "react-icons/pi";
 import { CiLocationOn } from "react-icons/ci";
 // import MapComponent from "../components/MapComponent";
 import dynamic from "next/dynamic";
+import { IoArrowForward } from "react-icons/io5";
 
 
 // Dynamically import MapComponent with SSR disabled
@@ -127,12 +128,17 @@ const ContactPage = () => {
 
             {/* Submit Button */}
             <div className="sm:col-span-2">
-              <button
-                type="submit"
-                className="w-full bg-orange-500 text-white py-3 px-4 rounded-md shadow-md hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 transition duration-300"
-              >
-                Skicka
-              </button>
+            <button
+                    className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
+                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                  px-3 md:px-4 lg:px-8  
+            rounded-md"
+                  >
+                    Skicka
+                    <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                      <IoArrowForward color="orange" size={23} />
+                    </span>
+                  </button>
             </div>
           </form>
         </div>

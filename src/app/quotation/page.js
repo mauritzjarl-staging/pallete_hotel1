@@ -7,6 +7,8 @@ import dynamic from "next/dynamic";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Importing required styles for DatePicker
 import { FaCalendarAlt } from "react-icons/fa"; // Optional: Icon for calendar
+import { IoArrowForward } from "react-icons/io5";
+
 
 // Dynamically import MapComponent with SSR disabled
 // const MapComponent = dynamic(() => import("../components/MapComponent"), {
@@ -88,7 +90,7 @@ const QuoteForm = () => {
             <div className="flex items-center">
               <AiOutlineMail size={20} />
               <p className="ml-4">order@pallhotellet.se</p>
-            </div> 
+            </div>
           </div>
         </div>
         <div className="w-full lg:w-10/12 px-8 ">
@@ -233,9 +235,9 @@ const QuoteForm = () => {
                       className="mr-2 size-6"
                     />
                   </div>
-                <div className="w-10/12">
-                  Vill hyra pallplatser INOMHUS I UPPVÄRMT LAGER
-                </div>
+                  <div className="w-10/12">
+                    Vill hyra pallplatser INOMHUS I UPPVÄRMT LAGER
+                  </div>
                 </label>
 
                 {checkedSections.varmlager && (
@@ -740,10 +742,15 @@ const QuoteForm = () => {
                 {/* Submit Button */}
                 <div className="text-center">
                   <button
-                    type="submit"
-                    className="bg-orange-500 px-5 text-white py-3 w-full rounded-lg hover:bg-orange-600"
+                    className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
+                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                  px-3 md:px-4 lg:px-8  
+            rounded-md"
                   >
                     Skicka
+                    <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                      <IoArrowForward color="orange" size={23} />
+                    </span>
                   </button>
                 </div>
               </div>
