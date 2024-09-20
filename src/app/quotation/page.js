@@ -742,7 +742,7 @@ const QuoteForm = () => {
                 {/* Submit Button */}
                 <div className="text-center">
                   <button
-                    className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
+                    className="my-3 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
                  hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
                   px-3 md:px-4 lg:px-8  
             rounded-md"
