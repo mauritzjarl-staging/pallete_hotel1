@@ -22,9 +22,7 @@ export default function HomePage() {
         </h1>
       </div>
       <div className="px-20">
-        <p className="xl:text-xl text-center">
-          Hyr din pallplats hos oss!
-        </p>
+        <p className="xl:text-xl text-center">Hyr din pallplats hos oss!</p>
       </div>
       <button
         className="bg-[#ff6300] hover:bg-white flex items-center hover:border-[#ff6300]
@@ -240,7 +238,8 @@ export default function HomePage() {
               Flexibel lagerhållning
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
-            Lagring hos oss är flexibelt och vi erbjuder både kort- och långtidsförvaring.
+              Lagring hos oss är flexibelt och vi erbjuder både kort- och
+              långtidsförvaring.
             </p>
           </div>
         </div>
@@ -257,7 +256,8 @@ export default function HomePage() {
               Snabb orderhantering
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
-            Med snabb orderhantering och ett stort lager lägger vi grunden för att kunna garantera snabba leveranser.
+              Med snabb orderhantering och ett stort lager lägger vi grunden för
+              att kunna garantera snabba leveranser.
             </p>
           </div>
         </div>
@@ -274,7 +274,8 @@ export default function HomePage() {
               Effektivare flöde
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
-            Vi tar gärna hand om hela ditt flöde. Du behover bara ringa ett telefonnummer.
+              Vi tar gärna hand om hela ditt flöde. Du behover bara ringa ett
+              telefonnummer.
             </p>
           </div>
         </div>
@@ -295,14 +296,21 @@ export default function HomePage() {
             mycket mer.
           </p>
           <p className="text-gray-500">
-            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-            lorem sit clita duo justo magna dolore erat amet
+            Våra lager har en stor kapacitet för att ha många olika typer av
+            gods, samt olika lageralternativ anpassade till olika
+            förvaringskrav. Vi har en lång erfarenhet inom lagerhållning samt
+            logistik och hjälper gärna till att hitta den optimala lösningen för
+            er.
           </p>
           <p className="bg-[#7d7d7d21] text-gray-500 p-[2rem] pl-5 place-content-around ">
-            Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet
-            lorem sit clita duo justo erat amett <br />
-            <span className="text-orange-600 mt-5">Christopher Jarl, CEO</span>
+            förstår att godshantering kan vara en utmaning för många företag,
+            det är därför erbjuder vi vår expertis för både små och stora
+            företag. Vi har sedan länge arbetat med lager och terminaler och har
+            en bred erfarenhet av att hantera olika typer av varor åt våra
+            kunder. <br />
+            <span className="text-orange-600 mt-5">
+              Christopher Jarl, VD Pallhotellet.se
+            </span>
           </p>
           <div className="flex text-wrap justify-center md:justify-start space-y-5 sm:space-y-0">
             <Link href="/contact">
@@ -346,11 +354,10 @@ export default function HomePage() {
       <section className="bg-[#7d7d7d21] p-10 md:px-20">
         <div className="text-center space-y-4">
           <p className="bg-[#FF6F0F17] text-[#ff6300] p-3 inline-block">
-          Vad erbjuder vi
+            Vad erbjuder vi
           </p>
           <p className="md:text-[2rem] text-[1.2rem] font-bold md:w-5/12 mx-auto">
-          Vi erbjuder flexibla och 
-          skräddarsydda lösningar
+            Vi erbjuder flexibla och skräddarsydda lösningar
           </p>
         </div>
 
@@ -362,12 +369,12 @@ export default function HomePage() {
                   Lagring
                 </p>
               </div>
-              <p className="px-2 mt-8 text-[1.3rem] font-bold">
-              Lager till allas behov
+              <p className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
+                Lager som passar allas behov
               </p>
-              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]">
-                Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet
-                diam et eos
+              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
+                I våra lager har vi plats för alla typer av gods Pallkapacitet
+                12.000 pall
               </p>
               {/* <!-- Greybox1 --> */}
               <div className="p-6">
@@ -399,12 +406,12 @@ export default function HomePage() {
                   Godshantering
                 </p>
               </div>
-              <p className="px-2 mt-8 text-[1.3rem] font-bold">
-              Vi tar hand om dina varor
+              <p className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
+                Vi tar hand om dina varor
               </p>
-              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]">
-                Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet
-                diam et eos
+              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
+                Vi ombesörjer lagerhållning och hjälper till med annat. Ca. 4950
+                pallar i lager
               </p>
               {/* <!-- Greybox1 --> */}
               <div className="p-6">
@@ -434,12 +441,12 @@ export default function HomePage() {
                   Dokumentation
                 </p>
               </div>
-              <p className="px-2 mt-8 text-[1.3rem] font-bold">
-              Vi ordnar det mesta
+              <p className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
+                Vi ordnar det mesta
               </p>
-              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]">
-                Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet
-                diam et eos
+              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
+                Du som kund behöver bara ringa ett nummer. Ca ett tiotal mycket
+                nöjda kunder
               </p>
               {/* <!-- Greybox1 --> */}
               <div className="p-6">
@@ -492,15 +499,28 @@ export default function HomePage() {
           <div className="lg:w-6/12 w-full text-white lg:px-10">
             <div className="text-center space-y-10 mb-10 md:mb-40">
               <p className="md:px-7 px-5 text-3xl font-bold">
-              Flexibla lagerplatser från 49 kr 
-              per pall och månad
+                Flexibla lagerplatser från 49 kr per pall och månad
               </p>
               <p className="text-lg">
-              Att välja Pallhotellet för dina lagerbehov innebär att du inte bara får  tillgång till flexibla och kostnadseffektiva lagerlösningar. Det innebär  också att du får en partner som är engagerad i att lösa ditt företags  unika utmaningar och hjälpa dig att optimera  ditt lagerflöde.
-              När du väljer oss för dina lagerbehov kommer du att uppleva fördelarna  med optimerad lagerhantering. Genom att endast betala för det utrymme du  faktiskt använder kan du optimera ditt lager och eliminera onödiga  kostnader. Detta kan vara särskilt fördelaktigt  för företag med varierande lagerbehov eller för de som bedriver  säsongsbaserad verksamhet.
+                Att välja Pallhotellet för dina lagerbehov innebär att du inte
+                bara får tillgång till flexibla och kostnadseffektiva
+                lagerlösningar. Det innebär också att du får en partner som är
+                engagerad i att lösa ditt företags unika utmaningar och hjälpa
+                dig att optimera ditt lagerflöde. När du väljer oss för dina
+                lagerbehov kommer du att uppleva fördelarna med optimerad
+                lagerhantering. Genom att endast betala för det utrymme du
+                faktiskt använder kan du optimera ditt lager och eliminera
+                onödiga kostnader. Detta kan vara särskilt fördelaktigt för
+                företag med varierande lagerbehov eller för de som bedriver
+                säsongsbaserad verksamhet.
               </p>
               <p className="text-lg">
-              Vårt engagemang att hantera dina in- och utleveranser innebär att du kan  lägga större fokus på ditt företags kärnverksamhet, vilket främjar  effektivitet inom ditt företag. Dessutom är vårt erbjudande utformat för  att vara så flexibelt som möjligt, vilket ger  dig friheten att anpassa ditt lagerutrymme efter dina behov, när du  behöver det.
+                Vårt engagemang att hantera dina in- och utleveranser innebär
+                att du kan lägga större fokus på ditt företags kärnverksamhet,
+                vilket främjar effektivitet inom ditt företag. Dessutom är vårt
+                erbjudande utformat för att vara så flexibelt som möjligt,
+                vilket ger dig friheten att anpassa ditt lagerutrymme efter dina
+                behov, när du behöver det.
               </p>
             </div>
             <div className="lg:relative my-10 hidden lg:block">
@@ -556,7 +576,7 @@ export default function HomePage() {
             Vår personal
           </p>
           <p className="md:text-4xl text-3xl font-bold md:w-2/12 w-5/12 mx-auto">
-          Kontakta oss redan idag!
+            Kontakta oss redan idag!
           </p>
         </div>
 
@@ -567,19 +587,19 @@ export default function HomePage() {
               <Image src="/imgs/1.png" alt="Staff 1" width={300} height={300} />
               <p className="pt-5 pb-1 text-lg  font-bold">Sylvain</p>
               <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Kundkontakt</p>
-              <p className="pt-1 pb-5 text-lg">0141215044</p>
+              <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
             </div>
             <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
               <Image src="/imgs/2.png" alt="Staff 2" width={300} height={300} />
               <p className="pt-5 pb-1 text-lg  font-bold">Lukas</p>
               <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Ekonomi</p>
-              <p className="pt-1 pb-5 text-lg">0141 215044 </p>
+              <p className="pt-1 pb-5 text-lg">0141-21 50 44  </p>
             </div>
             <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
               <Image src="/imgs/3.png" alt="Staff 3" width={300} height={300} />
               <p className="pt-5 pb-1 text-lg  font-bold">Elma </p>
               <p className="py-1 text-lg text-[#FF6F0F]">Ekonomi </p>
-              <p className="pt-1 pb-5 text-lg">0141 215044</p>
+              <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
             </div>
           </div>
 
@@ -598,7 +618,7 @@ export default function HomePage() {
                   <p className="py-1 text-lg text-[#FF6F0F]">
                     Sälj / Kundkontakt
                   </p>
-                  <p className="pt-1 pb-5 text-lg">0141215044</p>
+                  <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
                 </div>
               </div>
               <div>
@@ -611,7 +631,7 @@ export default function HomePage() {
                   />
                   <p className="pt-5 pb-1 text-lg  font-bold">Lukas</p>
                   <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Ekonomi</p>
-                  <p className="pt-1 pb-5 text-lg">0141 215044 </p>
+                  <p className="pt-1 pb-5 text-lg">0141-21 50 44  </p>
                 </div>
               </div>
               <div>
@@ -624,7 +644,7 @@ export default function HomePage() {
                   />
                   <p className="pt-5 pb-1 text-lg  font-bold">Elma </p>
                   <p className="py-1 text-lg text-[#FF6F0F]">Ekonomi </p>
-                  <p className="pt-1 pb-5 text-lg">0141 215044</p>
+                  <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
                 </div>
               </div>
             </Slider>
