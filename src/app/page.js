@@ -49,6 +49,7 @@ export default function HomePage() {
           Vi tar hand om ut-och inlastning av ditt gods
         </p>
       </div>
+      <Link href="/services#cargo">
       <button
         className="bg-white hover:bg-[#ff6300] flex items-center hover:border-[#ff6300]
        text-[#ff6300] hover:text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
@@ -58,6 +59,7 @@ export default function HomePage() {
           <IoArrowForward color="#ff6300" size={19} />
         </span>
       </button>
+      </Link>
     </div>
   );
   const SliderContent3 = () => (
@@ -72,6 +74,7 @@ export default function HomePage() {
           Vi tar hand om hela flödet åt er
         </p>
       </div>
+      <Link href="/services#other">
       <button
         className="bg-white hover:bg-[#ff6300] flex items-center hover:border-[#ff6300]
        text-[#ff6300] hover:text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
@@ -81,6 +84,7 @@ export default function HomePage() {
           <IoArrowForward color="#ff6300" size={19} />
         </span>
       </button>
+      </Link>
     </div>
   );
 
