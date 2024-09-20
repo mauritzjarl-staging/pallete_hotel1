@@ -165,31 +165,36 @@ const QuoteForm = () => {
                 </label>
 
                 {checkedSections.kallager && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="">
+                    <div className="flex md:justify-between flex-wrap md:flex-nowrap space-y-5 md:space-y-0 my-5 md:space-x-4 ">
                     <input
                       type="number"
                       name="pallplatserKallager"
                       placeholder="Antal pallplatser"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500 w-full  md:w-6/12"
                     />
+                    <div className="md:w-6/12 md:space-x-5 flex flex-wrap md:flex-nowrap space-y-5 md:space-y-0 ">
                     <input
                       type="text"
                       name="Pallvikt/snitt"
                       placeholder="Pallvikt/snitt"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500 w-full  md:w-6/12"
                     />
                     <input
                       type="text"
                       name="Antalkragar"
                       placeholder="Antal kragar"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500 w-full  md:w-6/12"
                     />
+                    </div>
+                    </div>
 
+                    <div className="flex md:space-x-3 flex-wrap md:flex-nowrap space-y-5 md:space-y-0">
                     <div
                       className="relative w-full"
                       onClick={handleStartDateClick}
                     >
-                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 ">
                         <DatePicker
                           ref={datePickerStartRef}
                           selected={startDate}
@@ -205,7 +210,7 @@ const QuoteForm = () => {
                       className="relative w-full"
                       onClick={handleEndDateClick}
                     >
-                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 ">
                         <DatePicker
                           ref={datePickerEndRef}
                           selected={endDate}
@@ -217,6 +222,7 @@ const QuoteForm = () => {
                         <FaCalendarAlt className="text-gray-400 pointer-events-none" />
                       </div>
                     </div>
+                  </div>
                   </div>
                 )}
               </div>
@@ -241,58 +247,65 @@ const QuoteForm = () => {
                 </label>
 
                 {checkedSections.varmlager && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input
-                      type="number"
-                      name="pallplatserVarmager"
-                      placeholder="Antal pallplatser"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="text"
-                      name="Pallvikt/snitt"
-                      placeholder="Pallvikt/snitt"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <input
-                      type="text"
-                      name="Antalkragar"
-                      placeholder="Antal kragar"
-                      className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                    />
-                    <div
-                      className="relative w-full"
-                      onClick={handleStartDateClick}
-                    >
-                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
-                        <DatePicker
-                          ref={datePickerStartRef}
-                          selected={startDate}
-                          onChange={(date) => setStartDate(date)}
-                          placeholderText="Från och med"
-                          dateFormat="yyyy-MM-dd"
-                          className="focus:outline-none w-full bg-transparent pointer-events-none"
-                        />
-                        <FaCalendarAlt className="text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-                    <div
-                      className="relative w-full"
-                      onClick={handleEndDateClick}
-                    >
-                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
-                        <DatePicker
-                          ref={datePickerEndRef}
-                          selected={endDate}
-                          onChange={(date) => setEndDate(date)}
-                          placeholderText="Till och med"
-                          dateFormat="yyyy-MM-dd"
-                          className="focus:outline-none w-full bg-transparent pointer-events-none"
-                        />
-                        <FaCalendarAlt className="text-gray-400 pointer-events-none" />
-                      </div>
+                  <div className="">
+                  <div className="flex md:justify-between flex-wrap md:flex-nowrap space-y-5 md:space-y-0 my-5 md:space-x-4">
+                  <input
+                    type="number"
+                    name="pallplatserKallager"
+                    placeholder="Antal pallplatser"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500 w-full  md:w-6/12"
+                  />
+                  <div className="md:w-6/12 md:space-x-5 flex-wrap md:flex-nowrap space-y-5 md:space-y-0 flex">
+                  <input
+                    type="text"
+                    name="Pallvikt/snitt"
+                    placeholder="Pallvikt/snitt"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500 w-full  md:w-6/12"
+                  />
+                  <input
+                    type="text"
+                    name="Antalkragar"
+                    placeholder="Antal kragar"
+                    className="p-3 border border-gray-300 rounded-md focus:outline-orange-500 w-full  md:w-6/12"
+                  />
+                  </div>
+                  </div>
+
+                  <div className="flex md:space-x-3 flex-wrap md:flex-nowrap space-y-5 md:space-y-0 ">
+                  <div
+                    className="relative w-full"
+                    onClick={handleStartDateClick}
+                  >
+                    <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 ">
+                      <DatePicker
+                        ref={datePickerStartRef}
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        placeholderText="Från och med"
+                        dateFormat="yyyy-MM-dd"
+                        className="focus:outline-none w-full bg-transparent pointer-events-none"
+                      />
+                      <FaCalendarAlt className="text-gray-400 pointer-events-none" />
                     </div>
                   </div>
+                  <div
+                    className="relative w-full"
+                    onClick={handleEndDateClick}
+                  >
+                    <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 ">
+                      <DatePicker
+                        ref={datePickerEndRef}
+                        selected={endDate}
+                        onChange={(date) => setEndDate(date)}
+                        placeholderText="Till och med"
+                        dateFormat="yyyy-MM-dd"
+                        className="focus:outline-none w-full bg-transparent pointer-events-none"
+                      />
+                      <FaCalendarAlt className="text-gray-400 pointer-events-none" />
+                    </div>
+                  </div>
+                </div>
+                </div>
                 )}
               </div>
 
@@ -347,7 +360,7 @@ const QuoteForm = () => {
                       className="relative w-full"
                       onClick={handleStartDateClick}
                     >
-                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 ">
                         <DatePicker
                           ref={datePickerStartRef}
                           selected={startDate}
@@ -363,7 +376,7 @@ const QuoteForm = () => {
                       className="relative w-full"
                       onClick={handleEndDateClick}
                     >
-                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                      <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 ">
                         <DatePicker
                           ref={datePickerEndRef}
                           selected={endDate}
@@ -415,7 +428,7 @@ const QuoteForm = () => {
                     className="relative w-full"
                     onClick={handleStartDateClick}
                   >
-                    <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                    <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 ">
                       <DatePicker
                         ref={datePickerStartRef}
                         selected={startDate}
@@ -428,7 +441,7 @@ const QuoteForm = () => {
                     </div>
                   </div>
                   <div className="relative w-full" onClick={handleEndDateClick}>
-                    <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 sm:text-sm">
+                    <div className="flex items-center justify-between w-full py-3 pl-3 pr-10 border border-gray-300 rounded-md shadow-sm cursor-pointer focus-within:border-orange-500 ">
                       <DatePicker
                         ref={datePickerEndRef}
                         selected={endDate}
