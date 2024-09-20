@@ -75,7 +75,6 @@ const QuoteForm = () => {
 
       <section className="py-12 px-4 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
         <div className="w-full lg:w-4/12 px-8">
-          <h2 className="text-xl font-bold mb-1">Kontakt</h2>
           <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
           <div className="space-y-4 text-lg">
             <div className="flex items-center">
