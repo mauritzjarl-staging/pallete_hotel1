@@ -755,14 +755,14 @@ const QuoteForm = () => {
                 {/* Submit Button */}
                 <div className="text-center">
                   <button
-                    className="my-3 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
-                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
-                  px-3 md:px-4 lg:px-8  
-            rounded-md"
+                     className="my-3 flex items-center mx-auto md:mx-0 hover:text-[#ff6300] text-white
+                     hover:bg-white bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                       px-3 md:px-4 lg:px-8  
+                 rounded-md"
                   >
                     Skicka
                     <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                      <IoArrowForward color="orange" size={23} />
+                      <IoArrowForward color="#ff6300" size={23} />
                     </span>
                   </button>
                 </div>

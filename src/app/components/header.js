@@ -84,7 +84,7 @@ export default function Header() {
         <div className="flex text-sm md:text-sm xl:text-lg items-center">
           <p className="hover:text-white">Följ oss:</p>
           <div className="px-4 cursor-pointer md:space-x-4 space-x-2 flex">
-            <FaFacebook className="hover:text-white" />
+           <Link href="https://www.facebook.com/profile.php?id=61565752334197"><FaFacebook className="hover:text-white" /> </Link>
             {/* <FaTwitter className="hover:text-white" />
             <IoLogoLinkedin className="hover:text-white" />
             <FiInstagram className="hover:text-white" /> */}

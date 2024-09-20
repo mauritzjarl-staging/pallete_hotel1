@@ -25,11 +25,12 @@ export default function Footer() {
             </p>
             <div className="flex my-5 gap-3">
               <Link
-                href="#"
+            href="https://www.facebook.com/profile.php?id=61565752334197"
                 className="border hover:text-white hover:border-white
                  p-2 rounded-md border-[#808E91]">
                 <FaFacebook />
               </Link>
+
 
               {/* <Link
                 href="#"

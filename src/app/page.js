@@ -26,8 +26,8 @@ export default function HomePage() {
       </div>
       <Link href="#frankr">
         <button
-          className="bg-white hover:bg-[#ff6300] flex items-center hover:border-[#ff6300]
-       text-[#ff6300] hover:text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+          className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
+        hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
         >
           UPPTÄCK MER{" "}
           <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
@@ -51,9 +51,9 @@ export default function HomePage() {
       </div>
       <Link href="/services#cargo">
       <button
-        className="bg-white hover:bg-[#ff6300] flex items-center hover:border-[#ff6300]
-       text-[#ff6300] hover:text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
-      >
+         className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
+         hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+         >
         UPPTÄCK MER
         <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
           <IoArrowForward color="#ff6300" size={19} />
@@ -76,9 +76,9 @@ export default function HomePage() {
       </div>
       <Link href="/services#other">
       <button
-        className="bg-white hover:bg-[#ff6300] flex items-center hover:border-[#ff6300]
-       text-[#ff6300] hover:text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
-      >
+         className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
+         hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+         >
         UPPTÄCK MER
         <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
           <IoArrowForward color="#ff6300" size={19} />
@@ -501,7 +501,7 @@ export default function HomePage() {
           </div>
 
           <section id="frankr" className="lg:w-6/12 w-full text-white lg:px-10">
-            <div className="text-center space-y-10 mb-10 md:mb-40">
+            <div className="text-center md:text-start space-y-10 mb-10 md:mb-40">
               <p className="md:px-7 px-5 text-3xl font-bold">
                 Från 49kr / mån per pall
               </p>

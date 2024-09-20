@@ -7,7 +7,6 @@ import { CiLocationOn } from "react-icons/ci";
 import dynamic from "next/dynamic";
 import { IoArrowForward } from "react-icons/io5";
 
-
 // Dynamically import MapComponent with SSR disabled
 const MapComponent = dynamic(() => import("../components/MapComponent"), {
   ssr: false,
@@ -18,11 +17,13 @@ const ContactPage = () => {
     <>
       <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] md:py-56 pt-32 pb-20">
         <div className=" mx-auto flex justify-center items-center h-full">
-          <h1 className="text-white md:text-5xl text-4xl font-bold text-center">Kontakta oss</h1>
+          <h1 className="text-white md:text-5xl text-4xl font-bold text-center">
+            Kontakta oss
+          </h1>
         </div>
       </section>
       <section className="h-[500px]">
-          <MapComponent />
+        <MapComponent />
       </section>
 
       <section className="pt-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
@@ -40,10 +41,8 @@ const ContactPage = () => {
               <p className="ml-2">0141-21 50 44</p>
             </div>
             <div className="flex items-center justify-center md:justify-normal">
-              <AiOutlineMail size={19} />      
-              <p className="ml-2">
-              order@pallhotellet.se
-              </p>
+              <AiOutlineMail size={19} />
+              <p className="ml-2">order@pallhotellet.se</p>
             </div>
           </div>
         </div>
@@ -128,17 +127,17 @@ const ContactPage = () => {
 
             {/* Submit Button */}
             <div className="sm:col-span-2">
-            <button
-                    className="my-3 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
-                 hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+              <button
+                className="my-3 flex items-center mx-auto md:mx-0 hover:text-[#ff6300] text-white
+                hover:bg-white bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
                   px-3 md:px-4 lg:px-8  
             rounded-md"
-                  >
-                    Skicka
-                    <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                      <IoArrowForward color="orange" size={23} />
-                    </span>
-                  </button>
+              >
+                Skicka
+                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                  <IoArrowForward color="#ff6300" size={23} />
+                </span>
+              </button>
             </div>
           </form>
         </div>
