@@ -24,15 +24,17 @@ export default function HomePage() {
       <div className="px-20">
         <p className="xl:text-xl text-center">Hyr din pallplats hos oss!</p>
       </div>
-      <button
-        className="bg-[#ff6300] hover:bg-white flex items-center hover:border-[#ff6300]
-       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
-      >
-        UPPTÄCK MER{" "}
-        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
-          <IoArrowForward color="orange" size={20} />
-        </span>
-      </button>
+      <Link href="#frankr">
+        <button
+          className="bg-white hover:bg-[#ff6300] flex items-center hover:border-[#ff6300]
+       text-[#ff6300] hover:text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+        >
+          UPPTÄCK MER{" "}
+          <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
+            <IoArrowForward color="#ff6300" size={19} />
+          </span>
+        </button>
+      </Link>
     </div>
   );
   const SliderContent2 = () => (
@@ -48,12 +50,12 @@ export default function HomePage() {
         </p>
       </div>
       <button
-        className="bg-[#ff6300] hover:bg-white flex items-center hover:border-[#ff6300]
-       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+        className="bg-white hover:bg-[#ff6300] flex items-center hover:border-[#ff6300]
+       text-[#ff6300] hover:text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
       >
         UPPTÄCK MER
-        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
-          <IoArrowForward color="orange" size={20} />
+        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
+          <IoArrowForward color="#ff6300" size={19} />
         </span>
       </button>
     </div>
@@ -71,12 +73,12 @@ export default function HomePage() {
         </p>
       </div>
       <button
-        className="bg-[#ff6300] hover:bg-white flex items-center hover:border-[#ff6300]
-       text-white hover:text-[#ff6300] border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+        className="bg-white hover:bg-[#ff6300] flex items-center hover:border-[#ff6300]
+       text-[#ff6300] hover:text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
       >
         UPPTÄCK MER
-        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-transparent border-2 border-[#ff6300]">
-          <IoArrowForward color="orange" size={20} />
+        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
+          <IoArrowForward color="#ff6300" size={19} />
         </span>
       </button>
     </div>
@@ -141,26 +143,26 @@ export default function HomePage() {
   const testimonials = [
     {
       image: "/imgs/Ellipse3.png",
-      text: " Tempor ut dolore lorem kasd vero ipsum sit eirmod sit.  Ipsum diam justo sed vero dolor duo. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.",
-      name: "Donor Name 1",
-      profession: "Profession 1",
+      text: " Ställde upp med kort varsel när vi satt i klistret, kom med dubbelt antal mannar och gjorde hela jobbet även innan utsatt tid. En räddare i nöden!",
+      name: "Stefan, VD",
+      // profession: "Profession 1",
     },
     {
       image: "/imgs/Ellipse3.png",
-      text: " Tempor ut dolore lorem kasd vero ipsum sit eirmod sit.  Ipsum diam justo sed vero dolor duo. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.",
-      name: "Donor Name 2",
-      profession: "Profession 2",
+      text: " Snabba, effektiva och trevliga - grymt bra killar! Rekommenderas starkt av oss!",
+      name: "Mikael, VD",
+      // profession: "Profession 2",
     },
     {
       image: "/imgs/Ellipse3.png",
-      text: " Tempor ut dolore lorem kasd vero ipsum sit eirmod sit.  Ipsum diam justo sed vero dolor duo. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.",
-      name: "Donor Name 3",
-      profession: "Profession 3",
+      text: "Pallhotellet är det mest flexibla team vi har mött. Ställer alltid upp vid behov, alla tider och alla dagar. Stort tack!",
+      name: "Magnus, Logistikansvarig",
+      // profession: "Profession 3",
     },
     {
       image: "/imgs/Ellipse3.png",
-      text: " Tempor ut dolore lorem kasd vero ipsum sit eirmod sit.  Ipsum diam justo sed vero dolor duo. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.",
-      name: "Donor Name 4",
+      text: "Vi har frekventa behov av snabba in och utleveranser. Pallhotellet har hittils ordnat det med bravur. Schyssta priser, snabb kvalitetsservice, vad mer kan man begära? ",
+      name: "Damir",
       profession: "Profession 4",
     },
   ];
@@ -303,11 +305,12 @@ export default function HomePage() {
             er.
           </p>
           <p className="bg-[#7d7d7d21] text-gray-500 p-[2rem] pl-5 place-content-around ">
-            Förstår att godshantering kan vara en utmaning för många företag,
+            "Förstår att godshantering kan vara en utmaning för många företag,
             det är därför erbjuder vi vår expertis för både små och stora
             företag. Vi har sedan länge arbetat med lager och terminaler och har
             en bred erfarenhet av att hantera olika typer av varor åt våra
-            kunder. <br />
+            kunder."
+            <br />
             <span className="text-orange-600 mt-5">
               Christopher Jarl, VD Pallhotellet.se
             </span>
@@ -320,7 +323,7 @@ export default function HomePage() {
               >
                 Kontakta oss
                 <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                  <IoArrowForward color="orange" size={23} />
+                  <IoArrowForward color="#ff6300" size={23} />
                 </span>
               </button>
             </Link>
@@ -373,14 +376,13 @@ export default function HomePage() {
                 Lager som passar allas behov
               </p>
               <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
-                I våra lager har vi plats för alla typer av gods Pallkapacitet
-                12.000 pall
+                I våra lager har vi plats för alla typer av gods
               </p>
               {/* <!-- Greybox1 --> */}
               <div className="p-6">
                 <ProgressBar
-                  total={10000}
-                  current={4950}
+                  total={12000}
+                  current={4921}
                   totalLabel="pallkapacitet"
                   currentLabel="pallar i lager"
                 />
@@ -410,15 +412,14 @@ export default function HomePage() {
                 Vi tar hand om dina varor
               </p>
               <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
-                Vi ombesörjer lagerhållning och hjälper till med annat. Ca. 4950
-                pallar i lager
+                Vi ombesörjer lagerhållning och hjälper till med annat. 
               </p>
               {/* <!-- Greybox1 --> */}
-              <div className="p-6">
+              <div className="p-6 invisible">
                 <ProgressBar
                   total={10}
                   current={4}
-                  totalLabel="customers as ml"
+                  totalLabel="kunder som ml"
                   currentLabel="existing customers"
                 />
               </div>
@@ -445,11 +446,10 @@ export default function HomePage() {
                 Vi ordnar det mesta
               </p>
               <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
-                Du som kund behöver bara ringa ett nummer. Ca ett tiotal mycket
-                nöjda kunder
+                Du som kund behöver bara ringa ett nummer.
               </p>
               {/* <!-- Greybox1 --> */}
-              <div className="p-6">
+              <div className="p-6 invisible">
                 <ProgressBar
                   total={5}
                   current={1}
@@ -496,23 +496,23 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="lg:w-6/12 w-full text-white lg:px-10">
+          <section id="frankr" className="lg:w-6/12 w-full text-white lg:px-10">
             <div className="text-center space-y-10 mb-10 md:mb-40">
               <p className="md:px-7 px-5 text-3xl font-bold">
-                Flexibla lagerplatser från 49 kr per pall och månad
+                Från 49kr / mån per pall
               </p>
               <p className="text-lg">
-                Att välja Pallhotellet för dina lagerbehov innebär att du inte
-                bara får tillgång till flexibla och kostnadseffektiva
-                lagerlösningar. Det innebär också att du får en partner som är
-                engagerad i att lösa ditt företags unika utmaningar och hjälpa
-                dig att optimera ditt lagerflöde. När du väljer oss för dina
-                lagerbehov kommer du att uppleva fördelarna med optimerad
-                lagerhantering. Genom att endast betala för det utrymme du
-                faktiskt använder kan du optimera ditt lager och eliminera
-                onödiga kostnader. Detta kan vara särskilt fördelaktigt för
-                företag med varierande lagerbehov eller för de som bedriver
-                säsongsbaserad verksamhet.
+                Genom att endast betala för det utrymme du faktiskt använder kan
+                du optimera ditt lager och eliminera onödiga kostnader. Detta
+                kan vara särskilt fördelaktigt för företag med varierande
+                lagerbehov eller för de som bedriver säsongsbaserad verksamhet.
+              </p>
+              <p className="text-lg">
+                Att välja Pallhotellet.se för dina lagerbehov innebär att du
+                inte bara får tillgång till flexibla och kostnadseffektiva
+                lagerlösningar men även att du får en partner som är engagerad i
+                att lösa ditt företags unika utmaningar samt hjälpa dig att
+                optimera ditt lagerflöde.
               </p>
               <p className="text-lg">
                 Vårt engagemang att hantera dina in- och utleveranser innebär
@@ -520,8 +520,9 @@ export default function HomePage() {
                 vilket främjar effektivitet inom ditt företag. Dessutom är vårt
                 erbjudande utformat för att vara så flexibelt som möjligt,
                 vilket ger dig friheten att anpassa ditt lagerutrymme efter dina
-                behov, när du behöver det.
+                behov - när du behöver det!
               </p>
+              <p className="text-lg">Kontakta oss gärna för mer info!</p>
             </div>
             <div className="lg:relative my-10 hidden lg:block">
               <div className="flex justify-center mt-10 lg:my-0 lg:absolute lg:-top-20 lg:right-0">
@@ -545,7 +546,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           <div className="lg:w-3/12 w-full  hidden lg:block">
             <div className="flex justify-center relative">
@@ -593,7 +594,7 @@ export default function HomePage() {
               <Image src="/imgs/2.png" alt="Staff 2" width={300} height={300} />
               <p className="pt-5 pb-1 text-lg  font-bold">Lukas</p>
               <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Ekonomi</p>
-              <p className="pt-1 pb-5 text-lg">0141-21 50 44  </p>
+              <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
             </div>
             <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
               <Image src="/imgs/3.png" alt="Staff 3" width={300} height={300} />
@@ -631,7 +632,7 @@ export default function HomePage() {
                   />
                   <p className="pt-5 pb-1 text-lg  font-bold">Lukas</p>
                   <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Ekonomi</p>
-                  <p className="pt-1 pb-5 text-lg">0141-21 50 44  </p>
+                  <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
                 </div>
               </div>
               <div>
@@ -689,10 +690,10 @@ export default function HomePage() {
                 activeSlide === index ? "active" : "inactive"
               }`}
             >
-              <div className="pb-10 relative ">
+              <div className="pb-10 relative">
                 <Image
                   src={testimonial.image}
-                  className="mx-auto rounded-full"
+                  className="mx-auto rounded-full p-1 border-2 border-[#ff6300]"
                   alt="{Client-Img ${index + 1}}"
                   width={90}
                   height={90}
@@ -700,15 +701,17 @@ export default function HomePage() {
               </div>
 
               <div
-                className={` text-white bg-[#ff6300] 
+                className={` text-white bg-[#ff6300]
                   text-center md:mx-8 mx-2 ${
                     activeSlide === index ? "opacity-100" : ""
                   }
                    bg-[#ff6300] rounded-lg md:p-5 p-4 space-y-2 text-white`}
               >
-                <p>{testimonial.text}</p>
-                <p className="font-semibold">{testimonial.name}</p>
-                <p>{testimonial.profession}</p>
+                <div className="md:min-h-32">
+                  <p>{testimonial.text}</p>
+                  <p className="font-semibold">{testimonial.name}</p>
+                  {/* <p>{testimonial.profession}</p> */}
+                </div>
               </div>
             </div>
           ))}

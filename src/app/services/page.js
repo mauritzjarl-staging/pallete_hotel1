@@ -219,86 +219,83 @@ const Ovrigt = () => (
     </Link>
   </section>
 );
-
 const Page = () => {
-    const [activeTab, setActiveTab] = useState(0);  // Default to the first tab (Lagerhållning inomhus)
-  
-    const tabs = [
-      { id: 0, label: 'Lagerhållning inomhus', component: <LagerhallningInomhus /> },
-      { id: 1, label: 'Lagerhållning utomhus', component: <LagerhallningUtomhus /> },
-      { id: 2, label: 'Hyra av förråd', component: <HyraAvForbind /> },
-      { id: 3, label: 'Godshantering', component: <Godshantering /> },
-      { id: 4, label: 'Övrigt', component: <Ovrigt /> },
-    ];
-  
-    const tabMap = {
-      indoor: 0,
-      outdoor: 1,
-      rental: 2,
-      cargo: 3,
-      other: 4,
+  const [activeTab, setActiveTab] = useState(0);  // Default to the first tab (Lagerhållning inomhus)
+
+  const tabs = [
+    { id: 0, label: 'Lagerhållning inomhus', component: <LagerhallningInomhus /> },
+    { id: 1, label: 'Lagerhållning utomhus', component: <LagerhallningUtomhus /> },
+    { id: 2, label: 'Hyra av förråd', component: <HyraAvForbind /> },
+    { id: 3, label: 'Godshantering', component: <Godshantering /> },
+    { id: 4, label: 'Övrigt', component: <Ovrigt /> },
+  ];
+
+  const tabMap = {
+    indoor: 0,
+    outdoor: 1,
+    rental: 2,
+    cargo: 3,
+    other: 4,
+  };
+
+  // Handle hash change in the URL and update active tab
+  const handleHashChange = () => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash && tabMap[hash] !== undefined) {
+      setActiveTab(tabMap[hash]);
+    }
+  };
+
+  // Set tab on initial load and listen for hash changes
+  useEffect(() => {
+    handleHashChange();  // Handle the initial load with hash
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Clean up event listener
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
     };
-  
-    // Handle hash change in the URL and update active tab
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace("#", "");
-      if (hash && tabMap[hash] !== undefined) {
-        setActiveTab(tabMap[hash]);
-      }
-    };
-  
-    // Listen for hash changes directly, with a re-trigger on initial load
-    useEffect(() => {
-      // Handle initial load with hash
-      handleHashChange();
-  
-      // Listen for hash change events
-      window.addEventListener('hashchange', handleHashChange);
-  
-      // Clean up event listener
-      return () => {
-        window.removeEventListener('hashchange', handleHashChange);
-      };
-    }, []);
-  
-    // Switch tabs and update the URL hash when clicked from within the page
-    const switchTab = (tabId) => {
-      setActiveTab(tabId);  // Set the active tab immediately
-      const hash = Object.keys(tabMap)[tabId];
-      window.location.hash = hash;  // Update the hash in the URL
-    };
-  
-    return (
-      <div>
-        {/* Hero Section */}
-        <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
-          <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
-            {tabs[activeTab].label}
-          </p>
-        </section>
-  
-        {/* Tab Section */}
-        <section className="md:my-32 my-10 px-4 md:px-20 md:flex md:space-x-8">
-          {/* Tab Navigation */}
-          <div className="md:w-3/12 bg-[#F3F3F3] h-full space-y-5 md:text-lg py-10 my-10 md:my-0 px-1">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => switchTab(tab.id)}
-                className={`flex justify-center w-full md:py-3 py-2 ${activeTab === tab.id ? 'bg-orange-500 text-white' : 'border-transparent text-black hover:text-orange-500'
-                  } focus:outline-none`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-  
-          {/* Tab Content */}
-          <div className="md:w-9/12">
-            {tabs[activeTab].component}
-          </div>
-        </section>
-      </div>
+  }, []);
+
+  // Switch tabs and update the URL hash
+  const switchTab = (tabId) => {
+    setActiveTab(tabId);  // Set the active tab immediately
+    const hash = Object.keys(tabMap)[tabId];
+    window.location.hash = hash;  // Update the hash in the URL
+  };
+
+  return (
+    <div>
+      {/* Hero Section */}
+      <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
+        <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
+          {tabs[activeTab].label}
+        </p>
+      </section>
+
+      {/* Tab Section */}
+      <section className="md:my-32 my-10 px-4 md:px-20 md:flex md:space-x-8">
+        {/* Tab Navigation */}
+        <div className="md:w-3/12 bg-[#F3F3F3] h-full space-y-5 md:text-lg py-10 my-10 md:my-0 px-1">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => switchTab(tab.id)}
+              className={`flex justify-center w-full md:py-3 py-2 ${activeTab === tab.id ? 'bg-orange-500 text-white' : 'border-transparent text-black hover:text-orange-500'
+                } focus:outline-none`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Tab Content */}
+        <div className="md:w-9/12">
+          {tabs[activeTab].component}
+        </div>
+      </section>
+    </div>
   );
 };
 

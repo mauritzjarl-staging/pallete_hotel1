@@ -40,3 +40,7 @@ body {
 .testimonial-slide.active {
   opacity: 1; /* Highlight active slide */
 }
+
+html {
+  scroll-behavior: smooth;
+}
