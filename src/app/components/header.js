@@ -45,9 +45,7 @@ export default function Header() {
 
   // Toggle dropdown for Tjänster
   const toggleDropdown = () => {
-    if (!pathname.startsWith("/services")) {
       setDropdownOpen(!dropdownOpen);
-    }
   };
 
   // Close dropdown when clicking outside
@@ -152,21 +150,23 @@ export default function Header() {
                     ? "text-[#ff6300]"
                     : "hover:text-[#ff6300]"
                 }`}
-                onClick={toggleDropdown}
-                // onMouseLeave={toggleDropdown}
+                onMouseEnter={toggleDropdown}
+                onMouseLeave={toggleDropdown}
               >
                 <div className="flex items-center">
                   <Link className="w-full" href="/services">
                     Tjänster
                   </Link>
                   <span className="ms-3">
-                    {!pathname.startsWith("/services") && <FaCaretDown />}
+                    {/* {!pathname.startsWith("/services") && <FaCaretDown />} */}
+                    <FaCaretDown />
                   </span>
                 </div>
 
                 {/* Dropdown */}
                 {dropdownOpen && (
-                  <ul className="absolute top-10 bg-white rounded font-medium text-[#001d24] py-2 z-50">
+                  <div className="absolute top-6"> 
+                  <ul className=" mt-5 bg-white rounded font-medium text-[#001d24] py-2 z-50">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       <Link className="w-full" href="/services#indoor">
                         Lagerhållning inomhus
@@ -193,6 +193,7 @@ export default function Header() {
                       </Link>
                     </li>
                   </ul>
+                  </div>
                 )}
               </li>
 
