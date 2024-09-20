@@ -303,7 +303,7 @@ export default function HomePage() {
             er.
           </p>
           <p className="bg-[#7d7d7d21] text-gray-500 p-[2rem] pl-5 place-content-around ">
-            förstår att godshantering kan vara en utmaning för många företag,
+            Förstår att godshantering kan vara en utmaning för många företag,
             det är därför erbjuder vi vår expertis för både små och stora
             företag. Vi har sedan länge arbetat med lager och terminaler och har
             en bred erfarenhet av att hantera olika typer av varor åt våra

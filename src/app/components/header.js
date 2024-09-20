@@ -152,8 +152,8 @@ export default function Header() {
                     ? "text-[#ff6300]"
                     : "hover:text-[#ff6300]"
                 }`}
-                onMouseEnter={toggleDropdown}
-                onMouseLeave={toggleDropdown}
+                onClick={toggleDropdown}
+                // onMouseLeave={toggleDropdown}
               >
                 <div className="flex items-center">
                   <Link className="w-full" href="/services">
