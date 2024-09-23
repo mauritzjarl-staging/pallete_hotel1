@@ -268,10 +268,10 @@ const Page = () => {
     }
   };
 
-  
+
   return (
+
     <div>
-      {/* Hero Section */}
       <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
         <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
           {tabs[activeTab].label}
@@ -279,6 +279,7 @@ const Page = () => {
       </section>
 
       {/* Tab Section */}
+      
       <section className="md:my-32 my-10 px-4 md:px-20 md:flex md:space-x-8">
         {/* Tab Navigation */}
         <div className="md:w-3/12 bg-[#F3F3F3] h-full space-y-5 md:text-lg py-10 my-10 md:my-0 px-1">
