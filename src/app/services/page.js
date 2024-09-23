@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
-import { useSearchParams,useNavigate } from "next/navigation";
+import { useSearchParams, useNavigate } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 // Define all tab content as separate components
@@ -230,89 +230,77 @@ const Page = () => {
     other: 4,
   };
 
-  const searchparams=useSearchParams();
+  const [activeTab, setActiveTab] = useState(0);
+  const searchParams = typeof window !== "undefined" ? useSearchParams() : null;
   const router = useRouter();
-  const tabParam=searchparams.get("tab")
-  console.log(tabParam)
-  
-  const initialTabIndex = tabMap[tabParam] !== undefined ? tabMap[tabParam] : 0;
-  const [activeTab, setActiveTab] = useState(initialTabIndex); // Default to the first tab (Lagerhållning inomhus)
+
+  useEffect(() => {
+    if (searchParams) {
+      const tabParam = searchParams.get("tab");
+      const tabIndex = tabMap[tabParam];
+      if (tabIndex !== undefined) {
+        setActiveTab(tabIndex);
+      }
+    }
+  }, [searchParams]);
+
   const tabs = [
-    { id: 0, label: 'Lagerhållning inomhus', component: <LagerhallningInomhus /> },
-    { id: 1, label: 'Lagerhållning utomhus', component: <LagerhallningUtomhus /> },
-    { id: 2, label: 'Hyra av förråd', component: <HyraAvForbind /> },
-    { id: 3, label: 'Godshantering', component: <Godshantering /> },
-    { id: 4, label: 'Övrigt', component: <Ovrigt /> },
+    {
+      id: 0,
+      label: "Lagerhållning inomhus",
+      component: <LagerhallningInomhus />,
+    },
+    {
+      id: 1,
+      label: "Lagerhållning utomhus",
+      component: <LagerhallningUtomhus />,
+    },
+    { id: 2, label: "Hyra av förråd", component: <HyraAvForbind /> },
+    { id: 3, label: "Godshantering", component: <Godshantering /> },
+    { id: 4, label: "Övrigt", component: <Ovrigt /> },
   ];
 
   const switchTab = (tabIndex) => {
     setActiveTab(tabIndex);
-
-    // Find the tab key corresponding to the tabIndex
     const tabKey = Object.keys(tabMap).find((key) => tabMap[key] === tabIndex);
-
     if (tabKey) {
-      // Update the URL query parameter
       router.push(`/services?tab=${tabKey}`);
     }
   };
 
-  // Handle hash change in the URL and update active tab
-  const handleHashChange = () => {
-    const hash = window.location.hash.replace("#", "");
-    if (hash && tabMap[hash] !== undefined) {
-      setActiveTab(tabMap[hash]);
-    }
-  };
-
-  // Set tab on initial load and listen for hash changes
-  useEffect(() => {
-    const tabIndex = tabMap[tabParam];
-    if (tabIndex !== undefined) {
-      setActiveTab(tabIndex);
-    } else {
-      setActiveTab(0); // Default to first tab if parameter is unrecognized
-    }
-  }, [tabParam]);
-
-  const handleTabChange = (tabIndex) => {
-    setActiveTab(tabIndex);
-    // Optionally update the URL query parameter here if needed
-  };
+  
   return (
     <div>
-    {/* Hero Section */}
-    <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
-      <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
-        {tabs[activeTab].label}
-      </p>
-    </section>
+      {/* Hero Section */}
+      <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
+        <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
+          {tabs[activeTab].label}
+        </p>
+      </section>
 
-    {/* Tab Section */}
-    <section className="md:my-32 my-10 px-4 md:px-20 md:flex md:space-x-8">
-      {/* Tab Navigation */}
-      <div className="md:w-3/12 bg-[#F3F3F3] h-full space-y-5 md:text-lg py-10 my-10 md:my-0 px-1">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => switchTab(tab.id)}
-            className={`flex justify-center w-full md:py-3 py-2 ${
-              activeTab === tab.id
-                ? 'bg-orange-500 text-white'
-                : 'border-transparent text-black hover:text-orange-500'
-            } focus:outline-none`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+      {/* Tab Section */}
+      <section className="md:my-32 my-10 px-4 md:px-20 md:flex md:space-x-8">
+        {/* Tab Navigation */}
+        <div className="md:w-3/12 bg-[#F3F3F3] h-full space-y-5 md:text-lg py-10 my-10 md:my-0 px-1">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => switchTab(tab.id)}
+              className={`flex justify-center w-full md:py-3 py-2 ${
+                activeTab === tab.id
+                  ? "bg-orange-500 text-white"
+                  : "border-transparent text-black hover:text-orange-500"
+              } focus:outline-none`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
 
-      {/* Tab Content */}
-      <div className="md:w-9/12">
-        {tabs[activeTab].component}
-      </div>
-    </section>
-  </div>
+        {/* Tab Content */}
+        <div className="md:w-9/12">{tabs[activeTab].component}</div>
+      </section>
+    </div>
   );
 };
 
