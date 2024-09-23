@@ -25,9 +25,10 @@ export default function Footer() {
             </p>
             <div className="flex my-5 gap-3">
               <Link
-            href="https://www.facebook.com/profile.php?id=61565752334197"
+            href="https://www.facebook.com/people/Pallhotellet/61566211919925/"
                 className="border hover:text-white hover:border-white
-                 p-2 rounded-md border-[#808E91]">
+                 p-2 rounded-md border-[#808E91]" 
+                 >
                 <FaFacebook />
               </Link>
 

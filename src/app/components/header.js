@@ -84,7 +84,7 @@ export default function Header() {
         <div className="flex text-sm md:text-sm xl:text-lg items-center">
           <p className="hover:text-white">Följ oss:</p>
           <div className="px-4 cursor-pointer md:space-x-4 space-x-2 flex">
-           <Link href="https://www.facebook.com/profile.php?id=61565752334197"><FaFacebook className="hover:text-white" /> </Link>
+           <Link href="https://www.facebook.com/people/Pallhotellet/61566211919925/"><FaFacebook className="hover:text-white" /> </Link>
             {/* <FaTwitter className="hover:text-white" />
             <IoLogoLinkedin className="hover:text-white" />
             <FiInstagram className="hover:text-white" /> */}
@@ -167,31 +167,31 @@ export default function Header() {
                 {dropdownOpen && (
                   <div className="absolute top-6"> 
                   <ul className=" mt-5 bg-white rounded font-medium text-[#001d24] py-2 z-50">
+                      <Link className="w-full" href="/services?tab=indoor">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link className="w-full" href="/services#indoor">
                         Lagerhållning inomhus
-                      </Link>
                     </li>
+                      </Link>
+                      <Link className="w-full" href="/services?tab=outdoor">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link className="w-full" href="/services#outdoor">
                         Lagerhållning utomhus
-                      </Link>
                     </li>
+                      </Link>
+                      <Link className="w-full" href="/services?tab=rental">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link className="w-full" href="/services#rental">
                         Hyra av förråd
-                      </Link>
                     </li>
+                      </Link>
+                      <Link className="w-full" href="/services?tab=cargo">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link className="w-full" href="/services#cargo">
                         Godshantering
-                      </Link>
                     </li>
+                      </Link>
+                      <Link className="w-full" href="/services?tab=other">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      <Link className="w-full" href="/services#other">
                         Övrigt
-                      </Link>
                     </li>
+                      </Link>
                   </ul>
                   </div>
                 )}
@@ -256,11 +256,7 @@ export default function Header() {
             </li> */}
 
             <li
-              className={`relative group dropdown-container ${
-                pathname.startsWith("/services")
-                  ? "text-[#ff6300]"
-                  : "hover:text-[#ff6300]"
-              }`}
+              className={`relative group dropdown-container `}
             >
               <div className="flex">
               <Link className="w-full" href="/services">
@@ -274,63 +270,42 @@ export default function Header() {
 
               <span className="ms-3"
                       onClick={toggleDropdown}>
-                    {!pathname.startsWith("/services") && <FaCaretDown />}
+                        <FaCaretDown />
+                    {/* {!pathname.startsWith("/services") && <FaCaretDown />} */}
                   </span>
                   </div>
-              {/* Dropdown */}
+                  {/* <ul className="bg-white text-[#001d24] text-md py-3 my-2 z-50 rounded"> */}
+    
+
               {dropdownOpen && (
-                <ul className="bg-white text-[#001d24] text-md py-3 my-2 z-50 rounded">
-                  <Link
-                    className="w-full"
-                    href="/services#indoor"
-                    onClick={() => setMenuOpen(false)}
-                  >
+               <ul className="bg-white text-[#001d24] text-md py-3 my-2 z-50 rounded">
+                      <Link className="w-full" onClick={() => setMenuOpen(false)} href="/services?tab=indoor">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      Lagerhållning inomhus
+                        Lagerhållning inomhus
                     </li>
-                  </Link>
-
-                  <Link
-                    className="w-full"
-                    href="/services#outdoor"
-                    onClick={() => setMenuOpen(false)}
-                  >
+                      </Link>
+                      <Link className="w-full" onClick={() => setMenuOpen(false)} href="/services?tab=outdoor">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      Lagerhållning utomhus
+                        Lagerhållning utomhus
                     </li>
-                  </Link>
-
-                  <Link
-                    className="w-full"
-                    href="/services#rental"
-                    onClick={() => setMenuOpen(false)}
-                  >
+                      </Link>
+                      <Link className="w-full" onClick={() => setMenuOpen(false)} href="/services?tab=rental">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      Hyra av förråd
+                        Hyra av förråd
                     </li>
-                  </Link>
-
-                  <Link
-                    className="w-full"
-                    href="/services#cargo"
-                    onClick={() => setMenuOpen(false)}
-                  >
+                      </Link>
+                      <Link className="w-full" onClick={() => setMenuOpen(false)} href="/services?tab=cargo">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      Godshantering
+                        Godshantering
                     </li>
-                  </Link>
-
-                  <Link
-                    className="w-full"
-                    href="/services#other"
-                    onClick={() => setMenuOpen(false)}
-                  >
+                      </Link>
+                      <Link className="w-full" onClick={() => setMenuOpen(false)} href="/services?tab=other">
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
-                      Övrigt
+                        Övrigt
                     </li>
-                  </Link>
-                </ul>
-              )}
+                      </Link>
+                  </ul>
+                )}
             </li>
 
             <Link
