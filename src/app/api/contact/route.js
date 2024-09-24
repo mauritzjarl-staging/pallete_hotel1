@@ -19,7 +19,7 @@ export async function POST(req) {
   const mailOptions = {
     from: process.env.EMAIL_USER, // Sender's email address
     to: process.env.EMAIL_RECIPIENT, // Fetch recipient from environment variable
-    subject: "New Contact Form Submission",
+    subject: "Kontakt från sidan Pallhotellet.se",
     html: `
           <p><strong>Förnamn:</strong> ${firstName}</p>
 <p><strong>Efternamn:</strong> ${lastName}</p>
