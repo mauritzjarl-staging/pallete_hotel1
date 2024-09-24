@@ -22,20 +22,20 @@ const LagerhallningInomhus = () => (
         <h2 className="text-2xl font-bold">Lagerhållning inomhus</h2>
         <p className="md:text-lg text-[#626262]">
           Lagerhåll dina varor i något av våra lager! Våra lager är placerade
-          mitt i Sverige, Motala Östergötland och ligger bra till för
-          distribution till de flesta storstadsregioner i Sverige. På våra lager
-          förvaras produkter i pallställ i långa rader och på höga höjder. Detta
-          lager är perfekt för kunder inom såväl grossist verksamhet som
-          industri, e-handel etc. Pallagring passar bra med snabbrörliga
-          produkter, men även som buffertlager
+          mitt i Sverige, Motala Östergötland, och ligger bra till för
+          distribution till de flesta storstadsregioner i Sverige.
         </p>
         <p className="md:text-lg text-[#626262]">
-          Vi kan förutom pallagring erbjuda lagring av skrymmande gods och stora
-          paket. Vi förfogar över stora lagerytor så vi kan alltid anpassa det
-          till just era önskemål och krav. På våra lager finns bade travers,
-          gaffel lastare, m.fl. Vi har lastkaj, kan lossa lastbilar utanför
-          lastkajen eller använda vår inomhus travers. Prisförslag fr.49kr /pall
-          och mån
+          På våra lager förvaras produkter i pallställ i långa rader och på höga
+          höjder. Våra lager lämpar sig utmärkt för kunder inom såväl
+          grossistverksamhet som industri, e-handel etc. Pallagring passar även
+          bra buffertlager Vi kan förutom pallagring erbjuda lagring av
+          skrymmande gods och stora paket.
+        </p>
+        <p className="md:text-lg text-[#626262]">
+          Vi förfogar över stora lagerytor så vi kan alltid anpassa det till
+          just era önskemål och krav. På våra lager finns bade lastkaj, travers,
+          gaffeltruck, m.fl. Prisförslag fr.49kr /pall och mån
         </p>
       </div>
     </div>
@@ -70,10 +70,10 @@ const LagerhallningUtomhus = () => (
       <div className="md:space-y-5 space-y-3">
         <h2 className="text-2xl font-bold">Lagerhållning utomhus</h2>
         <p className="md:text-lg text-[#626262]">
-          Vi har plats för containers, olika typer av skrymmande gods eller
-          annat som kan förvaras utomhus. Vi förfogar över mer än 100.000m2 yta
-          utomhus som kan användas till lagring. Våra utomhus lagerplatser är
-          framförallt belägna i Motala, Östergötland.
+          Vi har plats för olika typer av skrymmande gods eller annat som kan
+          förvaras utomhus. Vi förfogar över mer än 100.000m2 utomhusyta som kan
+          användas till lagring. Våra utomhuslagerplatser är belägna i Motala,
+          Östergötland.
         </p>
       </div>
     </div>
@@ -192,17 +192,17 @@ const Ovrigt = () => (
           När du väljer oss för dina lagerbehov kommer du att uppleva fördelarna
           med optimerad lagerhantering. Genom att endast betala för det utrymme
           du faktiskt använder kan du optimera ditt lager och eliminera onödiga
-          kostnader. Detta kan vara särskilt fördelaktigt för företag med
-          varierande lagerbehov eller för de som bedriver säsongsbaserad
-          verksamhet
+          kostnader. Vi hjälper er gärna även med att hitta pålitliga och
+          kontinuerliga distributionslösningar.
         </p>
-        <h2 className="text-2xl font-bold">3pl lösningar</h2>
+        <h2 className="text-2xl font-bold">3pl lösningar</h2>
         <p className="md:text-lg text-[#626262]">
-          Vårt engagemang att hantera dina in- och utleveranser innebär att du
-          kan lägga större fokus på ditt företags kärnverksamhet, vilket främjar
+          Vi tar hand om hela ditt flöde från att hantera dina in- och
+          utleveranser, distribution och documentation. Detta innebär att du kan
+          lägga större fokus på ditt företags kärnverksamhet, vilket främjar
           effektivitet inom ditt företag. Dessutom är vårt erbjudande utformat
           för att vara så flexibelt som möjligt, vilket ger dig friheten att
-          anpassa ditt lagerutrymme efter dina behov, när du behöver det
+          anpassa ditt lagerutrymme efter dina behov, då när du behöver det!
         </p>
       </div>
     </div>
@@ -268,9 +268,7 @@ const Page = () => {
     }
   };
 
-
   return (
-
     <div>
       <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
         <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
@@ -279,7 +277,7 @@ const Page = () => {
       </section>
 
       {/* Tab Section */}
-      
+
       <section className="md:my-32 my-10 px-4 md:px-20 md:flex md:space-x-8">
         {/* Tab Navigation */}
         <div className="md:w-3/12 bg-[#F3F3F3] h-full space-y-5 md:text-lg py-10 my-10 md:my-0 px-1">
