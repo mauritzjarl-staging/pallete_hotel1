@@ -301,18 +301,10 @@ export default function HomePage() {
             mycket mer.
           </p>
           <p className="text-gray-500">
-            Våra lager har en stor kapacitet för att ha många olika typer av
-            gods, samt olika lageralternativ anpassade till olika
-            förvaringskrav. Vi har en lång erfarenhet inom lagerhållning samt
-            logistik och hjälper gärna till att hitta den optimala lösningen för
-            er.
+          Våra lager har tillräcklig kapacitet för att ha många olika typer av gods, samt att vi kan erbjuda olika lageralternativ anpassade till olika förvaringskrav. Vi har en lång erfarenhet inom lagerhållning samt logistik och hjälper gärna till att hitta den optimala lösningen för er.
           </p>
           <p className="bg-[#7d7d7d21] text-gray-500 p-[2rem] pl-5 place-content-around ">
-            "Förstår att godshantering kan vara en utmaning för många företag,
-            det är därför erbjuder vi vår expertis för både små och stora
-            företag. Vi har sedan länge arbetat med lager och terminaler och har
-            en bred erfarenhet av att hantera olika typer av varor åt våra
-            kunder."
+          "Förstår att godshantering kan vara en utmaning för många företag, det är därför vi erbjuder vår expertis till både små och stora företag. Vi har sedan länge arbetat med lager och terminaler och har en lång erfarenhet av att hantera olika typer av gods."
             <br />
             <span className="text-orange-600 mt-5">
               Christopher Jarl, VD Pallhotellet.se
