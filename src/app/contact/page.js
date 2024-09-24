@@ -43,7 +43,7 @@ const ContactPage = () => {
 
       if (response.ok) {
         // Show success toast
-        toast.success(result.message || "Formuläret har skickats in framgångsrikt!");
+        toast.success(result.message || "Tack för ditt mail, vi kontaktar dig inom kort!");
 
         // Clear the form
         event.target.reset();
@@ -81,7 +81,7 @@ const ContactPage = () => {
           </h1>
         </div>
       </section>
-      <section className="h-[500px]">
+      <section className="h-[500px] z-10 relative">
         <MapComponent />
       </section>
 

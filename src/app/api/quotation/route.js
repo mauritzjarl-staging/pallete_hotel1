@@ -154,7 +154,7 @@ export async function POST(req) {
   try {
     await transporter.sendMail(mailOptions);
     return new NextResponse(
-      JSON.stringify({ message: 'Email sent successfully!' }),
+      JSON.stringify({ message: 'Tack för ditt mail, vi kontaktar dig inom kort!' }),
       { status: 200 }
     );
   } catch (error) {

@@ -34,7 +34,7 @@ const MapComponent = () => {
         // Add marker with popup
         L.marker([58.530561, 15.064665], { icon: redIcon })
           .addTo(mapRef.current)
-          .bindPopup("PallHotellet.se")
+          .bindPopup("Pallhotellet.se")
           .openPopup();
       }
     }

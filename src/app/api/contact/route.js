@@ -36,7 +36,7 @@ export async function POST(req) {
   try {
     await transporter.sendMail(mailOptions);
     return new NextResponse(
-      JSON.stringify({ message: "Tack, kontakte-posten har skickats!" }),
+      JSON.stringify({ message: "Tack för ditt mail, vi kontaktar dig inom kort!" }),
       { status: 200 }
     );
   } catch (error) {

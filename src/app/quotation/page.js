@@ -143,7 +143,7 @@ const QuoteForm = () => {
 
       if (response.ok) {
         // Show success toast
-        toast.success("Formuläret har skickats in framgångsrikt!");
+        toast.success("Tack för ditt mail, vi kontaktar dig inom kort!");
 
         // Clear the form by resetting the form state to initial values
         setFormState(initialFormState);

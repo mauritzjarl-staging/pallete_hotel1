@@ -502,7 +502,7 @@ export default function HomePage() {
 
           <section id="frankr" className="lg:w-6/12 w-full text-white lg:px-10">
             <div className="text-center md:text-start space-y-10 mb-10 md:mb-40">
-              <p className="md:px-7 px-5 text-3xl font-bold">
+              <p className="md:px-2 px-5 text-3xl font-bold">
                 Från 49kr / mån per pall
               </p>
               <p className="text-lg">
