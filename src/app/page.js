@@ -262,8 +262,7 @@ export default function HomePage() {
               Snabb orderhantering
             </h3>
             <p className="text-[0.6rem] md:text-[0.9rem]">
-              Med snabb orderhantering och ett stort lager lägger vi grunden för
-              att kunna garantera snabba leveranser.
+            Med snabb orderhantering och ett stort lager lägger vi grunden för ett effektivare godshantering.
             </p>
           </div>
         </div>
