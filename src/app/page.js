@@ -371,17 +371,17 @@ export default function HomePage() {
                 Lager som passar allas behov
               </p>
               <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
-                I våra lager har vi plats för alla typer av gods
+              I våra lager har vi plats för olika typer av gods. Totalt har vi plats för ca. 13.700 pall runt om i våra lager
               </p>
               {/* <!-- Greybox1 --> */}
-              <div className="p-6">
+              {/* <div className="p-6 invisible">
                 <ProgressBar
                   total={12000}
                   current={4921}
                   totalLabel="pallkapacitet"
                   currentLabel="pallar i lager"
                 />
-              </div>
+              </div> */}
               {/* <!-- Greybox Image --> */}
               <div className="w-full mt-4">
                 <Image
@@ -410,14 +410,14 @@ export default function HomePage() {
                 Vi ombesörjer lagerhållning och hjälper till med annat. 
               </p>
               {/* <!-- Greybox1 --> */}
-              <div className="p-6 invisible">
+              {/* <div className="p-6 invisible">
                 <ProgressBar
                   total={10}
                   current={4}
                   totalLabel="kunder som ml"
                   currentLabel="existing customers"
                 />
-              </div>
+              </div> */}
               {/* <!-- Greybox Image --> */}
               <div className="w-full mt-4">
                 <Image
@@ -444,14 +444,14 @@ export default function HomePage() {
                 Du som kund behöver bara ringa ett nummer.
               </p>
               {/* <!-- Greybox1 --> */}
-              <div className="p-6 invisible">
+              {/* <div className="p-6 invisible">
                 <ProgressBar
                   total={5}
                   current={1}
                   totalLabel="customers as ml"
                   currentLabel="Customer"
                 />
-              </div>
+              </div> */}
               {/* <!-- Greybox Image --> */}
               <div className="w-full mt-4">
                 <Image
