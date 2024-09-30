@@ -206,8 +206,14 @@ const QuoteForm = () => {
               </Link>
             </div>
             <div className="flex items-center">
-              <AiOutlineMail size={20} />
-              <p className="ml-4">order@pallhotellet.se</p>
+            <Link
+               target="_blank" 
+                href="mailto:info@pallhotellet.se"
+                className="flex items-center"
+              >
+                <AiOutlineMail size={16} />
+                <p className="ms-3">info@pallhotellet.se</p>
+              </Link>
             </div>
           </div>
         </div>
