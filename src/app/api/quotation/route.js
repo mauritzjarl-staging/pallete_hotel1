@@ -1,4 +1,4 @@
-// pages/api/quotation.js
+// /pages/api/quotation.js
 
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
@@ -7,11 +7,14 @@ export async function POST(req) {
   const data = await req.json();
   console.log('Received data:', data); // Log the received data for debugging
 
+  // Set up Nodemailer transporter using your custom SMTP server
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: process.env.EMAIL_HOST, // Custom email host (mail.lokalermotala.se)
+    port: process.env.EMAIL_PORT, // Custom email port (e.g., 465 for SSL)
+    secure: process.env.EMAIL_SECURE === 'true', // True for SSL, false for non-secure
     auth: {
-      user: process.env.EMAIL_USER, // Your Gmail address
-      pass: process.env.EMAIL_PASS, // Your Gmail password or app password
+      user: process.env.EMAIL_USER, // Your email address (contact@lokalermotala.se)
+      pass: process.env.EMAIL_PASS, // Your email password
     },
   });
 
@@ -23,7 +26,7 @@ export async function POST(req) {
   };
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: process.env.EMAIL_USER, // Sender's email address
     to: process.env.EMAIL_RECIPIENT, // Recipient email address
     subject: 'Offertförfrågan pallhotellet.se',
     html: `
