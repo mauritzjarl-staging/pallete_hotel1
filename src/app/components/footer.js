@@ -25,13 +25,13 @@ export default function Footer() {
             </p>
             <div className="flex my-5 gap-3">
               <Link
-            href="https://www.facebook.com/people/Pallhotellet/61566211919925/"
+                href="https://www.facebook.com/chriss.mauritz.1"
+                target="_blank" 
                 className="border hover:text-white hover:border-white
-                 p-2 rounded-md border-[#808E91]" 
-                 >
+                 p-2 rounded-md border-[#808E91]"
+              >
                 <FaFacebook />
               </Link>
-
 
               {/* <Link
                 href="#"
@@ -59,21 +59,34 @@ export default function Footer() {
           <div className="py-4 md:mt-20 md:w-4/12">
             <p className="text-lg mb-5 font-semibold text-white">Adress</p>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="#" className="flex">
-                <IoLocationSharp size={16} />
-                <p className="ms-3">Vickerkullavägen 2, 591 45 Motala</p>
-              </Link>
-            </li>
+  <Link 
+    href="https://www.google.com/maps?q=Vickerkullavägen+2,+591+45+Motala" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="flex items-center"
+  >
+    <IoLocationSharp size={16} />
+    <p className="ms-3">Vickerkullavägen 2, 591 45 Motala</p>
+  </Link>
+</li>
+
+            
             <li className="hover:text-white my-3 text-sm">
-              <Link href="#" className="flex">
-                <MdEmail size={16} />
-                <p className="ms-3">0141-21 50 44</p>
-              </Link>
-            </li>
-            <li className="hover:text-white my-3 text-sm">
-              <Link href="#" className="flex">
+              <Link href="tel:+46141215044" className="flex items-center">
                 <MdCall size={16} />
-                <p className="ms-3">order@pallhotellet.se</p>
+                <p className="ms-3">+46 141 21 50 44
+                </p>
+              </Link>
+            </li>
+
+            <li className="hover:text-white my-3 text-sm">
+              <Link
+               target="_blank" 
+                href="mailto:info@pallhotellet.se"
+                className="flex items-center"
+              >
+                <MdEmail size={16} />
+                <p className="ms-3">info@pallhotellet.se</p>
               </Link>
             </li>
           </div>
@@ -105,7 +118,7 @@ export default function Footer() {
             <span className="text-[#ff6300]"> Pall</span>
             <span className="text-white me-2">hotellet.se</span>
             <span className="text-gray-400 hover:text-white">
-             2024, Alla rättigheter förbehållna
+              2024, Alla rättigheter förbehållna
             </span>
           </p>
         </div>

@@ -9,7 +9,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { IoArrowForward } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Link from "next/link";
 
 const QuoteForm = () => {
   // Initial form state
@@ -161,11 +161,9 @@ const QuoteForm = () => {
     }
   };
 
-
-
   return (
     <>
- <ToastContainer
+      <ToastContainer
         position="top-center"
         autoClose={5000}
         hideProgressBar={false}
@@ -190,12 +188,22 @@ const QuoteForm = () => {
           <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
           <div className="space-y-4 text-lg">
             <div className="flex items-center">
-              <CiLocationOn size={20} />
-              <p className="ml-4">Vickerkullavägen 2, 591 45 Motala</p>
+              <Link
+                href="https://www.google.com/maps?q=Vickerkullavägen+2,+591+45+Motala"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <CiLocationOn size={20} />
+                <p className="ms-3">Vickerkullavägen 2, 591 45 Motala</p>
+              </Link>
             </div>
             <div className="flex items-center">
-              <PiPhoneCallThin size={20} />
-              <p className="ml-4">0141-21 50 44</p>
+            <Link href="tel:+46141215044" className="flex items-center">
+                <PiPhoneCallThin size={20} />
+                <p className="ms-3">+46 141 21 50 44
+                </p>
+              </Link>
             </div>
             <div className="flex items-center">
               <AiOutlineMail size={20} />
@@ -656,11 +664,7 @@ const QuoteForm = () => {
                       <DatePicker
                         selected={formState.hyraAvForrad.franOchMed}
                         onChange={(date) =>
-                          handleInputChange(
-                            "hyraAvForrad",
-                            "franOchMed",
-                            date
-                          )
+                          handleInputChange("hyraAvForrad", "franOchMed", date)
                         }
                         placeholderText="Från och med"
                         dateFormat="yyyy-MM-dd"
@@ -674,11 +678,7 @@ const QuoteForm = () => {
                       <DatePicker
                         selected={formState.hyraAvForrad.tillOchMed}
                         onChange={(date) =>
-                          handleInputChange(
-                            "hyraAvForrad",
-                            "tillOchMed",
-                            date
-                          )
+                          handleInputChange("hyraAvForrad", "tillOchMed", date)
                         }
                         placeholderText="Till och med"
                         dateFormat="yyyy-MM-dd"
@@ -694,7 +694,9 @@ const QuoteForm = () => {
             <div className="border-t-2 border-[#A0ABBB] mb-6"></div>
 
             {/* Section 3 - Inlastning / utlastning */}
-            <h2 className="text-2xl font-semibold">3. Inlastning / utlastning</h2>
+            <h2 className="text-2xl font-semibold">
+              3. Inlastning / utlastning
+            </h2>
 
             {/* Lossning, ompackning */}
             <h3 className="font-semibold">3.1 Lossning, ompackning</h3>
@@ -727,9 +729,7 @@ const QuoteForm = () => {
                 <div className="w-2/12 md:w-auto md:me-3">
                   <input
                     type="checkbox"
-                    checked={
-                      formState.services.lossningLastningContainerOnskas
-                    }
+                    checked={formState.services.lossningLastningContainerOnskas}
                     onChange={() =>
                       handleCheckboxChange(
                         "services",
@@ -753,17 +753,16 @@ const QuoteForm = () => {
                     type="checkbox"
                     checked={formState.services.ompackningPlockOnskas}
                     onChange={() =>
-                      handleCheckboxChange(
-                        "services",
-                        "ompackningPlockOnskas"
-                      )
+                      handleCheckboxChange("services", "ompackningPlockOnskas")
                     }
                     id="ompackning"
                     className="mr-2 size-6"
                   />
                 </div>
                 <div className="w-10/12">
-                  <label htmlFor="ompackning">Ompackning och plock önskas</label>
+                  <label htmlFor="ompackning">
+                    Ompackning och plock önskas
+                  </label>
                 </div>
               </div>
             </div>
@@ -776,9 +775,7 @@ const QuoteForm = () => {
                 <input
                   type="checkbox"
                   id="containerhanteringPacketering"
-                  checked={
-                    formState.services.containerhanteringPacketering
-                  }
+                  checked={formState.services.containerhanteringPacketering}
                   onChange={() =>
                     handleCheckboxChange(
                       "services",
@@ -804,10 +801,7 @@ const QuoteForm = () => {
                   id="hanteringSkrymmandeGods"
                   checked={formState.services.hanteringSkrymmandeGods}
                   onChange={() =>
-                    handleCheckboxChange(
-                      "services",
-                      "hanteringSkrymmandeGods"
-                    )
+                    handleCheckboxChange("services", "hanteringSkrymmandeGods")
                   }
                   className="mr-2 size-6"
                 />
@@ -897,9 +891,7 @@ const QuoteForm = () => {
                       <input
                         type="checkbox"
                         className="size-6 me-2"
-                        checked={
-                          formState.services.hjalpDokumentationOnskas
-                        }
+                        checked={formState.services.hjalpDokumentationOnskas}
                         onChange={() =>
                           handleCheckboxChange(
                             "services",
@@ -922,9 +914,7 @@ const QuoteForm = () => {
                     <div className="w-2/12 md:w-auto md:me-3">
                       <input
                         type="checkbox"
-                        checked={
-                          formState.services.hjalpOrderhanteringOnskas
-                        }
+                        checked={formState.services.hjalpOrderhanteringOnskas}
                         onChange={() =>
                           handleCheckboxChange(
                             "services",
@@ -988,26 +978,28 @@ const QuoteForm = () => {
                       />
                     </div>
                     <div className="w-10/12">
-                      Behöver förslag till en komplett 3pl lösning, önskar
-                      gärna mer info.
+                      Behöver förslag till en komplett 3pl lösning, önskar gärna
+                      mer info.
                     </div>
                   </label>
                 </div>
 
                 {/* Submit Button */}
                 <div className="text-center">
-                <button
-          type="submit"
-          disabled={loading}
-          className={`my-3 flex items-center mx-auto md:mx-0 ${
-            loading ? "opacity-50 cursor-not-allowed" : "hover:text-[#ff6300]"
-          } text-white hover:bg-white bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 px-3 md:px-4 lg:px-8 rounded-md`}
-        >
-          {loading ? "Skickar..." : "Skicka"}
-          <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-            <IoArrowForward color="#ff6300" size={23} />
-          </span>
-        </button>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className={`my-3 flex items-center mx-auto md:mx-0 ${
+                      loading
+                        ? "opacity-50 cursor-not-allowed"
+                        : "hover:text-[#ff6300]"
+                    } text-white hover:bg-white bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 px-3 md:px-4 lg:px-8 rounded-md`}
+                  >
+                    {loading ? "Skickar..." : "Skicka"}
+                    <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                      <IoArrowForward color="#ff6300" size={23} />
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
