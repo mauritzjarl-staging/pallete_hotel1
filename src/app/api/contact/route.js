@@ -8,7 +8,7 @@ export async function POST(req) {
   // Set up Nodemailer transporter using environment variables
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST || "mail.node1563.myfcloud.com",
-    port: process.env.SMTP_PORT || 587, 
+    port: process.env.SMTP_PORT || 467, 
     auth: {
       user: process.env.SMTP_USER || "contact@pallhotellet.se",
       pass: process.env.SMTP_PASS, // Store in environment variable
