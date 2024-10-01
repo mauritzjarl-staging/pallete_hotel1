@@ -1,33 +1,43 @@
-// /pages/api/quotation.js
-
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
+
 
 export async function POST(req) {
   const data = await req.json();
   console.log('Received data:', data); // Log the received data for debugging
 
-  // Set up Nodemailer transporter using your custom SMTP server
+  // Log environment variables for debugging
+  console.log("Using SMTP host:", process.env.EMAIL_HOST);
+  console.log("Using SMTP port:", process.env.EMAIL_PORT);
+  console.log("Using SMTP secure:", process.env.EMAIL_SECURE);
+  console.log("Using SMTP user:", process.env.EMAIL_USER);
+
+  // Set up Nodemailer transporter with debug and logging enabled
   const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST, // Custom email host (mail.lokalermotala.se)
-    port: process.env.EMAIL_PORT, // Custom email port (e.g., 465 for SSL)
-    secure: process.env.EMAIL_SECURE === 'true', // True for SSL, false for non-secure
+    host: process.env.EMAIL_HOST, 
+    port: process.env.EMAIL_PORT, 
+    secure: process.env.EMAIL_SECURE === 'true', // Use true for SSL (port 465)
     auth: {
-      user: process.env.EMAIL_USER, // Your email address (contact@lokalermotala.se)
-      pass: process.env.EMAIL_PASS, // Your email password
+      user: process.env.EMAIL_USER, 
+      pass: process.env.EMAIL_PASS, 
     },
+    logger: true,  // Enable logging for debugging
+    debug: true,   // Enable SMTP debug output
   });
 
-  // Function to format date objects
-  const formatDate = (date) => {
-    if (!date) return 'Info saknas';
-    const d = new Date(date);
-    return d.toISOString().split('T')[0]; // Format as YYYY-MM-DD
-  };
+  // Verify the transporter setup before attempting to send an email
+  transporter.verify(function (error, success) {
+    if (error) {
+      console.error("SMTP configuration error:", error);  // Log error if configuration is wrong
+    } else {
+      console.log("SMTP server is ready to send emails");
+    }
+  });
 
+  // Define the email options
   const mailOptions = {
-    from: process.env.EMAIL_USER, // Sender's email address
-    to: process.env.EMAIL_RECIPIENT, // Recipient email address
+    from: process.env.EMAIL_USER, 
+    to: process.env.EMAIL_RECIPIENT, 
     subject: 'Offertförfrågan pallhotellet.se',
     html: `
       <h1>Offertförfrågan</h1>
@@ -154,14 +164,16 @@ export async function POST(req) {
     `,
   };
 
+  // Try to send the email
   try {
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully:", info.response);
     return new NextResponse(
       JSON.stringify({ message: 'Tack för ditt mail, vi kontaktar dig inom kort!' }),
       { status: 200 }
     );
   } catch (error) {
-    console.error('Failed to send email:', error);
+    console.error("Failed to send email. Full error:", error); // Log the full error object
     return new NextResponse(
       JSON.stringify({ message: 'Failed to send email', error: error.message }),
       { status: 500 }
