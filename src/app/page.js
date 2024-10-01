@@ -17,7 +17,7 @@ export default function HomePage() {
   const SliderContent = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
+        <h1 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
           Från 49 kronor per pall!
         </h1>
       </div>
@@ -27,7 +27,7 @@ export default function HomePage() {
       <Link href="#frankr">
         <button
           className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
-        hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+        hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
         >
           UPPTÄCK MER{" "}
           <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
@@ -40,7 +40,7 @@ export default function HomePage() {
   const SliderContent2 = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
+        <h1 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
           Godshantering
         </h1>
       </div>
@@ -52,7 +52,7 @@ export default function HomePage() {
       <Link href="/services#cargo">
       <button
          className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
-         hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+         hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
          >
         UPPTÄCK MER
         <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
@@ -65,7 +65,7 @@ export default function HomePage() {
   const SliderContent3 = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <h1 className="text-center md:text-5xl lg:text-7xl text-3xl px-10 font-bold mx-auto">
+        <h1 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
           Vi ordnar hela flödet
         </h1>
       </div>
@@ -77,7 +77,7 @@ export default function HomePage() {
       <Link href="/services#other">
       <button
          className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
-         hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-3 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+         hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
          >
         UPPTÄCK MER
         <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
@@ -220,7 +220,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[url('/imgs/Frame5892.png')] bg-cover bg-center h-screen flex justify-center md:px-20 items-center px-5">
+      <section className="bg-[url('/imgs/Frame5892.png')] bg-cover bg-center sm:pb-32 sm:pt-48 pb-16 pt-24 flex justify-center md:px-20 items-center px-5">
         <div className="w-full max-w-5xl ">
           <Slider {...BannerSlider}>
             <SliderContent />
