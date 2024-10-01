@@ -1,6 +1,10 @@
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
 
+// Helper function to format dates if necessary
+const formatDate = (date) => {
+  return date ? new Date(date).toLocaleDateString() : 'Info saknas';
+};
 
 export async function POST(req) {
   const data = await req.json();
@@ -16,7 +20,7 @@ export async function POST(req) {
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST, 
     port: process.env.EMAIL_PORT, 
-    secure: process.env.EMAIL_SECURE === 'true', // Use true for SSL (port 465)
+    secure: process.env.EMAIL_SECURE === 'true', // Use true for SSL (port 465), false for STARTTLS (port 587)
     auth: {
       user: process.env.EMAIL_USER, 
       pass: process.env.EMAIL_PASS, 
@@ -57,110 +61,74 @@ export async function POST(req) {
       <!-- 2.1 Kallager -->
       <h3>2.1 Kallager</h3>
       <p><strong>Selected:</strong> ${data.kallager.isChecked ? 'JA' : 'NEJ'}</p>
-      ${
-        data.kallager.isChecked
-          ? `
+      ${data.kallager.isChecked
+        ? `
         <p><strong>Antal pallplatser:</strong> ${data.kallager.antalpallplaster || 'Info saknas'}</p>
         <p><strong>Pallvikt/snitt:</strong> ${data.kallager.snitt || 'Info saknas'}</p>
         <p><strong>Antal kragar:</strong> ${data.kallager.antalKragar || 'Info saknas'}</p>
         <p><strong>Från och med:</strong> ${formatDate(data.kallager.franOchMed)}</p>
-        <p><strong>Till och med:</strong> ${formatDate(data.kallager.tillOchMed)}</p>
-      `
-          : ''
-      }
+        <p><strong>Till och med:</strong> ${formatDate(data.kallager.tillOchMed)}</p>`
+        : ''}
 
       <!-- 2.2 Varmlager -->
       <h3>2.2 Varmlager</h3>
       <p><strong>Selected:</strong> ${data.varmlager.isChecked ? 'JA' : 'NEJ'}</p>
-      ${
-        data.varmlager.isChecked
-          ? `
+      ${data.varmlager.isChecked
+        ? `
         <p><strong>Antal pallplatser:</strong> ${data.varmlager.antalpallplaster || 'Info saknas'}</p>
         <p><strong>Pallvikt/snitt:</strong> ${data.varmlager.snitt || 'Info saknas'}</p>
         <p><strong>Antal kragar:</strong> ${data.varmlager.antalKragar || 'Info saknas'}</p>
         <p><strong>Från och med:</strong> ${formatDate(data.varmlager.franOchMed)}</p>
-        <p><strong>Till och med:</strong> ${formatDate(data.varmlager.tillOchMed)}</p>
-      `
-          : ''
-      }
+        <p><strong>Till och med:</strong> ${formatDate(data.varmlager.tillOchMed)}</p>`
+        : ''}
 
       <!-- 2.3 Utomhusförvaring -->
       <h3>2.3 Utomhusförvaring</h3>
       <p><strong>Selected:</strong> ${data.utomhusforvaring.isChecked ? 'JA' : 'NEJ'}</p>
-      ${
-        data.utomhusforvaring.isChecked
-          ? `
+      ${data.utomhusforvaring.isChecked
+        ? `
         <p><strong>Yta i m²:</strong> ${data.utomhusforvaring.ytaIM2 || 'Info saknas'}</p>
         <p><strong>Höjd:</strong> ${data.utomhusforvaring.hojd || 'Info saknas'}</p>
         <p><strong>Bredd:</strong> ${data.utomhusforvaring.bredd || 'Info saknas'}</p>
         <p><strong>Längd:</strong> ${data.utomhusforvaring.langd || 'Info saknas'}</p>
         <p><strong>Från och med:</strong> ${formatDate(data.utomhusforvaring.franOchMed)}</p>
         <p><strong>Till och med:</strong> ${formatDate(data.utomhusforvaring.tillOchMed)}</p>
-        <p><strong>Typ av gods:</strong> ${data.utomhusforvaring.typAvGods || 'Info saknas'}</p>
-      `
-          : ''
-      }
+        <p><strong>Typ av gods:</strong> ${data.utomhusforvaring.typAvGods || 'Info saknas'}</p>`
+        : ''}
 
       <!-- 2.4 Hyra av förråd -->
       <h3>2.4 Hyra av förråd</h3>
       <p><strong>Selected:</strong> ${data.hyraAvForrad.isChecked ? 'JA' : 'NEJ'}</p>
-      ${
-        data.hyraAvForrad.isChecked
-          ? `
+      ${data.hyraAvForrad.isChecked
+        ? `
         <p><strong>Ytan i m²:</strong> ${data.hyraAvForrad.ytanIM2 || 'Info saknas'}</p>
         <p><strong>Från och med:</strong> ${formatDate(data.hyraAvForrad.franOchMed)}</p>
-        <p><strong>Till och med:</strong> ${formatDate(data.hyraAvForrad.tillOchMed)}</p>
-      `
-          : ''
-      }
+        <p><strong>Till och med:</strong> ${formatDate(data.hyraAvForrad.tillOchMed)}</p>`
+        : ''}
 
       <!-- Section 3: Inlastning / utlastning -->
       <h2>3. Inlastning / utlastning</h2>
 
       <!-- 3.1 Lossning, ompackning -->
       <h3>3.1 Lossning, ompackning</h3>
-      <p><strong>Lossning/lastning lastbil med gaffeltruck önskas:</strong> ${
-        data.services.lossningLastbilGaffeltruckOnskas ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Lossning/lastning av container önskas:</strong> ${
-        data.services.lossningLastningContainerOnskas ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Ompackning och plock önskas:</strong> ${
-        data.services.ompackningPlockOnskas ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Containerhantering /packetering:</strong> ${
-        data.services.containerhanteringPacketering ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Hantering av skrymmande gods:</strong> ${
-        data.services.hanteringSkrymmandeGods ? 'JA' : 'NEJ'
-      }</p>
+      <p><strong>Lossning/lastning lastbil med gaffeltruck önskas:</strong> ${data.services.lossningLastbilGaffeltruckOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Lossning/lastning av container önskas:</strong> ${data.services.lossningLastningContainerOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Ompackning och plock önskas:</strong> ${data.services.ompackningPlockOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Containerhantering /packetering:</strong> ${data.services.containerhanteringPacketering ? 'JA' : 'NEJ'}</p>
+      <p><strong>Hantering av skrymmande gods:</strong> ${data.services.hanteringSkrymmandeGods ? 'JA' : 'NEJ'}</p>
 
       <!-- 3.2 Redskap och maskiner -->
       <h3>3.2 Redskap och maskiner</h3>
-      <p><strong>Handtruck önskas:</strong> ${
-        data.services.handtruckOnskas ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Gaffeltruck önskas:</strong> ${
-        data.services.gaffeltruckOnskas ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Travers önskas (max 7ton):</strong> ${
-        data.services.traversOnskas ? 'JA' : 'NEJ'
-      }</p>
+      <p><strong>Handtruck önskas:</strong> ${data.services.handtruckOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Gaffeltruck önskas:</strong> ${data.services.gaffeltruckOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Travers önskas (max 7ton):</strong> ${data.services.traversOnskas ? 'JA' : 'NEJ'}</p>
 
       <!-- Section 4: Kringtjänster -->
       <h2>4. Kringtjänster</h2>
-      <p><strong>Hjälp med dokumentation önskas:</strong> ${
-        data.services.hjalpDokumentationOnskas ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Hjälp med orderhantering önskas:</strong> ${
-        data.services.hjalpOrderhanteringOnskas ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Behöver hjälp med andra kringtjänster:</strong> ${
-        data.services.behoverHjalpKringtjansterMerInfo ? 'JA' : 'NEJ'
-      }</p>
-      <p><strong>Behöver förslag till en komplett 3pl lösning:</strong> ${
-        data.services.behoverForslagKomplett3plLosning ? 'JA' : 'NEJ'
-      }</p>
+      <p><strong>Hjälp med dokumentation önskas:</strong> ${data.services.hjalpDokumentationOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Hjälp med orderhantering önskas:</strong> ${data.services.hjalpOrderhanteringOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Behöver hjälp med andra kringtjänster:</strong> ${data.services.behoverHjalpKringtjansterMerInfo ? 'JA' : 'NEJ'}</p>
+      <p><strong>Behöver förslag till en komplett 3pl lösning:</strong> ${data.services.behoverForslagKomplett3plLosning ? 'JA' : 'NEJ'}</p>
     `,
   };
 
