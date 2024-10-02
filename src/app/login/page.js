@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Login - PallHotellet',
+  description: 'Log in to PallHotellet to access your account and manage your bookings.',
+};
+
+
 export default function Login() {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">

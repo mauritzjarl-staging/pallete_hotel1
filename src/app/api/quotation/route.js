@@ -60,7 +60,7 @@ export async function POST(req) {
 
       <!-- 2.1 Kallager -->
       <h3>2.1 Kallager</h3>
-      <p><strong>Selected:</strong> ${data.kallager.isChecked ? 'JA' : 'NEJ'}</p>
+      <p><strong> Valt:</strong> ${data.kallager.isChecked ? 'JA' : 'NEJ'}</p>
       ${data.kallager.isChecked
         ? `
         <p><strong>Antal pallplatser:</strong> ${data.kallager.antalpallplaster || 'Info saknas'}</p>
@@ -72,7 +72,7 @@ export async function POST(req) {
 
       <!-- 2.2 Varmlager -->
       <h3>2.2 Varmlager</h3>
-      <p><strong>Selected:</strong> ${data.varmlager.isChecked ? 'JA' : 'NEJ'}</p>
+      <p><strong> Valt:</strong> ${data.varmlager.isChecked ? 'JA' : 'NEJ'}</p>
       ${data.varmlager.isChecked
         ? `
         <p><strong>Antal pallplatser:</strong> ${data.varmlager.antalpallplaster || 'Info saknas'}</p>
@@ -84,7 +84,7 @@ export async function POST(req) {
 
       <!-- 2.3 Utomhusförvaring -->
       <h3>2.3 Utomhusförvaring</h3>
-      <p><strong>Selected:</strong> ${data.utomhusforvaring.isChecked ? 'JA' : 'NEJ'}</p>
+      <p><strong> Valt:</strong> ${data.utomhusforvaring.isChecked ? 'JA' : 'NEJ'}</p>
       ${data.utomhusforvaring.isChecked
         ? `
         <p><strong>Yta i m²:</strong> ${data.utomhusforvaring.ytaIM2 || 'Info saknas'}</p>
@@ -98,7 +98,7 @@ export async function POST(req) {
 
       <!-- 2.4 Hyra av förråd -->
       <h3>2.4 Hyra av förråd</h3>
-      <p><strong>Selected:</strong> ${data.hyraAvForrad.isChecked ? 'JA' : 'NEJ'}</p>
+      <p><strong> Valt:</strong> ${data.hyraAvForrad.isChecked ? 'JA' : 'NEJ'}</p>
       ${data.hyraAvForrad.isChecked
         ? `
         <p><strong>Ytan i m²:</strong> ${data.hyraAvForrad.ytanIM2 || 'Info saknas'}</p>
