@@ -371,7 +371,7 @@ export default function HomePage() {
                 Lager som passar allas behov
               </p>
               <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
-              I våra lager har vi plats för olika typer av gods. Totalt har vi plats för ca. 13.700 pall runt om i våra lager
+              Totalt har vi plats för 13.700 pall inne i våra lager
               </p>
               {/* <!-- Greybox1 --> */}
               {/* <div className="p-6 invisible">

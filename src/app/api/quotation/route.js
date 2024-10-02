@@ -21,7 +21,7 @@ export async function POST(req) {
     host: process.env.SMTP_HOST || "mail.node1563.myfcloud.com",
     port: process.env.SMTP_PORT ||587, 
     auth: {
-      user: process.env.SMTP_USER || "contact@pallhotellet.com",
+      user: process.env.SMTP_USER || "info@pallhotellet.com",
       pass: process.env.SMTP_PASS, // Store in environment variable
     },
     tls: {
@@ -40,7 +40,7 @@ export async function POST(req) {
 
   // Define the email options
   const mailOptions = {
-    from: process.env.SMTP_USER || "contact@pallhotellet.com",
+    from: process.env.SMTP_USER || "info@pallhotellet.com",
     to: process.env.RECIPIENT_EMAIL || "josip@jgruppen.se", // Store in environment variable
     subject: 'Offertförfrågan pallhotellet.se',
     html: `
