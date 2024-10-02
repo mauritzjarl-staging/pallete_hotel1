@@ -1,5 +1,6 @@
 // app/page.js
 import HomeClientComponent from './components/HomeClientComponent';  // Import client-side component
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Lager & Logistiklösningar i Motela Sverige - Pallhotellet | Lasthanteringsexperter',

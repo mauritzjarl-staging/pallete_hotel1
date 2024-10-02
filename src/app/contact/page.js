@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm';  // Import client-side form component
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Kontakta Pallhotellet - Lager- och logistiklösningar i Motela Sverige',

@@ -1,4 +1,5 @@
 import QuotationForm from '../components/QuotationForm';  // Import client-side form component
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Begär offert - Skräddarsydda lager- och logistiklösningar | Pallhotellet',
