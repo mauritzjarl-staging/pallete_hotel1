@@ -16,17 +16,17 @@ export async function POST(req) {
   console.log("Using SMTP secure:", process.env.EMAIL_SECURE);
   console.log("Using SMTP user:", process.env.EMAIL_USER);
 
-  // Set up Nodemailer transporter with debug and logging enabled
+  // Set up Nodemailer transporter using environment variables
   const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST, 
-    port: process.env.EMAIL_PORT, 
-    secure: process.env.EMAIL_SECURE === 'true', // Use true for SSL (port 465), false for STARTTLS (port 587)
+    host: process.env.SMTP_HOST || "mail.pallhotellet.se",
+    port: process.env.SMTP_PORT ||587, 
     auth: {
-      user: process.env.EMAIL_USER, 
-      pass: process.env.EMAIL_PASS, 
+      user: process.env.SMTP_USER || "contact@pallhotellet.se",
+      pass: process.env.SMTP_PASS, // Store in environment variable
     },
-    logger: true,  // Enable logging for debugging
-    debug: true,   // Enable SMTP debug output
+    tls: {
+      rejectUnauthorized: true, // Adjust based on your certificate configuration
+    },
   });
 
   // Verify the transporter setup before attempting to send an email
