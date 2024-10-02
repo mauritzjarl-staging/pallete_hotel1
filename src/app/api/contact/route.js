@@ -20,7 +20,7 @@ export async function POST(req) {
 
   const mailOptions = {
     from: process.env.SMTP_USER || "contact@pallhotellet.se",
-    to: process.env.RECIPIENT_EMAIL || "moiz_ghalib@techozon.com", // Store in environment variable
+    to: process.env.RECIPIENT_EMAIL || "josip@jgruppen.se", // Store in environment variable
     subject: "Kontakt från sidan Pallhotellet.se",
     html: `
       <p><strong>Förnamn:</strong> ${firstName}</p>
