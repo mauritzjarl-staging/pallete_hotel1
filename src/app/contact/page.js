@@ -7,6 +7,11 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.pallhotellet.se/contact" /> 
+  </Head>
       <ContactForm />  
+      </>
   );
 }

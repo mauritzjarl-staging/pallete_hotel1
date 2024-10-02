@@ -1,12 +1,17 @@
 import QuotationForm from '../components/QuotationForm';  // Import client-side form component
 
 export const metadata = {
-  title: 'Request a Quote - PallHotellet',
-  description: 'Request a quote from PallHotellet for our premium storage and hotel services. We offer tailored solutions to meet your needs.',
+  title: 'Begär offert - Skräddarsydda lager- och logistiklösningar | Pallhotellet',
+  description: 'Få en skräddarsydd offert för dina lager-, godshanterings- och logistikbehov. Kontakta Pallhotellet för en skräddarsydd lösning som passar dina affärsbehov.',
 };
 
 export default function QuotationPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.pallhotellet.se/quotation" /> 
+  </Head>
       <QuotationForm />
+      </>
   );
 }

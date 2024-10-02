@@ -8,6 +8,11 @@ export const metadata = {
 
 export default function HomePage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.pallhotellet.se/" /> 
+  </Head>
       <HomeClientComponent />  
+      </>
   );
 }
