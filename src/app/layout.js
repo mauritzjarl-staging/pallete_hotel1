@@ -15,7 +15,7 @@ export default function ClientOnlyLayout({ children }) {
   const isLoginPage = pathname.startsWith('/login');
 
   return (
-    <html lang="en">
+    <html lang="sv">
       <body className={montserrat.className}>
         {!isLoginPage && <Header />}
         <main>{children}</main>

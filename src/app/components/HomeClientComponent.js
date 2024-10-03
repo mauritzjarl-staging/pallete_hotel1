@@ -17,9 +17,9 @@ export default function HomePage() {
   const SliderContent = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <h1 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
+        <p className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
           Från 49 kronor per pall!
-        </h1>
+        </p>
       </div>
       <div className="px-20">
         <p className="xl:text-xl text-center">Hyr din pallplats hos oss!</p>
@@ -40,9 +40,9 @@ export default function HomePage() {
   const SliderContent2 = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <h1 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
+        <p className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
           Godshantering
-        </h1>
+        </p>
       </div>
       <div className="px-10">
         <p className="xl:text-xl text-center">
@@ -65,9 +65,9 @@ export default function HomePage() {
   const SliderContent3 = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <h1 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
+        <p className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
           Vi ordnar hela flödet
-        </h1>
+        </p>
       </div>
       <div className="px-20">
         <p className="xl:text-xl text-center">
@@ -296,10 +296,10 @@ export default function HomePage() {
               Vilka är vi
             </p>
           </div>
-          <p className="md:text-4xl text-lg font-bold leading-loose">
+          <h1 className="md:text-4xl text-lg font-bold leading-loose">
             Vi hjälper dig med lagerhållning, godshantering, dokumentation och
             mycket mer.
-          </p>
+          </h1>
           <p className="text-gray-500">
           Våra lager har tillräcklig kapacitet för att ha många olika typer av gods, samt att vi kan erbjuda olika lageralternativ anpassade till olika förvaringskrav. Vi har en lång erfarenhet inom lagerhållning samt logistik och hjälper gärna till att hitta den optimala lösningen för er.
           </p>
@@ -354,9 +354,9 @@ export default function HomePage() {
           <p className="bg-[#FF6F0F17] text-[#ff6300] p-3 inline-block">
             Vad erbjuder vi
           </p>
-          <p className="md:text-[2rem] text-[1.2rem] font-bold md:w-5/12 mx-auto">
+          <h2 className="md:text-[2rem] text-[1.2rem] font-bold md:w-5/12 mx-auto">
             Vi erbjuder flexibla och skräddarsydda lösningar
-          </p>
+          </h2>
         </div>
 
         <Slider {...solutionSettings}>
@@ -493,9 +493,9 @@ export default function HomePage() {
 
           <section id="frankr" className="lg:w-6/12 w-full text-white lg:px-10">
             <div className="text-center md:text-start space-y-10 mb-10 md:mb-40">
-              <p className="md:px-2 px-5 text-3xl font-bold">
+              <h3 className="md:px-2 px-5 text-3xl font-bold">
                 Från 49kr / mån per pall
-              </p>
+              </h3>
               <p className="text-lg">
                 Genom att endast betala för det utrymme du faktiskt använder kan
                 du optimera ditt lager och eliminera onödiga kostnader. Detta
