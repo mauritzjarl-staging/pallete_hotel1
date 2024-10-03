@@ -11,3 +11,4 @@ export async function generateMetadata() {
 export default function GoodsHandlingLayout({ children }) {
   return <>{children}</>;
 }
+ 
