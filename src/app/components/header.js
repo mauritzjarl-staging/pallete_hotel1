@@ -164,7 +164,7 @@ export default function Header() {
                 onMouseLeave={toggleDropdown}
               >
                 <div className="flex items-center">
-                  <Link className="w-full" href="/services">
+                  <Link className="w-full" href="/services/indoor_storage">
                     Tjänster
                   </Link>
                   <span className="ms-3">
@@ -177,27 +177,27 @@ export default function Header() {
                 {dropdownOpen && (
                   <div className="absolute top-6">
                     <ul className=" mt-5 bg-white rounded font-medium text-[#001d24] py-2 z-50">
-                      <Link className="w-full" href="/services?tab=indoor">
+                      <Link className="w-full" href="/services/indoor_storage">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Lagerhållning inomhus
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services?tab=outdoor">
+                      <Link className="w-full" href="/services/outdoor_storage">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Lagerhållning utomhus
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services?tab=rental">
+                      <Link className="w-full" href="/services/storage_rent">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Hyra av förråd
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services?tab=cargo">
+                      <Link className="w-full" href="/services/goods_handling">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Godshantering
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services?tab=other">
+                      <Link className="w-full" href="/services/others">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Övrigt
                         </li>
@@ -288,7 +288,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services?tab=indoor"
+                    href="/services/indoor_storage"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Lagerhållning inomhus
@@ -297,7 +297,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services?tab=outdoor"
+                    href="/services/outdoor_storage"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Lagerhållning utomhus
@@ -306,7 +306,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services?tab=rental"
+                    href="/services/storage_rent"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Hyra av förråd
@@ -315,7 +315,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services?tab=cargo"
+                    href="/services/goods_handling"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Godshantering
@@ -324,7 +324,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services?tab=other"
+                    href="/services/others"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Övrigt
