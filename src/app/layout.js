@@ -1,24 +1,23 @@
-"use client";
-import "./globals.css";
-import { Montserrat } from "next/font/google";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import Script from 'next/script'; // Import Script component for GA
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default function ClientOnlyLayout({ children }) {
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+        page_path: pathname,
+      });
+    }
+  }, [pathname]);
+
   const isLoginPage = pathname.startsWith('/login');
 
   return (
     <html lang="sv">
       <head>
-        {/* Google Analytics Script */}
+        {/* GA Script */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
