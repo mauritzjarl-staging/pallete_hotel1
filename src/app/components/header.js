@@ -92,6 +92,7 @@ export default function Header() {
             <Link
               target="_blank"
               href="https://www.facebook.com/chriss.mauritz.1"
+               alt="Facebook"
             >
               <FaFacebook className="hover:text-white" />{" "}
             </Link>
@@ -116,7 +117,7 @@ export default function Header() {
             <Link className="w-full" href="/">
               <Image
                 src="/imgs/Pallhotellet.se.png"
-                alt="Logo"
+                alt="Pallhotellet.se"
                 width={200}
                 height={250}
               />

@@ -18,6 +18,7 @@ export default function Footer() {
               height={250}
               className="mb-5"
               src="/imgs/Pallhotellet.se.png"
+              alt="logo"
             />
             <p className="text-sm md:w-9/12 hover:text-white md:mt-10">
               Vi hjälper dig med lagerhållning, godshantering, dokumentation
@@ -29,6 +30,7 @@ export default function Footer() {
                 target="_blank" 
                 className="border hover:text-white hover:border-white
                  p-2 rounded-md border-[#808E91]"
+                 alt="Facebook"
               >
                 <FaFacebook />
               </Link>
