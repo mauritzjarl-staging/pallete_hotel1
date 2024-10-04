@@ -220,7 +220,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[url('/imgs/Frame5892.png')] bg-cover bg-center sm:pb-32 sm:pt-48 pb-16 pt-24 flex justify-center md:px-20 items-center px-5">
+      <section className="bg-[url('/imgs/Frame5892.webp')] bg-cover bg-center sm:pb-32 sm:pt-48 pb-16 pt-24 flex justify-center md:px-20 items-center px-5">
         <div className="w-full max-w-5xl ">
           <Slider {...BannerSlider}>
             <SliderContent />
@@ -468,7 +468,7 @@ export default function HomePage() {
 
       {/* Services section / 3-Images  */}
 
-      <section className="my-10 bg-[url('/imgs/Frame5894.png')] p-10 md:p-20">
+      <section className="my-10 bg-[url('/imgs/Frame5894.webp')] p-10 md:p-20">
         <div className="flex flex-col justify-center lg:flex-row">
           <div className="lg:w-3/12 w-full lg:pt-44">
             <div className="relative my-10 lg:my-0 lg:flex justify-center  hidden">
