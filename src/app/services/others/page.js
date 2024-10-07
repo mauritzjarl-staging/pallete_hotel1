@@ -11,7 +11,7 @@ const page = () => {
     <div>
       <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
         <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
-        Godshantering
+        Övrigt
         </p>
       </section>
 
@@ -39,8 +39,8 @@ const page = () => {
           Godshantering
         </li>
       </Link>
-      <Link href="/services/others">
-        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/services/others' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
+      <Link href="/services/miscellaneous">
+        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/services/miscellaneous' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
           Övrigt
         </li>
       </Link>

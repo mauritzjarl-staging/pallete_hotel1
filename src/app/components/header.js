@@ -198,7 +198,7 @@ export default function Header() {
                           Godshantering
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services/others">
+                      <Link className="w-full" href="/services/miscellaneous">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Övrigt
                         </li>
@@ -325,7 +325,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services/others"
+                    href="/services/miscellaneous"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Övrigt

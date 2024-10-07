@@ -40,8 +40,8 @@ const page = () => {
           Godshantering
         </li>
       </Link>
-      <Link href="/services/others">
-        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/services/others' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
+      <Link href="/services/miscellaneous">
+        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/services/miscellaneous' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
           Övrigt
         </li>
       </Link>
