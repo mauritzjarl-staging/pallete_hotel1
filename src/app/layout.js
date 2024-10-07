@@ -26,6 +26,7 @@ export default function ClientOnlyLayout({ children }) {
   return (
     <>
       <Head>
+          <link rel="icon" href="/favicon.ico" />
         {/* Google Analytics Scripts */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}

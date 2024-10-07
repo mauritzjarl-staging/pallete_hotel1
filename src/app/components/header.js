@@ -146,7 +146,7 @@ export default function Header() {
                   Hem
                 </Link>
               </li>
-              {/* <li
+              <li
                 className={`${
                   pathname === "/findus"
                     ? "text-[#ff6300]"
@@ -154,7 +154,7 @@ export default function Header() {
                 }`}
               >
                 <Link className="w-full" href="/findus">Hitta oss</Link>
-              </li> */}
+              </li>
               <li
                 className={`relative group dropdown-container ${
                   pathname.startsWith("/services")
@@ -260,11 +260,11 @@ export default function Header() {
               </li>
             </Link>
 
-            {/* <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
+            <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
               <Link className="w-full" href="/findus" onClick={() => setMenuOpen(false)}>
                 Hitta oss
               </Link>
-            </li> */}
+            </li>
 
             <li className={`relative group dropdown-container `}>
               <div className="flex">
