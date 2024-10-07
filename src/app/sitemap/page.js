@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Sitemap() {
   return (
-    <div className="w-full flex flex-col justify-center py-44 px-28">
+    <div className="w-full flex text-white bg-[#163c45] flex-col justify-center pt-48 pb-24 px-28">
       <h1 className="text-3xl font-bold">Sitemap for Pallhotellet</h1>
       <ul className="space-y-4 list-disc my-10">
         <li className="text-lg ">
