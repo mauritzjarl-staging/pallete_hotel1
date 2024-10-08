@@ -15,7 +15,7 @@ const MapComponent = dynamic(() => import("../components/MapComponent"), {
   ssr: false,
 });
 
-const ContactPage = () => {
+const kontaktPage = () => {
   const [loading, setLoading] = useState(false); // Loading state for submit button
 
   const handleSubmit = async (event) => {
@@ -33,7 +33,7 @@ const ContactPage = () => {
     };
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/kontakt", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const ContactPage = () => {
         pauseOnHover
       />
 
-      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] md:py-56 pt-32 pb-20">
+      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/kontaktus.png')] md:py-56 pt-32 pb-20">
         <div className=" mx-auto flex justify-center items-center h-full">
           <h1 className="text-white md:text-5xl text-4xl font-bold text-center">
             Kontakta oss
@@ -90,7 +90,7 @@ const ContactPage = () => {
       </section>
 
       <section className="pt-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
-        {/* Contact Information */}
+        {/* kontakt Information */}
         <div className="w-full lg:w-5/12 md:p-8 P-4 text-center md:text-start">
           <h2 className="text-xl font-bold mb-1">Kontakta oss</h2>
           <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
@@ -125,7 +125,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+        {/* kontakt Form */}
         <div className="w-full lg:w-9/12  md:p-8 p-4">
           <h2 className="text-3xl font-bold mb-8">Kontakta oss</h2>
           <form
@@ -233,4 +233,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default kontaktPage;

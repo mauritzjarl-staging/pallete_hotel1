@@ -1,10 +1,10 @@
 export const metadata = {
-  title: 'Login - PallHotellet',
+  title: 'logga_in - PallHotellet',
   description: 'Log in to PallHotellet to access your account and manage your bookings.',
 };
 
 
-export default function Login() {
+export default function logga_in() {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
         {/* Wrapper for the logo */}
@@ -16,7 +16,7 @@ export default function Login() {
           />
         </div>
   
-        {/* Login form */}
+        {/* logga_in form */}
         <div className="bg-white p-8 rounded-lg shadow-lg w-96">
           <h1 className="text-2xl font-bold text-center mb-6 text-gray-900">
           Välkommen till Pallhotellet!

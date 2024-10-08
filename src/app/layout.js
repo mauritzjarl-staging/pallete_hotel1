@@ -21,7 +21,7 @@ export default function ClientOnlyLayout({ children }) {
     }
   }, [pathname]);
 
-  const isLoginPage = pathname.startsWith('/login, /sitemap');
+  const islogga_inPage = pathname.startsWith('/logga_in, /sitemap');
 
   return (
     <>
@@ -43,9 +43,9 @@ export default function ClientOnlyLayout({ children }) {
       </Head>
       <html lang="sv">
         <body className={montserrat.className}>
-          {!isLoginPage && <Header />}
+          {!islogga_inPage && <Header />}
           <main>{children}</main>
-          {!isLoginPage && <Footer />}
+          {!islogga_inPage && <Footer />}
         </body>
       </html>
     </>

@@ -17,13 +17,13 @@ export default function Findus() {
   return (
     <>
       {/* Hero Section */}
-      <section className="flex items-center justify-center bg-center bg-cover bg-[url('/imgs/contactus.png')] h-[30rem]">
+      <section className="flex items-center justify-center bg-center bg-cover bg-[url('/imgs/kontaktus.png')] h-[30rem]">
         <div className=" mx-auto flex justify-center items-center">
           <h1 className="text-white text-5xl font-bold">Hitta oss</h1>
         </div>
       </section>
 
-      {/* Contact Information Cards */}
+      {/* kontakt Information Cards */}
       <section className="md:-my-40 md:py-10 md:flex justify-center text-white md:mx-8">
         <div className="flex flex-col bg-[#08343D] md:w-[80%] w-full md:flex-row justify-evenly py-8 md:space-y-0 md:space-x-8">
           {/* Address */}

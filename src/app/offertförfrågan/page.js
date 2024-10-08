@@ -63,8 +63,8 @@ const QuoteForm = () => {
       tillOchMed: null,
     },
 
-    // Services without subfields
-    services: {
+    // tjanster without subfields
+    tjanster: {
       // 3.1 Lossning, ompackning
       lossningLastbilGaffeltruckOnskas: false,
       lossningLastningContainerOnskas: false,
@@ -92,7 +92,7 @@ const QuoteForm = () => {
 
   const handleCheckboxChange = (section, field) => {
     if (field) {
-      // For services and nested fields
+      // For tjanster and nested fields
       setFormState((prevState) => ({
         ...prevState,
         [section]: {
@@ -134,7 +134,7 @@ const QuoteForm = () => {
     setLoading(true); // Disable the submit button
 
     try {
-      const response = await fetch("/api/quotation", {
+      const response = await fetch("/api/offertförfrågan", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -167,10 +167,10 @@ const QuoteForm = () => {
 
 <Head>
         <title>Request a Quote - PallHotellet</title>
-        <meta name="description" content="Request a quote from PallHotellet for our premium storage and hotel services. We offer tailored solutions to meet your needs." />
+        <meta name="description" content="Request a quote from PallHotellet for our premium storage and hotel tjanster. We offer tailored solutions to meet your needs." />
         <meta property="og:title" content="Request a Quote - PallHotellet" />
-        <meta property="og:description" content="Request a quote from PallHotellet for our premium storage and hotel services. We offer tailored solutions to meet your needs." />
-        <meta property="og:url" content="https://www.pallhotellet.se/quotation" />
+        <meta property="og:description" content="Request a quote from PallHotellet for our premium storage and hotel tjanster. We offer tailored solutions to meet your needs." />
+        <meta property="og:url" content="https://www.pallhotellet.se/offertförfrågan" />
       </Head>
 
       <ToastContainer
@@ -185,7 +185,7 @@ const QuoteForm = () => {
         pauseOnHover
       />
 
-      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] md:py-56 pt-32 pb-20">
+      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/kontaktus.png')] md:py-56 pt-32 pb-20">
         <div className="mx-auto flex justify-center items-center h-full">
           <h1 className="text-white text-3xl md:text-5xl font-bold">
             Offertförfrågan
@@ -722,11 +722,11 @@ const QuoteForm = () => {
                   <input
                     type="checkbox"
                     checked={
-                      formState.services.lossningLastbilGaffeltruckOnskas
+                      formState.tjanster.lossningLastbilGaffeltruckOnskas
                     }
                     onChange={() =>
                       handleCheckboxChange(
-                        "services",
+                        "tjanster",
                         "lossningLastbilGaffeltruckOnskas"
                       )
                     }
@@ -745,10 +745,10 @@ const QuoteForm = () => {
                 <div className="w-2/12 md:w-auto md:me-3">
                   <input
                     type="checkbox"
-                    checked={formState.services.lossningLastningContainerOnskas}
+                    checked={formState.tjanster.lossningLastningContainerOnskas}
                     onChange={() =>
                       handleCheckboxChange(
-                        "services",
+                        "tjanster",
                         "lossningLastningContainerOnskas"
                       )
                     }
@@ -767,9 +767,9 @@ const QuoteForm = () => {
                 <div className="w-2/12 md:w-auto md:me-3">
                   <input
                     type="checkbox"
-                    checked={formState.services.ompackningPlockOnskas}
+                    checked={formState.tjanster.ompackningPlockOnskas}
                     onChange={() =>
-                      handleCheckboxChange("services", "ompackningPlockOnskas")
+                      handleCheckboxChange("tjanster", "ompackningPlockOnskas")
                     }
                     id="ompackning"
                     className="mr-2 size-6"
@@ -791,10 +791,10 @@ const QuoteForm = () => {
                 <input
                   type="checkbox"
                   id="containerhanteringPacketering"
-                  checked={formState.services.containerhanteringPacketering}
+                  checked={formState.tjanster.containerhanteringPacketering}
                   onChange={() =>
                     handleCheckboxChange(
-                      "services",
+                      "tjanster",
                       "containerhanteringPacketering"
                     )
                   }
@@ -815,9 +815,9 @@ const QuoteForm = () => {
                 <input
                   type="checkbox"
                   id="hanteringSkrymmandeGods"
-                  checked={formState.services.hanteringSkrymmandeGods}
+                  checked={formState.tjanster.hanteringSkrymmandeGods}
                   onChange={() =>
-                    handleCheckboxChange("services", "hanteringSkrymmandeGods")
+                    handleCheckboxChange("tjanster", "hanteringSkrymmandeGods")
                   }
                   className="mr-2 size-6"
                 />
@@ -841,9 +841,9 @@ const QuoteForm = () => {
                 <div className="w-2/12 md:w-auto md:me-3">
                   <input
                     type="checkbox"
-                    checked={formState.services.handtruckOnskas}
+                    checked={formState.tjanster.handtruckOnskas}
                     onChange={() =>
-                      handleCheckboxChange("services", "handtruckOnskas")
+                      handleCheckboxChange("tjanster", "handtruckOnskas")
                     }
                     id="handtruck"
                     className="mr-2 size-6"
@@ -858,9 +858,9 @@ const QuoteForm = () => {
                 <div className="w-2/12 md:w-auto md:me-3">
                   <input
                     type="checkbox"
-                    checked={formState.services.gaffeltruckOnskas}
+                    checked={formState.tjanster.gaffeltruckOnskas}
                     onChange={() =>
-                      handleCheckboxChange("services", "gaffeltruckOnskas")
+                      handleCheckboxChange("tjanster", "gaffeltruckOnskas")
                     }
                     id="gaffeltruck2"
                     className="mr-2 size-6"
@@ -875,9 +875,9 @@ const QuoteForm = () => {
                 <div className="w-2/12 md:w-auto md:me-3">
                   <input
                     type="checkbox"
-                    checked={formState.services.traversOnskas}
+                    checked={formState.tjanster.traversOnskas}
                     onChange={() =>
-                      handleCheckboxChange("services", "traversOnskas")
+                      handleCheckboxChange("tjanster", "traversOnskas")
                     }
                     id="travers"
                     className="mr-2 size-6"
@@ -907,10 +907,10 @@ const QuoteForm = () => {
                       <input
                         type="checkbox"
                         className="size-6 me-2"
-                        checked={formState.services.hjalpDokumentationOnskas}
+                        checked={formState.tjanster.hjalpDokumentationOnskas}
                         onChange={() =>
                           handleCheckboxChange(
-                            "services",
+                            "tjanster",
                             "hjalpDokumentationOnskas"
                           )
                         }
@@ -930,10 +930,10 @@ const QuoteForm = () => {
                     <div className="w-2/12 md:w-auto md:me-3">
                       <input
                         type="checkbox"
-                        checked={formState.services.hjalpOrderhanteringOnskas}
+                        checked={formState.tjanster.hjalpOrderhanteringOnskas}
                         onChange={() =>
                           handleCheckboxChange(
-                            "services",
+                            "tjanster",
                             "hjalpOrderhanteringOnskas"
                           )
                         }
@@ -956,11 +956,11 @@ const QuoteForm = () => {
                         type="checkbox"
                         className="me-2 size-6"
                         checked={
-                          formState.services.behoverHjalpKringtjansterMerInfo
+                          formState.tjanster.behoverHjalpKringtjansterMerInfo
                         }
                         onChange={() =>
                           handleCheckboxChange(
-                            "services",
+                            "tjanster",
                             "behoverHjalpKringtjansterMerInfo"
                           )
                         }
@@ -983,11 +983,11 @@ const QuoteForm = () => {
                         type="checkbox"
                         className="me-2 size-6"
                         checked={
-                          formState.services.behoverForslagKomplett3plLosning
+                          formState.tjanster.behoverForslagKomplett3plLosning
                         }
                         onChange={() =>
                           handleCheckboxChange(
-                            "services",
+                            "tjanster",
                             "behoverForslagKomplett3plLosning"
                           )
                         }

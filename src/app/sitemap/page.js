@@ -9,39 +9,39 @@ export default function Sitemap() {
           <Link href="https://www.pallhotellet.com/">Hem</Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/services/goods_handling">
+          <Link href="https://www.pallhotellet.com/tjanster/godshantering">
             Tjänster - Godshantering
           </Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/services/indoor_storage">
+          <Link href="https://www.pallhotellet.com/tjanster/lagerhållning_inomhus">
             Tjänster - Lagerhållning inomhus
           </Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/services/miscellaneous">
-            Tjänster - miscellaneous
+          <Link href="https://www.pallhotellet.com/tjanster/ovrigt">
+            Tjänster - ovrigt
           </Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/services/outdoor_storage">
+          <Link href="https://www.pallhotellet.com/tjanster/lagerhållning_utomhus">
             Tjänster - Lagerhållning utomhus
           </Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/services/storage_rent">
+          <Link href="https://www.pallhotellet.com/tjanster/hyra_av_förråd">
             {" "}
             Tjänster - Hyra av förråd
           </Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/contact">Kontakt</Link>
+          <Link href="https://www.pallhotellet.com/kontakt">Kontakt</Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/login">Logga in</Link>
+          <Link href="https://www.pallhotellet.com/logga_in">Logga in</Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/quotation">
+          <Link href="https://www.pallhotellet.com/offertförfrågan">
             Offertförfrågan
           </Link>
         </li>

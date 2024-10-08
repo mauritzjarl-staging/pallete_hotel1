@@ -49,7 +49,7 @@ export default function HomePage() {
           Vi tar hand om ut-och inlastning av ditt gods
         </p>
       </div>
-      <Link href="/services#cargo">
+      <Link href="/tjanster#cargo">
       <button
          className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
          hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
@@ -74,7 +74,7 @@ export default function HomePage() {
           Vi tar hand om hela flödet åt er
         </p>
       </div>
-      <Link href="/services#other">
+      <Link href="/tjanster#other">
       <button
          className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
          hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
@@ -311,7 +311,7 @@ export default function HomePage() {
             </span>
           </p>
           <div className="flex text-wrap justify-center md:justify-start space-y-5 sm:space-y-0">
-            <Link href="/contact">
+            <Link href="/kontakt">
               <button
                 className="flex items-center md:justify-around text-[#ff6300] hover:text-white hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2  px-3 md:px-4 lg:px-8  
            text-center rounded-md"
@@ -466,7 +466,7 @@ export default function HomePage() {
         </Slider>
       </section>
 
-      {/* Services section / 3-Images  */}
+      {/* tjanster section / 3-Images  */}
 
       <section className="my-10 bg-[url('/imgs/Frame5894.webp')] p-10 md:p-20">
         <div className="flex flex-col justify-center lg:flex-row">

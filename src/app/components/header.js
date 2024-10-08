@@ -157,7 +157,7 @@ export default function Header() {
               </li> */}
               <li
                 className={`relative group dropdown-container ${
-                  pathname.startsWith("/services")
+                  pathname.startsWith("/tjanster")
                     ? "text-[#ff6300]"
                     : "hover:text-[#ff6300]"
                 }`}
@@ -165,11 +165,11 @@ export default function Header() {
                 onMouseLeave={toggleDropdown}
               >
                 <div className="flex items-center">
-                  <Link className="w-full" href="/services/indoor_storage">
+                  <Link className="w-full" href="/tjanster/lagerhållning_inomhus">
                     Tjänster
                   </Link>
                   <span className="ms-3">
-                    {/* {!pathname.startsWith("/services") && <FaCaretDown />} */}
+                    {/* {!pathname.startsWith("/tjanster") && <FaCaretDown />} */}
                     <FaCaretDown />
                   </span>
                 </div>
@@ -178,27 +178,27 @@ export default function Header() {
                 {dropdownOpen && (
                   <div className="absolute top-6">
                     <ul className=" mt-5 bg-white rounded font-medium text-[#001d24] py-2 z-50">
-                      <Link className="w-full" href="/services/indoor_storage">
+                      <Link className="w-full" href="/tjanster/lagerhållning_inomhus">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Lagerhållning inomhus
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services/outdoor_storage">
+                      <Link className="w-full" href="/tjanster/lagerhållning_utomhus">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Lagerhållning utomhus
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services/storage_rent">
+                      <Link className="w-full" href="/tjanster/hyra_av_förråd">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Hyra av förråd
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services/goods_handling">
+                      <Link className="w-full" href="/tjanster/godshantering">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Godshantering
                         </li>
                       </Link>
-                      <Link className="w-full" href="/services/others">
+                      <Link className="w-full" href="/tjanster/ovrigt">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Övrigt
                         </li>
@@ -210,20 +210,20 @@ export default function Header() {
 
               <li
                 className={`${
-                  pathname === "/contact"
+                  pathname === "/kontakt"
                     ? "text-[#ff6300]"
                     : "hover:text-[#ff6300]"
                 }`}
               >
-                <Link className="w-full" href="/contact">
+                <Link className="w-full" href="/kontakt">
                   Kontakt
                 </Link>
               </li>
 
-              <Link className="w-full" href="/login">
+              <Link className="w-full" href="/logga_in">
                 <li
                   className={`${
-                    pathname === "/login"
+                    pathname === "/logga_in"
                       ? "text-[#ff6300]"
                       : "hover:text-[#ff6300]"
                   }`}
@@ -233,9 +233,9 @@ export default function Header() {
               </Link>
             </ul>
 
-            {/* Request for Quotation Button (Desktop) */}
+            {/* Request for offertförfrågan Button (Desktop) */}
             <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-[#ff6300] rounded-md">
-              <Link className="w-full" href="/quotation">
+              <Link className="w-full" href="/offertförfrågan">
                 <button className="hover:text-[#ff6300] md:py-2 py-1 font-semibold">
                   Offertförfrågan
                 </button>
@@ -268,7 +268,7 @@ export default function Header() {
 
             <li className={`relative group dropdown-container `}>
               <div className="flex">
-                <Link className="w-full" href="/services">
+                <Link className="w-full" href="/tjanster">
                   <div
                     className="flex items-center text-md font-semibold px-4"
                     onClick={() => setMenuOpen(false)}
@@ -279,7 +279,7 @@ export default function Header() {
 
                 <span className="ms-3" onClick={toggleDropdown}>
                   <FaCaretDown />
-                  {/* {!pathname.startsWith("/services") && <FaCaretDown />} */}
+                  {/* {!pathname.startsWith("/tjanster") && <FaCaretDown />} */}
                 </span>
               </div>
               {/* <ul className="bg-white text-[#001d24] text-md py-3 my-2 z-50 rounded"> */}
@@ -289,7 +289,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services/indoor_storage"
+                    href="/tjanster/lagerhållning_inomhus"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Lagerhållning inomhus
@@ -298,7 +298,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services/outdoor_storage"
+                    href="/tjanster/lagerhållning_utomhus"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Lagerhållning utomhus
@@ -307,7 +307,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services/storage_rent"
+                    href="/tjanster/hyra_av_förråd"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Hyra av förråd
@@ -316,7 +316,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services/goods_handling"
+                    href="/tjanster/godshantering"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Godshantering
@@ -325,7 +325,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/services/others"
+                    href="/tjanster/ovrigt"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Övrigt
@@ -337,7 +337,7 @@ export default function Header() {
 
             <Link
               className="w-full"
-              href="/contact"
+              href="/kontakt"
               onClick={() => setMenuOpen(false)}
             >
               <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
@@ -347,7 +347,7 @@ export default function Header() {
 
             <Link
               className="w-full"
-              href="/login"
+              href="/logga_in"
               onClick={() => setMenuOpen(false)}
             >
               <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
@@ -356,13 +356,13 @@ export default function Header() {
             </Link>
           </ul>
 
-          {/* Mobile Request for Quotation Button */}
+          {/* Mobile Request for offertförfrågan Button */}
           <div className="mt-4 border-2 border-[#ff6300] rounded-md">
             <button
               className="w-full py-2 text-md  hover:text-[#ff6300]"
               onClick={() => setMenuOpen(false)}
             >
-              <Link className="w-full" href="/quotation">
+              <Link className="w-full" href="/offertförfrågan">
                 Offertförfrågan
               </Link>
             </button>

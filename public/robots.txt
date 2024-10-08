@@ -3,7 +3,7 @@ export default function robots() {
       rules: {
         userAgent: '*',
         allow: '/',
-        disallow: ['/login', '/findus'],
+        disallow: ['/logga_in', '/findus'],
       },
       sitemap: 'https://www.pallhotellet.se/sitemap.xml',
     }

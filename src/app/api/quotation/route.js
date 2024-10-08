@@ -111,24 +111,24 @@ export async function POST(req) {
 
       <!-- 3.1 Lossning, ompackning -->
       <h3>3.1 Lossning, ompackning</h3>
-      <p><strong>Lossning/lastning lastbil med gaffeltruck önskas:</strong> ${data.services.lossningLastbilGaffeltruckOnskas ? 'JA' : 'NEJ'}</p>
-      <p><strong>Lossning/lastning av container önskas:</strong> ${data.services.lossningLastningContainerOnskas ? 'JA' : 'NEJ'}</p>
-      <p><strong>Ompackning och plock önskas:</strong> ${data.services.ompackningPlockOnskas ? 'JA' : 'NEJ'}</p>
-      <p><strong>Containerhantering /packetering:</strong> ${data.services.containerhanteringPacketering ? 'JA' : 'NEJ'}</p>
-      <p><strong>Hantering av skrymmande gods:</strong> ${data.services.hanteringSkrymmandeGods ? 'JA' : 'NEJ'}</p>
+      <p><strong>Lossning/lastning lastbil med gaffeltruck önskas:</strong> ${data.tjanster.lossningLastbilGaffeltruckOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Lossning/lastning av container önskas:</strong> ${data.tjanster.lossningLastningContainerOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Ompackning och plock önskas:</strong> ${data.tjanster.ompackningPlockOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Containerhantering /packetering:</strong> ${data.tjanster.containerhanteringPacketering ? 'JA' : 'NEJ'}</p>
+      <p><strong>Hantering av skrymmande gods:</strong> ${data.tjanster.hanteringSkrymmandeGods ? 'JA' : 'NEJ'}</p>
 
       <!-- 3.2 Redskap och maskiner -->
       <h3>3.2 Redskap och maskiner</h3>
-      <p><strong>Handtruck önskas:</strong> ${data.services.handtruckOnskas ? 'JA' : 'NEJ'}</p>
-      <p><strong>Gaffeltruck önskas:</strong> ${data.services.gaffeltruckOnskas ? 'JA' : 'NEJ'}</p>
-      <p><strong>Travers önskas (max 7ton):</strong> ${data.services.traversOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Handtruck önskas:</strong> ${data.tjanster.handtruckOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Gaffeltruck önskas:</strong> ${data.tjanster.gaffeltruckOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Travers önskas (max 7ton):</strong> ${data.tjanster.traversOnskas ? 'JA' : 'NEJ'}</p>
 
       <!-- Section 4: Kringtjänster -->
       <h2>4. Kringtjänster</h2>
-      <p><strong>Hjälp med dokumentation önskas:</strong> ${data.services.hjalpDokumentationOnskas ? 'JA' : 'NEJ'}</p>
-      <p><strong>Hjälp med orderhantering önskas:</strong> ${data.services.hjalpOrderhanteringOnskas ? 'JA' : 'NEJ'}</p>
-      <p><strong>Behöver hjälp med andra kringtjänster:</strong> ${data.services.behoverHjalpKringtjansterMerInfo ? 'JA' : 'NEJ'}</p>
-      <p><strong>Behöver förslag till en komplett 3pl lösning:</strong> ${data.services.behoverForslagKomplett3plLosning ? 'JA' : 'NEJ'}</p>
+      <p><strong>Hjälp med dokumentation önskas:</strong> ${data.tjanster.hjalpDokumentationOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Hjälp med orderhantering önskas:</strong> ${data.tjanster.hjalpOrderhanteringOnskas ? 'JA' : 'NEJ'}</p>
+      <p><strong>Behöver hjälp med andra kringtjänster:</strong> ${data.tjanster.behoverHjalpKringtjansterMerInfo ? 'JA' : 'NEJ'}</p>
+      <p><strong>Behöver förslag till en komplett 3pl lösning:</strong> ${data.tjanster.behoverForslagKomplett3plLosning ? 'JA' : 'NEJ'}</p>
     `,
   };
 

@@ -99,18 +99,18 @@ export default function Footer() {
               <Link href="/">Hem</Link>
             </li>
             {/* <li className="hover:text-white my-3 text-sm">
-              <Link href="/services">
+              <Link href="/tjanster">
                 Hitta oss
               </Link>
             </li> */}
             <li className="hover:text-white my-3 text-sm">
-              <Link href="/contact">Kontakt</Link>
+              <Link href="/kontakt">Kontakt</Link>
             </li>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="/login">Logga in</Link>
+              <Link href="/logga_in">Logga in</Link>
             </li>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="/quotation">Offertförfrågan</Link>
+              <Link href="/offertförfrågan">Offertförfrågan</Link>
             </li>
           </div>
         </div>
