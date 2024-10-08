@@ -134,7 +134,7 @@ const QuoteForm = () => {
     setLoading(true); // Disable the submit button
 
     try {
-      const response = await fetch("/api/offertförfrågan", {
+      const response = await fetch("/api/offert", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
