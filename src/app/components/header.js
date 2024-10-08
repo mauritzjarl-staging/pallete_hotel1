@@ -233,9 +233,9 @@ export default function Header() {
               </Link>
             </ul>
 
-            {/* Request for Quotation Button (Desktop) */}
+            {/* Request for offertförfrågan Button (Desktop) */}
             <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-[#ff6300] rounded-md">
-              <Link className="w-full" href="/quotation">
+              <Link className="w-full" href="/offertförfrågan">
                 <button className="hover:text-[#ff6300] md:py-2 py-1 font-semibold">
                   Offertförfrågan
                 </button>
@@ -356,13 +356,13 @@ export default function Header() {
             </Link>
           </ul>
 
-          {/* Mobile Request for Quotation Button */}
+          {/* Mobile Request for offertförfrågan Button */}
           <div className="mt-4 border-2 border-[#ff6300] rounded-md">
             <button
               className="w-full py-2 text-md  hover:text-[#ff6300]"
               onClick={() => setMenuOpen(false)}
             >
-              <Link className="w-full" href="/quotation">
+              <Link className="w-full" href="/offertförfrågan">
                 Offertförfrågan
               </Link>
             </button>
