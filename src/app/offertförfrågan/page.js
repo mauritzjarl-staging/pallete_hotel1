@@ -134,7 +134,7 @@ const QuoteForm = () => {
     setLoading(true); // Disable the submit button
 
     try {
-      const response = await fetch("/api/offertförfrågan", {
+      const response = await fetch("/api/quotation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -170,7 +170,7 @@ const QuoteForm = () => {
         <meta name="description" content="Request a quote from PallHotellet for our premium storage and hotel tjanster. We offer tailored solutions to meet your needs." />
         <meta property="og:title" content="Request a Quote - PallHotellet" />
         <meta property="og:description" content="Request a quote from PallHotellet for our premium storage and hotel tjanster. We offer tailored solutions to meet your needs." />
-        <meta property="og:url" content="https://www.pallhotellet.se/offertförfrågan" />
+        <meta property="og:url" content="https://www.pallhotellet.se/quotation" />
       </Head>
 
       <ToastContainer
@@ -185,7 +185,7 @@ const QuoteForm = () => {
         pauseOnHover
       />
 
-      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/kontaktus.png')] md:py-56 pt-32 pb-20">
+      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] md:py-56 pt-32 pb-20">
         <div className="mx-auto flex justify-center items-center h-full">
           <h1 className="text-white text-3xl md:text-5xl font-bold">
             Offertförfrågan

@@ -84,7 +84,7 @@ const page = () => {
                 </p>
               </div>
             </div>
-            <Link href="/offertförfrågan">
+            <Link href="/quotation">
               <button
                 className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
                  hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 

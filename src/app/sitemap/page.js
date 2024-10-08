@@ -41,7 +41,7 @@ export default function Sitemap() {
           <Link href="https://www.pallhotellet.com/logga_in">Logga in</Link>
         </li>
         <li className="text-lg ">
-          <Link href="https://www.pallhotellet.com/offertförfrågan">
+          <Link href="https://www.pallhotellet.com/quotation">
             Offertförfrågan
           </Link>
         </li>

@@ -78,7 +78,7 @@ const kontaktPage = () => {
         pauseOnHover
       />
 
-      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/kontaktus.png')] md:py-56 pt-32 pb-20">
+      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] md:py-56 pt-32 pb-20">
         <div className=" mx-auto flex justify-center items-center h-full">
           <h1 className="text-white md:text-5xl text-4xl font-bold text-center">
             Kontakta oss
