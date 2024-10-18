@@ -1,11 +1,16 @@
-module.exports = {
-  async redirects() {
-    return [
+export default function robots() {
+  return {
+    rules: [
       {
-        source: '/:path*', // Matches all paths
-        destination: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/:path*`,
-        permanent: true, // Permanent redirect (HTTP 301)
+        userAgent: 'Googlebot',
+        allow: ['/'],
+        disallow: ['/private/'],
       },
-    ];
-  },
-};
+      {
+        userAgent: ['Applebot', 'Bingbot'],
+        disallow: ['/'],
+      },
+    ],
+    sitemap: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/sitemap.xml`,
+  }
+}
