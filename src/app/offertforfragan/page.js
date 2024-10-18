@@ -170,7 +170,7 @@ const QuoteForm = () => {
         <meta name="description" content="Request a quote from PallHotellet for our premium storage and hotel tjanster. We offer tailored solutions to meet your needs." />
         <meta property="og:title" content="Request a Quote - PallHotellet" />
         <meta property="og:description" content="Request a quote from PallHotellet for our premium storage and hotel tjanster. We offer tailored solutions to meet your needs." />
-        <meta property="og:url" content="https://www.pallhotellet.se/offertförfrågan" />
+        <meta property="og:url" content="https://pallhotellet.se/offertförfrågan" />
       </Head>
 
       <ToastContainer

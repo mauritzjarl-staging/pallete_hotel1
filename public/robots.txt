@@ -1,10 +1,17 @@
-export default function robots() {
-    return {
-      rules: {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/logga_in', '/findus'],
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/(.*)',
+        has: [
+          {
+            type: 'host',
+            value: 'pallhotellet.se', // your domain name
+          },
+        ],
+        destination: 'https://pallhotellet.se/:path*',
+        permanent: true,
       },
-      sitemap: 'https://www.pallhotellet.se/sitemap.xml',
-    }
-  }
+    ]
+  },
+}

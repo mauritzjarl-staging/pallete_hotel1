@@ -3,19 +3,21 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Sitemap() {
-  const [baseDomain, setBaseDomain] = useState("");
+  // const [baseDomain, setBaseDomain] = useState("");
 
-  useEffect(() => {
-    // Detect the current domain
-    if (typeof window !== "undefined") {
-      const host = window.location.host;
-      if (host.includes(".se")) {
-        setBaseDomain("https://www.pallhotellet.se");
-      } else {
-        setBaseDomain("https://www.pallhotellet.com");
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Detect the current domain
+  //   if (typeof window !== "undefined") {
+  //     const host = window.location.host;
+  //     if (host.includes(".se")) {
+  //       setBaseDomain("https://pallhotellet.se");
+  //     } else {
+  //       setBaseDomain("https://pallhotellet.com");
+  //     }
+  //   }
+  // }, []);
+
+  const baseDomain = process.env.NEXT_PUBLIC_DOMAIN_URL
 
   return (
     <div className="w-full flex text-white bg-[#163c45] flex-col justify-center pt-48 pb-24 px-28">

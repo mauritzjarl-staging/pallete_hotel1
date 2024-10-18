@@ -7,7 +7,7 @@
 //     title: 'Lager & Logistiklösningar i Motela Sverige - Pallhotellet | Lasthanteringsexperter',
 //     description: 'Pålitligt lager i Sverige med flexibel lagring, sakkunnig lasthantering och dokumentationstjänster. Kontakta Pallhotellet för skräddarsydda lösningar.',
 //    alternates: {
-//       canonical: 'https://www.pallhotellet.se/',
+//       canonical: 'https://pallhotellet.se/',
 //     },
 //   };
 // }
@@ -33,9 +33,9 @@ export async function generateMetadata() {
 
   // Determine the canonical URL based on the host
   if (host.includes('.com')) {
-    canonicalUrl = 'https://www.pallhotellet.com/';
+    canonicalUrl = 'https://pallhotellet.com/';
   } else {
-    canonicalUrl = 'https://www.pallhotellet.se/';
+    canonicalUrl = 'https://pallhotellet.se/';
   }
 
   return {
