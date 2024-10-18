@@ -110,7 +110,7 @@ export default function Footer() {
               <Link href="/logga_in">Logga in</Link>
             </li>
             <li className="hover:text-white my-3 text-sm">
-              <Link href="/offertförfrågan">Offertförfrågan</Link>
+              <Link href="/offertforfragan">Offertförfrågan</Link>
             </li>
           </div>
         </div>

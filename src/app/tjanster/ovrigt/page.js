@@ -19,18 +19,18 @@ const page = () => {
         {/* Tab Navigation */}
            {/* Tab Navigation */}
            <div className="md:w-3/12 bg-[#F3F3F3] h-full space-y-5 md:text-lg py-10 my-10 md:my-0 px-1 list-none">
-      <Link href="/tjanster/lagerhållning_inomhus">
-        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/tjanster/lagerhållning_inomhus' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
+      <Link href="/tjanster/lagerhallning_inomhus">
+        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/tjanster/lagerhallning_inomhus' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
           Lagerhållning inomhus
         </li>
       </Link>
-      <Link href="/tjanster/lagerhållning_utomhus">
-        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/tjanster/lagerhållning_utomhus' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
+      <Link href="/tjanster/lagerhallning_utomhus">
+        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/tjanster/lagerhallning_utomhus' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
           Lagerhållning utomhus
         </li>
       </Link>
-      <Link href="/tjanster/hyra_av_förråd">
-        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/tjanster/hyra_av_förråd' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
+      <Link href="/tjanster/hyra_av_forrad">
+        <li className={`text-center w-full md:py-3 py-2  ${pathname === '/tjanster/hyra_av_forrad' ? 'bg-orange-500 text-white' : 'hover:text-orange-500'}`}>
           Hyra av förråd
         </li>
       </Link>

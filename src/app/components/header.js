@@ -165,7 +165,7 @@ export default function Header() {
                 onMouseLeave={toggleDropdown}
               >
                 <div className="flex items-center">
-                  <Link className="w-full" href="/tjanster/lagerhållning_inomhus">
+                  <Link className="w-full" href="/tjanster/lagerhallning_inomhus">
                     Tjänster
                   </Link>
                   <span className="ms-3">
@@ -178,17 +178,17 @@ export default function Header() {
                 {dropdownOpen && (
                   <div className="absolute top-6">
                     <ul className=" mt-5 bg-white rounded font-medium text-[#001d24] py-2 z-50">
-                      <Link className="w-full" href="/tjanster/lagerhållning_inomhus">
+                      <Link className="w-full" href="/tjanster/lagerhallning_inomhus">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Lagerhållning inomhus
                         </li>
                       </Link>
-                      <Link className="w-full" href="/tjanster/lagerhållning_utomhus">
+                      <Link className="w-full" href="/tjanster/lagerhallning_utomhus">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Lagerhållning utomhus
                         </li>
                       </Link>
-                      <Link className="w-full" href="/tjanster/hyra_av_förråd">
+                      <Link className="w-full" href="/tjanster/hyra_av_forrad">
                         <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                           Hyra av förråd
                         </li>
@@ -235,7 +235,7 @@ export default function Header() {
 
             {/* Request for offertförfrågan Button (Desktop) */}
             <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-[#ff6300] rounded-md">
-              <Link className="w-full" href="/offertförfrågan">
+              <Link className="w-full" href="/offertforfragan">
                 <button className="hover:text-[#ff6300] md:py-2 py-1 font-semibold">
                   Offertförfrågan
                 </button>
@@ -289,7 +289,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/tjanster/lagerhållning_inomhus"
+                    href="/tjanster/lagerhallning_inomhus"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Lagerhållning inomhus
@@ -298,7 +298,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/tjanster/lagerhållning_utomhus"
+                    href="/tjanster/lagerhallning_utomhus"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Lagerhållning utomhus
@@ -307,7 +307,7 @@ export default function Header() {
                   <Link
                     className="w-full"
                     onClick={() => setMenuOpen(false)}
-                    href="/tjanster/hyra_av_förråd"
+                    href="/tjanster/hyra_av_forrad"
                   >
                     <li className="px-3 py-1 text-nowrap hover:bg-slate-300">
                       Hyra av förråd
@@ -362,7 +362,7 @@ export default function Header() {
               className="w-full py-2 text-md  hover:text-[#ff6300]"
               onClick={() => setMenuOpen(false)}
             >
-              <Link className="w-full" href="/offertförfrågan">
+              <Link className="w-full" href="/offertforfragan">
                 Offertförfrågan
               </Link>
             </button>
