@@ -18,7 +18,7 @@ export default function HomePage() {
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
         <p className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
-          Från 49 kronor per pall!
+          Från 45 kronor per pall!
         </p>
       </div>
       <div className="px-20">
@@ -494,7 +494,7 @@ export default function HomePage() {
           <section id="frankr" className="lg:w-6/12 w-full text-white lg:px-10">
             <div className="text-center md:text-start space-y-10 mb-10 md:mb-40">
               <h3 className="md:px-2 px-5 text-3xl font-bold">
-                Från 49kr / mån per pall
+                Från 45kr / mån per pall
               </h3>
               <p className="text-lg">
                 Genom att endast betala för det utrymme du faktiskt använder kan
