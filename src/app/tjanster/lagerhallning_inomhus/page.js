@@ -79,7 +79,7 @@ const page = () => {
                 <p className="md:text-lg text-[#626262]">
                   Vi förfogar över stora lagerytor så vi kan alltid anpassa det
                   till just era önskemål och krav. På våra lager finns bade
-                  lastkaj, travers, gaffeltruck, m.fl. Prisförslag fr.45kr /pall
+                  lastkaj, travers, gaffeltruck, m.fl. Prisförslag fr.59kr /pall
                   och mån
                 </p>
               </div>
