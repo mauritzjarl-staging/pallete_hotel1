@@ -1,13 +1,15 @@
-"use client"
+// pages/logga_in.js
+'use client';  // Mark as a client-side component
 
-export default function logga_in() {
+import Link from 'next/link'
+
+export default function LoggaIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle login logic here
   };
 
   return (
-
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300">
       {/* Wrapper for the logo */}
       <div className="mb-6">
@@ -18,7 +20,7 @@ export default function logga_in() {
         />
       </div>
 
-      {/* logga_in form */}
+      {/* Login form */}
       <div className="bg-white p-8 rounded-xl shadow-lg w-[90%] sm:w-[26rem]">
         <div className="flex flex-col w-4/6 text-center justify-center items-center mx-auto mb-6">
           <h1 className="text-2xl font-bold mb-6 text-gray-500">
@@ -28,7 +30,6 @@ export default function logga_in() {
 
         <form className="space-y-4 px-5" onSubmit={handleSubmit}>
           <div>
-            
             <input
               type="email"
               id="email"
@@ -39,7 +40,6 @@ export default function logga_in() {
             />
           </div>
           <div>
-          
             <input
               type="password"
               id="password"
@@ -50,26 +50,13 @@ export default function logga_in() {
             />
           </div>
 
-          {/* Remember me checkbox */}
-          <div className="flex items-center">
-            {/* <div>
-            <input
-              type="checkbox"
-              id="remember"
-              name="remember"
-              className="mr-2"
-            />
-            <label htmlFor="remember" className="text-gray-600">Kom ihåg mig</label>
-            </div> */}
-           
-            {/* Forgot password link */}
-            <div className=" flex justify-end text-center">
-              <p className="text-sm text-gray-600">
-                <a href="/forgotpassword" className="text-orange-500 hover:text-orange-600">
-                  Glömt lösenordet?
-                </a>
-              </p>
-            </div>
+          {/* Forgot password link */}
+          <div className="flex justify-end text-center">
+            <p className="text-sm text-gray-600">
+              <Link href="/forgotpassword" className="text-orange-500 hover:text-orange-600">
+                Glömt lösenordet?
+              </Link>
+            </p>
           </div>
 
           <button
@@ -80,23 +67,16 @@ export default function logga_in() {
           </button>
         </form>
 
-
-
         {/* Register link */}
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
             Har du inget konto?{' '}
-            <a href="/register"  className="text-orange-500 text-sm hover:text-orange-600">
+            <Link href="/register" className="text-orange-500 text-sm hover:text-orange-600">
               Registrera dig här
-            </a>
+            </Link>
           </p>
         </div>
-
-
       </div>
-
     </div>
-    
-
   );
 }
