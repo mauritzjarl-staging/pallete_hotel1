@@ -14,7 +14,7 @@ export async function generateMetadata() {
   }
 
   return {
-    title: 'Logistik- och lagerlösningar i Motala, Östergötland – Lagerplatser på Pallhotellet.se',
+    title: 'Logistik- och lagerlésningar i Motala, Ostergétland - Pallhotellet.se',
     
     description: 'Pålitligt lager i Sverige med flexibel lagring, sakkunnig lasthantering och dokumentationstjänster. Kontakta Pallhotellet för skräddarsydda lösningar.',
     alternates: {
