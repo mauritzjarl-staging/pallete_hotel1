@@ -10,9 +10,15 @@ let title;
   if (host.includes('.com')) {
     canonicalUrl = 'https://pallhotellet.com/';
     title='Logistik- och lagerlösningar i Motala, Östergötland - Pallhotellet.com';
-  } else {
+  }
+  else if('.se') {
     canonicalUrl = 'https://pallhotellet.se/';
     title='Logistik- och lagerlösningar i Motala, Östergötland - Pallhotellet.se';
+  }
+  else{
+  // Fallback or default domain handling
+  canonicalUrl = 'https://pallethotellet.com/';
+  title = 'Logistik- och lagerlösningar i Motala, Östergötland - Pallhotellet.com';
   }
 
   return {
