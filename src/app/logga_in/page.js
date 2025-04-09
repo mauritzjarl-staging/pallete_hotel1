@@ -10,9 +10,9 @@ export default function LoggaIn() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300">
+    <div className="flex flex-col items-center mt-8 justify-center min-h-[80vh] bg-gray-300">
       {/* Wrapper for the logo */}
-      <div className="mb-6">
+      <div className="my-6">
         <img
           src="/imgs/Pallhotellet.seTransparent.png"
           alt="Pallhotellet Logo"
@@ -21,7 +21,7 @@ export default function LoggaIn() {
       </div>
 
       {/* Login form */}
-      <div className="bg-white p-8 rounded-xl shadow-lg w-[90%] sm:w-[26rem]">
+      <div className="bg-white p-8 rounded-xl shadow-lg w-[90%] sm:w-[26rem] mb-8 mt-8">
         <div className="flex flex-col w-4/6 text-center justify-center items-center mx-auto mb-6">
           <h1 className="text-2xl font-bold mb-6 text-gray-500">
             Välkommen till Pallhotellet!
