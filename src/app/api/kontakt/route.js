@@ -3,7 +3,46 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   const body = await req.json();
-  const { firstName, lastName, email, phone, company, orgNr, message } = body;
+  const { firstName, lastName, email, phone, company, orgNr, message, recaptchaToken } = body;
+
+  // Verify reCAPTCHA token server-side
+  try {
+    if (!recaptchaToken) {
+      return new NextResponse(
+        JSON.stringify({ message: "Ogiltig reCAPTCHA-token." }),
+        { status: 400 }
+      );
+    }
+
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    if (!secretKey) {
+      console.error("RECAPTCHA_SECRET_KEY is not set");
+      return new NextResponse(
+        JSON.stringify({ message: "Serverfel: reCAPTCHA är inte konfigurerat." }),
+        { status: 500 }
+      );
+    }
+
+    const verifyResponse = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ secret: String(secretKey), response: String(recaptchaToken) }),
+    });
+
+    const verification = await verifyResponse.json();
+    if (!verification.success) {
+      return new NextResponse(
+        JSON.stringify({ message: "reCAPTCHA-verifiering misslyckades." }),
+        { status: 400 }
+      );
+    }
+  } catch (e) {
+    console.error("reCAPTCHA verification error:", e);
+    return new NextResponse(
+      JSON.stringify({ message: "Fel vid reCAPTCHA-verifiering." }),
+      { status: 500 }
+    );
+  }
 
   // Set up Nodemailer transporter using environment variables
   const transporter = nodemailer.createTransport({

@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { PiPhoneCallThin } from "react-icons/pi";
 import { CiLocationOn } from "react-icons/ci";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import { IoArrowForward } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,10 +18,43 @@ const MapComponent = dynamic(() => import("../components/MapComponent"), {
 
 const kontaktPage = () => {
   const [loading, setLoading] = useState(false); // Loading state for submit button
+  const [isHuman, setIsHuman] = useState(false); // Show submit only when solved
+
+  // Expose reCAPTCHA callbacks globally for v2 checkbox
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    // Success callback when user solves the checkbox
+    window.onRecaptchaSuccess = function () {
+      setIsHuman(true);
+    };
+    // Expired callback when token expires
+    window.onRecaptchaExpired = function () {
+      setIsHuman(false);
+    };
+    // Error callback
+    window.onRecaptchaError = function () {
+      setIsHuman(false);
+    };
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true); // Disable the submit button
+
+    // Ensure reCAPTCHA is solved
+    try {
+      if (typeof window === "undefined" || !window.grecaptcha) {
+        toast.error("reCAPTCHA laddades inte. Ladda om sidan och försök igen.");
+        setLoading(false);
+        return;
+      }
+
+      const recaptchaToken = window.grecaptcha.getResponse();
+      if (!recaptchaToken) {
+        toast.error("Vänligen bekräfta att du inte är en robot.");
+        setLoading(false);
+        return;
+      }
 
     const formData = {
       firstName: event.target["first-name"].value,
@@ -30,6 +64,7 @@ const kontaktPage = () => {
       company: event.target.company.value,
       orgNr: event.target.orgnr.value,
       message: event.target.message.value,
+      recaptchaToken,
     };
 
     try {
@@ -51,6 +86,11 @@ const kontaktPage = () => {
 
         // Clear the form
         event.target.reset();
+        // Reset reCAPTCHA for potential subsequent submissions
+        if (window.grecaptcha) {
+          window.grecaptcha.reset();
+        }
+        setIsHuman(false);
       } else {
         // Show error toast
         toast.error(result.message || "Fel vid formulärinlämning.");
@@ -61,10 +101,19 @@ const kontaktPage = () => {
     } finally {
       setLoading(false); // Re-enable the submit button
     }
+    } catch (e) {
+      console.error("reCAPTCHA error:", e);
+      toast.error("Ett fel inträffade med reCAPTCHA. Försök igen.");
+      setLoading(false);
+    }
   };
 
   return (
     <>
+      <Script
+        src="https://www.google.com/recaptcha/api.js"
+        strategy="afterInteractive"
+      />
       {/* ToastContainer to display notifications */}
       <ToastContainer
         position="top-center"
@@ -207,25 +256,42 @@ const kontaktPage = () => {
               ></textarea>
             </div>
 
-            {/* Submit Button */}
+            {/* reCAPTCHA */}
             <div className="sm:col-span-2">
-              <button
-                type="submit"
-                disabled={loading}
-                className={`my-3 flex items-center mx-auto md:mx-0 ${
-                  loading
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:text-[#ff6300]"
-                } text-white hover:bg-white bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
-                      px-3 md:px-4 lg:px-8  
-                rounded-md`}
-              >
-                {loading ? "Skickar..." : "Skicka"}
-                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                  <IoArrowForward color="#ff6300" size={23} />
-                </span>
-              </button>
+              <div
+                className="g-recaptcha"
+                data-sitekey={
+                  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
+                  // Google's public test site key for reCAPTCHA v2 Checkbox
+                  "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                }
+                data-callback="onRecaptchaSuccess"
+                data-expired-callback="onRecaptchaExpired"
+                data-error-callback="onRecaptchaError"
+              ></div>
             </div>
+
+            {/* Submit Button: only show if user solved reCAPTCHA */}
+            {isHuman && (
+              <div className="sm:col-span-2">
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={`my-3 flex items-center mx-auto md:mx-0 ${
+                    loading
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:text-[#ff6300]"
+                  } text-white hover:bg-white bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                        px-3 md:px-4 lg:px-8  
+                  rounded-md`}
+                >
+                  {loading ? "Skickar..." : "Skicka"}
+                  <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                    <IoArrowForward color="#ff6300" size={23} />
+                  </span>
+                </button>
+              </div>
+            )}
           </form>
         </div>
       </section>
