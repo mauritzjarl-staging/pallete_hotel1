@@ -1,0 +1,6 @@
+services:
+  pallet-hotel:
+    build: .
+    image: mauritzjarldocker1/pallet-hotel:latest
+    ports:
+      - "3003:3000" # Aapke script mein port 3003 tha, isliye bahar 3003 rakha hai
