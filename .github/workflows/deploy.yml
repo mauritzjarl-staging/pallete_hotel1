@@ -1,0 +1,163 @@
+name: Deploy to Vercel via Google Secrets
+
+on:
+  push:
+    branches: [main] # change if needed
+
+jobs:
+  # ==========================================
+  # JOB 1: Deploy to PALLHOTELLET.COM
+  # ==========================================
+  deploy_com:
+    name: Deploy to .COM
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: "projects/521642927380/locations/global/workloadIdentityPools/pallete-hotel1-pool/providers/pallete-hotel1-provider"
+          service_account: "pallete-hotel1-deployer@techozon-fc682.iam.gserviceaccount.com"
+
+      - id: secrets
+        uses: google-github-actions/get-secretmanager-secrets@v2
+        with:
+          secrets: |
+            PALLETHOTEL_COM_SMTP_HOST:techozon-fc682/PALLETHOTEL_COM_SMTP_HOST
+            PALLETHOTEL_COM_SMTP_PORT:techozon-fc682/PALLETHOTEL_COM_SMTP_PORT
+            PALLETHOTEL_COM_SMTP_USER:techozon-fc682/PALLETHOTEL_COM_SMTP_USER
+            PALLETHOTEL_COM_SMTP_PASS:techozon-fc682/PALLETHOTEL_COM_SMTP_PASS
+            PALLETHOTEL_COM_RECIPIENT_EMAIL:techozon-fc682/PALLETHOTEL_COM_RECIPIENT_EMAIL
+            PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_API_KEY:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_API_KEY
+            PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+            PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_PROJECT_ID:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_PROJECT_ID
+            PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+            PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+            PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_APP_ID:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_APP_ID
+            PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+            PALLETHOTEL_COM_NEXT_PUBLIC_GA_MEASUREMENT_ID:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_GA_MEASUREMENT_ID
+            PALLETHOTEL_COM_DOMAIN_URL:techozon-fc682/PALLETHOTEL_COM_DOMAIN_URL
+            PALLETHOTEL_COM_NEXT_PUBLIC_RECAPTCHA_SITE_KEY:techozon-fc682/PALLETHOTEL_COM_NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+            PALLETHOTEL_COM_RECAPTCHA_SECRET_KEY:techozon-fc682/PALLETHOTEL_COM_RECAPTCHA_SECRET_KEY
+
+      - name: Inject secrets
+        run: |
+          cat <<EOF > .env.local
+          SMTP_HOST=${{ steps.secrets.outputs.PALLETHOTEL_COM_SMTP_HOST }}
+          SMTP_PORT=${{ steps.secrets.outputs.PALLETHOTEL_COM_SMTP_PORT }}
+          SMTP_USER=${{ steps.secrets.outputs.PALLETHOTEL_COM_SMTP_USER }}
+          SMTP_PASS=${{ steps.secrets.outputs.PALLETHOTEL_COM_SMTP_PASS }}
+          RECIPIENT_EMAIL=${{ steps.secrets.outputs.PALLETHOTEL_COM_RECIPIENT_EMAIL }}
+          NEXT_PUBLIC_FIREBASE_API_KEY=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_API_KEY }}
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
+          NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET }}
+          NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}
+          NEXT_PUBLIC_FIREBASE_APP_ID=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_APP_ID }}
+          NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }}
+          NEXT_PUBLIC_GA_MEASUREMENT_ID=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          DOMAIN_URL=${{ steps.secrets.outputs.PALLETHOTEL_COM_DOMAIN_URL }}
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ steps.secrets.outputs.PALLETHOTEL_COM_NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+          RECAPTCHA_SECRET_KEY=${{ steps.secrets.outputs.PALLETHOTEL_COM_RECAPTCHA_SECRET_KEY }}
+          EOF
+
+      - run: npm i -g vercel@latest
+
+      - run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_COM }}
+
+      - run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_COM }}
+
+      - run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_COM }}
+
+
+  # ==========================================
+  # JOB 2: Deploy to PALLHOTELLET.SE
+  # ==========================================
+  deploy_se:
+    name: Deploy to .SE
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: "projects/521642927380/locations/global/workloadIdentityPools/pallete-hotel1-pool/providers/pallete-hotel1-provider"
+          service_account: "pallete-hotel1-deployer@techozon-fc682.iam.gserviceaccount.com"
+
+      - id: secrets
+        uses: google-github-actions/get-secretmanager-secrets@v2
+        with:
+          secrets: |
+            PALLETHOTEL_SE_SMTP_HOST:techozon-fc682/PALLETHOTEL_SE_SMTP_HOST
+            PALLETHOTEL_SE_SMTP_PORT:techozon-fc682/PALLETHOTEL_SE_SMTP_PORT
+            PALLETHOTEL_SE_SMTP_USER:techozon-fc682/PALLETHOTEL_SE_SMTP_USER
+            PALLETHOTEL_SE_SMTP_PASS:techozon-fc682/PALLETHOTEL_SE_SMTP_PASS
+            PALLETHOTEL_SE_RECIPIENT_EMAIL:techozon-fc682/PALLETHOTEL_SE_RECIPIENT_EMAIL
+            PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_API_KEY:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_API_KEY
+            PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+            PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_PROJECT_ID:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_PROJECT_ID
+            PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+            PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+            PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_APP_ID:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_APP_ID
+            PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+            PALLETHOTEL_SE_NEXT_PUBLIC_GA_MEASUREMENT_ID:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_GA_MEASUREMENT_ID
+            PALLETHOTEL_SE_DOMAIN_URL:techozon-fc682/PALLETHOTEL_SE_DOMAIN_URL
+            PALLETHOTEL_SE_NEXT_PUBLIC_RECAPTCHA_SITE_KEY:techozon-fc682/PALLETHOTEL_SE_NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+            PALLETHOTEL_SE_RECAPTCHA_SECRET_KEY:techozon-fc682/PALLETHOTEL_SE_RECAPTCHA_SECRET_KEY
+
+      - name: Inject secrets
+        run: |
+          cat <<EOF > .env.local
+          SMTP_HOST=${{ steps.secrets.outputs.PALLETHOTEL_SE_SMTP_HOST }}
+          SMTP_PORT=${{ steps.secrets.outputs.PALLETHOTEL_SE_SMTP_PORT }}
+          SMTP_USER=${{ steps.secrets.outputs.PALLETHOTEL_SE_SMTP_USER }}
+          SMTP_PASS=${{ steps.secrets.outputs.PALLETHOTEL_SE_SMTP_PASS }}
+          RECIPIENT_EMAIL=${{ steps.secrets.outputs.PALLETHOTEL_SE_RECIPIENT_EMAIL }}
+          NEXT_PUBLIC_FIREBASE_API_KEY=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_API_KEY }}
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
+          NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET }}
+          NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}
+          NEXT_PUBLIC_FIREBASE_APP_ID=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_APP_ID }}
+          NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }}
+          NEXT_PUBLIC_GA_MEASUREMENT_ID=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          DOMAIN_URL=${{ steps.secrets.outputs.PALLETHOTEL_SE_DOMAIN_URL }}
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ steps.secrets.outputs.PALLETHOTEL_SE_NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+          RECAPTCHA_SECRET_KEY=${{ steps.secrets.outputs.PALLETHOTEL_SE_RECAPTCHA_SECRET_KEY }}
+          EOF
+
+      - run: npm i -g vercel@latest
+
+      - run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_SE }}
+
+      - run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_SE }}
+
+      - run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_SE }}
