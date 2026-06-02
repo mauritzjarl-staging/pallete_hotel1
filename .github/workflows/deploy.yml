@@ -13,17 +13,6 @@ jobs:
       actions: read
     steps:
       - uses: actions/checkout@
-
-      - name: Check for Redmine Issue Number
-        env:
-          COMMIT_MSG: ${{ github.event.head_commit.message }}
-        run: |
-          if ! echo "$COMMIT_MSG" | grep -qE '#[0-9]+'; then
-            echo "❌ ERROR: Commit message must contain a Redmine issue number (e.g., #123)."
-            exit 1
-          else
-            echo "✅ Redmine issue number found in commit message."
-          fi
 v4
         with:
           fetch-depth: 2
