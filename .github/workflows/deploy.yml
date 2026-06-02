@@ -2,14 +2,71 @@ name: Deploy to Vercel via Google Secrets
 
 on:
   push:
-    branches: [main] # change if needed
+    branches: [dev-automation]
 
 jobs:
+  version_check:
+    name: Check Version Update
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@
+
+      - name: Check for Redmine Issue Number
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          if ! echo "$COMMIT_MSG" | grep -qE '#[0-9]+'; then
+            echo "❌ ERROR: Commit message must contain a Redmine issue number (e.g., #123)."
+            exit 1
+          else
+            echo "✅ Redmine issue number found in commit message."
+          fi
+v4
+        with:
+          fetch-depth: 2
+
+      - name: Check if Version is Updated
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          LAST_RUN_ID=$(gh run list --workflow "deploy.yml" --branch "${{ github.ref_name }}" --status completed --limit 1 --json databaseId -q '.[0].databaseId' || echo "")
+          LAST_RUN_CONCLUSION=$(gh run list --workflow "deploy.yml" --branch "${{ github.ref_name }}" --status completed --limit 1 --json conclusion -q '.[0].conclusion' || echo "unknown")
+          
+          echo "Last completed workflow run status: $LAST_RUN_CONCLUSION"
+          
+          if [ -n "$LAST_RUN_ID" ] && [ "$LAST_RUN_ID" != "null" ]; then
+            VERSION_CHECK_CONCLUSION=$(gh run view $LAST_RUN_ID --json jobs --jq '.jobs[].steps[]? | select(.name == "Check if Version is Updated") | .conclusion' | head -n 1)
+            
+            if [ "$VERSION_CHECK_CONCLUSION" == "failure" ]; then
+              echo "⚠️ Last build failed specifically at the Version Check step. Enforcing version check."
+            elif [ "$LAST_RUN_CONCLUSION" == "failure" ] || [ "$LAST_RUN_CONCLUSION" == "cancelled" ] || [ "$LAST_RUN_CONCLUSION" == "startup_failure" ]; then
+              echo "⚠️ Last build failed AFTER version check. Allowing same version push to fix errors without blocking."
+              exit 0
+            fi
+          fi
+          
+          OLD_V=$(git show HEAD~1:package.json | grep '"version":' | cut -d '"' -f 4 || echo "unknown")
+          NEW_V=$(grep '"version":' package.json | cut -d '"' -f 4)
+          
+          echo "Previous Version: $OLD_V"
+          echo "New Version: $NEW_V"
+          
+          if [ "$OLD_V" == "$NEW_V" ]; then
+            echo "❌ ERROR: You must update the version in package.json!"
+            exit 1
+          else
+            echo "✅ Version updated successfully!"
+          fi
+
   # ==========================================
   # JOB 1: Deploy to PALLHOTELLET.COM
   # ==========================================
   deploy_com:
     name: Deploy to .COM
+    needs: version_check
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -89,6 +146,7 @@ jobs:
   # ==========================================
   deploy_se:
     name: Deploy to .SE
+    needs: version_check
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -161,3 +219,29 @@ jobs:
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_SE }}
+
+  # ==========================================
+  # JOB 3: Update Redmine
+  # ==========================================
+  update_redmine:
+    name: Update Redmine Version
+    needs: [deploy_com, deploy_se]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract version
+        id: extract_version
+        run: |
+          version=$(grep '"version":' package.json | cut -d '"' -f 4)
+          echo "VERSION=$version" >> $GITHUB_ENV
+
+      - name: Update Redmine Platform Details
+        if: success()
+        env:
+          REDMINE_USER: ${{ secrets.REDMINE_USER }}
+          REDMINE_PASS: ${{ secrets.REDMINE_PASS }}
+          BUILD_VERSION: ${{ env.VERSION }}
+          PLATFORM_TYPE: web
+          REDMINE_PROJECT_ID: 70
+        run: python .github/scripts/update_redmine_version.py
