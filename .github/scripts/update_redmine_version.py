@@ -134,7 +134,8 @@ def update_issue_for_qa(redmine_url, api_key, issue_id, project_id, version_id, 
     issue_payload = {
         "issue": {
             "fixed_version_id": int(version_id),
-            "due_date": ""
+            "due_date": "",
+            "estimated_hours": ""
         }
     }
 
