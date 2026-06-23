@@ -40,7 +40,7 @@ const MapComponent = () => {
     }
   }, []);
 
-  return <div id="map" className="h-full" style={{ height: '500px' }} />;
+  return <div id="map" className="h-[500px]" />;
 };
 
 export default MapComponent;

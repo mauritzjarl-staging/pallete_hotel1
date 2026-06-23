@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FiInstagram } from "react-icons/fi";
 import { IoLocationSharp } from "react-icons/io5";
@@ -28,33 +27,53 @@ export default function Footer() {
               <Link
                 href="https://www.facebook.com/share/1AW57zVRFg/"
                 target="_blank" 
+                rel="noopener noreferrer me"
                 className="border hover:text-white hover:border-white
                  p-2 rounded-md border-[#808E91]"
-                 alt="Facebook"
+                aria-label="Facebook"
               >
                 <FaFacebook />
               </Link>
 
-              {/* <Link
-                href="#"
+              <Link
+                href="https://x.com/pallhotellet"
+                target="_blank"
+                rel="noopener noreferrer me"
                 className="border hover:text-white hover:border-white p-2 rounded-md border-[#808E91]"
+                aria-label="X (Twitter)"
               >
                 <FaTwitter />
               </Link>
 
               <Link
-                href="#"
+                href="https://instagram.com/pallhotellet"
+                target="_blank"
+                rel="noopener noreferrer me"
                 className="border hover:text-white hover:border-white p-2 rounded-md border-[#808E91]"
+                aria-label="Instagram"
+              >
+                <FiInstagram />
+              </Link>
+
+              <Link
+                href="https://linkedin.com/company/pallhotellet"
+                target="_blank"
+                rel="noopener noreferrer me"
+                className="border hover:text-white hover:border-white p-2 rounded-md border-[#808E91]"
+                aria-label="LinkedIn"
               >
                 <IoLogoLinkedin />
               </Link>
 
               <Link
-                href="#"
+                href="https://www.youtube.com/@pallhotellet"
+                target="_blank"
+                rel="noopener noreferrer me"
                 className="border hover:text-white hover:border-white p-2 rounded-md border-[#808E91]"
+                aria-label="YouTube"
               >
-                <FiInstagram />
-              </Link> */}
+                <FaYoutube />
+              </Link>
             </div>
           </div>
 
@@ -62,7 +81,7 @@ export default function Footer() {
             <p className="text-lg mb-5 font-semibold text-white">Adress</p>
             <li className="hover:text-white my-3 text-sm">
   <Link 
-    href="https://www.google.com/maps?q=Vickerkullavägen+2,+591+45+Motala" 
+    href="https://www.google.com/maps?q=Pallhotellet+AB,+Vickerkullavägen+2,+591+45+Motala" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="flex items-center"

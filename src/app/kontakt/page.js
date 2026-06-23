@@ -146,7 +146,7 @@ const kontaktPage = () => {
           <div className="space-y-4 text-lg px-4 md:px-0">
             <div className="flex md:items-center justify-center md:justify-normal">
               <Link
-                href="https://www.google.com/maps?q=Vickerkullavägen+2,+591+45+Motala"
+                href="https://www.google.com/maps?q=Pallhotellet+AB,+Vickerkullavägen+2,+591+45+Motala"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center"

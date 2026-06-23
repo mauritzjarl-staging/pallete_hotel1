@@ -17,12 +17,12 @@ export default function HomePage() {
   const SliderContent = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <p className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
+        <h2 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
           Från 59 kronor per pall!
-        </p>
+        </h2>
       </div>
       <div className="px-20">
-        <p className="xl:text-xl text-center">Hyr din pallplats hos oss!</p>
+        <h3 className="xl:text-xl text-center">Hyr din pallplats hos oss - Upptäck mer!</h3>
       </div>
       <Link href="#frankr">
         <button
@@ -40,13 +40,13 @@ export default function HomePage() {
   const SliderContent2 = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <p className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
-          Godshantering
-        </p>
+        <h2 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
+          Vi tar hand om din godshantering
+        </h2>
       </div>
       <div className="px-10">
         <p className="xl:text-xl text-center">
-          Vi tar hand om ut-och inlastning av ditt gods
+          Vi tar hand om ut-och inlastning av ditt gods i Motala
         </p>
       </div>
       <Link href="/tjanster#cargo">
@@ -65,9 +65,9 @@ export default function HomePage() {
   const SliderContent3 = () => (
     <div className="py-auto flex flex-col items-center space-y-10 text-white md:mt-10 px-3">
       <div>
-        <p className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
+        <h2 className="text-center md:text-5xl text-3xl px-10 font-bold mx-auto">
           Vi ordnar hela flödet
-        </p>
+        </h2>
       </div>
       <div className="px-20">
         <p className="xl:text-xl text-center">
@@ -363,13 +363,13 @@ export default function HomePage() {
           <div className="md:px-5 mt-10">
             <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
               <div>
-                <p className="inline-block px-2 rounded-md py-2 bg-[#ff6300] text-[1.2rem] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
+                <h3 className="inline-block px-2 rounded-md py-2 bg-[#ff6300] text-[1.2rem] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
                   Lagring
-                </p>
+                </h3>
               </div>
-              <p className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
+              <h4 className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
                 Lager som passar allas behov
-              </p>
+              </h4>
               <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
               Totalt har vi plats för 13.700 pall inne i våra lager
               </p>
@@ -399,13 +399,13 @@ export default function HomePage() {
           <div className="md:px-5 mt-10">
             <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
               <div>
-                <p className="inline-block px-2 rounded-md py-2 bg-[#ff6300] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
+                <h3 className="inline-block px-2 rounded-md py-2 bg-[#ff6300] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
                   Godshantering
-                </p>
+                </h3>
               </div>
-              <p className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
+              <h4 className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
                 Vi tar hand om dina varor
-              </p>
+              </h4>
               <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
                 Vi ombesörjer lagerhållning och hjälper till med annat. 
               </p>
@@ -433,13 +433,13 @@ export default function HomePage() {
           <div className="md:px-5 mt-10">
             <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
               <div>
-                <p className="inline-block px-2 rounded-md py-2 bg-[#ff6300] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
+                <h3 className="inline-block px-2 rounded-md py-2 bg-[#ff6300] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
                   Dokumentation
-                </p>
+                </h3>
               </div>
-              <p className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
+              <h4 className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
                 Vi ordnar det mesta
-              </p>
+              </h4>
               <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
                 Du som kund behöver bara ringa ett nummer.
               </p>
@@ -568,12 +568,12 @@ export default function HomePage() {
 
       <section className="md:py-20 py-10 flex justify-center flex-col px-10">
         <div className="text-center space-y-8">
-          <p className="bg-[#FF6F0F17] text-[#ff6300] inline text-xl font-semiobold p-3">
+          <h2 className="bg-[#FF6F0F17] text-[#ff6300] inline text-xl font-semibold p-3">
             Vår personal
-          </p>
-          <p className="md:text-4xl text-3xl font-bold md:w-2/12 w-5/12 mx-auto">
+          </h2>
+          <h3 className="md:text-4xl text-3xl font-bold md:w-2/12 w-5/12 mx-auto">
             Kontakta oss redan idag!
-          </p>
+          </h3>
         </div>
 
         <div className="my-10">
@@ -652,12 +652,12 @@ export default function HomePage() {
 
       <section className="relative pt-10 md:pb-20 pb-10 px-10 md:px-[65px] bg-gray-100">
         <div className="text-center space-y-8 my-10">
-          <p className="bg-[#FF6F0F17] text-[#ff6300] text-xl font-semibold p-3 inline">
+          <h2 className="bg-[#FF6F0F17] text-[#ff6300] text-xl font-semibold p-3 inline">
             Kundomdömen
-          </p>
-          <p className="md:text-[2rem] text-[1.2rem] font-bold">
+          </h2>
+          <h3 className="md:text-[2rem] text-[1.2rem] font-bold">
             Vad säger våra kunder om oss
-          </p>
+          </h3>
         </div>
         {/* Custom navigation buttons */}
         <div className="flex justify-center ">
@@ -711,6 +711,65 @@ export default function HomePage() {
             </div>
           ))}
         </Slider>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-10 md:px-20 bg-white">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="bg-[#FF6F0F17] text-[#ff6300] text-xl font-semibold p-3 inline-block">
+            Vanliga frågor (FAQ)
+          </h2>
+          <h3 className="md:text-[2.5rem] text-[1.5rem] font-bold text-[#001d23]">
+            Här hittar du svar på vanliga funderingar
+          </h3>
+        </div>
+
+        <div className="max-w-4xl mx-auto space-y-6">
+          <div className="border-b border-gray-200 pb-6">
+            <h4 className="text-lg font-bold text-[#001d23] mb-2">
+              Vad kostar det att hyra en pallplats hos oss?
+            </h4>
+            <p className="text-gray-600 leading-relaxed">
+              Våra priser för lagerhållning börjar från endast 59 kr per pall och månad. Genom att endast betala för det utrymme du faktiskt använder kan du enkelt optimera ditt lager och sänka dina fasta kostnader.
+            </p>
+          </div>
+
+          <div className="border-b border-gray-200 pb-6">
+            <h4 className="text-lg font-bold text-[#001d23] mb-2">
+              Har ni flexibel lagring som anpassas efter våra behov?
+            </h4>
+            <p className="text-gray-600 leading-relaxed">
+              Ja, vi erbjuder helt flexibla förvaringslösningar som anpassas efter ditt företags unika behov. Vi har kapacitet för både kortsiktig lagring vid tillfälliga toppar och långsiktiga logistiklösningar.
+            </p>
+          </div>
+
+          <div className="border-b border-gray-200 pb-6">
+            <h4 className="text-lg font-bold text-[#001d23] mb-2">
+              Vilka tjänster har vi för att hantera dina varor?
+            </h4>
+            <p className="text-gray-600 leading-relaxed">
+              Vår kunniga personal hanterar de flesta typer av gods. Våra centrala lokaler i Motala är utrustade för både standardiserad pallförvaring inomhus och utomhus, samt hantering av mer skrymmande gods.
+            </p>
+          </div>
+
+          <div className="border-b border-gray-200 pb-6">
+            <h4 className="text-lg font-bold text-[#001d23] mb-2">
+              Var finns Pallhotellets lagerlokaler belägna?
+            </h4>
+            <p className="text-gray-600 leading-relaxed">
+              Våra lagerlokaler är strategiskt placerade i Motala, Östergötland. Det geografiska läget ger fantastiska transportförbindelser och gör oss till en perfekt logistikpartner för företag över hela Sverige.
+            </p>
+          </div>
+
+          <div className="pb-6">
+            <h4 className="text-lg font-bold text-[#001d23] mb-2">
+              Hur fungerar det med dokumentation och administration?
+            </h4>
+            <p className="text-gray-600 leading-relaxed">
+              Vi tar hand om allt från ankomstkontroll, inlastning och utlastning till löpande administration och dokumentationstjänster. Som kund behöver du bara ringa ett nummer, så löser vi resten åt dig.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

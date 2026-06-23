@@ -199,7 +199,7 @@ const QuoteForm = () => {
           <div className="space-y-4 text-lg">
             <div className="flex items-center">
               <Link
-                href="https://www.google.com/maps?q=Vickerkullavägen+2,+591+45+Motala"
+                href="https://www.google.com/maps?q=Pallhotellet+AB,+Vickerkullavägen+2,+591+45+Motala"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center"

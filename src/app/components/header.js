@@ -7,7 +7,7 @@ import { FaCaretDown } from "react-icons/fa";
 import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FiInstagram } from "react-icons/fi";
 
@@ -91,14 +91,44 @@ export default function Header() {
           <div className="px-4 cursor-pointer md:space-x-4 space-x-2 flex">
             <Link
               target="_blank"
+              rel="noopener noreferrer me"
               href="https://www.facebook.com/chriss.mauritz.1"
-               alt="Facebook"
+              aria-label="Facebook"
             >
               <FaFacebook className="hover:text-white" />{" "}
             </Link>
-            {/* <FaTwitter className="hover:text-white" />
-            <IoLogoLinkedin className="hover:text-white" />
-            <FiInstagram className="hover:text-white" /> */}
+            <Link
+              target="_blank"
+              rel="noopener noreferrer me"
+              href="https://x.com/pallhotellet"
+              aria-label="X (Twitter)"
+            >
+              <FaTwitter className="hover:text-white" />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer me"
+              href="https://instagram.com/pallhotellet"
+              aria-label="Instagram"
+            >
+              <FiInstagram className="hover:text-white" />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer me"
+              href="https://linkedin.com/company/pallhotellet"
+              aria-label="LinkedIn"
+            >
+              <IoLogoLinkedin className="hover:text-white" />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer me"
+              href="https://www.youtube.com/@pallhotellet"
+              aria-label="YouTube"
+            >
+              <FaYoutube className="hover:text-white" />
+            </Link>
           </div>
         </div>
       </div>
