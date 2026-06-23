@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
 import { Montserrat } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import Header from './components/header';
 import Footer from './components/footer';
 import "./globals.css";
@@ -85,25 +86,8 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google Analytics - with error handling */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-          onError={(e) => {
-            console.error('Google Analytics failed to load', e);
-            // Site will continue to load even if analytics fails
-          }}
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-          `}
-        </Script>
-        {/* Facebook Pixel */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
+        {/* Facebook Pixel - loaded with lazyOnload strategy to reduce unused JS on initial load */}
+        <Script id="facebook-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -121,7 +105,7 @@ export default function RootLayout({ children }) {
           <img
             height="1"
             width="1"
-            style={{ display: 'none' }}
+            className="hidden"
             src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '1029384756'}&ev=PageView&noscript=1`}
             alt="facebook pixel"
           />
@@ -131,6 +115,8 @@ export default function RootLayout({ children }) {
         {!islogga_inPage && <Header />}
         <main>{children}</main>
         {!islogga_inPage && <Footer />}
+        {/* Google Analytics - Loaded using highly-optimized third-parties script module */}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
       </body>
     </html>
   );

@@ -99,6 +99,7 @@ export default function HomePage() {
 
   return (
     <>
+      <link rel="preload" href="/imgs/Frame5892.webp" as="image" type="image/webp" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

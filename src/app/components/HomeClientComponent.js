@@ -6,12 +6,17 @@ import Image from "next/image";
 // import ProgressBar from "./components/ProgressBar";
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
 
 export default function HomePage() {
   const sliderRef = useRef(null); // Create a ref to access the Slider compone
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   // Reusable SliderContent Component
   const SliderContent = () => (
@@ -133,6 +138,24 @@ export default function HomePage() {
     ],
   };
 
+  const staff = [
+    {
+      name: "Sylvain",
+      role: "Sälj / Kundkontakt",
+      image: "/imgs/1.png"
+    },
+    {
+      name: "Lukas",
+      role: "Sälj / Ekonomi",
+      image: "/imgs/2.png"
+    },
+    {
+      name: "Elma ",
+      role: "Ekonomi ",
+      image: "/imgs/3.png"
+    }
+  ];
+
   // Slick Slider settings
   const sliderSettings = {
     speed: 500,
@@ -200,6 +223,53 @@ export default function HomePage() {
     beforeChange: (current, next) => handleSlideChange(next),
   };
 
+  const solutions = [
+    {
+      title: "Lagring",
+      subtitle: "Lager som passar allas behov",
+      text: "Totalt har vi plats för 13.700 pall inne i våra lager",
+      image: "/imgs/Rectangle12.png"
+    },
+    {
+      title: "Godshantering",
+      subtitle: "Vi tar hand om dina varor",
+      text: "Vi ombesörjer lagerhållning och hjälper till med annat.",
+      image: "/imgs/Rectangle13.png"
+    },
+    {
+      title: "Dokumentation",
+      subtitle: "Vi ordnar det mesta",
+      text: "Du som kund behöver bara ringa ett nummer.",
+      image: "/imgs/Rectangle14.png"
+    }
+  ];
+
+  const SolutionCard = ({ item }) => (
+    <div className="md:px-5 mt-10">
+      <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
+        <div>
+          <h3 className="inline-block px-2 rounded-md py-2 bg-[#ff6300] text-[1.2rem] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
+            {item.title}
+          </h3>
+        </div>
+        <h4 className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
+          {item.subtitle}
+        </h4>
+        <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
+          {item.text}
+        </p>
+        <div className="w-full mt-4">
+          <Image
+            width={1000}
+            height={500}
+            src={item.image}
+            alt={item.title}
+          />
+        </div>
+      </div>
+    </div>
+  );
+
   // Slider settings for What We Offer section
 
   const solutionSettings = {
@@ -222,11 +292,15 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="bg-[url('/imgs/Frame5892.webp')] bg-cover bg-center sm:pb-32 sm:pt-48 pb-16 pt-24 flex justify-center md:px-20 items-center px-5">
         <div className="w-full max-w-5xl ">
-          <Slider {...BannerSlider}>
+          {hasMounted ? (
+            <Slider {...BannerSlider}>
+              <SliderContent />
+              <SliderContent2 />
+              <SliderContent3 />
+            </Slider>
+          ) : (
             <SliderContent />
-            <SliderContent2 />
-            <SliderContent3 />
-          </Slider>
+          )}
         </div>
       </section>
 
@@ -359,111 +433,19 @@ export default function HomePage() {
           </h2>
         </div>
 
-        <Slider {...solutionSettings}>
-          <div className="md:px-5 mt-10">
-            <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
-              <div>
-                <h3 className="inline-block px-2 rounded-md py-2 bg-[#ff6300] text-[1.2rem] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
-                  Lagring
-                </h3>
-              </div>
-              <h4 className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
-                Lager som passar allas behov
-              </h4>
-              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
-              Totalt har vi plats för 13.700 pall inne i våra lager
-              </p>
-              {/* <!-- Greybox1 --> */}
-              {/* <div className="p-6 invisible">
-                <ProgressBar
-                  total={12000}
-                  current={4921}
-                  totalLabel="pallkapacitet"
-                  currentLabel="pallar i lager"
-                />
-              </div> */}
-              {/* <!-- Greybox Image --> */}
-              <div className="w-full mt-4">
-                <Image
-                  width={1000}
-                  height={500}
-                  src="/imgs/Rectangle12.png"
-                  alt="Grey box"
-                />
-              </div>
-            </div>
+        {hasMounted ? (
+          <Slider {...solutionSettings}>
+            {solutions.map((item, idx) => (
+              <SolutionCard key={idx} item={item} />
+            ))}
+          </Slider>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {solutions.map((item, idx) => (
+              <SolutionCard key={idx} item={item} />
+            ))}
           </div>
-
-          {/* 2nd Box  */}
-
-          <div className="md:px-5 mt-10">
-            <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
-              <div>
-                <h3 className="inline-block px-2 rounded-md py-2 bg-[#ff6300] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
-                  Godshantering
-                </h3>
-              </div>
-              <h4 className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
-                Vi tar hand om dina varor
-              </h4>
-              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
-                Vi ombesörjer lagerhållning och hjälper till med annat. 
-              </p>
-              {/* <!-- Greybox1 --> */}
-              {/* <div className="p-6 invisible">
-                <ProgressBar
-                  total={10}
-                  current={4}
-                  totalLabel="kunder som ml"
-                  currentLabel="existing customers"
-                />
-              </div> */}
-              {/* <!-- Greybox Image --> */}
-              <div className="w-full mt-4">
-                <Image
-                  width={1000}
-                  height={500}
-                  src="/imgs/Rectangle13.png"
-                  alt="Grey box"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="md:px-5 mt-10">
-            <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
-              <div>
-                <h3 className="inline-block px-2 rounded-md py-2 bg-[#ff6300] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
-                  Dokumentation
-                </h3>
-              </div>
-              <h4 className="px-2 mt-8 text-[1.3rem] font-bold md:h-10 h-20">
-                Vi ordnar det mesta
-              </h4>
-              <p className="text-[#989898] py-4 w-11/12 md:w-8/12 mx-auto text-[1rem]  lg:h-24 sm:h-36">
-                Du som kund behöver bara ringa ett nummer.
-              </p>
-              {/* <!-- Greybox1 --> */}
-              {/* <div className="p-6 invisible">
-                <ProgressBar
-                  total={5}
-                  current={1}
-                  totalLabel="customers as ml"
-                  currentLabel="Customer"
-                />
-              </div> */}
-              {/* <!-- Greybox Image --> */}
-              <div className="w-full mt-4">
-                <Image
-                  width={1000}
-                  height={500}
-                  src="/imgs/Rectangle14.png"
-                  alt="Grey box"
-                />
-              </div>
-            </div>
-          </div>
-        </Slider>
+        )}
       </section>
 
       {/* tjanster section / 3-Images  */}
@@ -601,49 +583,41 @@ export default function HomePage() {
 
           {/* Slick Slider for small screens */}
           <div className="md:hidden px-10">
-            <Slider {...sliderSettings}>
-              <div>
-                <div className="bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col">
-                  <Image
-                    src="/imgs/1.png"
-                    alt="Staff 1"
-                    width={800}
-                    height={300}
-                  />
-                  <p className="pt-5 pb-1 text-lg  font-bold">Sylvain</p>
-                  <p className="py-1 text-lg text-[#FF6F0F]">
-                    Sälj / Kundkontakt
-                  </p>
-                  <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
-                </div>
+            {hasMounted ? (
+              <Slider {...sliderSettings}>
+                {staff.map((item, idx) => (
+                  <div key={idx}>
+                    <div className="bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={800}
+                        height={300}
+                      />
+                      <p className="pt-5 pb-1 text-lg  font-bold">{item.name}</p>
+                      <p className="py-1 text-lg text-[#FF6F0F]">{item.role}</p>
+                      <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            ) : (
+              <div className="flex flex-col gap-6">
+                {staff.map((item, idx) => (
+                  <div key={idx} className="bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={800}
+                      height={300}
+                    />
+                    <p className="pt-5 pb-1 text-lg  font-bold">{item.name}</p>
+                    <p className="py-1 text-lg text-[#FF6F0F]">{item.role}</p>
+                    <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
+                  </div>
+                ))}
               </div>
-              <div>
-                <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
-                  <Image
-                    src="/imgs/2.png"
-                    alt="Staff 2"
-                    width={800}
-                    height={300}
-                  />
-                  <p className="pt-5 pb-1 text-lg  font-bold">Lukas</p>
-                  <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Ekonomi</p>
-                  <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
-                </div>
-              </div>
-              <div>
-                <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
-                  <Image
-                    src="/imgs/3.png"
-                    alt="Staff 3"
-                    width={800}
-                    height={300}
-                  />
-                  <p className="pt-5 pb-1 text-lg  font-bold">Elma </p>
-                  <p className="py-1 text-lg text-[#FF6F0F]">Ekonomi </p>
-                  <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
-                </div>
-              </div>
-            </Slider>
+            )}
           </div>
         </div>
       </section>
@@ -677,40 +651,60 @@ export default function HomePage() {
             </button>
           </div>
         </div>
-        <Slider ref={sliderRef} {...testimonialSettings}>
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`testimonial-slide ${
-                activeSlide === index ? "active" : "inactive"
-              }`}
-            >
-              <div className="pb-10 relative">
-                <Image
-                  src={testimonial.image}
-                  className="mx-auto rounded-full p-1 border-2 border-[#ff6300]"
-                  alt="{Client-Img ${index + 1}}"
-                  width={90}
-                  height={90}
-                />
-              </div>
-
+        {hasMounted ? (
+          <Slider ref={sliderRef} {...testimonialSettings}>
+            {testimonials.map((testimonial, index) => (
               <div
-                className={` text-white bg-[#ff6300]
-                  text-center md:mx-8 mx-2 ${
-                    activeSlide === index ? "opacity-100" : ""
-                  }
-                   bg-[#ff6300] rounded-lg md:p-5 p-4 space-y-2 text-white`}
+                key={index}
+                className={`testimonial-slide ${
+                  activeSlide === index ? "active" : "inactive"
+                }`}
               >
-                <div className="md:min-h-32">
-                  <p>{testimonial.text}</p>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  {/* <p>{testimonial.profession}</p> */}
+                <div className="pb-10 relative">
+                  <Image
+                    src={testimonial.image}
+                    className="mx-auto rounded-full p-1 border-2 border-[#ff6300]"
+                    alt={`Client-Img ${index + 1}`}
+                    width={90}
+                    height={90}
+                  />
+                </div>
+
+                <div
+                  className={` text-white bg-[#ff6300]
+                    text-center md:mx-8 mx-2 ${
+                      activeSlide === index ? "opacity-100" : ""
+                    }
+                     bg-[#ff6300] rounded-lg md:p-5 p-4 space-y-2 text-white`}
+                >
+                  <div className="md:min-h-32">
+                    <p>{testimonial.text}</p>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    {/* <p>{testimonial.profession}</p> */}
+                  </div>
                 </div>
               </div>
+            ))}
+          </Slider>
+        ) : (
+          <div className="testimonial-slide active max-w-lg mx-auto">
+            <div className="pb-10 relative">
+              <Image
+                src={testimonials[0].image}
+                className="mx-auto rounded-full p-1 border-2 border-[#ff6300]"
+                alt="Client-Img 1"
+                width={90}
+                height={90}
+              />
             </div>
-          ))}
-        </Slider>
+            <div className="text-white bg-[#ff6300] text-center md:mx-8 mx-2 rounded-lg md:p-5 p-4 space-y-2 text-white">
+              <div className="md:min-h-32">
+                <p>{testimonials[0].text}</p>
+                <p className="font-semibold">{testimonials[0].name}</p>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* FAQ Section */}
