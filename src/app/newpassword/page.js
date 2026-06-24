@@ -104,14 +104,22 @@ export default function NewPassword() {
       </div>
 
       {/* Info text to increase word count and add local SEO context */}
-      <div className="mt-12 max-w-lg text-center text-xs text-gray-500 px-6 pb-8">
-        <h2 className="font-semibold text-gray-600 mb-2">Ange ett nytt lösenord för ditt Pallhotellet-konto</h2>
-        <p className="mb-2">
-          Här kan du ställa in ett nytt och säkert lösenord för ditt konto hos Pallhotellet. Genom att ha ett uppdaterat lösenord säkerställer du att obehöriga inte kommer åt din information rörande lagertjänster, bokningar och logistikförfrågningar i Motala.
+      <div className="mt-12 max-w-xl text-center text-xs text-gray-500 px-6 pb-8">
+        <h2 className="font-semibold text-gray-600 mb-2">Ange ett nytt lösenord för kontot hos Pallhotellet</h2>
+        <p className="mb-4 text-justify sm:text-center">
+          Här kan du ställa in ett nytt och säkert lösenord för kontot hos oss på Pallhotellet. Genom att ha ett uppdaterat lösenord säkerställer du att obehöriga inte kommer åt information rörande lagertjänster, bokningar och logistikförfrågningar i Motala. Vi ser till att alla lagrade uppgifter hanteras med högsta konfidentialitet och säkerhet på vår anläggning.
         </p>
-        <p>
-          Vi rekommenderar att du väljer ett starkt lösenord med en kombination av bokstäver, siffror och specialtecken. När du har angett och bekräftat ditt nya lösenord kan du genast logga in igen och fortsätta hantera dina pågående lagringstjänster eller granska nya offerter.
+        <p className="mb-4 text-justify sm:text-center">
+          Vi rekommenderar att välja ett starkt lösenord med en kombination av bokstäver, siffror och specialtecken. När lösenordet har angetts och bekräftats i fälten ovan kan inloggning ske direkt för att fortsätta hantera pågående lagringstjänster eller granska nya offerter för företagets räkning.
         </p>
+        <p className="mb-6 text-justify sm:text-center">
+          Som en ledande logistikpartner i Östergötland strävar Pallhotellet efter att göra lagring, distribution, containerlossning och tredjepartslogistik (3PL) så trygg och effektiv som möjligt. Har du frågor angående kontosäkerhet eller behöver du support, är du välkommen att kontakta oss via telefon eller e-post. Följ oss även gärna på våra sociala profiler för nyheter och uppdateringar.
+        </p>
+        <div className="flex justify-center space-x-6 text-sm font-semibold border-t pt-4">
+          <Link href="https://www.facebook.com/share/1AW57zVRFg/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">Facebook</Link>
+          <Link href="https://instagram.com/pallhotellet" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">Instagram</Link>
+          <Link href="https://linkedin.com/company/pallhotellet" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">LinkedIn</Link>
+        </div>
       </div>
       </div>
   )

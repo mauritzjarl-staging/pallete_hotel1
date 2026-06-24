@@ -140,16 +140,23 @@ export default function Register() {
         </div>
       </div>
 
-      {/* Info text to increase word count and add local SEO context */}
-      <div className="mt-12 max-w-lg text-center text-xs text-gray-500 px-6 pb-8">
+      <div className="mt-12 max-w-xl text-center text-xs text-gray-500 px-6 pb-8">
         <h2 className="font-semibold text-gray-600 mb-2">Skapa konto på Pallhotellet i Motala</h2>
-        <p className="mb-2">
-          Genom att registrera ett konto hos oss får du full insyn i dina lagringstjänster och din godshantering. Vi erbjuder flexibla logistik- och lagerlösningar som är skräddarsydda för dina specifika behov.
+        <p className="mb-4 text-justify sm:text-center">
+          Välkommen att skapa ett konto hos oss på Pallhotellet. Genom att registrera ett konto får ni direkt tillgång till vår moderna kundportal, vilket gör det enkelt att hantera alla era logistikbehov på ett och samma ställe. Oavsett om ni vill begära offerter för kallager, tempererat varmlager, utomhusförvaring eller kompletta tredjepartslogistik (3PL) lösningar i Motala, så sköts allt smidigt via portalen.
         </p>
-        <p>
-          Registreringen är enkel och ger dig direkt tillgång till vår kundportal där du kan skicka in offertförfrågningar, hantera pågående bokningar och kommunicera med vårt supportteam. Vårt moderna pallager och förråd i Motala står redo att ta emot dina varor på ett tryggt och säkert sätt.
+        <p className="mb-4 text-justify sm:text-center">
+          När ni har ett registrerat konto kan ni även spåra era in- och utleveranser, se aktuella lagersaldon, administrera enskilda förråd för self-storage och ha en snabb kommunikationskanal till vår support. Vi erbjuder högsta säkerhet med passerkontroll och bevakning för att garantera att era varor förvaras under optimala förhållanden.
         </p>
+        <p className="mb-6 text-justify sm:text-center">
+          Det går snabbt att registrera sig och det är helt kostnadsfritt. Ange bara era företagsuppgifter eller personuppgifter i fältet ovan för att komma igång. Om ni stöter på problem under registreringen är ni alltid välkomna att kontakta vår kundtjänst per telefon eller mejl. Glöm inte att också följa oss på våra officiella sociala medier för att ta del av de senaste nyheterna från oss.
+        </p>
+        <div className="flex justify-center space-x-6 text-sm font-semibold border-t pt-4">
+          <Link href="https://www.facebook.com/share/1AW57zVRFg/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">Facebook</Link>
+          <Link href="https://instagram.com/pallhotellet" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">Instagram</Link>
+          <Link href="https://linkedin.com/company/pallhotellet" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">LinkedIn</Link>
+        </div>
       </div>
-      </div>
-  )
+    </div>
+  );
 }

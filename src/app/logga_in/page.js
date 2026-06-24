@@ -82,14 +82,22 @@ export default function LoggaIn() {
       </div>
 
       {/* Info text to increase word count and add local SEO context */}
-      <div className="mt-12 max-w-lg text-center text-xs text-gray-500 px-6 pb-8">
+      <div className="mt-12 max-w-xl text-center text-xs text-gray-500 px-6 pb-8">
         <h2 className="font-semibold text-gray-600 mb-2">Om Pallhotellet – Flexibel lagerhantering i Motala</h2>
-        <p className="mb-2">
-          Pallhotellet erbjuder trygga och moderna lagertjänster för företag och privatpersoner. Oavsett om du behöver förvara pallar, hyra förråd, eller söker hjälp med godshantering, har vi lösningen för dig i våra säkra lokaler i Motala.
+        <p className="mb-4 text-justify sm:text-center">
+          Välkommen till Pallhotellet. Vi erbjuder trygga, säkra och mycket moderna lagertjänster för både företag och privatpersoner. Oavsett om ni har behov av tillfällig eller långvarig pallagring, tempererad inomhusförvaring (varmlager), rymlig utomhuslagring på hårdgjorda ytor, eller vill hyra ett enskilt och säkert förråd för self-storage, har vi den perfekta lösningen för er i våra välbevakade och strategiskt belägna lokaler i Motala, Östergötland. Våra lagerlokaler är utrustade med moderna säkerhetssystem för att skydda era tillgångar.
         </p>
-        <p>
-          Genom att ha ett konto kan du enkelt administrera dina bokade tjänster, granska dina offertförfrågningar och hålla kontakten med vår kundtjänst. Vi fokuserar på flexibilitet och säkerhet för att dina varor ska hanteras på bästa möjliga sätt. Kontakta oss gärna om du har frågor om våra lagringslösningar eller logistiklösningar.
+        <p className="mb-4 text-justify sm:text-center">
+          Genom att logga in på ert användarkonto på vår hemsida kan ni enkelt administrera era bokade lagerplatser, granska pågående offertförfrågningar för era logistikbehov, uppdatera företagets kontaktuppgifter och hålla direktkontakt med vår kundservice. Vi fokuserar ständigt på högsta möjliga säkerhet, flexibla avtalsvillkor och ett personligt bemötande för att garantera att ert gods hanteras på absolut bästa sätt från mottagning till distribution.
         </p>
+        <p className="mb-6 text-justify sm:text-center">
+          Har ni glömt era inloggningsuppgifter eller har frågor om hur vår inloggningsportal fungerar? Vill ni veta mer om hur vi kan hjälpa er med tredjepartslogistik (3PL), containerlossning, orderplock eller andra kringtjänster? Tveka inte att höra av er till oss på Pallhotellet. Vi hjälper er gärna att optimera ert lagerflöde, sänka era fasta kostnader och effektivisera hela logistikkedjan. Följ oss gärna på våra sociala kanaler för att hålla er uppdaterade om nyheter och erbjudanden.
+        </p>
+        <div className="flex justify-center space-x-6 text-sm font-semibold border-t pt-4">
+          <Link href="https://www.facebook.com/share/1AW57zVRFg/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">Facebook</Link>
+          <Link href="https://instagram.com/pallhotellet" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">Instagram</Link>
+          <Link href="https://linkedin.com/company/pallhotellet" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">LinkedIn</Link>
+        </div>
       </div>
       </div>
   );
