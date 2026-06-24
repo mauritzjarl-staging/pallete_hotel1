@@ -51,7 +51,7 @@ export default function HomePage() {
           Vi tar hand om ut-och inlastning av ditt gods i Motala
         </p>
       </div>
-      <Link href="/tjanster#cargo">
+      <Link href="/tjanster/godshantering">
       <button
          className="hover:bg-white bg-primary flex items-center hover:border-primary
          hover:text-primary text-white border-4 border-primary text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
@@ -76,7 +76,7 @@ export default function HomePage() {
           Vi tar hand om hela flödet åt er
         </p>
       </div>
-      <Link href="/tjanster#other">
+      <Link href="/tjanster/ovrigt">
       <button
          className="hover:bg-white bg-primary flex items-center hover:border-primary
          hover:text-primary text-white border-4 border-primary text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
