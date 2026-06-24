@@ -2,9 +2,13 @@ export default function robots() {
   return {
     rules: [
       {
-        userAgent: '*',
+        userAgent: 'Googlebot',
         allow: ['/'],
-        disallow: ['/api/'],
+        disallow: ['/private/'],
+      },
+      {
+        userAgent: ['Applebot', 'Bingbot'],
+        disallow: ['/'],
       },
     ],
     sitemap: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/sitemap.xml`,

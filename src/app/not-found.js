@@ -1,16 +1,15 @@
 import Link from 'next/link';
 import { IoArrowBack } from 'react-icons/io5'; 
 
-
 export default function NotFoundPage() {
   return (
     <div className="h-screen bg-[#182a2f] text-white flex flex-col justify-center items-center">
       {/* Heading and Error Message */}
       <div className="text-center space-y-4">
         <h1 className="text-7xl font-bold tracking-wide animate-pulse">404</h1>
-        <p className="text-2xl md:text-3xl">Sidan hittades inte</p>
+        <p className="text-2xl md:text-3xl">Oops! Page Not Found</p>
         <p className="text-lg md:text-xl text-gray-300">
-          Sidan du letar efter finns inte eller har flyttats.
+          The page you're looking for doesn't exist or has been moved.
         </p>
       </div>
 
@@ -20,7 +19,7 @@ export default function NotFoundPage() {
         bg-[#ff6300] transition-all duration-100 ease-in-out"
         >
           <IoArrowBack className="text-lg" />
-          <span>Tillbaka till startsidan</span>
+          <span>Back to Home</span>
       </Link>
 
       {/* Decorative Animation */}
