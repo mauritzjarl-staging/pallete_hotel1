@@ -147,7 +147,7 @@ export default function Header() {
           <div className="md:w-4/12 lg:h-auto">
             <Link className="w-full" href="/">
               <img
-                src="/imgs/Pallhotellet.se.png"
+                src="/imgs/Pallhotellet.se.webp"
                 alt="Pallhotellet.se"
                 width={200}
                 height={250}

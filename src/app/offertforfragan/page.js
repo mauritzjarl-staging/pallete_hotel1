@@ -179,14 +179,14 @@ const QuoteForm = () => {
       <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.webp')] md:py-56 pt-32 pb-20">
         <div className="mx-auto flex justify-center items-center h-full">
           <h1 className="text-white text-3xl md:text-5xl font-bold">
-            Offertförfrågan
+            Offertförfrågan - Tjänster som önskas
           </h1>
         </div>
       </section>
 
       <section className="py-12 px-4 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
         <div className="w-full lg:w-4/12 px-8">
-          <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
+          <h2 className="text-lg font-semibold mb-4">Pallhotellet</h2>
           <div className="space-y-4 text-lg">
             <div className="flex items-center">
               <Link
@@ -215,77 +215,101 @@ const QuoteForm = () => {
           </div>
         </div>
         <div className="w-full lg:w-10/12 px-8">
-          <h2 className="text-3xl font-bold mb-8">Offertförfrågan</h2>
+          <h2 className="text-3xl font-bold mb-8">Offertförfrågan för tjänster som önskas hos Pallhotellet</h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             {/* 1. Företagsuppgifter */}
             <div>
               <h2 className="text-2xl font-bold mb-6">1. Företagsuppgifter</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
-                  required
-                  type="text"
-                  name="name"
-                  value={formState.name}
-                  onChange={(e) =>
-                    handleInputChange("name", null, e.target.value)
-                  }
-                  placeholder="Namn *"
-                  className="focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
-                />
-                <input
-                  required
-                  type="text"
-                  name="aftername"
-                  value={formState.aftername}
-                  onChange={(e) =>
-                    handleInputChange("aftername", null, e.target.value)
-                  }
-                  placeholder="Efternamn *"
-                  className="focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
-                />
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  value={formState.email}
-                  onChange={(e) =>
-                    handleInputChange("email", null, e.target.value)
-                  }
-                  placeholder="Email *"
-                  className="focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
-                />
-                <input
-                  required
-                  name="telephone"
-                  value={formState.telephone}
-                  onChange={(e) =>
-                    handleInputChange("telephone", null, e.target.value)
-                  }
-                  placeholder="Telefon *"
-                  className="p-3 border border-gray-300 rounded-md focus:outline-orange-500"
-                />
-                <input
-                  required
-                  type="text"
-                  name="foretag"
-                  value={formState.foretag}
-                  onChange={(e) =>
-                    handleInputChange("foretag", null, e.target.value)
-                  }
-                  placeholder="Företag *"
-                  className="focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
-                />
-                <input
-                  required
-                  type="text"
-                  name="orgnr"
-                  value={formState.orgnr}
-                  onChange={(e) =>
-                    handleInputChange("orgnr", null, e.target.value)
-                  }
-                  placeholder="OrgNr *"
-                  className="focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
-                />
+                <div>
+                  <label htmlFor="name" className="sr-only">Namn</label>
+                  <input
+                    required
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={formState.name}
+                    onChange={(e) =>
+                      handleInputChange("name", null, e.target.value)
+                    }
+                    placeholder="Namn *"
+                    className="w-full focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="aftername" className="sr-only">Efternamn</label>
+                  <input
+                    required
+                    type="text"
+                    name="aftername"
+                    id="aftername"
+                    value={formState.aftername}
+                    onChange={(e) =>
+                      handleInputChange("aftername", null, e.target.value)
+                    }
+                    placeholder="Efternamn *"
+                    className="w-full focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="sr-only">Email</label>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={formState.email}
+                    onChange={(e) =>
+                      handleInputChange("email", null, e.target.value)
+                    }
+                    placeholder="Email *"
+                    className="w-full focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="telephone" className="sr-only">Telefon</label>
+                  <input
+                    required
+                    name="telephone"
+                    id="telephone"
+                    value={formState.telephone}
+                    onChange={(e) =>
+                      handleInputChange("telephone", null, e.target.value)
+                    }
+                    placeholder="Telefon *"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-orange-500"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="foretag" className="sr-only">Företag</label>
+                  <input
+                    required
+                    type="text"
+                    name="foretag"
+                    id="foretag"
+                    value={formState.foretag}
+                    onChange={(e) =>
+                      handleInputChange("foretag", null, e.target.value)
+                    }
+                    placeholder="Företag *"
+                    className="w-full focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="orgnr" className="sr-only">OrgNr</label>
+                  <input
+                    required
+                    type="text"
+                    name="orgnr"
+                    id="orgnr"
+                    value={formState.orgnr}
+                    onChange={(e) =>
+                      handleInputChange("orgnr", null, e.target.value)
+                    }
+                    placeholder="OrgNr *"
+                    className="w-full focus:outline-orange-500 p-3 border border-gray-300 rounded-md"
+                  />
+                </div>
               </div>
               <div className="border-t-2 border-[#A0ABBB] my-6"></div>
             </div>
@@ -723,7 +747,7 @@ const QuoteForm = () => {
                 </div>
                 <div className="w-10/12">
                   <label htmlFor="gaffeltruck">
-                    Lossning/lastning lastbil med gaffeltruck önskas
+                    Lossning/lastning lastbil med gaffeltruck
                   </label>
                 </div>
               </div>
@@ -745,7 +769,7 @@ const QuoteForm = () => {
                 </div>
                 <div className="w-10/12">
                   <label htmlFor="container">
-                    Lossning/lastning av container önskas
+                    Lossning/lastning av container
                   </label>
                 </div>
               </div>
@@ -764,7 +788,7 @@ const QuoteForm = () => {
                 </div>
                 <div className="w-10/12">
                   <label htmlFor="ompackning">
-                    Ompackning och plock önskas
+                    Ompackning och plock
                   </label>
                 </div>
               </div>
@@ -837,7 +861,7 @@ const QuoteForm = () => {
                   />
                 </div>
                 <div className="w-10/12">
-                  <label htmlFor="handtruck">Handtruck önskas</label>
+                  <label htmlFor="handtruck">Handtruck</label>
                 </div>
               </div>
 
@@ -854,7 +878,7 @@ const QuoteForm = () => {
                   />
                 </div>
                 <div className="w-10/12">
-                  <label htmlFor="gaffeltruck2">Gaffeltruck önskas</label>
+                  <label htmlFor="gaffeltruck2">Gaffeltruck</label>
                 </div>
               </div>
 
@@ -871,7 +895,7 @@ const QuoteForm = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="travers">Travers önskas (max 7ton)</label>
+                  <label htmlFor="travers">Travers (max 7ton)</label>
                 </div>
               </div>
             </div>
@@ -904,7 +928,7 @@ const QuoteForm = () => {
                       />
                     </div>
                     <div className="w-10/12">
-                      Hjälp med dokumentation önskas
+                      Hjälp med dokumentation
                     </div>
                   </label>
                 </div>
@@ -928,7 +952,7 @@ const QuoteForm = () => {
                       />
                     </div>
                     <div className="w-10/12">
-                      Hjälp med orderhantering önskas
+                      Hjälp med orderhantering
                     </div>
                   </label>
                 </div>
@@ -1007,6 +1031,16 @@ const QuoteForm = () => {
               </div>
             </div>
           </form>
+
+          <div className="border-t pt-8 mt-12 space-y-6 text-[#626262]">
+            <h2 className="text-xl font-bold text-black">Hur går en offertförfrågan till hos Pallhotellet?</h2>
+            <p>
+              Vi på Pallhotellet strävar efter att göra logistik- och lagerprocessen så transparent och smidig som möjligt för alla våra kunder. När ni fyller i vårt detaljerade offertformulär har ni möjlighet att ange precis vilka volymer och specifika tjänster som önskas för er verksamhet i Motala. Detta inkluderar allt från kallager och tempererat varmlager till containerlossning, omlastning och kompletta 3PL-lösningar.
+            </p>
+            <p>
+              Efter att ni har skickat in er offertförfrågan gör vi en noggrann analys av era behov. Vårt mål är att erbjuda en skräddarsydd helhetslösning där ni endast betalar för den yta och de logistiktjänster som önskas och faktiskt används. Vi återkopplar snabbt med ett tydligt prisförslag, oftast inom en arbetsdag. Har ni frågor inför er förfrågan är ni alltid välkomna att kontakta oss direkt på telefon eller e-post.
+            </p>
+          </div>
         </div>
       </section>
     </>

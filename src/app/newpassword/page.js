@@ -34,7 +34,7 @@ export default function NewPassword() {
           <SlArrowLeftCircle className="h-8 w-auto" />
         </button>
         <img
-          src="/imgs/Pallhotellet.seTransparent.png"
+          src="/imgs/Pallhotellet.seTransparent.webp"
           alt="Pallhotellet Logo"
           className="h-8 w-auto"
         />

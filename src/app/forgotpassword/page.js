@@ -32,7 +32,7 @@ export default function forgotpassword() {
             
             <div className="flex px-6 justify-center  items-center">
               <img
-                src="/imgs/Pallhotellet.seTransparent.png"
+                src="/imgs/Pallhotellet.seTransparent.webp"
                 alt="Pallhotellet Logo"
                 className="h-8 w-auto"  
                 height={500}  

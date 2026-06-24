@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Offertförfrågan | Pallhotellet',
-  description: 'Fyll i vårt offertformulär för att få ett prisförslag på lagerhållning, förråd eller godshantering i Motala.',
+  title: 'Offertförfrågan - Logistiktjänster som önskas | Pallhotellet',
+  description: 'Fyll i vårt offertformulär för att specificera vilka logistiktjänster som önskas hos Pallhotellet i Motala och få ett anpassat prisförslag.',
   robots: {
     index: true,
     follow: true,

@@ -14,7 +14,7 @@ export default function LoggaIn() {
       {/* Wrapper for the logo */}
       <div className="my-6">
         <img
-          src="/imgs/Pallhotellet.seTransparent.png"
+          src="/imgs/Pallhotellet.seTransparent.webp"
           alt="Pallhotellet Logo"
           className="h-8 w-auto"
         />

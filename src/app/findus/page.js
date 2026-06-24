@@ -33,7 +33,7 @@ export default function Findus() {
   return (
     <>
       {/* Hero Section */}
-      <section className="flex items-center justify-center bg-center bg-cover bg-[url('/imgs/kontaktus.png')] h-[30rem]">
+      <section className="flex items-center justify-center bg-center bg-cover bg-[url('/imgs/contactus.webp')] h-[30rem]">
         <div className=" mx-auto flex justify-center items-center">
           <h1 className="text-white text-5xl font-bold">Hitta oss</h1>
         </div>

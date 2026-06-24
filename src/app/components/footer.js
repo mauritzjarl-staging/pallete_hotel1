@@ -23,7 +23,7 @@ export default function Footer() {
               width={200}
               height={250}
               className="mb-5"
-              src="/imgs/Pallhotellet.se.png"
+              src="/imgs/Pallhotellet.se.webp"
               alt="logo"
             />
             <p className="text-sm md:w-9/12 hover:text-white md:mt-10">
