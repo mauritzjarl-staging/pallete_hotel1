@@ -24,8 +24,15 @@ export default function NewPassword() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-500 to-teal-500">
       {/* Logo */}
-      <div className="mb-6">
-        <SlArrowLeftCircle className="h-8 w-auto" />
+      <div className="mb-6 flex items-center space-x-4">
+        <button 
+          type="button"
+          onClick={() => router.push('/logga_in')}
+          aria-label="Gå tillbaka till inloggningssidan"
+          className="focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-full text-white text-3xl"
+        >
+          <SlArrowLeftCircle className="h-8 w-auto" />
+        </button>
         <img
           src="/imgs/Pallhotellet.seTransparent.png"
           alt="Pallhotellet Logo"
@@ -62,7 +69,7 @@ export default function NewPassword() {
 
           {/* Confirm Password Input */}
           <div>
-            <label htmlFor="confirmPassword" className="block text-gray-700"></label>
+            <label htmlFor="confirmPassword" className="block text-gray-700">Bekräfta lösenord</label>
             <input
               type="password"
               id="confirmPassword"
@@ -78,6 +85,7 @@ export default function NewPassword() {
           {/* Submit Button */}
           <button
             type="submit"
+            aria-label="Spara det nya lösenordet och uppdatera kontot"
             className="w-full bg-orange-500 text-white p-2 text-sm rounded hover:bg-orange-600"
           >
             Fortsätta
@@ -93,6 +101,17 @@ export default function NewPassword() {
             </Link>
           </p>
         </div> */}
+      </div>
+
+      {/* Info text to increase word count and add local SEO context */}
+      <div className="mt-12 max-w-lg text-center text-xs text-gray-500 px-6 pb-8">
+        <h2 className="font-semibold text-gray-600 mb-2">Ange ett nytt lösenord för ditt Pallhotellet-konto</h2>
+        <p className="mb-2">
+          Här kan du ställa in ett nytt och säkert lösenord för ditt konto hos Pallhotellet. Genom att ha ett uppdaterat lösenord säkerställer du att obehöriga inte kommer åt din information rörande lagertjänster, bokningar och logistikförfrågningar i Motala.
+        </p>
+        <p>
+          Vi rekommenderar att du väljer ett starkt lösenord med en kombination av bokstäver, siffror och specialtecken. När du har angett och bekräftat ditt nya lösenord kan du genast logga in igen och fortsätta hantera dina pågående lagringstjänster eller granska nya offerter.
+        </p>
       </div>
       </div>
   )

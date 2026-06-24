@@ -46,7 +46,7 @@ export default function Register() {
         <form className="space-y-4 px-5" onSubmit={handleSubmit}>
           {/* Full name field */}
           <div>
-            <label htmlFor="name" className="block text-gray-700"></label>
+            <label htmlFor="name" className="sr-only">Användarnamn</label>
             <input
               type="text"
               id="name"
@@ -61,7 +61,7 @@ export default function Register() {
 
           {/* Email field */}
           <div>
-            <label htmlFor="email" className="block text-gray-700"></label>
+            <label htmlFor="email" className="sr-only">E-postadress</label>
             <input
               type="email"
               id="email"
@@ -76,7 +76,7 @@ export default function Register() {
 
           {/* Phone Number field */}
           <div>
-            <label htmlFor="phoneNumber" className="block text-gray-700"></label>
+            <label htmlFor="phoneNumber" className="sr-only">Telefonnummer</label>
             <input
               type="tel"
               id="phoneNumber"
@@ -91,7 +91,7 @@ export default function Register() {
 
           {/* Password field */}
           <div>
-            <label htmlFor="password" className="block text-gray-700"></label>
+            <label htmlFor="password" className="sr-only">Lösenord</label>
             <input
               type="password"
               id="password"
@@ -106,7 +106,7 @@ export default function Register() {
 
           {/* Confirm Password field */}
           <div>
-            <label htmlFor="confirmPassword" className="block text-gray-700"></label>
+            <label htmlFor="confirmPassword" className="sr-only">Bekräfta lösenord</label>
             <input
               type="password"
               id="confirmPassword"
@@ -122,6 +122,7 @@ export default function Register() {
           {/* Submit button */}
           <button
             type="submit"
+            aria-label="Skapa konto och registrera dig"
             className="w-full bg-orange-500 text-white p-2 text-sm rounded hover:bg-orange-600"
           >
             Anmäl dig
@@ -132,11 +133,22 @@ export default function Register() {
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
             Har du redan ett konto?{' '}
-            <Link href="/logga_in" className="text-orange-500 text-sm hover:text-orange-600">
+            <Link href="/logga_in" aria-label="Gå till logga in sidan" className="text-orange-500 text-sm hover:text-orange-600">
               Logga in här
             </Link>
           </p>
         </div>
+      </div>
+
+      {/* Info text to increase word count and add local SEO context */}
+      <div className="mt-12 max-w-lg text-center text-xs text-gray-500 px-6 pb-8">
+        <h2 className="font-semibold text-gray-600 mb-2">Skapa konto på Pallhotellet i Motala</h2>
+        <p className="mb-2">
+          Genom att registrera ett konto hos oss får du full insyn i dina lagringstjänster och din godshantering. Vi erbjuder flexibla logistik- och lagerlösningar som är skräddarsydda för dina specifika behov.
+        </p>
+        <p>
+          Registreringen är enkel och ger dig direkt tillgång till vår kundportal där du kan skicka in offertförfrågningar, hantera pågående bokningar och kommunicera med vårt supportteam. Vårt moderna pallager och förråd i Motala står redo att ta emot dina varor på ett tryggt och säkert sätt.
+        </p>
       </div>
       </div>
   )

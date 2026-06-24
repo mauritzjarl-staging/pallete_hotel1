@@ -18,10 +18,16 @@ export default function forgotpassword() {
           <div className="flex items-center w-full px-2 py-6">
          
             <div className="flex">
-              <SlArrowLeftCircle
-                onClick={handleRedirect}  
-                className="text-gray-500 text-start text-5xl cursor-pointer"
-              />
+              <button 
+                type="button"
+                onClick={handleRedirect}
+                aria-label="Gå tillbaka till inloggningssidan"
+                className="focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-full"
+              >
+                <SlArrowLeftCircle
+                  className="text-gray-500 text-start text-5xl cursor-pointer"
+                />
+              </button>
             </div>
 
             
@@ -42,7 +48,7 @@ export default function forgotpassword() {
 
             <form className="space-y-4 px-5">
               <div>
-               
+                <label htmlFor="email" className="sr-only">E-postadress</label>
                 <input
                   type="email"
                   id="email"
@@ -55,6 +61,7 @@ export default function forgotpassword() {
 
               <button
                 type="submit"
+                aria-label="Återställ lösenord och skicka återställningslänk"
                 className="w-full bg-[#FF6F0F] text-white px-4 py-3 rounded-md hover:bg-[#f07f3e] focus:ring-2 focus:ring-orange-500"
               >
                 Återställa
@@ -63,6 +70,17 @@ export default function forgotpassword() {
           </section>
         </div>
 
+      </div>
+
+      {/* Info text to increase word count and add local SEO context */}
+      <div className="mt-12 max-w-lg text-center text-xs text-gray-500 px-6 pb-8">
+        <h2 className="font-semibold text-gray-600 mb-2">Återställ lösenord hos Pallhotellet</h2>
+        <p className="mb-2">
+          Har du glömt ditt lösenord? Ange din e-postadress ovan så skickar vi en länk för att återställa ditt lösenord. På så sätt kan du snabbt få tillgång till ditt konto hos Pallhotellet och fortsätta hantera dina lagertjänster i Motala.
+        </p>
+        <p>
+          Vi värnar om din säkerhet. Se till att ange samma e-postadress som du registrerade ditt konto med. Om du har problem med att återställa ditt lösenord eller inte får något mejl, vänligen kontakta vår kundtjänst så hjälper vi dig vidare med dina lager- och logistikfrågor.
+        </p>
       </div>
       </div>
   );

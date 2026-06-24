@@ -2,6 +2,10 @@ export async function generateMetadata() {
     return {
       title: 'Omfattande 3PL, dokumentation & distributionstjänster i Motala Sverige | Pallhotellet',
       description: 'Pallhotellet erbjuder 3PL-lösningar, dokumentation och distributionstjänster. Effektivisera ditt lagerflöde med flexibel lagring och pålitlig logistik.',
+      robots: {
+        index: true,
+        follow: true,
+      },
       alternates: {
         canonical: 'https://pallhotellet.se/tjanster/ovrigt',
         languages: {

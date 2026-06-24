@@ -22,6 +22,10 @@ export async function generateMetadata() {
   return {
     title:title,
     description: 'Vi har det du behöver. Vi tar hand om din lagring och godshantering med sakkunnig personal i Motala. Kontakta oss för att få hjälp. Upptäck mer!',
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: canonicalUrl,
       languages: {

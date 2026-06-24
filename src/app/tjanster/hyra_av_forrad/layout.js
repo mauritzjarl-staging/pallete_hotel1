@@ -2,6 +2,10 @@ export async function generateMetadata() {
     return {
       title: 'Flexibel lageruthyrning i Motala Sverige - Anpassningsbara enheter | Pallhotellet',
       description: 'Hyr individuella förråd från 4m² och uppåt. Pallhotellet erbjuder flexibla förvaringslösningar skräddarsydda efter dina specifika behov. Kontakta oss idag.',
+      robots: {
+        index: true,
+        follow: true,
+      },
       alternates: {
         canonical: 'https://pallhotellet.se/tjanster/hyra_av_forrad',
         languages: {

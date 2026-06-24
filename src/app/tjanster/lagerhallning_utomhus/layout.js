@@ -2,6 +2,10 @@ export async function generateMetadata() {
     return {
       title: 'Expansiv utomhusförråd i Motala Sverige - 100 000 m² Tillgänglig | Pallhotellet',
       description: 'Behöver du plats för skrymmande varor? Pallhotellet erbjuder 100 000 m² utomhuslager i Motala, perfekt för stora föremål. Kontakta oss för mer info.',
+      robots: {
+        index: true,
+        follow: true,
+      },
       alternates: {
         canonical: 'https://pallhotellet.se/tjanster/lagerhallning_utomhus',
         languages: {

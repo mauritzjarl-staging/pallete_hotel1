@@ -12,6 +12,18 @@ export const metadata = {
   metadataBase: new URL('https://pallhotellet.se'),
   title: 'Pallhotellet - Lager- och logistiklösningar',
   description: 'Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket mer i Motala.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://pallhotellet.se',
+    languages: {
+      'sv-SE': 'https://pallhotellet.se',
+      'sv': 'https://pallhotellet.com',
+      'x-default': 'https://pallhotellet.com',
+    },
+  },
   openGraph: {
     title: 'Pallhotellet - Lager- och logistiklösningar',
     description: 'Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket mer i Motala.',

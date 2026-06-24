@@ -13,12 +13,26 @@ const MapComponent = dynamic(() => import("../components/MapComponent"), {
   ssr: false,
 });
 
+export const metadata = {
+  title: 'Hitta oss | Pallhotellet.se',
+  description: 'Här hittar du adress, karta och kontaktuppgifter till Pallhotellets lagerlokaler i Motala.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://pallhotellet.se/findus',
+    languages: {
+      'sv-SE': 'https://pallhotellet.se/findus',
+      'sv': 'https://pallhotellet.com/findus',
+      'x-default': 'https://pallhotellet.com/findus',
+    },
+  },
+};
+
 export default function Findus() {
   return (
     <>
-      <title>Hitta oss | Pallhotellet.se</title>
-      <meta name="description" content="Här hittar du adress, karta och kontaktuppgifter till Pallhotellets lagerlokaler i Motala." />
-      <link rel="canonical" href="https://pallhotellet.se/findus" />
       {/* Hero Section */}
       <section className="flex items-center justify-center bg-center bg-cover bg-[url('/imgs/kontaktus.png')] h-[30rem]">
         <div className=" mx-auto flex justify-center items-center">

@@ -182,6 +182,7 @@ const kontaktPage = () => {
           >
             {/* First Name */}
             <div className="flex flex-col">
+              <label htmlFor="first-name" className="sr-only">Förnamn</label>
               <input
                 id="first-name"
                 type="text"
@@ -193,6 +194,7 @@ const kontaktPage = () => {
 
             {/* Last Name */}
             <div className="flex flex-col">
+              <label htmlFor="last-name" className="sr-only">Efternamn</label>
               <input
                 id="last-name"
                 type="text"
@@ -204,6 +206,7 @@ const kontaktPage = () => {
 
             {/* Email */}
             <div className="flex flex-col">
+              <label htmlFor="email" className="sr-only">Email</label>
               <input
                 id="email"
                 type="email"
@@ -215,6 +218,7 @@ const kontaktPage = () => {
 
             {/* Phone Number */}
             <div className="flex flex-col">
+              <label htmlFor="phone" className="sr-only">Telefonnummer</label>
               <input
                 id="phone"
                 type="text"
@@ -226,6 +230,7 @@ const kontaktPage = () => {
 
             {/* Company */}
             <div className="flex flex-col sm:col-span-1">
+              <label htmlFor="company" className="sr-only">Företag</label>
               <input
                 id="company"
                 type="text"
@@ -236,6 +241,7 @@ const kontaktPage = () => {
 
             {/* OrgNr */}
             <div className="flex flex-col sm:col-span-1">
+              <label htmlFor="orgnr" className="sr-only">OrgNr</label>
               <input
                 id="orgnr"
                 type="text"
@@ -246,6 +252,7 @@ const kontaktPage = () => {
 
             {/* Message */}
             <div className="flex flex-col sm:col-span-2">
+              <label htmlFor="message" className="sr-only">Meddelande</label>
               <textarea
                 id="message"
                 rows={4}

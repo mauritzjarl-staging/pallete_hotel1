@@ -2,6 +2,10 @@ export async function generateMetadata() {
     return {
       title: 'Expert Godshantering i Motala Sverige - Lastning, lossning & orderhantering | Pallhotellet',
       description: 'Pallhotellet erbjuder heltäckande godshanteringstjänster med orderhantering, lastning/lossning och ankomstkontroll. Få en skräddarsydd logistiklösning.',
+      robots: {
+        index: true,
+        follow: true,
+      },
       alternates: {
         canonical: 'https://pallhotellet.se/tjanster/godshantering',
         languages: {
