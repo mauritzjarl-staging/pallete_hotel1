@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Logga in | Pallhotellet',
   description: 'Logga in på ditt konto hos Pallhotellet för att hantera dina lagertjänster.',
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
   alternates: {

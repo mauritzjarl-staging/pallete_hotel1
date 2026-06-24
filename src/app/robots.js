@@ -4,7 +4,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: ['/'],
-        disallow: ['/api/', '/logga_in', '/register', '/forgotpassword', '/newpassword'],
+        disallow: ['/api/'],
       },
     ],
     sitemap: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/sitemap.xml`,

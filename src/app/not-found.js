@@ -1,14 +1,6 @@
 import Link from 'next/link';
 import { IoArrowBack } from 'react-icons/io5'; 
 
-export const metadata = {
-  title: 'Sidan hittades inte | Pallhotellet',
-  description: 'Sidan du söker finns inte. Gå tillbaka till startsidan för att hitta det du letar efter hos Pallhotellet.',
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
 
 export default function NotFoundPage() {
   return (

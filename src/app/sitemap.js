@@ -21,12 +21,7 @@ export default async function sitemap() {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/findus`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
+
     {
       url: `${baseUrl}/tjanster/godshantering`,
       lastModified: new Date(),
