@@ -136,19 +136,19 @@ export default function HomePage() {
       title: "Lagring",
       subtitle: "Lager som passar allas behov",
       text: "Totalt har vi plats för 13.700 pall inne i våra lager",
-      image: "/imgs/Rectangle12.png"
+      image: "/imgs/Rectangle12.webp"
     },
     {
       title: "Godshantering",
       subtitle: "Vi tar hand om dina varor",
       text: "Vi ombesörjer lagerhållning och hjälper till med annat.",
-      image: "/imgs/Rectangle13.png"
+      image: "/imgs/Rectangle13.webp"
     },
     {
       title: "Dokumentation",
       subtitle: "Vi ordnar det mesta",
       text: "Du som kund behöver bara ringa ett nummer.",
-      image: "/imgs/Rectangle14.png"
+      image: "/imgs/Rectangle14.webp"
     }
   ];
 
@@ -310,7 +310,7 @@ export default function HomePage() {
         <div className="my-10 md:my-0 md:flex justify-end md:px-5 md:w-6/12 w-full">
           <div className="relative">
             <img
-              src="/imgs/Rectangle4.png"
+              src="/imgs/Rectangle4.webp"
               width={500}
               height={200}
               alt="Background Image"
@@ -360,7 +360,7 @@ export default function HomePage() {
                 <img
                   width={350}
                   height={200}
-                  src="/imgs/Rectangle12.png"
+                  src="/imgs/Rectangle12.webp"
                   alt="Grey box"
                 />
               </div>
@@ -410,7 +410,7 @@ export default function HomePage() {
                     <img
                       width={350}
                       height={200}
-                      src="/imgs/Rectangle14.png"
+                      src="/imgs/Rectangle14.webp"
                       alt="Grey box"
                     />
                   </div>
@@ -432,7 +432,7 @@ export default function HomePage() {
               <img
                 width={350}
                 height={200}
-                src="/imgs/Rectangle13.png"
+                src="/imgs/Rectangle13.webp"
                 alt="Grey box"
               />
               <div className="absolute top-0">

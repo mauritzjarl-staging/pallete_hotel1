@@ -31,7 +31,7 @@ export const metadata = {
     siteName: 'Pallhotellet',
     images: [
       {
-        url: '/imgs/Rectangle4.png',
+        url: '/imgs/Rectangle4.webp',
         width: 800,
         height: 600,
         alt: 'Pallhotellet',
@@ -44,7 +44,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Pallhotellet - Lager- och logistiklösningar',
     description: 'Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket mer i Motala.',
-    images: ['/imgs/Rectangle4.png'],
+    images: ['/imgs/Rectangle4.webp'],
   },
 };
 
@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'Pallhotellet',
-    'image': 'https://pallhotellet.se/imgs/Rectangle4.png',
+    'image': 'https://pallhotellet.se/imgs/Rectangle4.webp',
     '@id': `${canonicalUrl}#organization`,
     'url': canonicalUrl,
     'telephone': '0141-21 50 44',

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import React from "react";
 // import MapComponent from "../components/MapComponent";
@@ -76,12 +75,13 @@ export default function Findus() {
         <div className="mx-auto sm:w-[70%] flex flex-col md:flex-row items-center">
           {/* Image */}
           <div className="w-full md:w-1/2">
-            <Image
+            <img
               width={800}
               height={200}
-              src={"/imgs/Rectangle45.png"}
-              alt={"asdf"}
-            ></Image>
+              src="/imgs/Rectangle45.webp"
+              alt="Expert solutions"
+              className="w-full h-auto"
+            />
           </div>
           {/* Text */}
           <div className="w-full text-center md:text-start  md:w-1/2 mt-8 md:mt-0 md:pl-12">
@@ -97,7 +97,7 @@ export default function Findus() {
         </div>
       </section>
 
-      <section className="bg-cover h-auto relative bg-[url('/imgs/Rectangle38.png')] ">
+      <section className="bg-cover h-auto relative bg-[url('/imgs/Rectangle38.webp')] ">
         <div className="absolute inset-0 bg-[#083740d8] "></div>
         <div className="relative z-10 container mx-auto text-center text-white py-16">
           <h2 className="text-4xl font-bold mb-4">

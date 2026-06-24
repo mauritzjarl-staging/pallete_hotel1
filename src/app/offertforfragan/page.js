@@ -164,10 +164,6 @@ const QuoteForm = () => {
   return (
     <>
 
-      <title>Offertförfrågan | Pallhotellet.se</title>
-      <meta name="description" content="Skicka en offertförfrågan för lagring och godshantering hos Pallhotellet. Snabb återkoppling!" />
-      <link rel="canonical" href="https://pallhotellet.se/offertforfragan" />
-
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -180,7 +176,7 @@ const QuoteForm = () => {
         pauseOnHover
       />
 
-      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] md:py-56 pt-32 pb-20">
+      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.webp')] md:py-56 pt-32 pb-20">
         <div className="mx-auto flex justify-center items-center h-full">
           <h1 className="text-white text-3xl md:text-5xl font-bold">
             Offertförfrågan

@@ -1,7 +1,7 @@
 export async function generateMetadata() {
     return {
-      title: 'Flexibel lageruthyrning i Motala Sverige - Anpassningsbara enheter | Pallhotellet',
-      description: 'Hyr individuella förråd från 4m² och uppåt. Pallhotellet erbjuder flexibla förvaringslösningar skräddarsydda efter dina specifika behov. Kontakta oss idag.',
+      title: 'Hyra av förråd i Motala Sverige - Flexibelt self-storage | Pallhotellet',
+      description: 'Hitta billigt och säkert att hyra av förråd i Motala hos Pallhotellet. Vi erbjuder flexibla förrådsenheter från 4 m² för privatpersoner och företag.',
       robots: {
         index: true,
         follow: true,
@@ -15,8 +15,8 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Flexibel lageruthyrning i Motala Sverige - Anpassningsbara enheter | Pallhotellet',
-        description: 'Hyr individuella förråd från 4m² och uppåt. Pallhotellet erbjuder flexibla förvaringslösningar skräddarsydda efter dina specifika behov. Kontakta oss idag.',
+        title: 'Hyra av förråd i Motala Sverige - Flexibelt self-storage | Pallhotellet',
+        description: 'Hitta billigt och säkert att hyra av förråd i Motala hos Pallhotellet. Vi erbjuder flexibla förrådsenheter från 4 m² för privatpersoner och företag.',
         url: 'https://pallhotellet.se/tjanster/hyra_av_forrad',
         siteName: 'Pallhotellet',
         locale: 'sv_SE',
@@ -24,8 +24,8 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Flexibel lageruthyrning i Motala Sverige - Anpassningsbara enheter | Pallhotellet',
-        description: 'Hyr individuella förråd från 4m² och uppåt. Pallhotellet erbjuder flexibla förvaringslösningar skräddarsydda efter dina specifika behov. Kontakta oss idag.',
+        title: 'Hyra av förråd i Motala Sverige - Flexibelt self-storage | Pallhotellet',
+        description: 'Hitta billigt och säkert att hyra av förråd i Motala hos Pallhotellet. Vi erbjuder flexibla förrådsenheter från 4 m² för privatpersoner och företag.',
       },
     };
   }

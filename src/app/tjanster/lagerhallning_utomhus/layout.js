@@ -1,7 +1,7 @@
 export async function generateMetadata() {
     return {
-      title: 'Expansiv utomhusförråd i Motala Sverige - 100 000 m² Tillgänglig | Pallhotellet',
-      description: 'Behöver du plats för skrymmande varor? Pallhotellet erbjuder 100 000 m² utomhuslager i Motala, perfekt för stora föremål. Kontakta oss för mer info.',
+      title: 'Lagerhållning utomhus i Motala Sverige - 100 000 m² | Pallhotellet',
+      description: 'Kostnadseffektiv lagerhållning utomhus i Motala med Pallhotellet. Upptäck vårt öppna utomhuslager på 100 000 m² för skrymmande och tungt gods.',
       robots: {
         index: true,
         follow: true,
@@ -15,8 +15,8 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Expansiv utomhusförråd i Motala Sverige - 100 000 m² Tillgänglig | Pallhotellet',
-        description: 'Behöver du plats för skrymmande varor? Pallhotellet erbjuder 100 000 m² utomhuslager i Motala, perfekt för stora föremål. Kontakta oss för mer info.',
+        title: 'Lagerhållning utomhus i Motala Sverige - 100 000 m² | Pallhotellet',
+        description: 'Kostnadseffektiv lagerhållning utomhus i Motala med Pallhotellet. Upptäck vårt öppna utomhuslager på 100 000 m² för skrymmande och tungt gods.',
         url: 'https://pallhotellet.se/tjanster/lagerhallning_utomhus',
         siteName: 'Pallhotellet',
         locale: 'sv_SE',
@@ -24,8 +24,8 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Expansiv utomhusförråd i Motala Sverige - 100 000 m² Tillgänglig | Pallhotellet',
-        description: 'Behöver du plats för skrymmande varor? Pallhotellet erbjuder 100 000 m² utomhuslager i Motala, perfekt för stora föremål. Kontakta oss för mer info.',
+        title: 'Lagerhållning utomhus i Motala Sverige - 100 000 m² | Pallhotellet',
+        description: 'Kostnadseffektiv lagerhållning utomhus i Motala med Pallhotellet. Upptäck vårt öppna utomhuslager på 100 000 m² för skrymmande och tungt gods.',
       },
     };
   }

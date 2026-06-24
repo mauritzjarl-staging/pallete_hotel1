@@ -1,7 +1,7 @@
 export async function generateMetadata() {
     return {
-      title: 'Omfattande 3PL, dokumentation & distributionstjänster i Motala Sverige | Pallhotellet',
-      description: 'Pallhotellet erbjuder 3PL-lösningar, dokumentation och distributionstjänster. Effektivisera ditt lagerflöde med flexibel lagring och pålitlig logistik.',
+      title: 'Tredjepartslogistik (3PL) & distribution i Motala | Pallhotellet',
+      description: 'Professionella 3PL-lösningar, distribution och dokumentation i Motala med Pallhotellet. Vi optimerar och hanterar era lagerflöden effektivt.',
       robots: {
         index: true,
         follow: true,
@@ -15,8 +15,8 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Omfattande 3PL, dokumentation & distributionstjänster i Motala Sverige | Pallhotellet',
-        description: 'Pallhotellet erbjuder 3PL-lösningar, dokumentation och distributionstjänster. Effektivisera ditt lagerflöde med flexibel lagring och pålitlig logistik.',
+        title: 'Tredjepartslogistik (3PL) & distribution i Motala | Pallhotellet',
+        description: 'Professionella 3PL-lösningar, distribution och dokumentation i Motala med Pallhotellet. Vi optimerar och hanterar era lagerflöden effektivt.',
         url: 'https://pallhotellet.se/tjanster/ovrigt',
         siteName: 'Pallhotellet',
         locale: 'sv_SE',
@@ -24,8 +24,8 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Omfattande 3PL, dokumentation & distributionstjänster i Motala Sverige | Pallhotellet',
-        description: 'Pallhotellet erbjuder 3PL-lösningar, dokumentation och distributionstjänster. Effektivisera ditt lagerflöde med flexibel lagring och pålitlig logistik.',
+        title: 'Tredjepartslogistik (3PL) & distribution i Motala | Pallhotellet',
+        description: 'Professionella 3PL-lösningar, distribution och dokumentation i Motala med Pallhotellet. Vi optimerar och hanterar era lagerflöden effektivt.',
       },
     };
   }

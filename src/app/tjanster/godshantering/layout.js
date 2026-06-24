@@ -1,7 +1,7 @@
 export async function generateMetadata() {
     return {
-      title: 'Expert Godshantering i Motala Sverige - Lastning, lossning & orderhantering | Pallhotellet',
-      description: 'Pallhotellet erbjuder heltäckande godshanteringstjänster med orderhantering, lastning/lossning och ankomstkontroll. Få en skräddarsydd logistiklösning.',
+      title: 'Godshantering i Motala Sverige - Effektiv logistik | Pallhotellet',
+      description: 'Professionell godshantering i Motala med Pallhotellet. Vi utför lastning, lossning, orderhantering och ankomstkontroll för ett optimalt logistikflöde.',
       robots: {
         index: true,
         follow: true,
@@ -15,8 +15,8 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Expert Godshantering i Motala Sverige - Lastning, lossning & orderhantering | Pallhotellet',
-        description: 'Pallhotellet erbjuder heltäckande godshanteringstjänster med orderhantering, lastning/lossning och ankomstkontroll. Få en skräddarsydd logistiklösning.',
+        title: 'Godshantering i Motala Sverige - Effektiv logistik | Pallhotellet',
+        description: 'Professionell godshantering i Motala med Pallhotellet. Vi utför lastning, lossning, orderhantering och ankomstkontroll för ett optimalt logistikflöde.',
         url: 'https://pallhotellet.se/tjanster/godshantering',
         siteName: 'Pallhotellet',
         locale: 'sv_SE',
@@ -24,8 +24,8 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Expert Godshantering i Motala Sverige - Lastning, lossning & orderhantering | Pallhotellet',
-        description: 'Pallhotellet erbjuder heltäckande godshanteringstjänster med orderhantering, lastning/lossning och ankomstkontroll. Få en skräddarsydd logistiklösning.',
+        title: 'Godshantering i Motala Sverige - Effektiv logistik | Pallhotellet',
+        description: 'Professionell godshantering i Motala med Pallhotellet. Vi utför lastning, lossning, orderhantering och ankomstkontroll för ett optimalt logistikflöde.',
       },
     };
   }

@@ -110,9 +110,6 @@ const kontaktPage = () => {
 
   return (
     <>
-      <title>Kontakta oss | Pallhotellet.se</title>
-      <meta name="description" content="Kontakta Pallhotellet i Motala för frågor om lagerhållning, godshantering och logistiklösningar." />
-      <link rel="canonical" href="https://pallhotellet.se/kontakt" />
       <Script
         src="https://www.google.com/recaptcha/api.js"
         strategy="afterInteractive"
@@ -130,7 +127,7 @@ const kontaktPage = () => {
         pauseOnHover
       />
 
-      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.png')] md:py-56 pt-32 pb-20">
+      <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.webp')] md:py-56 pt-32 pb-20">
         <div className=" mx-auto flex justify-center items-center h-full">
           <h1 className="text-white md:text-5xl text-4xl font-bold text-center">
             Kontakta oss
@@ -170,6 +167,19 @@ const kontaktPage = () => {
                 __html: `<!--email_off--><a target="_blank" href="mailto:info@pallhotellet.se" class="flex items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" class="inline" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span class="ms-3">info@pallhotellet.se</span></a><!--/email_off-->`
               }}
             />
+          </div>
+
+          <div className="mt-8 text-sm text-gray-600 space-y-4">
+            <h4 className="font-bold text-black text-base">Hitta till oss eller ställ dina frågor</h4>
+            <p>
+              Vårt kontor och lager är strategiskt belägna på Vickerkullavägen 2 i Motala, Östergötland. Det ger oss optimala möjligheter att sköta distribution och logistik till hela södra och mellersta Sverige på ett kostnadseffektivt och miljövänligt sätt.
+            </p>
+            <p>
+              Har du specifika frågor angående hur mycket plats ditt gods tar, priser för pallagring per månad, eller hur vi kan anpassa våra 3PL-tjänster efter dina system? Tveka inte att skicka ett meddelande via kontaktformuläret. Vår kundtjänst besvarar normalt alla förfrågningar inom 24 timmar under vardagar.
+            </p>
+            <p>
+              Vare sig det gäller en mindre flyttförvaring för ett privat hushåll eller ett storskaligt industriellt buffertlager med tunga transporter och löpande distribution, står Pallhotellets personal redo att leverera service av högsta klass. Ring oss eller skicka e-post, så sätter vi ihop en offert skräddarsydd för dina behov.
+            </p>
           </div>
         </div>
 

@@ -1,6 +1,5 @@
 "use client"
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { SlArrowLeftCircle } from "react-icons/sl";
 
 export default function forgotpassword() {
@@ -32,7 +31,7 @@ export default function forgotpassword() {
 
             
             <div className="flex px-6 justify-center  items-center">
-              <Image
+              <img
                 src="/imgs/Pallhotellet.seTransparent.png"
                 alt="Pallhotellet Logo"
                 className="h-8 w-auto"  

@@ -1,7 +1,7 @@
 export async function generateMetadata() {
     return {
-      title: 'Prisvärd inomhusförvaring i Motala Sverige - Från 59 SEK | Pallhotellet',
-      description: 'Förvara dina varor säkert i centrala Motala. Vi erbjuder flexibla förvaringslösningar inomhus, inklusive pallförvaring och lagring av stora föremål.',
+      title: 'Lagerhållning inomhus i Motala - Utrymme från 59 kr | Pallhotellet',
+      description: 'Säker och prisvärd lagerhållning inomhus i Motala hos Pallhotellet. Vi erbjuder flexibla lagringsenheter, pallplatser och förvaring av skrymmande gods.',
       robots: {
         index: true,
         follow: true,
@@ -15,8 +15,8 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Prisvärd inomhusförvaring i Motala Sverige - Från 59 SEK | Pallhotellet',
-        description: 'Förvara dina varor säkert i centrala Motala. Vi erbjuder flexibla förvaringslösningar inomhus, inklusive pallförvaring och lagring av stora föremål.',
+        title: 'Lagerhållning inomhus i Motala - Utrymme från 59 kr | Pallhotellet',
+        description: 'Säker och prisvärd lagerhållning inomhus i Motala hos Pallhotellet. Vi erbjuder flexibla lagringsenheter, pallplatser och förvaring av skrymmande gods.',
         url: 'https://pallhotellet.se/tjanster/lagerhallning_inomhus',
         siteName: 'Pallhotellet',
         locale: 'sv_SE',
@@ -24,8 +24,8 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Prisvärd inomhusförvaring i Motala Sverige - Från 59 SEK | Pallhotellet',
-        description: 'Förvara dina varor säkert i centrala Motala. Vi erbjuder flexibla förvaringslösningar inomhus, inklusive pallförvaring och lagring av stora föremål.',
+        title: 'Lagerhållning inomhus i Motala - Utrymme från 59 kr | Pallhotellet',
+        description: 'Säker och prisvärd lagerhållning inomhus i Motala hos Pallhotellet. Vi erbjuder flexibla lagringsenheter, pallplatser och förvaring av skrymmande gods.',
       },
     };
   }

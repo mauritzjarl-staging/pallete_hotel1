@@ -7,15 +7,11 @@ import { usePathname } from "next/navigation";
 const page = () => {
     const pathname = usePathname(); 
   return (
-    <>
-      <title>Övriga tjänster | Pallhotellet.se</title>
-      <meta name="description" content="Dokumentation, distribution och skräddarsydda 3PL-lösningar för hela ditt logistikflöde." />
-      <link rel="canonical" href="https://pallhotellet.se/tjanster/ovrigt" />
-      <div>
-      <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
-        <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
-        Övrigt
-        </p>
+    <div className="w-full">
+      <section className="relative bg-[url('/imgs/Frame5892.webp')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
+        <h1 className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
+          Övrigt
+        </h1>
       </section>
 
       <section className="md:my-32 my-10 px-4 md:px-20 md:flex md:space-x-8">
@@ -53,7 +49,7 @@ const page = () => {
         <div className="md:w-9/12">
         <section id="other" className="space-y-10">
     <img
-      src="/imgs/Service1.png"
+      src="/imgs/Service1.webp"
       alt="Warehouse"
       width={1000}
       height={500}
@@ -70,7 +66,7 @@ const page = () => {
         </p>
         <h2 className="text-2xl font-bold">Distribution</h2>
         <p className="md:text-lg text-[#626262]">
-          När du väljer oss för dina lagerbehov kommer du att uppleva fördelarna
+          När du väljer oss för dina lagerbehov kommer du att upplever fördelarna
           med optimerad lagerhantering. Genom att endast betala för det utrymme
           du faktiskt använder kan du optimera ditt lager och eliminera onödiga
           kostnader. Vi hjälper er gärna även med att hitta pålitliga och
@@ -84,6 +80,24 @@ const page = () => {
           effektivitet inom ditt företag. Dessutom är vårt erbjudande utformat
           för att vara så flexibelt som möjligt, vilket ger dig friheten att
           anpassa ditt lagerutrymme efter dina behov, då när du behöver det!
+        </p>
+      </div>
+
+      <div className="border-t pt-8 mt-12 space-y-6 text-[#626262]">
+        <h3 className="text-xl font-bold text-black">Flexibla tredjepartslogistik (3PL) lösningar i Motala</h3>
+        <p>
+          Att hantera logistik, lagerhållning och distribution på egen hand kan vara både tidskrävande och kostsamt för växande företag. Genom att överlåta er logistikkedja till oss på Pallhotellet får ni en professionell 3PL-partner som sköter allt från inkommande leveranser till slutlig distribution. Vi skräddarsyr lösningar utifrån era specifika behov och erbjuder fullständig flexibilitet.
+        </p>
+        
+        <h4 className="text-lg font-semibold text-black">Våra heltäckande logistiktjänster omfattar:</h4>
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>Omfattande dokumentation:</strong> Vi sköter all nödvändig dokumentation, inklusive fraktsedlar, tullhandlingar och lagerrapportering för full spårbarhet.</li>
+          <li><strong>Effektiv distribution:</strong> Vi samarbetar med ledande transportörer för att garantera snabba och säkra leveranser till era kunder i hela Norden.</li>
+          <li><strong>Skräddarsydd 3PL:</strong> Från e-handelslogistik med plock och pack till industriella flöden – vi anpassar oss efter era system och rutiner.</li>
+        </ul>
+
+        <p>
+          Med vår strategiska placering i Motala, Östergötland, har vi ett utmärkt utgångsläge för att distribuera varor över hela Sverige. Vi hjälper er att sänka era fasta logistikkostnader och omvandla dem till rörliga kostnader som följer er försäljningsvolym. Kontakta oss för att prata om hur vi kan optimera er verksamhet med effektiva 3PL-tjänster och pålitlig distribution.
         </p>
       </div>
     </div>
@@ -104,7 +118,6 @@ const page = () => {
         </div>
       </section>
     </div>
-    </>
   );
 };
 
