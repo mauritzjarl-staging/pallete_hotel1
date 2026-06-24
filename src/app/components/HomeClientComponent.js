@@ -1,21 +1,18 @@
 "use client";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import Image from "next/image";
-// import ProgressBar from "./components/ProgressBar";
-import { GrPrevious } from "react-icons/gr";
-import { GrNext } from "react-icons/gr";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
 
 export default function HomePage() {
-  const sliderRef = useRef(null); // Create a ref to access the Slider compone
   const [hasMounted, setHasMounted] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     setHasMounted(true);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 3);
+    }, 4500);
+    return () => clearInterval(timer);
   }, []);
 
   // Reusable SliderContent Component
@@ -36,7 +33,7 @@ export default function HomePage() {
         >
           UPPTÄCK MER{" "}
           <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
-            <IoArrowForward color="#ff6300" size={19} />
+            <IoArrowForward className="text-[#ff6300]" size={19} />
           </span>
         </button>
       </Link>
@@ -61,7 +58,7 @@ export default function HomePage() {
          >
         UPPTÄCK MER
         <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
-          <IoArrowForward color="#ff6300" size={19} />
+          <IoArrowForward className="text-[#ff6300]" size={19} />
         </span>
       </button>
       </Link>
@@ -86,57 +83,12 @@ export default function HomePage() {
          >
         UPPTÄCK MER
         <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
-          <IoArrowForward color="#ff6300" size={19} />
+          <IoArrowForward className="text-[#ff6300]" size={19} />
         </span>
       </button>
       </Link>
     </div>
   );
-
-  // Banner slider settings
-
-  // Custom Next Arrow
-  const NextArrow = ({ onClick }) => {
-    return (
-      <div
-        className="absolute top-1/2 right-0 transform -translate-y-1/2  bg-[#001D23D1]  p-2 rounded-full text-white cursor-pointer z-10"
-        onClick={onClick}
-      >
-        <GrNext size={30} />
-      </div>
-    );
-  };
-
-  // Custom Previous Arrow
-  const PrevArrow = ({ onClick }) => {
-    return (
-      <div
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-[#001D23D1]  p-2 rounded-full cursor-pointer z-10"
-        onClick={onClick}
-      >
-        <GrPrevious size={30} />
-      </div>
-    );
-  };
-
-  const BannerSlider = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          // arrows: false,
-        },
-      },
-    ],
-  };
 
   const staff = [
     {
@@ -156,72 +108,28 @@ export default function HomePage() {
     }
   ];
 
-  // Slick Slider settings
-  const sliderSettings = {
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplaySpeed: 2000,
-    autoplay: true,
-  };
-
-  // Testomonial slider settings
-
   const testimonials = [
     {
       image: "/imgs/Ellipse3.png",
       text: " Ställde upp med kort varsel när vi satt i klistret, kom med dubbelt antal mannar och gjorde hela jobbet även innan utsatt tid. En räddare i nöden!",
       name: "Stefan, VD",
-      // profession: "Profession 1",
     },
     {
       image: "/imgs/Ellipse3.png",
       text: " Snabba, effektiva och trevliga - grymt bra killar! Rekommenderas starkt av oss!",
       name: "Mikael, VD",
-      // profession: "Profession 2",
     },
     {
       image: "/imgs/Ellipse3.png",
       text: "Pallhotellet är det mest flexibla team vi har mött. Ställer alltid upp vid behov, alla tider och alla dagar. Stort tack!",
       name: "Magnus, Logistikansvarig",
-      // profession: "Profession 3",
     },
     {
       image: "/imgs/Ellipse3.png",
       text: "Vi har frekventa behov av snabba in och utleveranser. Pallhotellet har hittils ordnat det med bravur. Schyssta priser, snabb kvalitetsservice, vad mer kan man begära? ",
       name: "Damir",
-      profession: "Profession 4",
     },
   ];
-
-  // Set the initial active slide to be the middle one
-  const [activeSlide, setActiveSlide] = useState(
-    Math.floor(testimonials.length / 2)
-  );
-
-  const handleSlideChange = (next) => {
-    setActiveSlide(next);
-  };
-
-  const testimonialSettings = {
-    centerMode: true,
-    centerPadding: "0px",
-    slidesToShow: 3,
-    autoplay: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1,
-          arrows: true,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        },
-      },
-    ],
-    beforeChange: (current, next) => handleSlideChange(next),
-  };
 
   const solutions = [
     {
@@ -259,7 +167,7 @@ export default function HomePage() {
           {item.text}
         </p>
         <div className="w-full mt-4">
-          <Image
+          <img
             width={1000}
             height={500}
             src={item.image}
@@ -290,24 +198,24 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[url('/imgs/Frame5892.webp')] bg-cover bg-center sm:pb-32 sm:pt-48 pb-16 pt-24 flex justify-center md:px-20 items-center px-5">
-        <div className="w-full max-w-5xl ">
-          {hasMounted ? (
-            <Slider {...BannerSlider}>
-              <SliderContent />
-              <SliderContent2 />
-              <SliderContent3 />
-            </Slider>
-          ) : (
+      <section className="bg-[url('/imgs/Frame5892.webp')] bg-cover bg-center sm:pb-32 sm:pt-48 pb-16 pt-24 flex justify-center md:px-20 items-center px-5 relative min-h-[350px] overflow-hidden">
+        <div className="w-full max-w-5xl relative min-h-[220px] flex items-center justify-center">
+          <div className={`transition-opacity duration-1000 absolute inset-0 flex flex-col items-center justify-center ${currentSlide === 0 ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"}`}>
             <SliderContent />
-          )}
+          </div>
+          <div className={`transition-opacity duration-1000 absolute inset-0 flex flex-col items-center justify-center ${currentSlide === 1 ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"}`}>
+            <SliderContent2 />
+          </div>
+          <div className={`transition-opacity duration-1000 absolute inset-0 flex flex-col items-center justify-center ${currentSlide === 2 ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"}`}>
+            <SliderContent3 />
+          </div>
         </div>
       </section>
 
       {/* What We Offer Section */}
       <section className="bg-[#08343D] lg:flex items-center justify-around px-10 md:px-20 text-white lg:py-4 py-14">
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
-          <Image
+          <img
             src="/imgs/Layer_1.png"
             alt="Flexible warehousing"
             width={64}
@@ -325,7 +233,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
-          <Image
+          <img
             src="/imgs/Layer_2.png"
             alt="Fast order processing"
             width={64}
@@ -342,7 +250,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
-          <Image
+          <img
             src="/imgs/Layer_3.png"
             alt="More efficient flow"
             width={64}
@@ -392,7 +300,7 @@ export default function HomePage() {
               >
                 Kontakta oss
                 <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                  <IoArrowForward color="#ff6300" size={23} />
+                  <IoArrowForward className="text-[#ff6300]" size={23} />
                 </span>
               </button>
             </Link>
@@ -401,7 +309,7 @@ export default function HomePage() {
         {/* <!--col-2 side Image --> */}
         <div className="my-10 md:my-0 md:flex justify-end md:px-5 md:w-6/12 w-full">
           <div className="relative">
-            <Image
+            <img
               src="/imgs/Rectangle4.png"
               width={500}
               height={200}
@@ -409,7 +317,7 @@ export default function HomePage() {
               className="w-full h-full "
             />
             <div className="absolute sm:-top-6 sm:-left-10 -top-3 -left-5 border-8 border-white">
-              <Image
+              <img
                 src="/imgs/image2.png"
                 width={500}
                 height={300}
@@ -433,19 +341,13 @@ export default function HomePage() {
           </h2>
         </div>
 
-        {hasMounted ? (
-          <Slider {...solutionSettings}>
-            {solutions.map((item, idx) => (
-              <SolutionCard key={idx} item={item} />
-            ))}
-          </Slider>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {solutions.map((item, idx) => (
-              <SolutionCard key={idx} item={item} />
-            ))}
-          </div>
-        )}
+        <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-6 pb-6 lg:grid lg:grid-cols-3 lg:overflow-visible">
+          {solutions.map((item, idx) => (
+            <div key={idx} className="snap-center shrink-0 w-[85%] sm:w-[45%] lg:w-auto">
+              <SolutionCard item={item} />
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* tjanster section / 3-Images  */}
@@ -455,7 +357,7 @@ export default function HomePage() {
           <div className="lg:w-3/12 w-full lg:pt-44">
             <div className="relative my-10 lg:my-0 lg:flex justify-center  hidden">
               <div>
-                <Image
+                <img
                   width={350}
                   height={200}
                   src="/imgs/Rectangle12.png"
@@ -505,7 +407,7 @@ export default function HomePage() {
               <div className="flex justify-center mt-10 lg:my-0 lg:absolute lg:-top-20 lg:right-0">
                 <div className="flex justify-center relative">
                   <div>
-                    <Image
+                    <img
                       width={350}
                       height={200}
                       src="/imgs/Rectangle14.png"
@@ -527,7 +429,7 @@ export default function HomePage() {
 
           <div className="lg:w-3/12 w-full  hidden lg:block">
             <div className="flex justify-center relative">
-              <Image
+              <img
                 width={350}
                 height={200}
                 src="/imgs/Rectangle13.png"
@@ -558,66 +460,24 @@ export default function HomePage() {
           </h3>
         </div>
 
-        <div className="my-10">
-          {/* Regular layout for medium and larger screens */}
-          <div className="hidden md:flex flex-col md:flex-row justify-center md:space-x-10 space-y-5 md:space-y-0">
-            <div className="bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col">
-              <Image src="/imgs/1.png" alt="Staff 1" width={300} height={300} />
-              <p className="pt-5 pb-1 text-lg  font-bold">Sylvain</p>
-              <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Kundkontakt</p>
-              <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
-            </div>
-            <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
-              <Image src="/imgs/2.png" alt="Staff 2" width={300} height={300} />
-              <p className="pt-5 pb-1 text-lg  font-bold">Lukas</p>
-              <p className="py-1 text-lg text-[#FF6F0F]">Sälj / Ekonomi</p>
-              <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
-            </div>
-            <div className="bg-[#F4F4F4] rounded-md text-center flex justify-center flex-col">
-              <Image src="/imgs/3.png" alt="Staff 3" width={300} height={300} />
-              <p className="pt-5 pb-1 text-lg  font-bold">Elma </p>
-              <p className="py-1 text-lg text-[#FF6F0F]">Ekonomi </p>
-              <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
-            </div>
-          </div>
-
-          {/* Slick Slider for small screens */}
-          <div className="md:hidden px-10">
-            {hasMounted ? (
-              <Slider {...sliderSettings}>
-                {staff.map((item, idx) => (
-                  <div key={idx}>
-                    <div className="bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col">
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        width={800}
-                        height={300}
-                      />
-                      <p className="pt-5 pb-1 text-lg  font-bold">{item.name}</p>
-                      <p className="py-1 text-lg text-[#FF6F0F]">{item.role}</p>
-                      <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-            ) : (
-              <div className="flex flex-col gap-6">
-                {staff.map((item, idx) => (
-                  <div key={idx} className="bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={800}
-                      height={300}
-                    />
-                    <p className="pt-5 pb-1 text-lg  font-bold">{item.name}</p>
-                    <p className="py-1 text-lg text-[#FF6F0F]">{item.role}</p>
-                    <p className="pt-1 pb-5 text-lg">0141-21 50 44 </p>
-                  </div>
-                ))}
+        <div className="my-10 px-5 md:px-10">
+          <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-6 pb-6 md:grid md:grid-cols-3 md:overflow-visible md:gap-10 justify-center">
+            {staff.map((item, idx) => (
+              <div key={idx} className="snap-center shrink-0 w-[80%] md:w-auto bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col p-4 shadow-sm">
+                <div className="overflow-hidden rounded-md flex justify-center">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    width={300}
+                    height={300}
+                    className="object-cover rounded-md"
+                  />
+                </div>
+                <p className="pt-5 pb-1 text-lg font-bold">{item.name}</p>
+                <p className="py-1 text-lg text-[#FF6F0F]">{item.role}</p>
+                <p className="pt-1 pb-5 text-lg">0141-21 50 44</p>
               </div>
-            )}
+            ))}
           </div>
         </div>
       </section>
@@ -633,78 +493,28 @@ export default function HomePage() {
             Vad säger våra kunder om oss
           </h3>
         </div>
-        {/* Custom navigation buttons */}
-        <div className="flex justify-center ">
-          <div className="absolute transform z-20 translate-y-1/2 space-x-52">
-            <button
-              aria-label="Previous Slide"
-              onClick={() => sliderRef.current.slickPrev()} // Use the ref to trigger slickPrev
+        <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-6 pb-6 md:grid md:grid-cols-3 md:overflow-visible max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="snap-center shrink-0 w-[85%] md:w-auto bg-[#ff6300] rounded-lg md:p-5 p-4 text-white flex flex-col justify-between min-h-[220px] shadow-sm"
             >
-              <GrPrevious className="text-[#ff6300] text-3xl" />
-            </button>
-
-            <button
-              aria-label="Next Slide"
-              onClick={() => sliderRef.current.slickNext()} // Use the ref to trigger slickNext
-            >
-              <GrNext className="text-[#ff6300] text-3xl" />
-            </button>
-          </div>
+              <div className="pb-4 relative">
+                <img
+                  src={testimonial.image}
+                  className="mx-auto rounded-full p-1 border-2 border-[#ff6300] bg-white"
+                  alt={`Client-Img ${index + 1}`}
+                  width={90}
+                  height={90}
+                />
+              </div>
+              <div className="text-center space-y-2 flex-grow flex flex-col justify-between">
+                <p className="text-sm italic">"{testimonial.text}"</p>
+                <p className="font-bold mt-2">{testimonial.name}</p>
+              </div>
+            </div>
+          ))}
         </div>
-        {hasMounted ? (
-          <Slider ref={sliderRef} {...testimonialSettings}>
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className={`testimonial-slide ${
-                  activeSlide === index ? "active" : "inactive"
-                }`}
-              >
-                <div className="pb-10 relative">
-                  <Image
-                    src={testimonial.image}
-                    className="mx-auto rounded-full p-1 border-2 border-[#ff6300]"
-                    alt={`Client-Img ${index + 1}`}
-                    width={90}
-                    height={90}
-                  />
-                </div>
-
-                <div
-                  className={` text-white bg-[#ff6300]
-                    text-center md:mx-8 mx-2 ${
-                      activeSlide === index ? "opacity-100" : ""
-                    }
-                     bg-[#ff6300] rounded-lg md:p-5 p-4 space-y-2 text-white`}
-                >
-                  <div className="md:min-h-32">
-                    <p>{testimonial.text}</p>
-                    <p className="font-semibold">{testimonial.name}</p>
-                    {/* <p>{testimonial.profession}</p> */}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        ) : (
-          <div className="testimonial-slide active max-w-lg mx-auto">
-            <div className="pb-10 relative">
-              <Image
-                src={testimonials[0].image}
-                className="mx-auto rounded-full p-1 border-2 border-[#ff6300]"
-                alt="Client-Img 1"
-                width={90}
-                height={90}
-              />
-            </div>
-            <div className="text-white bg-[#ff6300] text-center md:mx-8 mx-2 rounded-lg md:p-5 p-4 space-y-2 text-white">
-              <div className="md:min-h-32">
-                <p>{testimonials[0].text}</p>
-                <p className="font-semibold">{testimonials[0].name}</p>
-              </div>
-            </div>
-          </div>
-        )}
       </section>
 
       {/* FAQ Section */}

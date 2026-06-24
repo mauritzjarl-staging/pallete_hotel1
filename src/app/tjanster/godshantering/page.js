@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { IoArrowForward } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 
@@ -50,13 +49,12 @@ const page = () => {
         {/* Tab Content */}
         <div className="md:w-9/12">
         <section id="cargo" className="space-y-10">
-    <Image
+    <img
       src="/imgs/Service2.png"
       alt="Warehouse"
       width={1000}
       height={500}
       className="w-full h-auto mb-6"
-      //  unoptimized={true} // Disable Next.js image optimization
     />
     <div className="space-y-10 md:pe-5">
       <div className="md:space-y-5 space-y-3">
@@ -78,7 +76,7 @@ const page = () => {
       >
         Offertförfrågan
         <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-          <IoArrowForward color="orange" size={23} />
+          <IoArrowForward className="text-orange-500" size={23} />
         </span>
       </button>
     </Link>

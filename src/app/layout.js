@@ -1,7 +1,4 @@
-"use client";
-
-import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { headers } from 'next/headers';
 import Script from 'next/script';
 import { Montserrat } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -11,40 +8,10 @@ import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
-// Firebase config from environment variables
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
-};
-
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-
-  // Simplified analytics approach that won't block rendering
-  useEffect(() => {
-    // Safe analytics implementation that won't break your site
-    try {
-      if (window.gtag) {
-        window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
-          page_path: pathname,
-        });
-      }
-    } catch (error) {
-      console.error("Analytics error:", error);
-      // Continue rendering the site even if analytics fails
-    }
-  }, [pathname]);
-
-  const islogga_inPage = pathname?.startsWith('/logga_in, /sitemap') || false;
-
-  const canonicalUrl = typeof window !== 'undefined'
-    ? (window.location.hostname.includes('.com') ? 'https://pallhotellet.com/' : 'https://pallhotellet.se/')
-    : 'https://pallhotellet.se/';
+  const headersList = headers();
+  const host = headersList.get('host') || '';
+  const canonicalUrl = host.includes('.com') ? 'https://pallhotellet.com/' : 'https://pallhotellet.se/';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -112,9 +79,9 @@ export default function RootLayout({ children }) {
         </noscript>
       </head>
       <body className={montserrat.className}>
-        {!islogga_inPage && <Header />}
+        <Header />
         <main>{children}</main>
-        {!islogga_inPage && <Footer />}
+        <Footer />
         {/* Google Analytics - Loaded using highly-optimized third-parties script module */}
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
       </body>

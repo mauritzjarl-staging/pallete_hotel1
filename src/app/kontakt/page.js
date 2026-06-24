@@ -287,7 +287,7 @@ const kontaktPage = () => {
                 >
                   {loading ? "Skickar..." : "Skicka"}
                   <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                    <IoArrowForward color="#ff6300" size={23} />
+                    <IoArrowForward className="text-[#ff6300]" size={23} />
                   </span>
                 </button>
               </div>

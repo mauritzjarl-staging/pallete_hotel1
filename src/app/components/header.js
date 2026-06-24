@@ -1,7 +1,6 @@
 "use client"; // Enable client-side interactivity
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaCaretDown } from "react-icons/fa";
 import Link from "next/link";
@@ -16,6 +15,11 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname();
+
+  const excludedPaths = ["/logga_in", "/register", "/forgotpassword", "/newpassword", "/sitemap"];
+  if (excludedPaths.some(path => pathname?.startsWith(path))) {
+    return null;
+  }
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -145,7 +149,7 @@ export default function Header() {
         >
           <div className="md:w-4/12 lg:h-auto">
             <Link className="w-full" href="/">
-              <Image
+              <img
                 src="/imgs/Pallhotellet.se.png"
                 alt="Pallhotellet.se"
                 width={200}

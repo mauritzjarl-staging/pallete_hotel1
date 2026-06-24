@@ -1,5 +1,6 @@
-import Image from "next/image";
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FiInstagram } from "react-icons/fi";
@@ -7,12 +8,18 @@ import { IoLocationSharp } from "react-icons/io5";
 import { MdCall } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 export default function Footer() {
+  const pathname = usePathname();
+  const excludedPaths = ["/logga_in", "/register", "/forgotpassword", "/newpassword", "/sitemap"];
+  if (excludedPaths.some(path => pathname?.startsWith(path))) {
+    return null;
+  }
+
   return (
     <footer className="md:px-10 px-5 bg-[#001D23]">
       <div className="leading-8 py-8 list-none md:px-20 px-10">
         <div className="flex md:justify-between justify-center flex-col md:flex-row text-[#808E91]">
           <div className="py-4 h-auto mt-10 md:w-4/12">
-            <Image
+            <img
               width={200}
               height={250}
               className="mb-5"
