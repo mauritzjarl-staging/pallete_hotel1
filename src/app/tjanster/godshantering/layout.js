@@ -10,8 +10,8 @@ export async function generateMetadata() {
         canonical: 'https://pallhotellet.se/tjanster/godshantering',
         languages: {
           'sv-SE': 'https://pallhotellet.se/tjanster/godshantering',
-          'sv': 'https://pallhotellet.com/tjanster/godshantering',
-          'x-default': 'https://pallhotellet.com/tjanster/godshantering',
+          'sv': 'https://pallhotellet.se/tjanster/godshantering',
+          'x-default': 'https://pallhotellet.se/tjanster/godshantering',
         },
       },
       openGraph: {

@@ -10,8 +10,8 @@ export async function generateMetadata() {
         canonical: 'https://pallhotellet.se/tjanster/hyra_av_forrad',
         languages: {
           'sv-SE': 'https://pallhotellet.se/tjanster/hyra_av_forrad',
-          'sv': 'https://pallhotellet.com/tjanster/hyra_av_forrad',
-          'x-default': 'https://pallhotellet.com/tjanster/hyra_av_forrad',
+          'sv': 'https://pallhotellet.se/tjanster/hyra_av_forrad',
+          'x-default': 'https://pallhotellet.se/tjanster/hyra_av_forrad',
         },
       },
       openGraph: {

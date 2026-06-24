@@ -9,8 +9,8 @@ export const metadata = {
     canonical: 'https://pallhotellet.se/logga_in',
     languages: {
       'sv-SE': 'https://pallhotellet.se/logga_in',
-      'sv': 'https://pallhotellet.com/logga_in',
-      'x-default': 'https://pallhotellet.com/logga_in',
+      'sv': 'https://pallhotellet.se/logga_in',
+      'x-default': 'https://pallhotellet.se/logga_in',
     },
   },
 };

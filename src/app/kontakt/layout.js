@@ -9,8 +9,8 @@ export const metadata = {
     canonical: 'https://pallhotellet.se/kontakt',
     languages: {
       'sv-SE': 'https://pallhotellet.se/kontakt',
-      'sv': 'https://pallhotellet.com/kontakt',
-      'x-default': 'https://pallhotellet.com/kontakt',
+      'sv': 'https://pallhotellet.se/kontakt',
+      'x-default': 'https://pallhotellet.se/kontakt',
     },
   },
 };

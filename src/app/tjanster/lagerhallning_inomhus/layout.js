@@ -10,8 +10,8 @@ export async function generateMetadata() {
         canonical: 'https://pallhotellet.se/tjanster/lagerhallning_inomhus',
         languages: {
           'sv-SE': 'https://pallhotellet.se/tjanster/lagerhallning_inomhus',
-          'sv': 'https://pallhotellet.com/tjanster/lagerhallning_inomhus',
-          'x-default': 'https://pallhotellet.com/tjanster/lagerhallning_inomhus',
+          'sv': 'https://pallhotellet.se/tjanster/lagerhallning_inomhus',
+          'x-default': 'https://pallhotellet.se/tjanster/lagerhallning_inomhus',
         },
       },
       openGraph: {

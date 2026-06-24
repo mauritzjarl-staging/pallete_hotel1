@@ -10,8 +10,8 @@ export async function generateMetadata() {
         canonical: 'https://pallhotellet.se/tjanster/lagerhallning_utomhus',
         languages: {
           'sv-SE': 'https://pallhotellet.se/tjanster/lagerhallning_utomhus',
-          'sv': 'https://pallhotellet.com/tjanster/lagerhallning_utomhus',
-          'x-default': 'https://pallhotellet.com/tjanster/lagerhallning_utomhus',
+          'sv': 'https://pallhotellet.se/tjanster/lagerhallning_utomhus',
+          'x-default': 'https://pallhotellet.se/tjanster/lagerhallning_utomhus',
         },
       },
       openGraph: {

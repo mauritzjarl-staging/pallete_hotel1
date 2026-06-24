@@ -6,7 +6,7 @@ export async function generateMetadata() {
   const domainUrl = process.env.DOMAIN_URL || '';
   // Determine the canonical URL based on the host
   if (domainUrl.includes('.com')) {
-    canonicalUrl = 'https://pallhotellet.com/';
+    canonicalUrl = 'https://pallhotellet.se/';
     title = 'Lager- och logistiklösningar i Motala med Pallhotellet.com';
   }
   else if (domainUrl.includes('.se')) {
@@ -30,8 +30,8 @@ export async function generateMetadata() {
       canonical: canonicalUrl,
       languages: {
         'sv-SE': 'https://pallhotellet.se/',
-        'sv': 'https://pallhotellet.com/',
-        'x-default': 'https://pallhotellet.com/',
+        'sv': 'https://pallhotellet.se/',
+        'x-default': 'https://pallhotellet.se/',
       },
     },
     openGraph: {
@@ -63,7 +63,7 @@ export default function HomePage() {
   let canonicalUrl = 'https://pallhotellet.se/';
   const domainUrl = process.env.DOMAIN_URL || '';
   if (domainUrl.includes('.com')) {
-    canonicalUrl = 'https://pallhotellet.com/';
+    canonicalUrl = 'https://pallhotellet.se/';
   }
   else if (domainUrl.includes('.se')) {
     canonicalUrl = 'https://pallhotellet.se/';

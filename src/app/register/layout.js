@@ -9,8 +9,8 @@ export const metadata = {
     canonical: 'https://pallhotellet.se/register',
     languages: {
       'sv-SE': 'https://pallhotellet.se/register',
-      'sv': 'https://pallhotellet.com/register',
-      'x-default': 'https://pallhotellet.com/register',
+      'sv': 'https://pallhotellet.se/register',
+      'x-default': 'https://pallhotellet.se/register',
     },
   },
 };

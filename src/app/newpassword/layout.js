@@ -9,8 +9,8 @@ export const metadata = {
     canonical: 'https://pallhotellet.se/newpassword',
     languages: {
       'sv-SE': 'https://pallhotellet.se/newpassword',
-      'sv': 'https://pallhotellet.com/newpassword',
-      'x-default': 'https://pallhotellet.com/newpassword',
+      'sv': 'https://pallhotellet.se/newpassword',
+      'x-default': 'https://pallhotellet.se/newpassword',
     },
   },
 };

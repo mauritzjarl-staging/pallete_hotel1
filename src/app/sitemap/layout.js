@@ -9,8 +9,8 @@ export const metadata = {
     canonical: 'https://pallhotellet.se/sitemap',
     languages: {
       'sv-SE': 'https://pallhotellet.se/sitemap',
-      'sv': 'https://pallhotellet.com/sitemap',
-      'x-default': 'https://pallhotellet.com/sitemap',
+      'sv': 'https://pallhotellet.se/sitemap',
+      'x-default': 'https://pallhotellet.se/sitemap',
     },
   },
 };

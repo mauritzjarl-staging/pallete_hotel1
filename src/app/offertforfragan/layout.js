@@ -9,8 +9,8 @@ export const metadata = {
     canonical: 'https://pallhotellet.se/offertforfragan',
     languages: {
       'sv-SE': 'https://pallhotellet.se/offertforfragan',
-      'sv': 'https://pallhotellet.com/offertforfragan',
-      'x-default': 'https://pallhotellet.com/offertforfragan',
+      'sv': 'https://pallhotellet.se/offertforfragan',
+      'x-default': 'https://pallhotellet.se/offertforfragan',
     },
   },
 };

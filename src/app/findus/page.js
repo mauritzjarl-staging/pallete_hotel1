@@ -23,8 +23,8 @@ export const metadata = {
     canonical: 'https://pallhotellet.se/findus',
     languages: {
       'sv-SE': 'https://pallhotellet.se/findus',
-      'sv': 'https://pallhotellet.com/findus',
-      'x-default': 'https://pallhotellet.com/findus',
+      'sv': 'https://pallhotellet.se/findus',
+      'x-default': 'https://pallhotellet.se/findus',
     },
   },
 };

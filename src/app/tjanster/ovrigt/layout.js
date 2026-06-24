@@ -10,8 +10,8 @@ export async function generateMetadata() {
         canonical: 'https://pallhotellet.se/tjanster/ovrigt',
         languages: {
           'sv-SE': 'https://pallhotellet.se/tjanster/ovrigt',
-          'sv': 'https://pallhotellet.com/tjanster/ovrigt',
-          'x-default': 'https://pallhotellet.com/tjanster/ovrigt',
+          'sv': 'https://pallhotellet.se/tjanster/ovrigt',
+          'x-default': 'https://pallhotellet.se/tjanster/ovrigt',
         },
       },
       openGraph: {

@@ -20,8 +20,8 @@ export const metadata = {
     canonical: 'https://pallhotellet.se',
     languages: {
       'sv-SE': 'https://pallhotellet.se',
-      'sv': 'https://pallhotellet.com',
-      'x-default': 'https://pallhotellet.com',
+      'sv': 'https://pallhotellet.se',
+      'x-default': 'https://pallhotellet.se',
     },
   },
   openGraph: {
@@ -51,7 +51,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const headersList = headers();
   const host = headersList.get('host') || '';
-  const canonicalUrl = host.includes('.com') ? 'https://pallhotellet.com/' : 'https://pallhotellet.se/';
+  const canonicalUrl = host.includes('.com') ? 'https://pallhotellet.se/' : 'https://pallhotellet.se/';
 
   const jsonLd = {
     '@context': 'https://schema.org',

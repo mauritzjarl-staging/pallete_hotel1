@@ -12,7 +12,7 @@ export default function Sitemap() {
   //     if (host.includes(".se")) {
   //       setBaseDomain("https://pallhotellet.se");
   //     } else {
-  //       setBaseDomain("https://pallhotellet.com");
+  //       setBaseDomain("https://pallhotellet.se");
   //     }
   //   }
   // }, []);
