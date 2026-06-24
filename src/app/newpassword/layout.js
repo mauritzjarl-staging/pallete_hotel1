@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Ange nytt lösenord | Pallhotellet',
   description: 'Ange ett nytt lösenord för ditt Pallhotellet-konto.',
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
   alternates: {

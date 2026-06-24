@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
+import Link from "next/link";
 // import MapComponent from "../components/MapComponent";
 import {
   AiOutlineMail,
@@ -101,20 +102,23 @@ export default function Findus() {
         <div className="absolute inset-0 bg-[#083740d8] "></div>
         <div className="relative z-10 container mx-auto text-center text-white py-16">
           <h2 className="text-4xl font-bold mb-4">
-            Safe, secure and complete peace of <br /> mind storage
+            Säker, trygg och fullständig lagerhållning
           </h2>
           <p className="max-w-2xl mx-auto mb-6">
-            Malesuada lacinia ipsum elit suscipit imperdiet tellus turpis
-            commodo euismod dis lectus natoque donec mollis feugiat risus
-            egestas etiam viverra.
+            Hos Pallhotellet erbjuder vi professionella förvaringslösningar med fullständig
+            trygghet för dina varor. Våra lagerlokaler i Motala är utrustade med modern
+            säkerhetsteknik och vårt erfarna team ser till att ditt gods hanteras
+            med största omsorg, från ankomst till utleverans.
           </p>
-          <button
-            className="bg-orange-500 text-white py-3
+          <Link href="/offertforfragan">
+            <button
+              className="bg-orange-500 text-white py-3
            px-8 rounded-lg shadow-md hover:bg-orange-600
             transition duration-300"
-          >
-            Get Started
-          </button>
+            >
+              Begär offert
+            </button>
+          </Link>
         </div>
       </section>
 

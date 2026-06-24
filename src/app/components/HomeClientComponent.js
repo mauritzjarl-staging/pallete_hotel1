@@ -94,38 +94,38 @@ export default function HomePage() {
     {
       name: "Sylvain",
       role: "Sälj / Kundkontakt",
-      image: "/imgs/1.png"
+      image: "/imgs/1.webp"
     },
     {
       name: "Lukas",
       role: "Sälj / Ekonomi",
-      image: "/imgs/2.png"
+      image: "/imgs/2.webp"
     },
     {
       name: "Elma ",
       role: "Ekonomi ",
-      image: "/imgs/3.png"
+      image: "/imgs/3.webp"
     }
   ];
 
   const testimonials = [
     {
-      image: "/imgs/Ellipse3.png",
+      image: "/imgs/Ellipse3.webp",
       text: " Ställde upp med kort varsel när vi satt i klistret, kom med dubbelt antal mannar och gjorde hela jobbet även innan utsatt tid. En räddare i nöden!",
       name: "Stefan, VD",
     },
     {
-      image: "/imgs/Ellipse3.png",
+      image: "/imgs/Ellipse3.webp",
       text: " Snabba, effektiva och trevliga - grymt bra killar! Rekommenderas starkt av oss!",
       name: "Mikael, VD",
     },
     {
-      image: "/imgs/Ellipse3.png",
+      image: "/imgs/Ellipse3.webp",
       text: "Pallhotellet är det mest flexibla team vi har mött. Ställer alltid upp vid behov, alla tider och alla dagar. Stort tack!",
       name: "Magnus, Logistikansvarig",
     },
     {
-      image: "/imgs/Ellipse3.png",
+      image: "/imgs/Ellipse3.webp",
       text: "Vi har frekventa behov av snabba in och utleveranser. Pallhotellet har hittils ordnat det med bravur. Schyssta priser, snabb kvalitetsservice, vad mer kan man begära? ",
       name: "Damir",
     },
@@ -216,7 +216,7 @@ export default function HomePage() {
       <section className="bg-[#08343D] lg:flex items-center justify-around px-10 md:px-20 text-white lg:py-4 py-14">
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
           <img
-            src="/imgs/Layer_1.png"
+            src="/imgs/Layer_1.webp"
             alt="Flexible warehousing"
             width={64}
             height={64}
@@ -234,7 +234,7 @@ export default function HomePage() {
 
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
           <img
-            src="/imgs/Layer_2.png"
+            src="/imgs/Layer_2.webp"
             alt="Fast order processing"
             width={64}
             height={64}
@@ -251,7 +251,7 @@ export default function HomePage() {
 
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
           <img
-            src="/imgs/Layer_3.png"
+            src="/imgs/Layer_3.webp"
             alt="More efficient flow"
             width={64}
             height={64}
@@ -318,7 +318,7 @@ export default function HomePage() {
             />
             <div className="absolute sm:-top-6 sm:-left-10 -top-3 -left-5 border-8 border-white">
               <img
-                src="/imgs/image2.png"
+                src="/imgs/image2.webp"
                 width={500}
                 height={300}
                 alt="Overlay Image"

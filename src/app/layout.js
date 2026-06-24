@@ -6,7 +6,12 @@ import Header from './components/header';
 import Footer from './components/footer';
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'], display: 'swap' });
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata = {
   metadataBase: new URL('https://pallhotellet.se'),
@@ -112,9 +117,9 @@ export default function RootLayout({ children }) {
           <img
             height="1"
             width="1"
-            className="hidden"
+            style={{ display: 'none' }}
             src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '1029384756'}&ev=PageView&noscript=1`}
-            alt="facebook pixel"
+            alt=""
           />
         </noscript>
       </head>

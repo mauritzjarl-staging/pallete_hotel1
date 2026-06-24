@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Skapa konto | Pallhotellet',
   description: 'Registrera dig och skapa ett konto hos Pallhotellet för flexibel lagerhållning i Motala.',
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
   alternates: {

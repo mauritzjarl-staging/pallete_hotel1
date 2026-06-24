@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Återställ lösenord | Pallhotellet',
   description: 'Återställ ditt lösenord på Pallhotellet för att få tillgång till ditt lagerkonto.',
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
   alternates: {
