@@ -47,7 +47,7 @@ const page = () => {
         {/* Tab Content */}
         <div className="md:w-9/12">
           <section id="rental" className="space-y-10">
-            <img
+            <img loading="lazy"
               src="/imgs/Service3.webp"
               alt="Warehouse"
               width={1000}

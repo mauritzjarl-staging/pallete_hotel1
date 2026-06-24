@@ -75,10 +75,10 @@ export default function Findus() {
         <div className="mx-auto sm:w-[70%] flex flex-col md:flex-row items-center">
           {/* Image */}
           <div className="w-full md:w-1/2">
-            <img
+            <img loading="lazy"
               width={800}
               height={200}
-              src="/imgs/Rectangle45.webp"
+              src="/imgs/pallhotellet-kontakt-karta.webp"
               alt="Expert solutions"
               className="w-full h-auto"
             />
@@ -97,7 +97,7 @@ export default function Findus() {
         </div>
       </section>
 
-      <section className="bg-cover h-auto relative bg-[url('/imgs/Rectangle38.webp')] ">
+      <section className="bg-cover h-auto relative bg-[url('/imgs/pallhotellet-hitta-oss.webp')] ">
         <div className="absolute inset-0 bg-[#083740d8] "></div>
         <div className="relative z-10 container mx-auto text-center text-white py-16">
           <h2 className="text-4xl font-bold mb-4">

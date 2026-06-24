@@ -136,19 +136,19 @@ export default function HomePage() {
       title: "Lagring",
       subtitle: "Lager som passar allas behov",
       text: "Totalt har vi plats för 13.700 pall inne i våra lager",
-      image: "/imgs/Rectangle12.webp"
+      image: "/imgs/pallhotellet-tjanst-1.webp"
     },
     {
       title: "Godshantering",
       subtitle: "Vi tar hand om dina varor",
       text: "Vi ombesörjer lagerhållning och hjälper till med annat.",
-      image: "/imgs/Rectangle13.webp"
+      image: "/imgs/pallhotellet-tjanst-2.webp"
     },
     {
       title: "Dokumentation",
       subtitle: "Vi ordnar det mesta",
       text: "Du som kund behöver bara ringa ett nummer.",
-      image: "/imgs/Rectangle14.webp"
+      image: "/imgs/pallhotellet-tjanst-3.webp"
     }
   ];
 
@@ -167,7 +167,7 @@ export default function HomePage() {
           {item.text}
         </p>
         <div className="w-full mt-4">
-          <img
+          <img loading="lazy"
             width={1000}
             height={500}
             src={item.image}
@@ -215,7 +215,7 @@ export default function HomePage() {
       {/* What We Offer Section */}
       <section className="bg-[#08343D] lg:flex items-center justify-around px-10 md:px-20 text-white lg:py-4 py-14">
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
-          <img
+          <img loading="lazy"
             src="/imgs/Layer_1.png"
             alt="Flexible warehousing"
             width={64}
@@ -233,7 +233,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
-          <img
+          <img loading="lazy"
             src="/imgs/Layer_2.png"
             alt="Fast order processing"
             width={64}
@@ -250,7 +250,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex items-center mx-6 mb-6 space-x-5 md:space-x-14">
-          <img
+          <img loading="lazy"
             src="/imgs/Layer_3.png"
             alt="More efficient flow"
             width={64}
@@ -309,15 +309,15 @@ export default function HomePage() {
         {/* <!--col-2 side Image --> */}
         <div className="my-10 md:my-0 md:flex justify-end md:px-5 md:w-6/12 w-full">
           <div className="relative">
-            <img
-              src="/imgs/Rectangle4.webp"
+            <img loading="lazy"
+              src="/imgs/pallhotellet-logistik-lager.webp"
               width={500}
               height={200}
               alt="Background Image"
               className="w-full h-full "
             />
             <div className="absolute sm:-top-6 sm:-left-10 -top-3 -left-5 border-8 border-white">
-              <img
+              <img loading="lazy"
                 src="/imgs/image2.png"
                 width={500}
                 height={300}
@@ -357,10 +357,10 @@ export default function HomePage() {
           <div className="lg:w-3/12 w-full lg:pt-44">
             <div className="relative my-10 lg:my-0 lg:flex justify-center  hidden">
               <div>
-                <img
+                <img loading="lazy"
                   width={350}
                   height={200}
-                  src="/imgs/Rectangle12.webp"
+                  src="/imgs/pallhotellet-tjanst-1.webp"
                   alt="Grey box"
                 />
               </div>
@@ -407,10 +407,10 @@ export default function HomePage() {
               <div className="flex justify-center mt-10 lg:my-0 lg:absolute lg:-top-20 lg:right-0">
                 <div className="flex justify-center relative">
                   <div>
-                    <img
+                    <img loading="lazy"
                       width={350}
                       height={200}
-                      src="/imgs/Rectangle14.webp"
+                      src="/imgs/pallhotellet-tjanst-3.webp"
                       alt="Grey box"
                     />
                   </div>
@@ -429,10 +429,10 @@ export default function HomePage() {
 
           <div className="lg:w-3/12 w-full  hidden lg:block">
             <div className="flex justify-center relative">
-              <img
+              <img loading="lazy"
                 width={350}
                 height={200}
-                src="/imgs/Rectangle13.webp"
+                src="/imgs/pallhotellet-tjanst-2.webp"
                 alt="Grey box"
               />
               <div className="absolute top-0">
@@ -465,7 +465,7 @@ export default function HomePage() {
             {staff.map((item, idx) => (
               <div key={idx} className="snap-center shrink-0 w-[80%] md:w-auto bg-[#f4f4f4] rounded-md text-center flex justify-center flex-col p-4 shadow-sm">
                 <div className="overflow-hidden rounded-md flex justify-center">
-                  <img
+                  <img loading="lazy"
                     src={item.image}
                     alt={item.name}
                     width={300}
@@ -500,7 +500,7 @@ export default function HomePage() {
               className="snap-center shrink-0 w-[85%] md:w-auto bg-primary rounded-lg md:p-5 p-4 text-white flex flex-col justify-between min-h-[220px] shadow-sm"
             >
               <div className="pb-4 relative">
-                <img
+                <img loading="lazy"
                   src={testimonial.image}
                   className="mx-auto rounded-full p-1 border-2 border-primary bg-white"
                   alt={`Client-Img ${index + 1}`}

@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="leading-8 py-8 list-none md:px-20 px-10">
         <div className="flex md:justify-between justify-center flex-col md:flex-row text-[#808E91]">
           <div className="py-4 h-auto mt-10 md:w-4/12">
-            <img
+            <img loading="lazy"
               width={200}
               height={250}
               className="mb-5"

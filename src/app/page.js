@@ -41,7 +41,7 @@ export async function generateMetadata() {
       siteName: 'Pallhotellet',
       images: [
         {
-          url: `${canonicalUrl}imgs/Rectangle4.webp`,
+          url: `${canonicalUrl}imgs/pallhotellet-logistik-lager.webp`,
           width: 800,
           height: 600,
           alt: 'Pallhotellet - Lager- och logistiklösningar',
@@ -54,7 +54,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title: title,
       description: 'Vi har det du behöver. Vi tar hand om din lagring och godshantering med sakkunnig personal i Motala. Kontakta oss för att få hjälp. Upptäck mer!',
-      images: [`${canonicalUrl}imgs/Rectangle4.webp`],
+      images: [`${canonicalUrl}imgs/pallhotellet-logistik-lager.webp`],
     },
   };
 }
@@ -73,7 +73,7 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'Pallhotellet',
-    'image': 'https://pallhotellet.se/imgs/Rectangle4.webp',
+    'image': 'https://pallhotellet.se/imgs/pallhotellet-logistik-lager.webp',
     '@id': `${canonicalUrl}#organization`,
     'url': canonicalUrl,
     'telephone': '0141-21 50 44',
