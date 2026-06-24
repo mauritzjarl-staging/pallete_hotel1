@@ -16,6 +16,9 @@ const MapComponent = dynamic(() => import("../components/MapComponent"), {
 export default function Findus() {
   return (
     <>
+      <title>Hitta oss | Pallhotellet.se</title>
+      <meta name="description" content="Här hittar du adress, karta och kontaktuppgifter till Pallhotellets lagerlokaler i Motala." />
+      <link rel="canonical" href="https://pallhotellet.se/findus" />
       {/* Hero Section */}
       <section className="flex items-center justify-center bg-center bg-cover bg-[url('/imgs/kontaktus.png')] h-[30rem]">
         <div className=" mx-auto flex justify-center items-center">
@@ -41,7 +44,7 @@ export default function Findus() {
               <AiOutlineMail size={20} />
             </div>
             <p className="text-lg font-bold mt-4">Email</p>
-            <p>order@pallhotell.se</p>
+            <p dangerouslySetInnerHTML={{ __html: '<!--email_off-->order@pallhotell.se<!--/email_off-->' }} />
           </div>
           {/* Phone */}
           <div className="flex flex-col items-center  p-6 rounded-lg">

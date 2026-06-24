@@ -77,6 +77,6 @@ export default function LoggaIn() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
   );
 }

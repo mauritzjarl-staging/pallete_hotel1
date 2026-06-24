@@ -110,6 +110,9 @@ const kontaktPage = () => {
 
   return (
     <>
+      <title>Kontakta oss | Pallhotellet.se</title>
+      <meta name="description" content="Kontakta Pallhotellet i Motala för frågor om lagerhållning, godshantering och logistiklösningar." />
+      <link rel="canonical" href="https://pallhotellet.se/kontakt" />
       <Script
         src="https://www.google.com/recaptcha/api.js"
         strategy="afterInteractive"
@@ -161,16 +164,12 @@ const kontaktPage = () => {
                 <p className="ms-3">+46 141 21 50 44</p>
               </Link>
             </div>
-            <div className="flex items-center justify-center md:justify-normal">
-              <Link
-                target="_blank"
-                href="mailto:info@pallhotellet.se"
-                className="flex items-center"
-              >
-                <AiOutlineMail size={20} />
-                <p className="ms-3">info@pallhotellet.se</p>
-              </Link>
-            </div>
+            <div 
+              className="flex items-center justify-center md:justify-normal"
+              dangerouslySetInnerHTML={{
+                __html: `<!--email_off--><a target="_blank" href="mailto:info@pallhotellet.se" class="flex items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" class="inline" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span class="ms-3">info@pallhotellet.se</span></a><!--/email_off-->`
+              }}
+            />
           </div>
         </div>
 

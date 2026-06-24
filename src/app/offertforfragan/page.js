@@ -10,7 +10,6 @@ import { IoArrowForward } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
-import Head from "next/head";
 
 const QuoteForm = () => {
   // Initial form state
@@ -165,13 +164,9 @@ const QuoteForm = () => {
   return (
     <>
 
-<Head>
-        <title>Request a Quote - PallHotellet</title>
-        <meta name="description" content="Request a quote from PallHotellet for our premium storage and hotel tjanster. We offer tailored solutions to meet your needs." />
-        <meta property="og:title" content="Request a Quote - PallHotellet" />
-        <meta property="og:description" content="Request a quote from PallHotellet for our premium storage and hotel tjanster. We offer tailored solutions to meet your needs." />
-        <meta property="og:url" content="https://pallhotellet.se/offertförfrågan" />
-      </Head>
+      <title>Offertförfrågan | Pallhotellet.se</title>
+      <meta name="description" content="Skicka en offertförfrågan för lagring och godshantering hos Pallhotellet. Snabb återkoppling!" />
+      <link rel="canonical" href="https://pallhotellet.se/offertforfragan" />
 
       <ToastContainer
         position="top-center"
@@ -215,16 +210,12 @@ const QuoteForm = () => {
                 </p>
               </Link>
             </div>
-            <div className="flex items-center">
-            <Link
-               target="_blank" 
-                href="mailto:info@pallhotellet.se"
-                className="flex items-center"
-              >
-                <AiOutlineMail size={16} />
-                <p className="ms-3">info@pallhotellet.se</p>
-              </Link>
-            </div>
+            <div 
+              className="flex items-center"
+              dangerouslySetInnerHTML={{
+                __html: `<!--email_off--><a target="_blank" href="mailto:info@pallhotellet.se" class="flex items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="16" width="16" class="inline" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span class="ms-3">info@pallhotellet.se</span></a><!--/email_off-->`
+              }}
+            />
           </div>
         </div>
         <div className="w-full lg:w-10/12 px-8">

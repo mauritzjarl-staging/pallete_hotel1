@@ -7,7 +7,11 @@ import { usePathname } from "next/navigation";
 const page = () => {
   const pathname = usePathname();
   return (
-    <div>
+    <>
+      <title>Lagerhållning utomhus | Pallhotellet.se</title>
+      <meta name="description" content="Mer än 100 000 kvm säker utomhusyta för lagring av skrymmande gods i Motala." />
+      <link rel="canonical" href="https://pallhotellet.se/tjanster/lagerhallning_utomhus" />
+      <div>
       <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
         <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
         Lagerhållning utomhus
@@ -84,6 +88,7 @@ const page = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -94,6 +94,6 @@ export default function NewPassword() {
           </p>
         </div> */}
       </div>
-    </div>
+      </div>
   )
 }

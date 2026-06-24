@@ -20,7 +20,11 @@ export default function Sitemap() {
   const baseDomain = process.env.NEXT_PUBLIC_DOMAIN_URL
 
   return (
-    <div className="w-full flex text-white bg-[#163c45] flex-col justify-center pt-48 pb-24 px-28">
+    <>
+      <title>Sitemap | Pallhotellet.se</title>
+      <meta name="description" content="Sitemap över alla sidor på Pallhotellet.se. Hitta enkelt rätt lager- och logistiktjänst." />
+      <link rel="canonical" href="https://pallhotellet.se/sitemap" />
+      <div className="w-full flex text-white bg-[#163c45] flex-col justify-center pt-48 pb-24 px-28">
       <h1 className="text-3xl font-bold">Sitemap for Pallhotellet</h1>
       <ul className="space-y-4 list-disc my-10">
         <li className="text-lg">
@@ -59,6 +63,7 @@ export default function Sitemap() {
           <Link href={`${baseDomain}/offertforfragan`}>offertförfrågan</Link>
         </li>
       </ul>
-    </div>
+      </div>
+    </>
   );
 }

@@ -64,6 +64,6 @@ export default function forgotpassword() {
         </div>
 
       </div>
-    </div>
+      </div>
   );
 }

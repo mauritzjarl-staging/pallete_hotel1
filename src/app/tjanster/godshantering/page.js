@@ -8,7 +8,11 @@ import { usePathname } from "next/navigation";
 const page = () => {
     const pathname = usePathname(); 
   return (
-    <div>
+    <>
+      <title>Godshantering | Pallhotellet.se</title>
+      <meta name="description" content="Hjälp med orderhantering, lastning, lossning och ankomstkontroll i Motala." />
+      <link rel="canonical" href="https://pallhotellet.se/tjanster/godshantering" />
+      <div>
       <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
         <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
         Godshantering
@@ -84,6 +88,7 @@ const page = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

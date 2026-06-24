@@ -46,7 +46,7 @@ export default async function sitemap() {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/tjanster/ovright`,
+      url: `${baseUrl}/tjanster/ovrigt`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,

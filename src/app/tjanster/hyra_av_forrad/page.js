@@ -7,7 +7,11 @@ import { usePathname } from "next/navigation";
 const page = () => {
     const pathname = usePathname(); 
   return (
-    <div>
+    <>
+      <title>Hyra av förråd | Pallhotellet.se</title>
+      <meta name="description" content="Hyr enskilda förråd i Motala från 4 kvm och uppåt. Flexibla förvaringslösningar." />
+      <link rel="canonical" href="https://pallhotellet.se/tjanster/hyra_av_forrad" />
+      <div>
       <section className="relative bg-[url('/imgs/Frame5892.png')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
         <p className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
         Hyra av förråd
@@ -82,6 +86,7 @@ const page = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

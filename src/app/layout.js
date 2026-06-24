@@ -8,6 +8,34 @@ import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
+export const metadata = {
+  metadataBase: new URL('https://pallhotellet.se'),
+  title: 'Pallhotellet - Lager- och logistiklösningar',
+  description: 'Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket mer i Motala.',
+  openGraph: {
+    title: 'Pallhotellet - Lager- och logistiklösningar',
+    description: 'Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket mer i Motala.',
+    url: 'https://pallhotellet.se',
+    siteName: 'Pallhotellet',
+    images: [
+      {
+        url: '/imgs/Rectangle4.png',
+        width: 800,
+        height: 600,
+        alt: 'Pallhotellet',
+      },
+    ],
+    locale: 'sv_SE',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pallhotellet - Lager- och logistiklösningar',
+    description: 'Vi hjälper dig med lagerhållning, godshantering, dokumentation och mycket mer i Motala.',
+    images: ['/imgs/Rectangle4.png'],
+  },
+};
+
 export default function RootLayout({ children }) {
   const headersList = headers();
   const host = headersList.get('host') || '';
