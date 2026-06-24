@@ -16,7 +16,7 @@ export default function NotFoundPage() {
       {/* Back to Home Button */}
       <Link href="/"
           className="mt-8 text-white hover:border px-6 py-3 flex items-center space-x-2 rounded-md 
-        bg-[#ff6300] transition-all duration-100 ease-in-out"
+        bg-primary transition-all duration-100 ease-in-out"
         >
           <IoArrowBack className="text-lg" />
           <span>Back to Home</span>

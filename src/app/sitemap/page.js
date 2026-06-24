@@ -24,39 +24,39 @@ export default function Sitemap() {
       <h1 className="text-3xl font-bold">Sitemap for Pallhotellet</h1>
       <ul className="space-y-4 list-disc my-10">
         <li className="text-lg">
-          <Link href={`${baseDomain}/`}>Hem</Link>
+          <Link href="/">Hem</Link>
         </li>
         <li className="text-lg">
-          <Link href={`${baseDomain}/tjanster/godshantering`}>
+          <Link href="/tjanster/godshantering">
             Tjänster - Godshantering
           </Link>
         </li>
         <li className="text-lg">
-          <Link href={`${baseDomain}/tjanster/lagerhallning_inomhus`}>
+          <Link href="/tjanster/lagerhallning_inomhus">
             Tjänster - Lagerhållning inomhus
           </Link>
         </li>
         <li className="text-lg">
-          <Link href={`${baseDomain}/tjanster/ovrigt`}>Tjänster - ovrigt</Link>
+          <Link href="/tjanster/ovrigt">Tjänster - Övrigt</Link>
         </li>
         <li className="text-lg">
-          <Link href={`${baseDomain}/tjanster/lagerhallning_utomhus`}>
+          <Link href="/tjanster/lagerhallning_utomhus">
             Tjänster - Lagerhållning utomhus
           </Link>
         </li>
         <li className="text-lg">
-          <Link href={`${baseDomain}/tjanster/hyra_av_forrad`}>
+          <Link href="/tjanster/hyra_av_forrad">
             Tjänster - Hyra av förråd
           </Link>
         </li>
         <li className="text-lg">
-          <Link href={`${baseDomain}/kontakt`}>Kontakt</Link>
+          <Link href="/kontakt">Kontakt</Link>
         </li>
         <li className="text-lg">
-          <Link href={`${baseDomain}/logga_in`}>Logga in</Link>
+          <Link href="/logga_in">Logga in</Link>
         </li>
         <li className="text-lg">
-          <Link href={`${baseDomain}/offertforfragan`}>offertförfrågan</Link>
+          <Link href="/offertforfragan">Offertförfrågan</Link>
         </li>
       </ul>
     </div>

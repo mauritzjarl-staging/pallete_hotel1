@@ -1,6 +1,6 @@
 export async function generateMetadata() {
     return {
-      title: 'Lagerhållning utomhus i Motala Sverige - 100 000 m² | Pallhotellet',
+      title: 'Lagerhållning utomhus i Motala | Pallhotellet',
       description: 'Kostnadseffektiv lagerhållning utomhus i Motala med Pallhotellet. Upptäck vårt öppna utomhuslager på 100 000 m² för skrymmande och tungt gods.',
       robots: {
         index: true,
@@ -15,7 +15,7 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Lagerhållning utomhus i Motala Sverige - 100 000 m² | Pallhotellet',
+        title: 'Lagerhållning utomhus i Motala | Pallhotellet',
         description: 'Kostnadseffektiv lagerhållning utomhus i Motala med Pallhotellet. Upptäck vårt öppna utomhuslager på 100 000 m² för skrymmande och tungt gods.',
         url: 'https://pallhotellet.se/tjanster/lagerhallning_utomhus',
         siteName: 'Pallhotellet',
@@ -24,7 +24,7 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Lagerhållning utomhus i Motala Sverige - 100 000 m² | Pallhotellet',
+        title: 'Lagerhållning utomhus i Motala | Pallhotellet',
         description: 'Kostnadseffektiv lagerhållning utomhus i Motala med Pallhotellet. Upptäck vårt öppna utomhuslager på 100 000 m² för skrymmande och tungt gods.',
       },
     };

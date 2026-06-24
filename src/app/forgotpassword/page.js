@@ -1,8 +1,9 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import { SlArrowLeftCircle } from "react-icons/sl";
+import Link from 'next/link';
 
-export default function forgotpassword() {
+export default function ForgotPassword() {
   const router = useRouter();  // Initialize useRouter
   const handleRedirect = () => {
     router.push('/logga_in');  // Redirect to /login page

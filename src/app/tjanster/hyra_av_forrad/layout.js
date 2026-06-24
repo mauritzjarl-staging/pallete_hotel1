@@ -1,6 +1,6 @@
 export async function generateMetadata() {
     return {
-      title: 'Hyra av förråd i Motala Sverige - Flexibelt self-storage | Pallhotellet',
+      title: 'Hyra av förråd i Motala | Pallhotellet',
       description: 'Hitta billigt och säkert att hyra av förråd i Motala hos Pallhotellet. Vi erbjuder flexibla förrådsenheter från 4 m² för privatpersoner och företag.',
       robots: {
         index: true,
@@ -15,7 +15,7 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Hyra av förråd i Motala Sverige - Flexibelt self-storage | Pallhotellet',
+        title: 'Hyra av förråd i Motala | Pallhotellet',
         description: 'Hitta billigt och säkert att hyra av förråd i Motala hos Pallhotellet. Vi erbjuder flexibla förrådsenheter från 4 m² för privatpersoner och företag.',
         url: 'https://pallhotellet.se/tjanster/hyra_av_forrad',
         siteName: 'Pallhotellet',
@@ -24,7 +24,7 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Hyra av förråd i Motala Sverige - Flexibelt self-storage | Pallhotellet',
+        title: 'Hyra av förråd i Motala | Pallhotellet',
         description: 'Hitta billigt och säkert att hyra av förråd i Motala hos Pallhotellet. Vi erbjuder flexibla förrådsenheter från 4 m² för privatpersoner och företag.',
       },
     };

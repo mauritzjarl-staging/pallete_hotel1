@@ -90,8 +90,11 @@ export default function LoggaIn() {
         <p className="mb-4 text-justify sm:text-center">
           Genom att logga in på ert användarkonto på vår hemsida kan ni enkelt administrera era bokade lagerplatser, granska pågående offertförfrågningar för era logistikbehov, uppdatera företagets kontaktuppgifter och hålla direktkontakt med vår kundservice. Vi fokuserar ständigt på högsta möjliga säkerhet, flexibla avtalsvillkor och ett personligt bemötande för att garantera att ert gods hanteras på absolut bästa sätt från mottagning till distribution.
         </p>
-        <p className="mb-6 text-justify sm:text-center">
+        <p className="mb-4 text-justify sm:text-center">
           Har ni glömt era inloggningsuppgifter eller har frågor om hur vår inloggningsportal fungerar? Vill ni veta mer om hur vi kan hjälpa er med tredjepartslogistik (3PL), containerlossning, orderplock eller andra kringtjänster? Tveka inte att höra av er till oss på Pallhotellet. Vi hjälper er gärna att optimera ert lagerflöde, sänka era fasta kostnader och effektivisera hela logistikkedjan. Följ oss gärna på våra sociala kanaler för att hålla er uppdaterade om nyheter och erbjudanden.
+        </p>
+        <p className="mb-6 text-justify sm:text-center">
+          Vårt lagerhotell i Motala erbjuder flexibla lagerytor för alla typer av gods. Med ett strategiskt läge i Östergötland kan vi erbjuda snabba och effektiva logistiklösningar till hela Norden. Vi hanterar allt från enstaka pallar till hela containerleveranser, och anpassar våra tjänster efter era specifika behov. Oavsett om ni behöver korttidsförvaring under en övergångsperiod eller ett långsiktigt samarbete för er tredjepartslogistik, kan ni lita på att vi levererar högsta kvalitet och personlig service i varje steg.
         </p>
         <div className="flex justify-center space-x-6 text-sm font-semibold border-t pt-4">
           <Link href="https://www.facebook.com/share/1AW57zVRFg/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500">Facebook</Link>

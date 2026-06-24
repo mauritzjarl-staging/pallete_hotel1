@@ -1,6 +1,6 @@
 
 export default async function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_DOMAIN_URL || "https://pallhotellet.se";
 
   return [
     {

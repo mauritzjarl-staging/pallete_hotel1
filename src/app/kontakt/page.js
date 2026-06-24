@@ -130,7 +130,7 @@ const kontaktPage = () => {
       <section className="flex items-center justify-center text-white bg-center bg-cover bg-[url('/imgs/contactus.webp')] md:py-56 pt-32 pb-20">
         <div className=" mx-auto flex justify-center items-center h-full">
           <h1 className="text-white md:text-5xl text-4xl font-bold text-center">
-            Kontakta oss
+            Kontakta oss på Pallhotellet
           </h1>
         </div>
       </section>
@@ -141,7 +141,7 @@ const kontaktPage = () => {
       <section className="pt-12 px-6 md:px-9 text-black w-full flex flex-col lg:flex-row gap-12 items-start justify-center">
         {/* kontakt Information */}
         <div className="w-full lg:w-5/12 md:p-8 P-4 text-center md:text-start">
-          <h2 className="text-xl font-bold mb-1">Kontakta oss</h2>
+          <h2 className="text-xl font-bold mb-1">Kontakta Pallhotellet</h2>
           <h3 className="text-lg font-semibold mb-4">Pallhotellet</h3>
           <div className="space-y-4 text-lg px-4 md:px-0">
             <div className="flex md:items-center justify-center md:justify-normal">
@@ -180,12 +180,21 @@ const kontaktPage = () => {
             <p>
               Vare sig det gäller en mindre flyttförvaring för ett privat hushåll eller ett storskaligt industriellt buffertlager med tunga transporter och löpande distribution, står Pallhotellets personal redo att leverera service av högsta klass. Ring oss eller skicka e-post, så sätter vi ihop en offert skräddarsydd för dina behov.
             </p>
+            <p>
+              Våra moderna och välbevakade lokaler på Pallhotellet i Motala är fullt utrustade för att hantera alla typer av lagerhållning, inklusive varmlager för känsliga produkter samt säkra ytor för utomhuslagring. Vi lägger stor vikt vid att ständigt utveckla våra säkerhetssystem och arbetsmetoder för att garantera att dina varor hanteras med yttersta omsorg och precision.
+            </p>
+            <p>
+              Välkommen att kontakta oss för ett förutsättningslöst samtal om hur vi kan förenkla din logistikkedja. Genom att outsourca er lagerhållning till Pallhotellet kan ni fokusera på er kärnverksamhet, medan vi sköter allt från godsmottagning och inventering till packning och distribution. Vi ser fram emot att samarbeta med er!
+            </p>
+            <p>
+              För besökare finns det gott om parkeringsplatser i direkt anslutning till receptionen. Anmäl dig i receptionen vid ankomst så hjälper vår personal dig vidare till rätt avdelning för lastning eller lossning av gods.
+            </p>
           </div>
         </div>
 
         {/* kontakt Form */}
         <div className="w-full lg:w-9/12  md:p-8 p-4">
-          <h2 className="text-3xl font-bold mb-8">Kontakta oss</h2>
+          <h2 className="text-3xl font-bold mb-8">Kontakta Pallhotellet i Motala</h2>
           <form
             onSubmit={handleSubmit}
             className="grid grid-cols-1 sm:grid-cols-2 gap-6"
@@ -296,14 +305,14 @@ const kontaktPage = () => {
                   className={`my-3 flex items-center mx-auto md:mx-0 ${
                     loading
                       ? "opacity-50 cursor-not-allowed"
-                      : "hover:text-[#ff6300]"
-                  } text-white hover:bg-white bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                      : "hover:text-primary"
+                  } text-white hover:bg-white bg-primary border-primary border-2 text-nowrap md:py-3 py-2 
                         px-3 md:px-4 lg:px-8  
                   rounded-md`}
                 >
                   {loading ? "Skickar..." : "Skicka"}
-                  <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                    <IoArrowForward className="text-[#ff6300]" size={23} />
+                  <span className="bg-white rounded-full border-primary border-2 p-1 ms-3">
+                    <IoArrowForward className="text-primary" size={23} />
                   </span>
                 </button>
               </div>

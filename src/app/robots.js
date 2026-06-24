@@ -11,6 +11,6 @@ export default function robots() {
         disallow: ['/'],
       },
     ],
-    sitemap: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/sitemap.xml`,
+    sitemap: `${process.env.NEXT_PUBLIC_DOMAIN_URL || "https://pallhotellet.se"}/sitemap.xml`,
   }
 }

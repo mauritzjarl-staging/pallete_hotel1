@@ -1019,12 +1019,12 @@ const QuoteForm = () => {
                     className={`my-3 flex items-center mx-auto md:mx-0 ${
                       loading
                         ? "opacity-50 cursor-not-allowed"
-                        : "hover:text-[#ff6300]"
-                    } text-white hover:bg-white bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 px-3 md:px-4 lg:px-8 rounded-md`}
+                        : "hover:text-primary"
+                    } text-white hover:bg-white bg-primary border-primary border-2 text-nowrap md:py-3 py-2 px-3 md:px-4 lg:px-8 rounded-md`}
                   >
                     {loading ? "Skickar..." : "Skicka"}
-                    <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                      <IoArrowForward className="text-[#ff6300]" size={23} />
+                    <span className="bg-white rounded-full border-primary border-2 p-1 ms-3">
+                      <IoArrowForward className="text-primary" size={23} />
                     </span>
                   </button>
                 </div>

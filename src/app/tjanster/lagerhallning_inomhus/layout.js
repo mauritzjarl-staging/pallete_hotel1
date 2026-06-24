@@ -1,6 +1,6 @@
 export async function generateMetadata() {
     return {
-      title: 'Lagerhållning inomhus i Motala - Utrymme från 59 kr | Pallhotellet',
+      title: 'Lagerhållning inomhus i Motala | Pallhotellet',
       description: 'Säker och prisvärd lagerhållning inomhus i Motala hos Pallhotellet. Vi erbjuder flexibla lagringsenheter, pallplatser och förvaring av skrymmande gods.',
       robots: {
         index: true,
@@ -15,7 +15,7 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Lagerhållning inomhus i Motala - Utrymme från 59 kr | Pallhotellet',
+        title: 'Lagerhållning inomhus i Motala | Pallhotellet',
         description: 'Säker och prisvärd lagerhållning inomhus i Motala hos Pallhotellet. Vi erbjuder flexibla lagringsenheter, pallplatser och förvaring av skrymmande gods.',
         url: 'https://pallhotellet.se/tjanster/lagerhallning_inomhus',
         siteName: 'Pallhotellet',
@@ -24,7 +24,7 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Lagerhållning inomhus i Motala - Utrymme från 59 kr | Pallhotellet',
+        title: 'Lagerhållning inomhus i Motala | Pallhotellet',
         description: 'Säker och prisvärd lagerhållning inomhus i Motala hos Pallhotellet. Vi erbjuder flexibla lagringsenheter, pallplatser och förvaring av skrymmande gods.',
       },
     };

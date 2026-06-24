@@ -1,6 +1,6 @@
 export async function generateMetadata() {
     return {
-      title: 'Godshantering i Motala Sverige - Effektiv logistik | Pallhotellet',
+      title: 'Godshantering i Motala | Pallhotellet',
       description: 'Professionell godshantering i Motala med Pallhotellet. Vi utför lastning, lossning, orderhantering och ankomstkontroll för ett optimalt logistikflöde.',
       robots: {
         index: true,
@@ -15,7 +15,7 @@ export async function generateMetadata() {
         },
       },
       openGraph: {
-        title: 'Godshantering i Motala Sverige - Effektiv logistik | Pallhotellet',
+        title: 'Godshantering i Motala | Pallhotellet',
         description: 'Professionell godshantering i Motala med Pallhotellet. Vi utför lastning, lossning, orderhantering och ankomstkontroll för ett optimalt logistikflöde.',
         url: 'https://pallhotellet.se/tjanster/godshantering',
         siteName: 'Pallhotellet',
@@ -24,7 +24,7 @@ export async function generateMetadata() {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Godshantering i Motala Sverige - Effektiv logistik | Pallhotellet',
+        title: 'Godshantering i Motala | Pallhotellet',
         description: 'Professionell godshantering i Motala med Pallhotellet. Vi utför lastning, lossning, orderhantering och ankomstkontroll för ett optimalt logistikflöde.',
       },
     };

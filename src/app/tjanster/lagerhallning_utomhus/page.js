@@ -10,7 +10,7 @@ const page = () => {
     <div className="w-full">
       <section className="relative bg-[url('/imgs/Frame5892.webp')] bg-cover text-center bg-center md:h-[500px] h-[200px] pt-10 flex justify-center items-center">
         <h1 className="relative text-white font-bold px-5 text-3xl md:text-5xl text-center z-10">
-          Lagerhållning utomhus
+          Lagerhållning utomhus hos Pallhotellet
         </h1>
       </section>
 
@@ -56,7 +56,7 @@ const page = () => {
             />
             <div className="space-y-10 md:pe-5">
               <div className="md:space-y-5 space-y-3">
-                <h2 className="text-2xl font-bold">Lagerhållning utomhus</h2>
+                <h2 className="text-2xl font-bold">Säker lagerhållning utomhus på Pallhotellet</h2>
                 <p className="md:text-lg text-[#626262]">
                   Vi have plats för olika typer av skrymmande gods eller annat som kan
                   förvaras utomhus. Vi förfogar över mer än 100.000m2 utomhusyta som kan
@@ -87,13 +87,13 @@ const page = () => {
             
             <Link href="/offertforfragan">
               <button
-                className="mt-10 flex items-center mx-auto md:mx-0 text-[#ff6300] hover:text-white
-                         hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2 
+                className="mt-10 flex items-center mx-auto md:mx-0 text-primary hover:text-white
+                         hover:bg-primary border-primary border-2 text-nowrap md:py-3 py-2 
                           px-3 md:px-4 lg:px-8  
                     rounded-md"
               >
                 Offertförfrågan
-                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
+                <span className="bg-white rounded-full border-primary border-2 p-1 ms-3">
                   <IoArrowForward className="text-orange-500" size={23} />
                 </span>
               </button>

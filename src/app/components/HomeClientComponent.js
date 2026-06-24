@@ -28,12 +28,12 @@ export default function HomePage() {
       </div>
       <Link href="#frankr">
         <button
-          className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
-        hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+          className="hover:bg-white bg-primary flex items-center hover:border-primary
+        hover:text-primary text-white border-4 border-primary text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
         >
           UPPTÄCK MER{" "}
-          <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
-            <IoArrowForward className="text-[#ff6300]" size={19} />
+          <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-primary">
+            <IoArrowForward className="text-primary" size={19} />
           </span>
         </button>
       </Link>
@@ -53,12 +53,12 @@ export default function HomePage() {
       </div>
       <Link href="/tjanster#cargo">
       <button
-         className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
-         hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+         className="hover:bg-white bg-primary flex items-center hover:border-primary
+         hover:text-primary text-white border-4 border-primary text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
          >
         UPPTÄCK MER
-        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
-          <IoArrowForward className="text-[#ff6300]" size={19} />
+        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-primary">
+          <IoArrowForward className="text-primary" size={19} />
         </span>
       </button>
       </Link>
@@ -78,12 +78,12 @@ export default function HomePage() {
       </div>
       <Link href="/tjanster#other">
       <button
-         className="hover:bg-white bg-[#ff6300] flex items-center hover:border-[#ff6300]
-         hover:text-[#ff6300] text-white border-4 border-[#ff6300] text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
+         className="hover:bg-white bg-primary flex items-center hover:border-primary
+         hover:text-primary text-white border-4 border-primary text-nowrap py-1 md:py-2 font-bold px-3 md:px-5 lg:px-10 text-center rounded-md text-sm"
          >
         UPPTÄCK MER
-        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-[#ff6300]">
-          <IoArrowForward className="text-[#ff6300]" size={19} />
+        <span className="bg-white rounded-full md:p-2 p-1 ms-3 hover:bg-white border-2 border-primary">
+          <IoArrowForward className="text-primary" size={19} />
         </span>
       </button>
       </Link>
@@ -154,9 +154,9 @@ export default function HomePage() {
 
   const SolutionCard = ({ item }) => (
     <div className="md:px-5 mt-10">
-      <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-[#ff6300] bg-white">
+      <div className=" rounded-t-3xl flex flex-col justify-center item-center text-center border-t-8 pb-0 mb-0 border-primary bg-white">
         <div>
-          <h3 className="inline-block px-2 rounded-md py-2 bg-[#ff6300] text-[1.2rem] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
+          <h3 className="inline-block px-2 rounded-md py-2 bg-primary text-[1.2rem] -mt-1 text-white md:w-5/12 w-8/12 font-semibold">
             {item.title}
           </h3>
         </div>
@@ -274,7 +274,7 @@ export default function HomePage() {
         {/* <!--col-1 Text --> */}
         <div className="md:pe-8 inline-flex justify-center flex-col space-y-6 md:w-6/12 w-full text-center md:text-start">
           <div>
-            <p className="bg-[#FF6F0F17] text-[#ff6300] inline-block p-4 text-lg">
+            <p className="bg-[#FF6F0F17] text-primary inline-block p-4 text-lg">
               Vilka är vi
             </p>
           </div>
@@ -295,12 +295,12 @@ export default function HomePage() {
           <div className="flex text-wrap justify-center md:justify-start space-y-5 sm:space-y-0">
             <Link href="/kontakt">
               <button
-                className="flex items-center md:justify-around text-[#ff6300] hover:text-white hover:bg-[#ff6300] border-[#ff6300] border-2 text-nowrap md:py-3 py-2  px-3 md:px-4 lg:px-8  
+                className="flex items-center md:justify-around text-primary hover:text-white hover:bg-primary border-primary border-2 text-nowrap md:py-3 py-2  px-3 md:px-4 lg:px-8  
            text-center rounded-md"
               >
                 Kontakta oss
-                <span className="bg-white rounded-full border-[#ff6300] border-2 p-1 ms-3">
-                  <IoArrowForward className="text-[#ff6300]" size={23} />
+                <span className="bg-white rounded-full border-primary border-2 p-1 ms-3">
+                  <IoArrowForward className="text-primary" size={23} />
                 </span>
               </button>
             </Link>
@@ -333,7 +333,7 @@ export default function HomePage() {
 
       <section className="bg-[#7d7d7d21] p-10 md:px-20">
         <div className="text-center space-y-4">
-          <p className="bg-[#FF6F0F17] text-[#ff6300] p-3 inline-block">
+          <p className="bg-[#FF6F0F17] text-primary p-3 inline-block">
             Vad erbjuder vi
           </p>
           <h2 className="md:text-[2rem] text-[1.2rem] font-bold md:w-5/12 mx-auto">
@@ -366,7 +366,7 @@ export default function HomePage() {
               </div>
               <div className="absolute top-0">
                 <p
-                  className="text-center rounded-md py-1 bg-[#ff6300]
+                  className="text-center rounded-md py-1 bg-primary
              text-white px-8 inline font-semibold"
                 >
                   Lagring
@@ -416,7 +416,7 @@ export default function HomePage() {
                   </div>
                   <div className="absolute top-0">
                     <p
-                      className="text-center rounded-md py-1 bg-[#ff6300] text-[1.2rem]
+                      className="text-center rounded-md py-1 bg-primary text-[1.2rem]
              text-white px-8 inline font-semibold"
                     >
                       Godshantering
@@ -437,7 +437,7 @@ export default function HomePage() {
               />
               <div className="absolute top-0">
                 <p
-                  className="text-center rounded-md py-1 bg-[#ff6300] text-[1.2rem]
+                  className="text-center rounded-md py-1 bg-primary text-[1.2rem]
              text-white px-8 inline font-semibold"
                 >
                   Godshantering
@@ -452,7 +452,7 @@ export default function HomePage() {
 
       <section className="md:py-20 py-10 flex justify-center flex-col px-10">
         <div className="text-center space-y-8">
-          <h2 className="bg-[#FF6F0F17] text-[#ff6300] inline text-xl font-semibold p-3">
+          <h2 className="bg-[#FF6F0F17] text-primary inline text-xl font-semibold p-3">
             Vår personal
           </h2>
           <h3 className="md:text-4xl text-3xl font-bold md:w-2/12 w-5/12 mx-auto">
@@ -486,7 +486,7 @@ export default function HomePage() {
 
       <section className="relative pt-10 md:pb-20 pb-10 px-10 md:px-[65px] bg-gray-100">
         <div className="text-center space-y-8 my-10">
-          <h2 className="bg-[#FF6F0F17] text-[#ff6300] text-xl font-semibold p-3 inline">
+          <h2 className="bg-[#FF6F0F17] text-primary text-xl font-semibold p-3 inline">
             Kundomdömen
           </h2>
           <h3 className="md:text-[2rem] text-[1.2rem] font-bold">
@@ -497,12 +497,12 @@ export default function HomePage() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="snap-center shrink-0 w-[85%] md:w-auto bg-[#ff6300] rounded-lg md:p-5 p-4 text-white flex flex-col justify-between min-h-[220px] shadow-sm"
+              className="snap-center shrink-0 w-[85%] md:w-auto bg-primary rounded-lg md:p-5 p-4 text-white flex flex-col justify-between min-h-[220px] shadow-sm"
             >
               <div className="pb-4 relative">
                 <img
                   src={testimonial.image}
-                  className="mx-auto rounded-full p-1 border-2 border-[#ff6300] bg-white"
+                  className="mx-auto rounded-full p-1 border-2 border-primary bg-white"
                   alt={`Client-Img ${index + 1}`}
                   width={90}
                   height={90}
@@ -520,7 +520,7 @@ export default function HomePage() {
       {/* FAQ Section */}
       <section className="py-20 px-10 md:px-20 bg-white">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="bg-[#FF6F0F17] text-[#ff6300] text-xl font-semibold p-3 inline-block">
+          <h2 className="bg-[#FF6F0F17] text-primary text-xl font-semibold p-3 inline-block">
             Vanliga frågor (FAQ)
           </h2>
           <h3 className="md:text-[2.5rem] text-[1.5rem] font-bold text-[#001d23]">

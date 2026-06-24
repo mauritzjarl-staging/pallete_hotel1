@@ -139,7 +139,7 @@ export default function Footer() {
 
         <div>
           <p className="flex text-lg flex-wrap">
-            <span className="text-[#ff6300]"> Pall</span>
+            <span className="text-primary"> Pall</span>
             <span className="text-white me-2">hotellet.se</span>
             <span className="text-gray-400 hover:text-white">
               2024, Alla rättigheter förbehållna

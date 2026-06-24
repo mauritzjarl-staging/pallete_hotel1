@@ -170,7 +170,7 @@ export default function Header() {
             >
               <li
                 className={`${
-                  pathname === "/" ? "text-[#ff6300]" : "hover:text-[#ff6300]"
+                  pathname === "/" ? "text-primary" : "hover:text-primary"
                 }`}
               >
                 <Link className="w-full" href="/">
@@ -180,8 +180,8 @@ export default function Header() {
               {/* <li
                 className={`${
                   pathname === "/findus"
-                    ? "text-[#ff6300]"
-                    : "hover:text-[#ff6300]"
+                    ? "text-primary"
+                    : "hover:text-primary"
                 }`}
               >
                 <Link className="w-full" href="/findus">Hitta oss</Link>
@@ -189,8 +189,8 @@ export default function Header() {
               <li
                 className={`relative group dropdown-container ${
                   pathname.startsWith("/tjanster")
-                    ? "text-[#ff6300]"
-                    : "hover:text-[#ff6300]"
+                    ? "text-primary"
+                    : "hover:text-primary"
                 }`}
                 onMouseEnter={toggleDropdown}
                 onMouseLeave={toggleDropdown}
@@ -242,8 +242,8 @@ export default function Header() {
               <li
                 className={`${
                   pathname === "/kontakt"
-                    ? "text-[#ff6300]"
-                    : "hover:text-[#ff6300]"
+                    ? "text-primary"
+                    : "hover:text-primary"
                 }`}
               >
                 <Link className="w-full" href="/kontakt">
@@ -255,8 +255,8 @@ export default function Header() {
                 <li
                   className={`${
                     pathname === "/logga_in"
-                      ? "text-[#ff6300]"
-                      : "hover:text-[#ff6300]"
+                      ? "text-primary"
+                      : "hover:text-primary"
                   }`}
                 >
                   Logga in
@@ -265,9 +265,9 @@ export default function Header() {
             </ul>
 
             {/* Request for offertförfrågan Button (Desktop) */}
-            <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-[#ff6300] rounded-md">
+            <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-primary rounded-md">
               <Link className="w-full" href="/offertforfragan">
-                <button className="hover:text-[#ff6300] md:py-2 py-1 font-semibold">
+                <button className="hover:text-primary md:py-2 py-1 font-semibold">
                   Offertförfrågan
                 </button>
               </Link>
@@ -286,12 +286,12 @@ export default function Header() {
               href="/"
               onClick={() => setMenuOpen(false)}
             >
-              <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
+              <li className="text-white hover:text-primary my-3 text-md font-semibold px-4">
                 Hem
               </li>
             </Link>
 
-            {/* <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
+            {/* <li className="text-white hover:text-primary my-3 text-md font-semibold px-4">
               <Link className="w-full" href="/findus" onClick={() => setMenuOpen(false)}>
                 Hitta oss
               </Link>
@@ -371,7 +371,7 @@ export default function Header() {
               href="/kontakt"
               onClick={() => setMenuOpen(false)}
             >
-              <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
+              <li className="text-white hover:text-primary my-3 text-md font-semibold px-4">
                 Kontakt
               </li>
             </Link>
@@ -381,16 +381,16 @@ export default function Header() {
               href="/logga_in"
               onClick={() => setMenuOpen(false)}
             >
-              <li className="text-white hover:text-[#ff6300] my-3 text-md font-semibold px-4">
+              <li className="text-white hover:text-primary my-3 text-md font-semibold px-4">
                 Logga in
               </li>
             </Link>
           </ul>
 
           {/* Mobile Request for offertförfrågan Button */}
-          <div className="mt-4 border-2 border-[#ff6300] rounded-md">
+          <div className="mt-4 border-2 border-primary rounded-md">
             <button
-              className="w-full py-2 text-md  hover:text-[#ff6300]"
+              className="w-full py-2 text-md  hover:text-primary"
               onClick={() => setMenuOpen(false)}
             >
               <Link className="w-full" href="/offertforfragan">
