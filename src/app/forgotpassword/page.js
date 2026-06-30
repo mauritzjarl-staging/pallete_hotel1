@@ -10,40 +10,31 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300">
-      <div>
+    <div className="flex flex-col items-center justify-center min-h-screen w-full overflow-x-hidden bg-gray-300">
+      <div className="w-full px-4 sm:px-0 max-w-[449px]">
 
         <div className="w-full">
          
-          <div className="flex items-center w-full px-2 py-6">
-         
-            <div className="flex">
-              <button 
-                type="button"
-                onClick={handleRedirect}
-                aria-label="Gå tillbaka till inloggningssidan"
-                className="focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-full"
-              >
-                <SlArrowLeftCircle
-                  className="text-gray-500 text-start text-5xl cursor-pointer"
-                />
-              </button>
-            </div>
-
-            
-            <div className="flex px-6 justify-center  items-center">
-              <img
-                src="/imgs/Pallhotellet.seTransparent.webp"
-                alt="Pallhotellet Logo"
-                className="h-8 w-auto"  
-                height={500}  
-                width={500}   
+          <div className="flex items-center justify-center w-full py-6 relative">
+            <button 
+              type="button"
+              onClick={handleRedirect}
+              aria-label="Gå tillbaka till inloggningssidan"
+              className="absolute left-2 sm:left-0 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-full"
+            >
+              <SlArrowLeftCircle
+                className="text-gray-500 text-start text-4xl sm:text-5xl cursor-pointer"
               />
-            </div>
+            </button>
+            <img
+              src="/imgs/Pallhotellet.seTransparent.webp"
+              alt="Pallhotellet Logo"
+              className="h-8 sm:h-10 w-auto"  
+            />
           </div>
-          <section className="bg-white p-12  mx-auto rounded-xl shadow-lg w-[449px]">
-            <div className="text-2xl font-bold  text-[#505050] mb-6">
-              <h1 className="flex justify-center mx-auto w-4/6">Återställ lösenordet</h1>
+          <section className="bg-white p-8 sm:p-12 mx-auto rounded-xl shadow-lg w-full">
+            <div className="text-2xl font-bold text-[#505050] mb-6">
+              <h1 className="text-center w-full">Återställ lösenordet</h1>
             </div>
 
             <form className="space-y-4 px-5">
@@ -73,7 +64,7 @@ export default function ForgotPassword() {
       </div>
 
       {/* Info text to increase word count and add local SEO context */}
-      <div className="mt-12 max-w-xl text-center text-xs text-gray-500 px-6 pb-8">
+      <div className="mt-12 w-full max-w-xl text-center text-xs text-gray-500 px-6 pb-8">
         <h2 className="font-semibold text-gray-600 mb-2">Återställ lösenordet hos Pallhotellet</h2>
         <p className="mb-4 text-justify sm:text-center">
           Har du glömt lösenordet till kontot? Ingen fara, ange e-postadressen i fältet ovan så skickar vi omedelbart en återställningslänk. Genom att återställa lösenordet kan du som kund snabbt logga in igen på användarkontot hos oss på Pallhotellet för att fortsätta hantera alla bokade lagertjänster, se aktiva offertförfrågningar och administrera lagerhållning i Motala. Vi ser till att återställningsprocessen är både säker och snabb för att minska onödigt driftstopp för företagets logistikverksamhet.

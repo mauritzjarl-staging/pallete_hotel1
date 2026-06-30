@@ -17,8 +17,8 @@ export default function Footer() {
   return (
     <footer className="md:px-10 px-5 bg-[#001D23]">
       <div className="leading-8 py-8 list-none md:px-20 px-10">
-        <div className="flex md:justify-between justify-center flex-col md:flex-row text-[#808E91]">
-          <div className="py-4 h-auto mt-10 md:w-4/12">
+        <div className="flex lg:justify-between justify-center flex-col lg:flex-row text-[#808E91] lg:gap-8 gap-4">
+          <div className="py-4 h-auto mt-10 lg:w-4/12">
             <img
               width={200}
               height={250}
@@ -26,11 +26,11 @@ export default function Footer() {
               src="/imgs/Pallhotellet.se.webp"
               alt="logo"
             />
-            <p className="text-sm md:w-9/12 hover:text-white md:mt-10">
+            <p className="text-sm lg:w-10/12 hover:text-white lg:mt-10">
               Vi hjälper dig med lagerhållning, godshantering, dokumentation
               och mycket annat!
             </p>
-            <div className="flex my-5 gap-3">
+            <div className="flex flex-wrap my-5 gap-3">
               <Link
                 href="https://www.facebook.com/share/1AW57zVRFg/"
                 target="_blank" 
@@ -84,7 +84,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="py-4 md:mt-20 md:w-4/12">
+          <div className="py-4 lg:mt-20 lg:w-4/12">
             <p className="text-lg mb-5 font-semibold text-white">Adress</p>
             <li className="hover:text-white my-3 text-sm">
   <Link 
@@ -115,7 +115,7 @@ export default function Footer() {
             />
           </div>
 
-          <div className="py-4 md:mt-20">
+          <div className="py-4 lg:mt-20">
             <p className="text-lg mb-5 text-white font-semibold">Snabblänkar</p>
             <li className="hover:text-white my-3 text-sm">
               <Link href="/">Hem</Link>

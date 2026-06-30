@@ -16,11 +16,6 @@ export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname();
 
-  const excludedPaths = ["/logga_in", "/register", "/forgotpassword", "/newpassword", "/sitemap"];
-  if (excludedPaths.some(path => pathname?.startsWith(path))) {
-    return null;
-  }
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       const handleScroll = () => {
@@ -69,6 +64,11 @@ export default function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const excludedPaths = ["/logga_in", "/register", "/forgotpassword", "/newpassword", "/sitemap"];
+  if (excludedPaths.some(path => pathname?.startsWith(path))) {
+    return null;
+  }
 
   return (
     <header
@@ -156,17 +156,17 @@ export default function Header() {
           </div>
 
           {/* Mobile menu toggler */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button className="text-white" onClick={toggleMenu}>
-              <GiHamburgerMenu /> {/* Mobile menu icon */}
+              <GiHamburgerMenu size={24} /> {/* Mobile menu icon */}
             </button>
           </div>
 
-          <div className="md:w-8/12 hidden md:flex items-center justify-between space-x-2">
+          <div className="lg:w-8/12 hidden lg:flex items-center justify-between space-x-2">
             {/* Desktop menu */}
             <ul
               id="menu"
-              className="hidden md:flex text-nowrap lg:space-x-14 md:space-x-2 lg:text-lg font-semibold "
+              className="hidden lg:flex text-nowrap lg:space-x-6 xl:space-x-14 lg:text-lg font-semibold "
             >
               <li
                 className={`${
@@ -265,9 +265,9 @@ export default function Header() {
             </ul>
 
             {/* Request for offertförfrågan Button (Desktop) */}
-            <div className="border-2 hidden md:block outline-2 xl:px-6 md:px-2 border-primary rounded-md">
+            <div className="border-2 hidden lg:block outline-2 xl:px-6 lg:px-2 border-primary rounded-md">
               <Link className="w-full" href="/offertforfragan">
-                <button className="hover:text-primary md:py-2 py-1 font-semibold">
+                <button className="hover:text-primary lg:py-2 py-1 font-semibold">
                   Offertförfrågan
                 </button>
               </Link>
@@ -279,7 +279,7 @@ export default function Header() {
       {/* Mobile Menu - Only shown when toggled */}
 
       {menuOpen && (
-        <div className="md:hidden bg-[#001d24] text-white px-4 z-60 pt-[70px] pb-10">
+        <div className="lg:hidden bg-[#001d24] text-white px-4 z-60 pt-[70px] pb-10">
           <ul className="">
             <Link
               className="w-full"
