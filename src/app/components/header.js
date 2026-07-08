@@ -74,22 +74,22 @@ export default function Header() {
     <header
       className={`text-white justify-between items-center w-full fixed top-0 left-0 z-50 pb-2`}
     >
-      <div className="px-20 mx-auto border border-gray-700 text-gray-400 hidden md:flex justify-between items-center py-2">
-        <div className="flex md:text-sm xl:text-lg text-sm items-center space-x-6">
-          <div className="hover:text-white flex items-center space-x-3">
+      <div className="px-4 lg:px-20 mx-auto border border-gray-700 text-gray-400 hidden md:flex justify-between items-center py-2">
+        <div className="flex md:text-xs lg:text-sm xl:text-lg items-center space-x-2 lg:space-x-6">
+          <div className="hover:text-white flex items-center space-x-1 lg:space-x-3">
             <p>591 45 Motala, Sweden</p>
             <FaLocationDot />
           </div>
           <div 
-            className="hover:text-white flex items-center space-x-3"
+            className="hover:text-white flex items-center space-x-1 lg:space-x-3"
             dangerouslySetInnerHTML={{
-              __html: `<!--email_off--><a class="hover:text-white flex items-center space-x-3" href="mailto:info@pallhotellet.se"><p>info@pallhotellet.se</p><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0-2-.9-2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg></a><!--/email_off-->`
+              __html: `<!--email_off--><a class="hover:text-white flex items-center space-x-1 lg:space-x-3" href="mailto:info@pallhotellet.se"><p>info@pallhotellet.se</p><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0-2-.9-2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg></a><!--/email_off-->`
             }}
           />
         </div>
-        <div className="flex text-sm md:text-sm xl:text-lg items-center">
+        <div className="flex md:text-xs lg:text-sm xl:text-lg items-center">
           <p className="hover:text-white">Följ oss:</p>
-          <div className="px-4 cursor-pointer md:space-x-4 space-x-2 flex">
+          <div className="px-2 lg:px-4 cursor-pointer space-x-2 lg:space-x-4 flex">
             <Link
               target="_blank"
               rel="noopener noreferrer me"
@@ -138,9 +138,9 @@ export default function Header() {
         <div
           id="stickyDiv"
           className={`text-white flex justify-between items-center
-             w-full py-4 bg-[#001d24] px-8 md:mx-20 ${
+             w-full py-4 bg-[#001d24] px-4 md:mx-4 lg:mx-20 lg:px-8 ${
                isSticky
-                 ? "bg-[#001d24] fixed top-0 z-50 px-8 md:px-20"
+                 ? "bg-[#001d24] fixed top-0 z-50 px-4 md:px-4 lg:px-20"
                  : "md:relative absolute "
              }`}
         >

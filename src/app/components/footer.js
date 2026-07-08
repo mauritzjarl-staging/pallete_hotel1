@@ -138,12 +138,15 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="flex text-lg flex-wrap">
+          <p className="flex text-lg flex-wrap md:justify-start justify-center">
             <span className="text-primary"> Pall</span>
             <span className="text-white me-2">hotellet.se</span>
             <span className="text-gray-400 hover:text-white">
               2024, Alla rättigheter förbehållna
             </span>
+          </p>
+          <p className="text-center text-[#808E91] text-sm mt-6">
+            Version: 1.0.0
           </p>
         </div>
       </div>
